@@ -53,12 +53,11 @@ library(gt)
 -   BA: UC Santa Barbara
 -   PhD, School Psychology: University of Maryland
 -   UO since 2009 at Behavioral Research & Teaching ([BRT](http://brtprojects.org))
--   Research Associate Professor
+-   Research Professor
 
 **Research**
 
--   Applied statistical methods to measure and monitor student growth
--   Inform the applied research methodologies used by researchers
+-   Applied statistical methods used by researchers
 -   Developing and improving systems that support data-based decision making using advanced technologies to influence teachers' instructional practices and increase student achievement
     -   [CORE](https://jnese.github.io/core-blog/) and [CORE II](https://jnese.github.io/coreprosody)
     -   Inclusive Skill-building Learning Approach ([ISLA](https://www.neselab.org/isla/))
@@ -66,16 +65,16 @@ library(gt)
 **Teaching**
 
 - EDLD 651 - this one!
+- EDLD 653 - Functional Programming for Educational Data Science^[this spring!]
 - EDLD 654 - Applied Machine Learning for Educational Data Scientists
 - EDLD 609 - Data Science Capstone
-- EDLD 653 - Functional Programming for Educational Data Science^[this spring!]
 
 ## About you
 
 Please introduce yourself
 
 1.  Name and program/year of study
-2.  Do you have any `R` experience?
+2.  Any `R` experience?
 3.  How many popcorn kernels are in the jar?
     -   No changing your answer! *Academic integrity!*
 
@@ -235,7 +234,7 @@ Sometimes I may ask people to share with the class something they have learned.
 ::: {.column width="50%"}
 > "I went to re-run my 'cool figure' a couple months later and my code did not work!
 >
-> I spent \[*mumble mumble*\] minutes getting it to work again!"
+> I spent \[*mumble mumble*\] hours getting it to work again!"
 :::
 
 ::: {.column width="50%"}
@@ -312,8 +311,8 @@ Learning to problem solve!
 -   Perform basic data manipulations / transformations in `R` with the `{tidyverse}`
     -   leverage appropriate functions for introductory data science tasks
     -   prepare data using scripts and reproducible workflows
--   Use version control with `R` via git and GitHub
--   Use Quarto to create reproducible dynamic reports
+-   Use version control with `R` via `git` and `GitHub`
+-   Use `Quarto` to create reproducible dynamic reports
 -   Understand and create different types of data visualizations
 
 ## Course Site {.smaller}
@@ -401,12 +400,12 @@ read_csv(here("rubrics", "grades_rubric.csv")) |>
 -   Homeworks are generally due the class after they are assigned, before class starts
     - You **can** work in groups on these
     - late: 7 points max
-    - />1 week late: 0 points
+    - \>1 week late: 0 points
 
 ## Final Project {.smaller}
 
 -   Group project, 3-4 people
-    + You select or me organize?
+    + You select or me organize? (*vote*)
     + The expectations if you select
 -   Quarto document
 
@@ -621,6 +620,13 @@ This is the RStudio IDE *(Integrated Development Environment)*
 3 / (3+2)
 ```
 
+. . .
+
+```{r}
+#| echo: true
+sqrt(49)
+```
+
 ## Object Assignment `<-` {.smaller}
 
 Objects are stored in active memory of your computer with names that you provide
@@ -686,14 +692,10 @@ Data can be a variety of types
 
 . . .
 
--   **numeric**: `2` and/or `15.5`
-
-. . .
-
--   **integer**: `2` 
-    - whole number is called an `integer`
-    - decimal also called `double`
-    - explicit about an integer `2L` (the `L` tells `R` to store this as an integer) ¯\\_(ツ)_/¯
+-   **numeric**: `2` and/or `15.5` 
+    - whole number called an **integer**
+    - decimal called a **double**
+    - *Aside*: explicit about an integer `2L` (the `L` tells `R` to store this as an integer) ¯\\_(ツ)_/¯
 
 . . .
 
@@ -701,7 +703,7 @@ Data can be a variety of types
 
 . . .
 
-These objects can be extremely useful in programming
+These data types can be extremely useful in programming
 
 ## Objects {.smaller}
 
@@ -716,10 +718,9 @@ Objects can also be:
 -   functions
 -   figures
 -   more...
+:::
 
-::: {.fragment}
-
-::: {.column width="50%"}
+::: {.column width="50%" .fragment}
 You can then use or manipulate these in different ways
 
 -   plots
@@ -829,13 +830,13 @@ Also
 ## Mandatory: Customize your RStudio {.smaller}
 
 :::: {.columns}
-::: {.column width="66%"}
+::: {.column width="60%"}
 
 ![](./images/rstudio_1.png)
 
 :::
 
-::: {.column width="44%"}
+::: {.column width="40%"}
 **Tools > Global Options > General > Basic**
 
 -   **Workspace**
@@ -850,13 +851,13 @@ Also
 ## Optional: Customize your RStudio {.smaller}
 
 :::: {.columns}
-::: {.column width="66%"}
+::: {.column width="60%"}
 
 ![](./images/rstudio_2.png)
 
 :::
 
-::: {.column width="44%"}
+::: {.column width="40%"}
 
 **Tools > Global Options > Code > Display** 
 
@@ -874,13 +875,13 @@ Also
 ## Optional: Customize your RStudio {.smaller}
 
 :::: {.columns}
-::: {.column width="66%"}
+::: {.column width="60%"}
 
 ![](./images/rstudio_3.png)
 
 :::
 
-::: {.column width="44%"}
+::: {.column width="40%"}
 
 **Tools > Global Options > R Markdown > Basic**
 
@@ -895,13 +896,13 @@ Also
 ## Optional: Customize your RStudio Display!
 
 :::: {.columns}
-::: {.column width="66%"}
+::: {.column width="60%"}
 
 ![](./images/rstudio_4.png)
 
 :::
 
-::: {.column width="44%"}
+::: {.column width="40%"}
 
 __Tools > Global Options > Pane Layout__
 
@@ -916,6 +917,8 @@ As you like!
 
 __Tools > Global Options > Appearance__
 
+(let's take a look)
+
 **Editor font**
 
 **Editor font size**
@@ -924,13 +927,13 @@ __Tools > Global Options > Appearance__
 
 ## Keyboard Shortcuts {.smaller}
 
-#### There are a lot...
+There are a lot...
 
 **Tools > Keyboard Shortcuts Help** (`Alt + Shift + K`)
 
 **Tools > Modify Keyboard Shortcuts**
 
-. . .
+::: {.fragment}
 
 My favorites (for Macs, sub `Command` for `Ctrl`)
 
@@ -938,8 +941,9 @@ My favorites (for Macs, sub `Command` for `Ctrl`)
 2.  `Ctrl + Shift + M` = insert pipe (`|>`)
 3.  `Ctrl + Alt + I` = insert code chunk in R Markdown
 4.  `Ctrl + Shift + C` = comment a block
+:::
 
-. . .
+::: {.fragment}
 
 Other good ones
 
@@ -947,6 +951,8 @@ Other good ones
 -   `Alt + Shift + Up/Down` = add cursor above/below current cursor
 
 [**demo**]{style="color:#D55E00;"}
+
+:::
 
 # `R` Packages
 
@@ -1234,7 +1240,7 @@ Produce a `hist`ogram of the *tvhours* variable in `gss_cat`
 -   To start, you can read it as, "then"
 -   It is crucial for work in the `{tidyverse}`
 
-. . .
+## The pipe operator (`|>`)
 
 *Note*
 
@@ -1254,7 +1260,7 @@ gss_cat |>
 
 We will talk about this a little right now and lot more later
 
-## Quick aside
+## Quick aside {.smaller}
 
 Base `R` has a native pipe now!
 
@@ -1264,7 +1270,9 @@ R 4.1.0 introduced a native pipe operator, `|>`. As described in the R News:
 
 The behavior of the native pipe is basically the same as the `%>%` pipe  (from the `{magrittr}` package)
 
-Luckily there’s no need to commit entirely to one pipe or the other — you can use the base pipe for the majority of cases where it’s sufficient and use the magrittr pipe when you really need its special features.
+Luckily there’s no need to commit entirely to one pipe or the other
+
+- you can use `|>` for the majority of cases and use `%>%` when you really need its special features
 
 More [here](https://www.tidyverse.org/blog/2023/04/base-vs-magrittr-pipe/#-vs).
 
