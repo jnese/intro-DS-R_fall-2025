@@ -6,7 +6,7 @@ project:
     - "!nopublish/"
 
 website:
-  title: "EDLD 651: Fall 2025"
+  title: "EDLD 651"
   description: "Introduction to Data Science with R"
   navbar:
     left:
