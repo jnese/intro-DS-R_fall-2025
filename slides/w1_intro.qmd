@@ -1278,7 +1278,7 @@ More [here](https://www.tidyverse.org/blog/2023/04/base-vs-magrittr-pipe/#-vs).
 
 ## Why use `|>`
 
-Chaining arguments is **efficient** and **easy to read**
+Chaining functions is **efficient** and **easy to read**
 
 . . .
 
