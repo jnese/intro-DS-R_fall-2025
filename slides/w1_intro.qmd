@@ -11,6 +11,7 @@ format:
     fig-width: 9
     fig-height: 3.5
     scrollable: true
+    slide-number: true
 #    multiplex: true
 #    chalkboard: true
     embed-resources: true
