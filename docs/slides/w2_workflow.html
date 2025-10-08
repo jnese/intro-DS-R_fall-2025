@@ -236,11 +236,15 @@ Joe Nese
 </ul></li>
 </ul>
 <div class="columns">
-
-</div>
-<p><img data-src="https://jnese.github.io/intro-DS-R_fall-2025/slides/images/codecademy_Intro-to-R-Syntax.png" style="width:30.0%"> :::</p>
-<p>::: <img data-src="https://jnese.github.io/intro-DS-R_fall-2025/slides/images/codecademy_Intro-to-Data-Fames-R.png" style="width:30.0%"> :::</p>
-<p>:::: # Workflow</p>
+<div class="column" style="width:50%;">
+<p><img data-src="https://jnese.github.io/intro-DS-R_fall-2025/slides/images/codecademy_Intro-to-R-Syntax.png" style="width:30.0%"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="https://jnese.github.io/intro-DS-R_fall-2025/slides/images/codecademy_Intro-to-Data-Fames-R.png" style="width:30.0%"></p>
+</div></div>
+</section>
+<section>
+<section id="workflow" class="title-slide slide level1 center">
+<h1>Workflow</h1>
 <p>Week 2</p>
 </section>
 <section id="agenda" class="slide level2 smaller">
@@ -267,7 +271,7 @@ Joe Nese
 <li>Learn two ways to read data</li>
 <li>Establish good workflow habits</li>
 </ul>
-</section>
+</section></section>
 <section>
 <section id="rstudio-projects" class="title-slide slide level1 center">
 <h1>RStudio Projects</h1>
@@ -339,7 +343,7 @@ Joe Nese
 <li>easy to work on other projects with different directories</li>
 </ul>
 </div><div class="column" style="width:50%;">
-<p><strong>Session &gt; Restart R</strong> (<code>Ctrl/Command + Shift + F10</code>)</p>
+<p><strong>Session &gt; Restart R</strong></p>
 <p>Restart the <code>R</code> session</p>
 <ul>
 <li>Create a fresh <code>R</code> process</li>
@@ -374,11 +378,14 @@ Joe Nese
 </ol>
 <ul>
 <li>Restart <code>R</code> very often and re-run your developing script from the top</li>
-<li>Use the RStudio menu item: <strong>Session &gt; Restart R</strong> (<code>Ctrl/Command + Shift + F10</code>)</li>
+<li>Use the RStudio menu item
+<ul>
+<li><strong>Session &gt; Restart R</strong> (<code>Ctrl/Command + Shift + F10</code>)</li>
+</ul></li>
 </ul>
 </section></section>
 <section>
-<section id="workflow" class="title-slide slide level1 center">
+<section id="workflow-1" class="title-slide slide level1 center">
 <h1>Workflow</h1>
 
 </section>
@@ -392,7 +399,7 @@ Joe Nese
 <li>“data”</li>
 <li>“scripts”</li>
 </ul></li>
-<li><p>Read in data</p></li>
+<li><p>Add data</p></li>
 <li><p>Create scripts</p></li>
 <li><p>Load packages</p></li>
 </ol>
@@ -470,11 +477,8 @@ Joe Nese
 <section id="lets-see-files-are-in-our-data-folder" class="slide level2">
 <h2>Let’s see files are in our “data” folder</h2>
 <ul>
-<li>You can <code>list.files("path/to/files")</code> to see the contents of your project directory (i.e., what your computer “sees”)
-<ul>
-<li><code>list.files(here("data"))</code></li>
-</ul></li>
-<li>You can also use the <em>Files</em> tab in RStudio</li>
+<li><p>You can <code>list.files("path/to/files")</code> to see the contents of your project directory (i.e., what your computer “sees”)</p></li>
+<li><p>You can also use the <em>Files</em> tab in RStudio</p></li>
 </ul>
 <div class="fragment">
 <ul>
@@ -483,10 +487,11 @@ Joe Nese
 </div>
 <div class="fragment">
 <ul>
-<li><code>here()</code> is simply a function to print a path</li>
+<li><code>here()</code> is simply a function to print a path
+<ul>
+<li><code>list.files(here("data"))</code> . . .</li>
+</ul></li>
 </ul>
-</div>
-<div class="fragment">
 <p><span style="color:#D55E00;"><strong>demo</strong></span></p>
 </div>
 </section>
@@ -494,7 +499,7 @@ Joe Nese
 <h2>Reading data into <code>R</code></h2>
 <p>You just need two things:</p>
 <ol type="1">
-<li><strong>where</strong> the data is located</li>
+<li><span style="color:#D55E00">where</span> the dataset it located</li>
 </ol>
 <p>This is most often just a path on you machine</p>
 <div class="fragment">
@@ -517,10 +522,10 @@ Joe Nese
 <li>Your final project!</li>
 </ul>
 <p>Think of <code>here()</code> simply as a function to print a path name</p>
-<p>A <strong>path</strong> can be the <strong>location</strong> of your data</p>
+<p>A <span style="color:#D55E00">path</span> can be the <span style="color:#D55E00">lcoation</span> of your data</p>
 
 <div class="fragment">
-<p><strong>path</strong> = <strong>location</strong></p>
+<p><span style="color:#D55E00">path</span> = <span style="color:#D55E00">lcoation</span></p>
 </div>
 <aside><div>
 <p>Art: <a href="https://www.allisonhorst.com/">Allison Horst</a></p>
@@ -528,7 +533,7 @@ Joe Nese
 <section id="here" class="slide level2">
 <h2><a href="https://here.r-lib.org/"><code>{here}</code></a></h2>
 <p>Think of <code>here()</code> simply as a function to print a path name</p>
-<p>First, install/load the package</p>
+<p>First, install/load <code>{here}</code> the package</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co"># In the console: </span></span>
 <span id="cb1-2"><a></a><span class="co"># install.packages("here")</span></span>
@@ -624,7 +629,7 @@ Joe Nese
 </ul>
 </section>
 <section id="rioimport" class="slide level2 smaller">
-<h2><a href="https://cran.r-project.org/web/packages/rio/vignettes/rio.html"><code>rio::</code>import()`</a></h2>
+<h2><a href="https://cran.r-project.org/web/packages/rio/vignettes/rio.html"><code>rio::import()</code></a></h2>
 <p>
 </p><p><span style="color:#0072B2">import</span>(<span style="color:#D55E00">file</span>, <span style="color:#CC79A7">format</span>, <span style="color:#009E73">setclass</span>, …)</p>
 <p><span style="color:#D55E00">file</span> = character string naming a file</p>
@@ -635,9 +640,9 @@ Joe Nese
 </div>
 </section>
 <section id="rioimport-1" class="slide level2 smaller">
-<h2><a href="https://cran.r-project.org/web/packages/rio/vignettes/rio.html"><code>rio::</code>import()`</a></h2>
+<h2><a href="https://cran.r-project.org/web/packages/rio/vignettes/rio.html"><code>rio::import()</code></a></h2>
 <p>
-</p><p><span style="color:#0072B2">import</span>(<span style="color:#D55E00">file</span>, <span style="color:#CC79A7">format</span>, <span style="color:#009E73">setclass</span>, …)</p>
+</p><p><span style="color:#0072B2">import</span>(<span style="color:#D55E00">file</span>)</p>
 <p><span style="color:#D55E00">file</span> = character string naming a file</p>
 </section>
 <section id="a.-read-in-data" class="slide level2">
@@ -921,26 +926,26 @@ Joe Nese
 <h2>Quick Peek</h2>
 <p><strong>What is Quarto?</strong></p>
 <ul>
-<li>an open-source scientific and technical publishing system</li>
-<li>create dynamic content with Python, R, Julia, and Observable.</li>
-<li>publish reproducible, production quality articles, presentations, websites, blogs, and books in HTML, PDF, MS Word, ePub, etc.</li>
-<li>include equations, citations, crossrefs, figure panels, callouts, advanced layout, etc.</li>
-<li>a multi-language, next generation version of R Markdown (from Posit)</li>
-<li>includes many built in output formats (and options for customizing each)</li>
-<li>has native features for special project types like Websites, Books, and Blogs (rather than relying on external packages)</li>
+<li class="fragment">an open-source scientific and technical publishing system</li>
+<li class="fragment">create dynamic content with Python, R, Julia, and Observable.</li>
+<li class="fragment">publish reproducible, production quality articles, presentations, websites, blogs, and books in HTML, PDF, MS Word, ePub, etc.</li>
+<li class="fragment">include equations, citations, crossrefs, figure panels, callouts, advanced layout, etc.</li>
+<li class="fragment">a multi-language, next generation version of R Markdown (from Posit)</li>
+<li class="fragment">includes many built in output formats (and options for customizing each)</li>
+<li class="fragment">has native features for special project types like Websites, Books, and Blogs (rather than relying on external packages)</li>
 </ul>
 </section>
 <section id="why-quarto" class="slide level2">
 <h2>Why Quarto?</h2>
 <ul>
-<li><strong>Reproducibility</strong>: reproducible workflow
+<li class="fragment"><strong>Reproducibility</strong>: reproducible workflow
 <ul>
-<li>Code + output + prose together</li>
-<li>Syntax highlighting FTW!</li>
-<li>Familiar-feeling authoring with the visual editor without having to learn a bunch of new markdown syntax</li>
+<li class="fragment">Code + output + prose together</li>
+<li class="fragment">Syntax highlighting FTW!</li>
+<li class="fragment">Familiar-feeling authoring with the visual editor without having to learn a bunch of new markdown syntax</li>
 </ul></li>
-<li><strong>Efficiency</strong>: consistent formatting</li>
-<li><strong>Extendability</strong>: Use with Python, and Julia, and Observable, and more</li>
+<li class="fragment"><strong>Efficiency</strong>: consistent formatting</li>
+<li class="fragment"><strong>Extendability</strong>: Use with Python, and Julia, and Observable, and more</li>
 </ul>
 </section>
 <section id="qmd" class="slide level2">
@@ -1032,8 +1037,11 @@ Joe Nese
 <ul>
 <li><code>clean_names()</code>
 <ul>
-<li>styles <strong>column names</strong> (NOT data itself) with “snake_case”: lower case and underscore between words</li>
-<li>can choose other “<code>*_case</code>”</li>
+<li>styles <strong>column names</strong> (NOT data itself) with “snake_case”
+<ul>
+<li>lower case and underscore between words</li>
+</ul></li>
+<li>can choose a different “<code>*_case</code>”</li>
 </ul></li>
 </ul>
 </div>
@@ -1490,6 +1498,7 @@ Joe Nese
 </div>
 <div class="fragment">
 <p>Let’s look at <code>?count</code> and <code>?tabyl</code></p>
+<p><span style="color:#D55E00;"><strong>demo</strong></span></p>
 </div>
 </section>
 <section id="why-use" class="slide level2">
@@ -1591,6 +1600,7 @@ Joe Nese
 <ul>
 <li><em>Assignments &gt; Homeworks &gt; HW 1</em></li>
 </ul>
+<p><span style="color:#D55E00;"><strong>let’s take a look!</strong></span></p>
 </section>
 <section id="before-next-class" class="slide level2 smaller">
 <h2>Before next class</h2>

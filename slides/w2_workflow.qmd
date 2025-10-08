@@ -55,11 +55,11 @@ Custom Editor theme!
 
 :::: {.columns}
 
-:::
+::: {.column width="50%"}
 ![](https://jnese.github.io/intro-DS-R_fall-2025/slides/images/codecademy_Intro-to-R-Syntax.png){width=30%}
 :::
 
-:::
+::: {.column width="50%"}
 ![](https://jnese.github.io/intro-DS-R_fall-2025/slides/images/codecademy_Intro-to-Data-Fames-R.png){width=30%}
 :::
 
@@ -155,7 +155,7 @@ Use the `{here}` package to specify **paths**
 :::
 
 ::: {.column width="50%"}
-**Session \> Restart R** (`Ctrl/Command + Shift + F10`)
+**Session \> Restart R** 
 
 Restart the `R` session
 
@@ -191,7 +191,8 @@ Write every script assuming it will be run in a fresh `R` process
 2)  Daily work habit:
 
 -   Restart `R` very often and re-run your developing script from the top
--   Use the RStudio menu item: **Session \> Restart R** (`Ctrl/Command + Shift + F10`)
+-   Use the RStudio menu item
+    + **Session \> Restart R** (`Ctrl/Command + Shift + F10`)
 
 # Workflow
 
@@ -206,7 +207,7 @@ Typical workflow
     -   "data"
     -   "scripts"
 
-3.  Read in data
+3.  Add data
 
 4.  Create scripts
 
@@ -278,7 +279,7 @@ Let's save the following data files into our project "data" folder
 ## Let's see files are in our "data" folder
 
 - You can `list.files("path/to/files")` to see the contents of your project directory (i.e., what your computer "sees")
-  + `list.files(here("data"))`
+
 - You can also use the *Files* tab in RStudio
 
 . . .
@@ -288,7 +289,7 @@ Let's save the following data files into our project "data" folder
 . . .
 
 - `here()` is simply a function to print a path
-
+    + `list.files(here("data"))`
 . . .
 
 [**demo**]{style="color:#D55E00;"}
@@ -297,7 +298,7 @@ Let's save the following data files into our project "data" folder
 
 You just need two things:
 
-1.  **where** the data is located
+1.  [where]{style="color:#D55E00"} the dataset it located
 
 This is most often just a path on you machine
 
@@ -320,7 +321,7 @@ We'll be talking about two data reading packages
 
 Think of `here()` simply as a function to print a path name
 
-A **path** can be the **location** of your data
+A [path]{style="color:#D55E00"} can be the [lcoation]{style="color:#D55E00"} of your data
 
 ::: aside
 Art: [Allison Horst](https://www.allisonhorst.com/)
@@ -328,13 +329,13 @@ Art: [Allison Horst](https://www.allisonhorst.com/)
 
 . . .
 
-**path** = **location**
+[path]{style="color:#D55E00"} = [lcoation]{style="color:#D55E00"}
 
 ## [`{here}`](https://here.r-lib.org/)
 
 Think of `here()` simply as a function to print a path name
 
-First, install/load the package
+First, install/load `{here}` the package
 
 ```{r}
 #| echo: true
@@ -432,7 +433,7 @@ here("data", "ecls-k_samp.sav")
     -   this might not impress you, but it really should!
     -   any package that turns a complex task into a simple procedure that "just works" is invaluable
 
-## [`rio::`import()`](https://cran.r-project.org/web/packages/rio/vignettes/rio.html) {.smaller}
+## [`rio::import()`](https://cran.r-project.org/web/packages/rio/vignettes/rio.html) {.smaller}
 
 <p>
 
@@ -448,11 +449,11 @@ here("data", "ecls-k_samp.sav")
 
 </p>
 
-## [`rio::`import()`](https://cran.r-project.org/web/packages/rio/vignettes/rio.html) {.smaller}
+## [`rio::import()`](https://cran.r-project.org/web/packages/rio/vignettes/rio.html) {.smaller}
 
 <p>
 
-[import]{style="color:#0072B2"}([file]{style="color:#D55E00"}, [format]{style="color:#CC79A7"}, [setclass]{style="color:#009E73"}, ...)
+[import]{style="color:#0072B2"}([file]{style="color:#D55E00"})
 
 [file]{style="color:#D55E00"} = character string naming a file
 
@@ -716,6 +717,7 @@ Run code
 
 **What is Quarto?**
 
+::: {.incremental}
 - an open-source scientific and technical publishing system
 - create dynamic content with Python, R, Julia, and Observable.
 - publish reproducible, production quality articles, presentations, websites, blogs, and books in HTML, PDF, MS Word, ePub, etc.
@@ -723,8 +725,11 @@ Run code
 - a multi-language, next generation version of R Markdown (from Posit)
 - includes many built in output formats (and options for customizing each)
 - has native features for special project types like Websites, Books, and Blogs (rather than relying on external packages)
+:::
 
 ## Why Quarto?
+
+::: {.incremental}
 
 -   **Reproducibility**: reproducible workflow
     -   Code + output + prose together
@@ -732,6 +737,8 @@ Run code
     -   Familiar-feeling authoring with the visual editor without having to learn a bunch of new markdown syntax
 -   **Efficiency**: consistent formatting
 -   **Extendability**: Use with Python, and Julia, and Observable, and more
+
+:::
 
 ## .qmd
 
@@ -816,8 +823,9 @@ A fantastic package!
 . . .
 
 -   `clean_names()`
-    -   styles **column names** (NOT data itself) with "snake_case": lower case and underscore between words
-    -   can choose other "`*_case`"
+    -   styles **column names** (NOT data itself) with "snake_case"
+        + lower case and underscore between words
+    -   can choose a different "`*_case`"
 
 # Let's put it all together
 
@@ -998,6 +1006,8 @@ penguins |>
 
 Let's look at `?count` and `?tabyl`
 
+[**demo**]{style="color:#D55E00;"}
+
 ## Why use `|>`
 
 Chaining arguments is **efficient** and **easy to read**
@@ -1073,6 +1083,8 @@ Script on website
 Submit a rendered .html file to Canvas
 
 -   *Assignments \> Homeworks \> HW 1*
+
+[**let's take a look!**]{style="color:#D55E00;"}
 
 ## Before next class {.smaller}
 
