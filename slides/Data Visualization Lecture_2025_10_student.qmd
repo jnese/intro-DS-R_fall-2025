@@ -1,0 +1,1090 @@
+---
+title: "Week 3: Data Visualization"
+subtitle: "{ggplot2}"
+author: "Eunji Kong <br>(adapted from Dr. Joe Nese's lecture)"
+institute: "University of Oregon <br>Fall 2025"
+format:
+  html:
+    toc: true
+    toc-depth: 6
+    toc-expand: true         
+    toc-location: left
+    embed-resources: true
+    include-in-header: |
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(warning = FALSE, message = FALSE)
+```
+
+```{=html}
+<style>
+  main.content section.level2 {
+    margin-left: 2em;   /* push inward */
+    padding-left: 1em;  /* optional spacing */
+    border-left: 3px solid #ddd; /* optional vertical line */
+  }
+  p {
+    font-style: italic;
+  }
+</style>
+```
+
+
+```{r}
+#install.packages("tidyverse")
+#install.packages("palmerpenguins")
+#install.packages("patchwork")
+#install.packages("ggridges")
+#install.packages("gghighlight")
+#install.packages("MetBrewer")
+#install.packages("ggthemes")
+
+
+#library(tidyverse)
+#library(palmerpenguins)
+#libraryy(patchwork)
+#library(ggridges)
+#library(gghighlight)
+#library(MetBrewer)
+#library(ggthemes)
+```
+
+# Greetings!
+
+-   Eunji Kong
+
+-   4th year SPED doctoral student
+
+-   Finished EDS specialization
+
+-   EDS project
+
+    -   [Data Viz project](https://eunjikong.shinyapps.io/edld652_shiny/#section-amber-1)
+    -   [Capstone](https://eunjikong.shinyapps.io/EDLD640_Capstone_Final/)
+
+# Learning Objectives
+
+-   Understand the basic syntax requirements for {ggplot2}
+-   Recognize various options for displaying data
+-   Familiarity with various {ggplot2} options/layers
+-   **Basically, how to graph and visualize data**
+
+**Lecture/Material Structure**
+
+-   PDF Lecture Notes
+
+    -   Include hyperlinks that take you directly to the relevant topics
+        -   Hyperlinks: everything underlined
+
+-   .qmd file (recommended)
+
+    -   Same information as the PDF but allows you to write notes directly in the file
+
+    -   You can also test out code interactively as you follow along
+
+    -   You can then render this document as an HTML file for later review
+
+    -   Visual mode
+
+# `{tidyverse}`
+
+`{tidyverse}` is a a meta-package that loads a set of core packages
+
+```{r message=TRUE}
+# If you don't have the package installed
+# install.packages("tidyverse")
+
+# load library
+library(tidyverse)
+```
+
+# `{ggplot2}`
+
+-   gg stands for “grammar of graphics”
+-   [**Resources**]{.underline}
+    -   ggplot2 book
+        -   *email Dr. Nese for digital copy*
+    -   Posit [cheat sheet](https://rstudio.github.io/cheatsheets/html/data-visualization.html?_gl=1*1j49xha*_ga*MTM2MTAwMDI2MS4xNjk2OTY0NDAy*_ga_2C0WZ1JHG0*MTY5Njk2NDQwMi4xLjAuMTY5Njk2NDQwMi4wLjAuMA..)
+        -   *can be helpful, perhaps more so after a little experience*
+    -   [R Graphics Cookbook](http://www.cookbook-r.com/Graphs/)
+    -   [R Graph Gallery](https://www.r-graph-gallery.com/index.html)
+        -   *past students have really liked this one*
+
+# Components
+
+Every ggplot has **three** components:
+
+1.  **data**
+    -   the data used to produce the plot
+2.  **aesthetic mappings (aes)**
+    -   between variables and visual properties
+3.  **layers(s)**
+    -   usually through the geom\_\*() function plus various other layers
+
+[**Template**]{.underline}
+
+I use the base R's version of pipe `|>` instead of `%>%` but they are essentially the same thing.
+
+```         
+data |> #pipe here
+ ggplot(aes(mapping)) + #plus here
+ geom_function() +
+ additional layers
+```
+
+Above code is the same as the bottom code.
+
+```         
+ggplot(data, aes(mapping)) +
+geom_function() +
+additional layers
+```
+
+## data
+
+```{r}
+
+# install.packages("palmerpenguins")
+
+library(palmerpenguins)
+```
+
+```{r}
+
+head(penguins)
+
+# str(penguins)
+
+# glimpse(penguins)
+
+# colnames(penguins)
+
+# View(penguins)
+```
+
+------------------------------------------------------------------------
+
+## ggplot(aes(mapping))
+
+-   aesthetic mappings describe how **variables** in the data are **mapped to visual properties**
+
+-   Some visual properties include:
+
+    -   **x**
+
+    -   **y**
+
+    -   color [*(will come back to it)*]{style="color:darkgreen;"}
+
+    -   fill [*(will come back to it)*]{style="color:darkgreen;"}
+
+    -   alpha [*(will come back to it)*]{style="color:darkgreen;"}
+
+    -   others (linetype, shape, linewidth, size, group)
+
+```{r}
+penguins |> 
+  ggplot(aes(x = bill_length_mm, y = body_mass_g))
+```
+
+**QUESTION: What do you see? Why is there nothing plotted?**
+
+```         
+ANSWER: 
+```
+
+------------------------------------------------------------------------
+
+## Layers
+
+### geom_function()
+
+Use a geom_function() to represent **data points**
+
++---------------------------+---------------------+---------------------------+---------------------------------------+
+|                           | **Only 1 Variable** | **Continuous Variable 2** | **Discrete Variable 2**               |
++---------------------------+---------------------+---------------------------+---------------------------------------+
+| **Continuous Variable 1** | geom_histogram      | geom_point                | geom_density_ridges (from {ggridges}) |
+|                           |                     |                           |                                       |
+|                           | geom_density        | geom_smooth               | geom_boxplot                          |
+|                           |                     |                           |                                       |
+|                           |                     | geom_line                 | geom_violin                           |
+|                           |                     |                           |                                       |
+|                           |                     |                           | geom_col                              |
++---------------------------+---------------------+---------------------------+---------------------------------------+
+| **Discrete Variable 1**   | geom_bar            | x                         | geom_count                            |
++---------------------------+---------------------+---------------------------+---------------------------------------+
+
+**Other**
+
+Heatmap: geom_tile
+
+------------------------------------------------------------------------
+
+#### geom_histogram() {#geom_histogram}
+
+**General research question**: How does the values of my continuous variable vary across its range?
+
+**Our data specific question**: How is the distribution of penguin bill lengths (mm) in this sample? Any outliers? Unimodal?
+
+```{r}
+
+penguins |> 
+  ggplot(aes(x = bill_length_mm)) + # Remember to use + instead of |> or %>%
+  geom_histogram()
+
+```
+
+##### Color vs Fill
+
+```{r}
+penguins |> 
+  ggplot(aes(x = bill_length_mm)) +
+  geom_histogram(color = "blue")
+
+```
+
+```{r}
+penguins |> 
+  ggplot(aes(x = bill_length_mm)) +
+  geom_histogram(color = "blue", 
+                 fill = "green")
+```
+
+Color = outline
+
+Fill = area
+
+##### Transparency
+
+```{r transparency}
+penguins |> 
+  ggplot(aes(x = bill_length_mm)) +
+  geom_histogram(color = "blue", 
+                 fill = "green",
+                 alpha = 0.2)
+
+```
+
+Color, fill & alpha in this example area all [**fixed**]{.underline} settings (i.e., applies to all data points).
+
+##### More aes mapping
+
+```{r}
+penguins |> 
+  ggplot(aes(x = bill_length_mm)) +
+  geom_histogram(aes(fill = sex), # note that fill is inside  aes()
+                 alpha = 0.7)
+
+```
+
+Fill here is a [**conditional**]{.underline} mapping, meaning that the fill color is different based on the variable (in this case the sex of the birds).
+
+##### Fixed vs Conditional
+
+```         
+penguins |> 
+ggplot(aes(x = bill_length_mm)) +
+geom_histogram(fill = "green")
+```
+
+In the above example where fill is not within aes(), fill is a [**fixed**]{.underline} setting. Also notice that color is in quotes.
+
+```         
+penguins |> 
+ggplot(aes(x = bill_length_mm)) +
+geom_histogram(aes(fill = sex))
+```
+
+In the above example, aes() is used to access variables and make changes according to a specific variable. Here, fill is a [**conditional**]{.underline} on the variable, sex. Also notice that variables are not in quotes.
+
+```{r}
+a <- penguins |> 
+ggplot(aes(x = bill_length_mm)) +
+geom_histogram(fill = "green")
+
+b <- penguins |> 
+ggplot(aes(x = bill_length_mm)) +
+geom_histogram(aes(fill = sex))
+
+#install.packages("patchwork")
+library(patchwork)
+a+b
+
+
+```
+
+**Be mindful of aes()**
+
+```         
+penguins |>
+ggplot(aes(x = bill_length_mm))+
+geom_histogram(fill = “green”)
+```
+
+```         
+penguins |>
+ggplot(aes(x = bill_length_mm))+
+geom_histogram(aes(fill = “green”))
+```
+
+**Question**: What is wrong with the bottom code? How do you think the plot will look like?
+
+```         
+Answer: 
+```
+
+```{r}
+penguins |> 
+ggplot(aes(x = bill_length_mm)) +
+geom_histogram(aes(fill = "green"))
+```
+
+#### geom_density()
+
+**General research question:** How does the probability density of my continuous variable vary across its range?
+
+Think of it as a smoothed histogram
+
+-   **Difference**: not use bins; not use count but use relative frequency per unit of x
+
+```{r}
+
+penguins |>
+  ggplot(aes(x = bill_length_mm)) + 
+  geom_density()
+
+```
+
+##### More aes mapping
+
+```{r}
+
+penguins |>
+  ggplot(aes(x = bill_length_mm)) +
+  geom_density(aes(fill = sex))
+
+```
+
+Add transparency for clarity
+
+```{r}
+penguins |>
+  ggplot(aes(x = bill_length_mm)) +
+  geom_density(aes(fill = sex), alpha = 0.5)
+```
+
+##### Histogram vs Density
+
+```{r}
+a <- penguins |>
+  ggplot(aes(x = bill_length_mm)) +
+  geom_histogram(aes(fill = sex), alpha = 0.5)
+
+b <- penguins |>
+  ggplot(aes(x = bill_length_mm)) +
+  geom_density(aes(fill = sex), alpha = 0.5)
+
+a + b
+```
+
+**Question**: What is the difference that you see? When would you use one vs another?
+
+```         
+Answer: 
+```
+
+##### facet_wrap
+
+wrap by 1 variable
+
+```{r}
+penguins |>
+  ggplot(aes(x = bill_length_mm)) +
+  geom_density(aes(fill = sex), alpha = 0.5) +
+  facet_wrap(~sex) # remember to use ~
+```
+
+wrap by 2 variables
+
+```{r}
+penguins |>
+  ggplot(aes(x = bill_length_mm)) +
+  geom_density(aes(fill = sex), alpha = 0.5) +
+  facet_wrap(year~sex)
+```
+
+wrap using vars()
+
+```{r}
+penguins |>
+  ggplot(aes(x = bill_length_mm)) +
+  geom_density(aes(fill = sex), alpha = 0.5) +
+  facet_wrap(vars(year,sex))
+```
+
+#### geom_density_ridges()
+
+geom_density_ridges: two variables
+
+```{r}
+# install.packages("ggridges")
+
+library(ggridges)
+
+penguins |>
+  ggplot(aes(bill_length_mm, sex)) +
+  geom_density_ridges()
+```
+
+#### geom_point()
+
+**General research question**: How are two numeric variables related? (raw observations)
+
+**Our data specific question**: What is the relationship between penguin’s bill length and body mass?
+
+```{r}
+penguins |>
+  ggplot(aes(x = bill_length_mm, y = body_mass_g)) +
+  geom_point()
+
+```
+
+**Add color**
+
+```{r}
+penguins |>
+  ggplot(aes(x = bill_length_mm, y = body_mass_g)) +
+  geom_point(color = "magenta")
+
+```
+
+**Emphasize specific data points (island = Torgersen)**
+
+```{r}
+penguins |>
+  ggplot(aes(x = bill_length_mm, y = body_mass_g)) +
+  geom_point(color = "magenta") +
+  geom_point(data = filter(penguins, island == "Torgersen"), color = "blue")
+```
+
+```{r}
+penguins |>
+  ggplot(aes(x = bill_length_mm, y = body_mass_g)) +
+  geom_point(data = filter(penguins, island == "Torgersen"), color = "blue") +
+  geom_point(color = "magenta")
+  
+```
+
+**Question**: What happened when we switched the order of the geom_points?
+
+```         
+Answer: 
+```
+
+**Emphasize another way**
+
+```{r}
+# install.packages("gghighlight")
+
+
+
+penguins |>
+  ggplot(aes(x = bill_length_mm, y = body_mass_g)) +
+  geom_point(color = "magenta") +
+  gghighlight::gghighlight(island == "Torgersen")
+```
+
+#### geom_smooth()
+
+**General research question**: What is the pattern of relationship of two continuous variables? (trend)
+
+**Our data specific question**: What is the trend or pattern of relationship between penguin’s bill length and body mass?
+
+```{r message=TRUE}
+penguins |>
+  ggplot(aes(bill_length_mm, body_mass_g)) + 
+  geom_smooth()
+```
+
+##### Method
+
+```{r}
+penguins |>
+  ggplot(aes(bill_length_mm, body_mass_g)) +
+  geom_smooth(method = "lm")
+```
+
+No need to include “x =” or “y =” because ggplot assumes the first argument will be x and then y.
+
+```{r}
+penguins |>
+  ggplot(aes(bill_length_mm, body_mass_g)) +
+  geom_smooth(method = "lm", level = .65)
+```
+
+```{r}
+penguins |>
+  ggplot(aes(bill_length_mm, body_mass_g)) +
+  geom_smooth(method = "lm", se=FALSE)
+```
+
+**Note**: This is not the same as geom_line(). We are fitting a line of best fit with geom_smooth()
+
+**Adding Layers**
+
+```{r}
+penguins |>
+  ggplot(aes(bill_length_mm, body_mass_g)) +
+  geom_point() +
+  geom_smooth(method = "lm")
+```
+
+##### Global
+
+If we use something like color = “x” in the first aesthetic, it will carry on through all additional layers.
+
+```{r}
+penguins |> 
+  ggplot(aes(bill_length_mm, body_mass_g, color = species)) + #color = spieces
+  geom_point() +
+  geom_smooth(method = "lm")
+```
+
+```{r}
+penguins |> 
+  ggplot(aes(bill_length_mm, body_mass_g, color = species)) +
+  geom_point(aes(color = species)) +
+  geom_smooth(method = "lm", aes(color = species))
+```
+
+##### Local
+
+```{r}
+penguins |> 
+  ggplot(aes(bill_length_mm, body_mass_g)) +
+  geom_point(aes(color = species)) + #color = spieces
+  geom_smooth(method = "lm")
+```
+
+#### geom_line()
+
+-   geom_point: raw observations, not linked
+
+-   geom_smooth: trend/pattern
+
+-   geom_line: raw data linked
+
+```{r}
+penguins |>
+  ggplot(aes(bill_length_mm, body_mass_g)) +
+  geom_point() +
+  geom_smooth(method = "lm")
+```
+
+```{r}
+penguins |>
+  ggplot(aes(bill_length_mm, body_mass_g)) +
+  geom_point() +
+  geom_smooth(method = "lm") + 
+  geom_line()
+```
+
+When should you use line plots?
+
+-   Usually when time is involved
+
+-   One time point per line or per group
+
+-   Shows linkage
+
+```{r}
+# Original data
+head(penguins)
+
+```
+
+```{r}
+# Create new data set so that there is only one data point per year
+penguins_year <- penguins |>
+  group_by(year) |> 
+  summarize(avg_bill = mean(bill_length_mm, na.rm=TRUE))
+head(penguins_year)
+```
+
+```{r}
+penguins_year |>
+  ggplot(aes(year, avg_bill)) + 
+  geom_line()
+```
+
+```{r}
+# Create new data set so that there is one data point for each year for each species
+penguins_year_species <- penguins |> 
+  group_by(year, island) |> 
+  summarize(avg_bill = mean(bill_length_mm, na.rm=TRUE))
+
+head(penguins_year_species)
+```
+
+```{r}
+penguins_year_species |>
+  ggplot(aes(year, avg_bill, group = island, color = island)) + 
+  geom_line()
+
+```
+
+#### geom_boxplot()
+
+**General research question**: How is a continuous variable distributed across groups, and how do the medians, quartiles, and potential outliers compare?
+
+```{r}
+penguins |>
+  ggplot(aes(species, body_mass_g)) +
+  geom_boxplot()
+```
+
+#### geom_violin()
+
+**General research question**: How is the full distribution of a continuous variable shaped across groups?
+
+```{r}
+penguins |>
+  ggplot(aes(species, body_mass_g)) +
+  geom_violin()
+```
+
+#### geom_bar()
+
+##### geom_bar() vs geom_col()
+
++----------------------------------------------------------------------------+------------------------------------------------------------------------------------+
+| geom_bar()                                                                 | geom_col()                                                                         |
++============================================================================+====================================================================================+
+| -   1 discrete variable                                                    | -   2 variables                                                                    |
+|                                                                            |                                                                                    |
+|                                                                            |     -   1 continuous                                                               |
+|                                                                            |                                                                                    |
+|                                                                            |     -   1 discrete (unique)                                                        |
++----------------------------------------------------------------------------+------------------------------------------------------------------------------------+
+| -   counts rows                                                            | -   need to have a variable with numbers in your data (average, proportion, count) |
+|                                                                            |                                                                                    |
+| -   height of the bar is proportional to the number of cases in each group |                                                                                    |
++----------------------------------------------------------------------------+------------------------------------------------------------------------------------+
+
+```{r}
+penguins |> 
+  ggplot(aes(species)) + # one variable in the `aes()`
+  geom_bar()
+```
+
+#### geom_col()
+
+```{r}
+summarized_penguins <- penguins |> 
+  group_by(species) |> 
+  summarize(N = n())
+
+head(summarized_penguins)
+```
+
+```{r}
+summarized_penguins |>
+  ggplot(aes(species, N)) +
+  geom_col()
+```
+
+##### More aes mapping
+
+```{r}
+summarized_penguins2 <- penguins |>
+  group_by(species, sex) |>
+  na.omit() |> 
+  summarize(bill_length_avg = mean(bill_length_mm))
+
+summarized_penguins2
+
+```
+
+```{r}
+ggplot(summarized_penguins2, aes(species, bill_length_avg)) +
+  geom_col(aes(fill = sex))
+
+```
+
+##### Position
+
+```{r}
+ggplot(summarized_penguins2, aes(species, bill_length_avg)) +
+  geom_col(aes(fill = sex), position = "dodge")
+
+```
+
+##### coord_flip
+
+```{r}
+ggplot(summarized_penguins2, aes(species, bill_length_avg)) +
+  geom_col(aes(fill = sex), position = "dodge") +
+  coord_flip()
+```
+
+#### geom_count()
+
+**General research question**: How many observations fall in each category pair?
+
+**Our data specific question**: How many of each species live in each island?
+
+```{r}
+penguins |>
+  ggplot(aes(species, island)) +
+  geom_count()
+
+```
+
+##### Scales
+
+```{r}
+penguins |>
+  ggplot(aes(species, island)) +
+  geom_count(aes(color = after_stat(n)))+
+  scale_color_gradient(low = "lightblue", high = "brown")
+```
+
+**What do scales do?**
+
+Scales control how the mappings you added to aes are displayed (e.g., color range, size range, breaks and labels, range or limits)
+
+Template: scale\_\*
+
+Most aes mappings: x, y, size, color, fill, line, alpha, etc
+
+**Colorblind friendly**
+
+```{r}
+penguins |>
+  ggplot(aes(species, island)) +
+  geom_count(aes(color = after_stat(n)))+
+  scale_color_viridis_c()
+```
+
+```{r}
+penguins |>
+  ggplot(aes(species, island)) +
+  geom_count(aes(color = after_stat(n)))+
+  scale_color_viridis_c(option = "turbo") #magma, interno, plasma, viridis, cividis, rocket, mako, turbo or A-H
+```
+
+-   [{MetBrewer}](https://github.com/BlakeRMills/MetBrewer) - inspired by art in the Met
+
+```{r MetBrewer}
+#install.packages("MetBrewer")
+
+penguins |>
+  ggplot(aes(species, island)) +
+  geom_count(aes(color = after_stat(n)))+
+  scale_color_gradientn(colors=MetBrewer::met.brewer("Isfahan1"))
+
+```
+
+#### geom_tile()
+
+**General research question**: What’s the value of a numerical measure (Z) for each (X, Y) pair? In other words, what is the correlation (Z) for each X,Y pair?
+
+```{r}
+corr <- penguins |>
+  select(bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g) |>
+  drop_na() |>                
+  cor()
+
+pc <- corr |> 
+  as.data.frame() |> 
+  rownames_to_column(var = "row") |> 
+  pivot_longer(
+    cols = -row,
+    names_to = "col",
+    values_to = "cor")
+
+head(pc)
+
+```
+
+```{r}
+ggplot(pc, aes(row, col, fill = cor)) +
+  geom_tile()
+```
+
+```{r}
+ggplot(pc, aes(row, col, fill = cor)) +
+  geom_tile() +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+```
+
+```{r}
+ggplot(pc, aes(row, col, fill = cor)) +
+  geom_tile() +
+  scale_fill_viridis_c()+
+  theme(axis.text.x = element_text(angle = 90, hjust = 1))
+
+```
+
+------------------------------------------------------------------------
+
+### Other Layers
+
+#### labels
+
+##### axis labels
+
+```{r}
+penguins |> 
+  ggplot(aes(bill_length_mm, body_mass_g)) +
+  geom_point(aes(color = species)) 
+```
+
+```{r}
+penguins |> 
+  ggplot(aes(bill_length_mm, body_mass_g)) +
+  geom_point(aes(color = species)) + 
+  labs(x="Bill length (mm)",
+       y="Body mass (g)")
+
+```
+
+##### title
+
+```{r}
+penguins |> 
+  ggplot(aes(bill_length_mm, body_mass_g)) +
+  geom_point(aes(color = species)) + 
+  labs(x="Bill length (mm)",
+       y="Body mass (g)",
+       title = "Relationship between bill length and body mass")
+
+```
+
+##### subtitle
+
+```{r}
+penguins |> 
+  ggplot(aes(bill_length_mm, body_mass_g)) +
+  geom_point(aes(color = species)) + 
+  labs(x="Bill length (mm)",
+       y="Body mass (g)",
+       title = "Relationship between bill length and body mass",
+       subtitle="Grouped by species")
+
+```
+
+##### caption
+
+```{r}
+penguins |> 
+  ggplot(aes(bill_length_mm, body_mass_g)) +
+  geom_point(aes(color = species)) + 
+  labs(x="Bill length (mm)",
+       y="Body mass (g)",
+       title = "Relationship between bill length and body mass",
+       subtitle="Grouped by species",
+       caption = "palmerpenguins")
+
+```
+
+##### tag
+
+```{r}
+penguins |> 
+  ggplot(aes(bill_length_mm, body_mass_g)) +
+  geom_point(aes(color = species)) + 
+  labs(x="Bill length (mm)",
+       y="Body mass (g)",
+       title = "Relationship between bill length and body mass",
+       subtitle="Grouped by species",
+       caption = "palmerpenguins",
+       tag = "(A)")
+
+```
+
+##### legend (one way)
+
+```{r}
+penguins |> 
+  ggplot(aes(bill_length_mm, body_mass_g)) +
+  geom_point(aes(color = species)) + 
+  labs(x="Bill length (mm)",
+       y="Body mass (g)",
+       title = "Relationship between bill length and body mass",
+       subtitle="Grouped by species",
+       caption = "palmerpenguins",
+       tag = "(A)",
+       color="SPECIES!")
+
+```
+
+------------------------------------------------------------------------
+
+#### theme
+
+The default is theme_gray(). There are a lot of built-in alternative in {ggplot2}. My go-to is theme_minimal() because it is clean without a lot of unnecessary visuals.
+
+If you want to set theme globally (meaning to all your graphs in your document), add theme_set(theme_minimal()) to the first line after you load your libraries.
+
+```{r}
+penguins |> 
+  ggplot(aes(bill_length_mm, body_mass_g)) +
+  geom_point(aes(color = species)) + 
+  labs(x="Bill length (mm)",
+       y="Body mass (g)",
+       title = "Relationship between bill length and body mass",
+       subtitle="Grouped by species",
+       caption = "palmerpenguins",
+       tag = "(A)",
+       color="SPECIES!") +
+  theme_minimal()
+```
+
+Other packages:
+
+-   [{ggthemes}](https://yutannihilation.github.io/allYourFigureAreBelongToUs/ggthemes/)
+
+-   [{ggthemeassist}](https://github.com/calligross/ggthemeassist)
+
+-   [{hrbrthemes}](https://github.com/hrbrmstr/hrbrthemes)
+
+-   [Build your own theme](https://bookdown.org/rdpeng/RProgDA/building-a-new-theme.html)
+
+```{r }
+#install.packages("ggthemes")
+
+penguins |> 
+  ggplot(aes(bill_length_mm, body_mass_g)) +
+  geom_point(aes(color=species)) + 
+	ggthemes::theme_economist()+
+  ggthemes::scale_color_economist()
+
+```
+
+```{r build-your-own-theme}
+penguins |> 
+  ggplot(aes(bill_length_mm, body_mass_g)) +
+  geom_point(aes(color = species)) + 
+  labs(x        = "Bill length (mm)",
+       y        = "Body mass (g)",
+       title    = "Relationship between bill length and body mass",
+       subtitle = "Grouped by species",
+       caption  = "palmerpenguins",
+       tag      = "(A)",
+       color    = "SPECIES!") +
+  theme(plot.title        = element_text(size=13, face="bold", hjust =0.5), 
+        axis.title        = element_text(size=11, family="Georgia"), 
+        axis.text.x       = element_text(size=10, angle = 45, hjust=1),
+        panel.background  = element_rect(fill = "grey95"),
+        plot.background   = element_rect(fill = "white"),
+        panel.grid.major  = element_line(color = "black"),
+        panel.grid.minor  = element_blank(),
+        legend.position   = "top",
+        legend.title      = element_text(face="bold"),
+        legend.background = element_rect(fill = "transparent")) 
+
+```
+
+------------------------------------------------------------------------
+
+# Practice together
+
+## 1
+
+Get to know the data - str(mpg) or head(mpg)
+
+```{r}
+
+```
+
+## 2
+
+What is the overall distribution of city fuel efficiency (mpg) across car models?
+
+```{r}
+
+```
+
+## 3
+
+How does the distribution vary by drivetrain type (e.g., front-, rear-, 4-wheel drive)?
+
+```{r}
+
+```
+
+## 4
+
+What is the relationship between city and highway mpg?
+
+```{r}
+
+```
+
+## 5
+
+Can we focus on/emphasize Audi’s relationship?
+
+```{r}
+
+```
+
+## 6
+
+Can we have larger points for clarity?
+
+```{r}
+
+```
+
+## 7
+
+How are the city/hwy mpg relationships different by car class?
+
+```{r}
+
+```
+
+## 8
+
+Too much clutter. Can we just see trends?
+
+```{r}
+
+```
+
+## 9
+
+Still too much clutter. Better way to clearly see each trends?
+
+```{r}
+
+```
+
+## 10
+
+Can we make it colorblind friendly?
+
+```{r}
+
+```
+
+## 11
+
+Can we clarify axis and legend labels?
+
+```{r}
+
+```
+
+## 12
+
+Can we polish the appearance with a theme?
+
+```{r}
+
+```
+
