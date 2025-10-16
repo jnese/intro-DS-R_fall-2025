@@ -1096,7 +1096,7 @@
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "Before Week 1\nPlease complete the following five installs before our first class.\nInstructions for each are on the Installs page.\n\nInstall R\nInstall RStudio\nRegister a GitHub account\nInstall Git\nInstall GitKraken\n\n\n\nWeek 1: Introduction\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReading\nSlides\nLecture1\nAssigned2\nDue\n\n\n\n\nOct-01\nR4DS(2e) 5\n\n\nA Quick Tour of the RStudio IDE\nInstalls\n\n\n\n\nR4DS(2e) 3\n\n\n\n\nCodecademy: Introduction to R Syntax\n\n\n\n\n\n\nR4DS(2e) 7\n\n\n\n\n\nFinal Project\n\nFinal Project\n\n\n\n\n\n\nOptional: MD 1.1\n\n\n\n\n\n\n\n\n\n\n\n1 Passcode: TjPe*3C0\n\n\n2 I do not rearrange my RStudio panes as he does.\n\n\n\n\n\n\n\n\n\n\nWeek 2: Workflow\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReading\nSlides\nLecture1\nAssigned\nDue\n\n\n\n\nOct-08\nProject-oriented Workflow\n\n\nCodecademy: Introduction to Data Frames in R\nA Quick Tour of the RStudio IDE\n\n\n\n\nR4DS(2e) 29\n\n\n\n\nCodecademy: Introduction to Visualization with R\nCodecademy: Introduction to R Syntax\n\n\n\n\nhere::here() Jenny Bryan\n\n\n\n\nHomework 1\n\n\n\n\n\n\n{rio} vignette\n\n\n\n\n\n\n\n\n\n\n\n1 Passcode: 9.0Xhxz!\n\n\n\n\n\n\n\n\n\n\nWeek 3: {ggplot2}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReading\nSlides\nLecture1\nAssigned\nDue\n\n\n\n\nOct-15\nR4DS(2e) 2\n\n\n\nCodecademy: Modifying Data Frames\nCodecademy: Introduction to Data Frames in R\n\n\n\n\nOptional: MD 2.0 to 2.9\n\n\n\nCodecademy: Aggregates in R\nCodecademy: Introduction to Visualization with R\n\n\n\n\nOptional: Healy Ch 3\n\n\n\n\nHomework 2\nHomework 1\n\n\n\n\n\n\n\n\n\n\nHomework 3\n\nFinal Project: Finalize Groups\n\nFinal Project: Finalize Groups\n\n\n\n1 Passcode: NA\n\n\n\n\n\n\n\n\n\n\nWeek 4: {dplyr}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReading\nSlides\nLecture1\nAssigned\nDue\n\n\n\n\nOct-22\nR4DS(2e) 4\n\n\n\n\nDownload GitKraken\nCodecademy: Modifying Data Frames\n\n\n\n\nOptional: MD 3.1 to 3.6, 3.8\n\n\n\n\nWatch What is a Git repository?\nCodecademy: Aggregates in R\n\n\n\n\n\n\n\n\n\n\nWatch What is a remote repository?\nHomework 2\n\n\n\n\n\n\n\n\n\n\nHomework 4\nHomework 3\n\n\n\n1 Passcode: NA\n\n\n\n\n\n\n\n\n\n\nWeek 5: GitHub\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReading\nSlides\nLecture1\nAssigned\nDue\n\n\n\n\nOct-29\nBryan 2017\n\n\n\n\nMarkdown Tutorial\nDownload GitKraken\n\n\n\n\n\n\n\n\n\n\nHomework 5\nWatch What is a Git repository?\n\n\n\n\n\n\n\n\n\n\nHomework 6\nWatch What is a remote repository?\n\n\n\n\n\n\n\n\n\n\n\n\nHomework 4\n\n\n\n\n\n\n\n\n\n\n\n\n\nFinal Project: Outline\n\nFinal Project: Outline\n\n\n\n1 Passcode: NA\n\n\n\n\n\n\n\n\n\n\nWeek 6: Quarto\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReading\nSlides\nLecture1\nAssigned\nDue\n\n\n\n\nNov-05\nR4DS(2e) 29\n\n\n\n\nCodecademy: Joining Tables in R\nMarkdown Tutorial\n\n\n\n\n\n\n\n\n\n\nHomework 7\nHomework 5\n\n\n\n\n\n\n\n\n\n\n\n\nHomework 6\n\n\n\n1 Passcode: NA\n\n\n\n\n\n\n\n\n\n\nWeek 7: Mutating Joins\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReading\nSlides\nLecture1\nAssigned\nDue\n\n\n\n\nNov-12\nR4DS(2e) 13\n\n\n\n\nCodecademy: Data Cleaning in R\nCodecademy: Joining Tables in R\n\n\n\n\n\n\n\n\n\n\nHomework 8\nHomework 6\n\n\n\n\n\n\n\n\n\n\n\n\nHomework 7\n\n\n\n1 Passcode: NA\n\n\n\n\n\n\n\n\n\n\nWeek 8: Tidy Data\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReading\nSlides\nLecture1\nAssigned\nDue\n\n\n\n\nNov-19\nR4DS(2e) 12\n\n\n\n\nHomework 9\nCodecademy: Data Cleaning in R\n\n\n\n\nWickham 2014\n\n\n\n\n\n\nHomework 8\n\n\n\n\nR-Ladies Sydney CleanItUp 5\n\n\n\n\n\nFinal Project: Draft Data Script\n\nFinal Project: Draft Data Script\n\n\n\n\n\n\nOptional: MD 4.2 - 4.4\n\n\n\n\n\n\n\n\n\n\n\n1 Passcode: NA\n\n\n\n\n\n\n\n\n\n\nWeek 9: Factors & Pull Request\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReading\nSlides\nLecture1\nAssigned\nDue\n\n\n\n\nNov-26\nR4DS(2e) 17\n\n\n\n\nHomework 10\nHomework 9\n\n\n\n\n\n\n\n\n\n\n\nFinal Project: Peer Review of Script\n\nFinal Project: Peer Review of Script\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFinal Project: Draft Data Script\n\nFinal Project: Draft Data Script\n\n\n\n1 Passcode: NA\n\n\n\n\n\n\n\n\n\n\nWeek 10: Presentations\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReading\nSlides\nLecture1\nAssigned\nDue\n\n\n\n\nDec-03\n\n\n\n\n\n\n\n\nHomework 10\n\n\n\n\n\n\n\n\n\n\n\n\n\nFinal Project: Presentation\n\nFinal Project: Presentation\n\n\n\n1 Passcode: NA\n\n\n\n\n\n\n\n\n\n\nWeek 11: No class: Final papers due"
+    "text": "Before Week 1\nPlease complete the following five installs before our first class.\nInstructions for each are on the Installs page.\n\nInstall R\nInstall RStudio\nRegister a GitHub account\nInstall Git\nInstall GitKraken\n\n\n\nWeek 1: Introduction\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReading\nSlides\nLecture1\nAssigned2\nDue\n\n\n\n\nOct-01\nR4DS(2e) 5\n\n\nA Quick Tour of the RStudio IDE\nInstalls\n\n\n\n\nR4DS(2e) 3\n\n\n\n\nCodecademy: Introduction to R Syntax\n\n\n\n\n\n\nR4DS(2e) 7\n\n\n\n\n\nFinal Project\n\nFinal Project\n\n\n\n\n\n\nOptional: MD 1.1\n\n\n\n\n\n\n\n\n\n\n\n1 Passcode: TjPe*3C0\n\n\n2 I do not rearrange my RStudio panes as he does.\n\n\n\n\n\n\n\n\n\n\nWeek 2: Workflow\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReading\nSlides\nLecture1\nAssigned\nDue\n\n\n\n\nOct-08\nProject-oriented Workflow\n\n\nCodecademy: Introduction to Data Frames in R\nA Quick Tour of the RStudio IDE\n\n\n\n\nR4DS(2e) 29\n\n\n\n\nCodecademy: Introduction to Visualization with R\nCodecademy: Introduction to R Syntax\n\n\n\n\nhere::here() Jenny Bryan\n\n\n\n\nHomework 1\n\n\n\n\n\n\n{rio} vignette\n\n\n\n\n\n\n\n\n\n\n\n1 Passcode: 9.0Xhxz!\n\n\n\n\n\n\n\n\n\n\nWeek 3: {ggplot2}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReading\nSlides\nLecture1\nAssigned\nDue\n\n\n\n\nOct-15\nR4DS(2e) 2\n\n\nCodecademy: Modifying Data Frames\nCodecademy: Introduction to Data Frames in R\n\n\n\n\nOptional: MD 2.0 to 2.9\n\n\n\nCodecademy: Aggregates in R\nCodecademy: Introduction to Visualization with R\n\n\n\n\nOptional: Healy Ch 3\n\n\n\n\nHomework 2\nHomework 1\n\n\n\n\n\n\n\n\n\n\nHomework 3\n\nFinal Project: Finalize Groups\n\nFinal Project: Finalize Groups\n\n\n\n1 Passcode: 0m9#%C5B\n\n\n\n\n\n\n\n\n\n\nWeek 4: {dplyr}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReading\nSlides\nLecture1\nAssigned\nDue\n\n\n\n\nOct-22\nR4DS(2e) 4\n\n\n\n\nDownload GitKraken\nCodecademy: Modifying Data Frames\n\n\n\n\nOptional: MD 3.1 to 3.6, 3.8\n\n\n\n\nWatch What is a Git repository?\nCodecademy: Aggregates in R\n\n\n\n\n\n\n\n\n\n\nWatch What is a remote repository?\nHomework 2\n\n\n\n\n\n\n\n\n\n\nHomework 4\nHomework 3\n\n\n\n1 Passcode: NA\n\n\n\n\n\n\n\n\n\n\nWeek 5: GitHub\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReading\nSlides\nLecture1\nAssigned\nDue\n\n\n\n\nOct-29\nBryan 2017\n\n\n\n\nMarkdown Tutorial\nDownload GitKraken\n\n\n\n\n\n\n\n\n\n\nHomework 5\nWatch What is a Git repository?\n\n\n\n\n\n\n\n\n\n\nHomework 6\nWatch What is a remote repository?\n\n\n\n\n\n\n\n\n\n\n\n\nHomework 4\n\n\n\n\n\n\n\n\n\n\n\n\n\nFinal Project: Outline\n\nFinal Project: Outline\n\n\n\n1 Passcode: NA\n\n\n\n\n\n\n\n\n\n\nWeek 6: Quarto\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReading\nSlides\nLecture1\nAssigned\nDue\n\n\n\n\nNov-05\nR4DS(2e) 29\n\n\n\n\nCodecademy: Joining Tables in R\nMarkdown Tutorial\n\n\n\n\n\n\n\n\n\n\nHomework 7\nHomework 5\n\n\n\n\n\n\n\n\n\n\n\n\nHomework 6\n\n\n\n1 Passcode: NA\n\n\n\n\n\n\n\n\n\n\nWeek 7: Mutating Joins\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReading\nSlides\nLecture1\nAssigned\nDue\n\n\n\n\nNov-12\nR4DS(2e) 13\n\n\n\n\nCodecademy: Data Cleaning in R\nCodecademy: Joining Tables in R\n\n\n\n\n\n\n\n\n\n\nHomework 8\nHomework 6\n\n\n\n\n\n\n\n\n\n\n\n\nHomework 7\n\n\n\n1 Passcode: NA\n\n\n\n\n\n\n\n\n\n\nWeek 8: Tidy Data\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReading\nSlides\nLecture1\nAssigned\nDue\n\n\n\n\nNov-19\nR4DS(2e) 12\n\n\n\n\nHomework 9\nCodecademy: Data Cleaning in R\n\n\n\n\nWickham 2014\n\n\n\n\n\n\nHomework 8\n\n\n\n\nR-Ladies Sydney CleanItUp 5\n\n\n\n\n\nFinal Project: Draft Data Script\n\nFinal Project: Draft Data Script\n\n\n\n\n\n\nOptional: MD 4.2 - 4.4\n\n\n\n\n\n\n\n\n\n\n\n1 Passcode: NA\n\n\n\n\n\n\n\n\n\n\nWeek 9: Factors & Pull Request\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReading\nSlides\nLecture1\nAssigned\nDue\n\n\n\n\nNov-26\nR4DS(2e) 17\n\n\n\n\nHomework 10\nHomework 9\n\n\n\n\n\n\n\n\n\n\n\nFinal Project: Peer Review of Script\n\nFinal Project: Peer Review of Script\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFinal Project: Draft Data Script\n\nFinal Project: Draft Data Script\n\n\n\n1 Passcode: NA\n\n\n\n\n\n\n\n\n\n\nWeek 10: Presentations\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReading\nSlides\nLecture1\nAssigned\nDue\n\n\n\n\nDec-03\n\n\n\n\n\n\n\n\nHomework 10\n\n\n\n\n\n\n\n\n\n\n\n\n\nFinal Project: Presentation\n\nFinal Project: Presentation\n\n\n\n1 Passcode: NA\n\n\n\n\n\n\n\n\n\n\nWeek 11: No class: Final papers due"
   },
   {
     "objectID": "syllabus.html",
@@ -1278,14 +1278,14 @@
     "href": "slides/w3_ggplot2.html#basic-syntax",
     "title": "Week 3: Data Visualization",
     "section": "Basic syntax",
-    "text": "Basic syntax\nggplot(data, aes(x = xvar, y = yvar)) +  geom_function()\n\nggplot() = the function is ggplot and the package is {ggplot2}\n\n\ndata = the data to be plotted\n\n\naes(x = xvar, y = yvar) = the aesthetic mappings\n\n\ngeom_function() = the geometrics of the plot; the “function()” here represents any of the geom_* offerings\n\n\n\nnote the + and NOT the %&gt;%"
+    "text": "Basic syntax\nggplot(data, aes(x = xvar, y = yvar)) +  geom_function()\n\nggplot() = the function is ggplot and the package is {ggplot2}\n\n\ndata = the data to be plotted\n\n\naes(x = xvar, y = yvar) = the aesthetic mappings\n\n\ngeom_function() = the geometrics of the plot; the “function()” here represents any of the geom_* offerings\n\n\n\nnote the + and NOT the |&gt;"
   },
   {
     "objectID": "slides/w3_ggplot2.html#ggplot2-template",
     "href": "slides/w3_ggplot2.html#ggplot2-template",
     "title": "Week 3: Data Visualization",
     "section": "{ggplot2} template",
-    "text": "{ggplot2} template\n\nggplot(data, aes(mappings)) +\n  geom_function()\n\n\nor equivalently\n\n\n\ndata %&gt;% \n  ggplot(aes(mappings)) +\n  geom_function()"
+    "text": "{ggplot2} template\n\nggplot(data, aes(mappings)) +\n  geom_function()\n\n\nor equivalently\n\n\n\ndata |&gt; \n  ggplot(aes(mappings)) +\n  geom_function()"
   },
   {
     "objectID": "slides/w3_ggplot2.html#some-data-for-today",
@@ -1299,7 +1299,7 @@
     "href": "slides/w3_ggplot2.html#setting-up-a-plot",
     "title": "Week 3: Data Visualization",
     "section": "Setting up a plot",
-    "text": "Setting up a plot\nRun the following code. What do you see?\n\npenguins %&gt;% \n  ggplot(aes(bill_length_mm, body_mass_g))"
+    "text": "Setting up a plot\nRun the following code. What do you see?\n\npenguins |&gt; \n  ggplot(aes(bill_length_mm, body_mass_g))"
   },
   {
     "objectID": "slides/w3_ggplot2.html#setting-up-a-plot-output",
@@ -1327,7 +1327,7 @@
     "href": "slides/w3_ggplot2.html#how-about-points",
     "title": "Week 3: Data Visualization",
     "section": "How about points?",
-    "text": "How about points?\n\npenguins %&gt;% \n  ggplot(aes(bill_length_mm, body_mass_g)) +\n  geom_point()"
+    "text": "How about points?\n\npenguins |&gt; \n  ggplot(aes(bill_length_mm, body_mass_g)) +\n  geom_point()"
   },
   {
     "objectID": "slides/w3_ggplot2.html#adding-layers",
@@ -1341,28 +1341,28 @@
     "href": "slides/w3_ggplot2.html#color",
     "title": "Week 3: Data Visualization",
     "section": "color",
-    "text": "color\n\npenguins %&gt;% \n  ggplot(aes(bill_length_mm, body_mass_g)) +\n  geom_point(color = \"magenta\")"
+    "text": "color\n\npenguins |&gt; \n  ggplot(aes(bill_length_mm, body_mass_g)) +\n  geom_point(color = \"magenta\")"
   },
   {
     "objectID": "slides/w3_ggplot2.html#add-another-layer",
     "href": "slides/w3_ggplot2.html#add-another-layer",
     "title": "Week 3: Data Visualization",
     "section": "Add another layer",
-    "text": "Add another layer\nLet’s add a smoothed line with geom_smooth()\n\npenguins %&gt;% \n  ggplot(aes(bill_length_mm, body_mass_g)) +\n  geom_point(color = \"magenta\") + \n  geom_smooth()"
+    "text": "Add another layer\nLet’s add a smoothed line with geom_smooth()\n\npenguins |&gt; \n  ggplot(aes(bill_length_mm, body_mass_g)) +\n  geom_point(color = \"magenta\") + \n  geom_smooth()"
   },
   {
     "objectID": "slides/w3_ggplot2.html#add-another-layer-1",
     "href": "slides/w3_ggplot2.html#add-another-layer-1",
     "title": "Week 3: Data Visualization",
     "section": "Add another layer",
-    "text": "Add another layer\nLet’s add a smoothed line with geom_smooth()\n\npenguins %&gt;% \n  ggplot(aes(bill_length_mm, body_mass_g)) +\n  geom_point(color = \"magenta\") + \n  geom_smooth()\n\nNote: This is NOT the same as geom_line(). We are fitting a line of best fit with geom_smooth()"
+    "text": "Add another layer\nLet’s add a smoothed line with geom_smooth()\n\npenguins |&gt; \n  ggplot(aes(bill_length_mm, body_mass_g)) +\n  geom_point(color = \"magenta\") + \n  geom_smooth()\n\nNote: This is NOT the same as geom_line(). We are fitting a line of best fit with geom_smooth()"
   },
   {
     "objectID": "slides/w3_ggplot2.html#you-try",
     "href": "slides/w3_ggplot2.html#you-try",
     "title": "Week 3: Data Visualization",
     "section": "You try",
-    "text": "You try\nYou probably got the message below when you ran (defaults)\n\npenguins %&gt;% \n  ggplot(aes(bill_length_mm, body_mass_g)) +\n  geom_point(color = \"magenta\") + \n  geom_smooth()\n\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n\n\n\n\nChange the method to \"lm\""
+    "text": "You try\nYou probably got the message below when you ran (defaults)\n\npenguins |&gt; \n  ggplot(aes(bill_length_mm, body_mass_g)) +\n  geom_point(color = \"magenta\") + \n  geom_smooth()\n\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n\n\n\n\nChange the method to \"lm\""
   },
   {
     "objectID": "slides/w3_ggplot2.html#lets-do-this-one-together",
@@ -1383,35 +1383,35 @@
     "href": "slides/w3_ggplot2.html#section-1",
     "title": "Week 3: Data Visualization",
     "section": "",
-    "text": "penguins %&gt;% \n  ggplot(aes(bill_length_mm, body_mass_g)) +\n  geom_point(aes(color = species))"
+    "text": "penguins |&gt; \n  ggplot(aes(bill_length_mm, body_mass_g)) +\n  geom_point(aes(color = species))"
   },
   {
     "objectID": "slides/w3_ggplot2.html#color-global-vs.-conditional-1",
     "href": "slides/w3_ggplot2.html#color-global-vs.-conditional-1",
     "title": "Week 3: Data Visualization",
     "section": "color: global vs. conditional",
-    "text": "color: global vs. conditional\n\npenguins %&gt;% \n  ggplot(aes(bill_length_mm, body_mass_g)) +\n  geom_point(aes(color = species))\n\n\nWhen we did geom_point(color = \"magenta\") we put quotes around the color\nWhy now is “species” not in quotes?\n\n\n\n\ncolor names/hex codes are in quotes\n\nNOT in the aes()\n\nvariable names are in the aes()\n\nNOT in quotes\naes() is where you map to your data!"
+    "text": "color: global vs. conditional\n\npenguins |&gt; \n  ggplot(aes(bill_length_mm, body_mass_g)) +\n  geom_point(aes(color = species))\n\n\nWhen we did geom_point(color = \"magenta\") we put quotes around the color\nWhy now is “species” not in quotes?\n\n\n\n\ncolor names/hex codes are in quotes\n\nNOT in the aes()\n\nvariable names are in the aes()\n\nNOT in quotes\naes() is where you map to your data!"
   },
   {
     "objectID": "slides/w3_ggplot2.html#conditional-flow-through-layers",
     "href": "slides/w3_ggplot2.html#conditional-flow-through-layers",
     "title": "Week 3: Data Visualization",
     "section": "Conditional flow through layers",
-    "text": "Conditional flow through layers\nIf we use something like color = “x” in the first aesthetic, it will carry on through all additional layers\nThese two codes are the same:\n\npenguins %&gt;% \n  ggplot(aes(bill_length_mm, body_mass_g)) +\n  geom_point(aes(color = species))\n\n\npenguins %&gt;% \n  gplot(aes(bill_length_mm, body_mass_g, color = species)) +\n  geom_point()\n\n\nBut these two are not…why? run to find out\n\npenguins %&gt;% \n  ggplot(aes(bill_length_mm, body_mass_g)) +\n  geom_point(aes(color = species)) + \n  geom_smooth()\n\n\npenguins %&gt;% \n  ggplot(aes(bill_length_mm, body_mass_g, color = species)) +\n  geom_point() + \n  geom_smooth()"
+    "text": "Conditional flow through layers\nIf we use something like color = “x” in the first aesthetic, it will carry on through all additional layers\nThese two codes are the same:\n\npenguins |&gt; \n  ggplot(aes(bill_length_mm, body_mass_g)) +\n  geom_point(aes(color = species))\n\n\npenguins |&gt; \n  gplot(aes(bill_length_mm, body_mass_g, color = species)) +\n  geom_point()\n\n\nBut these two are not…why? run to find out\n\npenguins |&gt; \n  ggplot(aes(bill_length_mm, body_mass_g)) +\n  geom_point(aes(color = species)) + \n  geom_smooth()\n\n\npenguins |&gt; \n  ggplot(aes(bill_length_mm, body_mass_g, color = species)) +\n  geom_point() + \n  geom_smooth()"
   },
   {
     "objectID": "slides/w3_ggplot2.html#be-mindful-with-aes",
     "href": "slides/w3_ggplot2.html#be-mindful-with-aes",
     "title": "Week 3: Data Visualization",
     "section": "Be mindful with aes()",
-    "text": "Be mindful with aes()\nUsing aes() when you don’t need it\nWhat is happening here?\n\npenguins %&gt;% \n  ggplot(aes(bill_length_mm, body_mass_g)) +\n  geom_point(aes(color = \"blue\")) + \n  geom_smooth()"
+    "text": "Be mindful with aes()\nUsing aes() when you don’t need it\nWhat is happening here?\n\npenguins |&gt; \n  ggplot(aes(bill_length_mm, body_mass_g)) +\n  geom_point(aes(color = \"blue\")) + \n  geom_smooth()"
   },
   {
     "objectID": "slides/w3_ggplot2.html#be-mindful-with-aes-1",
     "href": "slides/w3_ggplot2.html#be-mindful-with-aes-1",
     "title": "Week 3: Data Visualization",
     "section": "Be mindful with aes()",
-    "text": "Be mindful with aes()\nNot using aes() when you need it\nWhat is happening here?\n\npenguins %&gt;% \n  ggplot(aes(bill_length_mm, body_mass_g)) +\n  geom_point(color = species) + \n  geom_smooth()\n\nError: object 'species' not found\n\n\n\n\nKind of helpful message here."
+    "text": "Be mindful with aes()\nNot using aes() when you need it\nWhat is happening here?\n\npenguins |&gt; \n  ggplot(aes(bill_length_mm, body_mass_g)) +\n  geom_point(color = species) + \n  geom_smooth()\n\nError: object 'species' not found\n\n\n\n\nKind of helpful message here."
   },
   {
     "objectID": "slides/w3_ggplot2.html#lets-talk-themes",
@@ -1432,35 +1432,35 @@
     "href": "slides/w3_ggplot2.html#section-2",
     "title": "Week 3: Data Visualization",
     "section": "",
-    "text": "penguins %&gt;% \n  ggplot(aes(bill_length_mm, body_mass_g)) +\n  geom_point(color = \"black\")"
+    "text": "penguins |&gt; \n  ggplot(aes(bill_length_mm, body_mass_g)) +\n  geom_point(color = \"black\")"
   },
   {
     "objectID": "slides/w3_ggplot2.html#section-3",
     "href": "slides/w3_ggplot2.html#section-3",
     "title": "Week 3: Data Visualization",
     "section": "",
-    "text": "penguins %&gt;% \n  ggplot(aes(bill_length_mm, body_mass_g)) +\n  geom_point(color = \"black\") + \n  geom_point(data = dplyr::filter(penguins, island == \"Torgersen\"), color = \"magenta\")"
+    "text": "penguins |&gt; \n  ggplot(aes(bill_length_mm, body_mass_g)) +\n  geom_point(color = \"black\") + \n  geom_point(data = dplyr::filter(penguins, island == \"Torgersen\"), color = \"magenta\")"
   },
   {
     "objectID": "slides/w3_ggplot2.html#section-4",
     "href": "slides/w3_ggplot2.html#section-4",
     "title": "Week 3: Data Visualization",
     "section": "",
-    "text": "penguins %&gt;% \n  ggplot(aes(bill_length_mm, body_mass_g)) +\n  geom_point(color = \"black\") + \n  geom_point(data = dplyr::filter(penguins, island == \"Torgersen\"), color = \"magenta\") + \n  geom_smooth(se = FALSE)"
+    "text": "penguins |&gt; \n  ggplot(aes(bill_length_mm, body_mass_g)) +\n  geom_point(color = \"black\") + \n  geom_point(data = dplyr::filter(penguins, island == \"Torgersen\"), color = \"magenta\") + \n  geom_smooth(se = FALSE)"
   },
   {
     "objectID": "slides/w3_ggplot2.html#section-5",
     "href": "slides/w3_ggplot2.html#section-5",
     "title": "Week 3: Data Visualization",
     "section": "",
-    "text": "penguins %&gt;% \n  ggplot(aes(bill_length_mm, body_mass_g)) +\n  geom_point(color = \"black\") + \n  geom_point(data = dplyr::filter(penguins, island == \"Torgersen\"), color = \"magenta\") + \n  geom_smooth(se = FALSE) + \n  theme_minimal()"
+    "text": "penguins |&gt; \n  ggplot(aes(bill_length_mm, body_mass_g)) +\n  geom_point(color = \"black\") + \n  geom_point(data = dplyr::filter(penguins, island == \"Torgersen\"), color = \"magenta\") + \n  geom_smooth(se = FALSE) + \n  theme_minimal()"
   },
   {
     "objectID": "slides/w3_ggplot2.html#another-option",
     "href": "slides/w3_ggplot2.html#another-option",
     "title": "Week 3: Data Visualization",
     "section": "Another option",
-    "text": "Another option\n{gghighlight} varying flexibility\n\npenguins %&gt;% \n  ggplot(aes(bill_length_mm, body_mass_g)) +\n  geom_point(color = \"magenta\") + \n  gghighlight::gghighlight(island == \"Torgersen\") + \n  theme_minimal()"
+    "text": "Another option\n{gghighlight} varying flexibility\n\npenguins |&gt; \n  ggplot(aes(bill_length_mm, body_mass_g)) +\n  geom_point(color = \"magenta\") + \n  gghighlight::gghighlight(island == \"Torgersen\") + \n  theme_minimal()"
   },
   {
     "objectID": "slides/w3_ggplot2.html#line-plots",
@@ -1481,56 +1481,56 @@
     "href": "slides/w3_ggplot2.html#lets-try-it",
     "title": "Week 3: Data Visualization",
     "section": "Let’s try it",
-    "text": "Let’s try it\nHow do you think we’d fit a line plot to these data, showing unemployment (“unemploy”) over time?\n\n\neconomics %&gt;% \n  ggplot(aes(date, unemploy)) +\n  geom_line()"
+    "text": "Let’s try it\nHow do you think we’d fit a line plot to these data, showing unemployment (“unemploy”) over time?\n\n\neconomics |&gt; \n  ggplot(aes(date, unemploy)) +\n  geom_line()"
   },
   {
     "objectID": "slides/w3_ggplot2.html#layers",
     "href": "slides/w3_ggplot2.html#layers",
     "title": "Week 3: Data Visualization",
     "section": "Layers",
-    "text": "Layers\nWhat happens when we layer geom_line and geom_point?\n\neconomics %&gt;% \n  ggplot(aes(date, unemploy)) +\n  geom_line() +\n  geom_point()\n\ntry it!\n\nNot the best instance of this\nIt would work better on a plot with fewer time points, but you get the idea"
+    "text": "Layers\nWhat happens when we layer geom_line and geom_point?\n\neconomics |&gt; \n  ggplot(aes(date, unemploy)) +\n  geom_line() +\n  geom_point()\n\ntry it!\n\nNot the best instance of this\nIt would work better on a plot with fewer time points, but you get the idea"
   },
   {
     "objectID": "slides/w3_ggplot2.html#axis-labels",
     "href": "slides/w3_ggplot2.html#axis-labels",
     "title": "Week 3: Data Visualization",
     "section": "Axis Labels",
-    "text": "Axis Labels\n\neconomics %&gt;% \n  ggplot(aes(date, unemploy)) +\n  geom_line() +\n  theme_minimal() +\n  labs(x = \"Date\",\n       y = \"Unemployment\")"
+    "text": "Axis Labels\n\neconomics |&gt; \n  ggplot(aes(date, unemploy)) +\n  geom_line() +\n  theme_minimal() +\n  labs(x = \"Date\",\n       y = \"Unemployment\")"
   },
   {
     "objectID": "slides/w3_ggplot2.html#title",
     "href": "slides/w3_ggplot2.html#title",
     "title": "Week 3: Data Visualization",
     "section": "Title",
-    "text": "Title\n\neconomics %&gt;% \n  ggplot(aes(date, unemploy)) +\n  geom_line() +\n  theme_minimal() +\n  labs(x = \"Date\", \n       y = \"Unemployment\",\n       title = \"Unemployment Over Time\")"
+    "text": "Title\n\neconomics |&gt; \n  ggplot(aes(date, unemploy)) +\n  geom_line() +\n  theme_minimal() +\n  labs(x = \"Date\", \n       y = \"Unemployment\",\n       title = \"Unemployment Over Time\")"
   },
   {
     "objectID": "slides/w3_ggplot2.html#subtitle",
     "href": "slides/w3_ggplot2.html#subtitle",
     "title": "Week 3: Data Visualization",
     "section": "Subtitle",
-    "text": "Subtitle\n\neconomics %&gt;% \n  ggplot(aes(date, unemploy)) +\n  geom_line() +\n  theme_minimal() +\n  labs(x = \"Date\", \n       y = \"Unemployment\",\n       title = \"Unemployment Over Time\",\n       subtitle = \"This is the subtitle\")"
+    "text": "Subtitle\n\neconomics |&gt; \n  ggplot(aes(date, unemploy)) +\n  geom_line() +\n  theme_minimal() +\n  labs(x = \"Date\", \n       y = \"Unemployment\",\n       title = \"Unemployment Over Time\",\n       subtitle = \"This is the subtitle\")"
   },
   {
     "objectID": "slides/w3_ggplot2.html#caption",
     "href": "slides/w3_ggplot2.html#caption",
     "title": "Week 3: Data Visualization",
     "section": "Caption",
-    "text": "Caption\n\neconomics %&gt;% \n  ggplot(aes(date, unemploy)) +\n  geom_line() +\n  theme_minimal() +\n  labs(x = \"Date\", \n       y = \"Unemployment\",\n       title = \"Unemployment Over Time\",\n       subtitle = \"This is the subtitle\",\n       caption = \"Created by Joe Nese\")"
+    "text": "Caption\n\neconomics |&gt; \n  ggplot(aes(date, unemploy)) +\n  geom_line() +\n  theme_minimal() +\n  labs(x = \"Date\", \n       y = \"Unemployment\",\n       title = \"Unemployment Over Time\",\n       subtitle = \"This is the subtitle\",\n       caption = \"Created by Joe Nese\")"
   },
   {
     "objectID": "slides/w3_ggplot2.html#tag",
     "href": "slides/w3_ggplot2.html#tag",
     "title": "Week 3: Data Visualization",
     "section": "Tag",
-    "text": "Tag\n\neconomics %&gt;% \n  ggplot(aes(date, unemploy)) +\n  geom_line() +\n  theme_minimal() +\n  labs(x = \"Date\", \n       y = \"Unemployment\",\n       title = \"Unemployment Over Time\",\n       subtitle = \"This is the subtitle\",\n       caption = \"Created by Joe Nese\",\n       tag = \"(A)\")"
+    "text": "Tag\n\neconomics |&gt; \n  ggplot(aes(date, unemploy)) +\n  geom_line() +\n  theme_minimal() +\n  labs(x = \"Date\", \n       y = \"Unemployment\",\n       title = \"Unemployment Over Time\",\n       subtitle = \"This is the subtitle\",\n       caption = \"Created by Joe Nese\",\n       tag = \"(A)\")"
   },
   {
     "objectID": "slides/w3_ggplot2.html#legend-one-way",
     "href": "slides/w3_ggplot2.html#legend-one-way",
     "title": "Week 3: Data Visualization",
     "section": "Legend (one way)",
-    "text": "Legend (one way)\n\npenguins %&gt;% \n  ggplot(aes(bill_length_mm, body_mass_g, color = species)) + # 'color = '\n  geom_point() +\n  theme_minimal() +\n  labs(x = \"Bill Length (mm)\",\n       y = \"Body Mass (g)\",\n       color = \"Species!\") # 'color = '"
+    "text": "Legend (one way)\n\npenguins |&gt; \n  ggplot(aes(bill_length_mm, body_mass_g, color = species)) + # 'color = '\n  geom_point() +\n  theme_minimal() +\n  labs(x = \"Bill Length (mm)\",\n       y = \"Body Mass (g)\",\n       color = \"Species!\") # 'color = '"
   },
   {
     "objectID": "slides/w3_ggplot2.html#faceting",
@@ -1544,49 +1544,49 @@
     "href": "slides/w3_ggplot2.html#faceting-1",
     "title": "Week 3: Data Visualization",
     "section": "Faceting",
-    "text": "Faceting\n\npenguins %&gt;% \n  ggplot(aes(bill_length_mm, body_mass_g)) + \n  geom_point() +\n  geom_smooth() +\n  facet_wrap(~species)"
+    "text": "Faceting\n\npenguins |&gt; \n  ggplot(aes(bill_length_mm, body_mass_g)) + \n  geom_point() +\n  geom_smooth() +\n  facet_wrap(~species)"
   },
   {
     "objectID": "slides/w3_ggplot2.html#careful-about-the",
     "href": "slides/w3_ggplot2.html#careful-about-the",
     "title": "Week 3: Data Visualization",
     "section": "Careful about the ~",
-    "text": "Careful about the ~\n\npenguins %&gt;% \n  ggplot(aes(bill_length_mm, body_mass_g)) + \n  geom_point() +\n  geom_smooth() +\n  facet_wrap(species)\n\nError: object 'species' not found"
+    "text": "Careful about the ~\n\npenguins |&gt; \n  ggplot(aes(bill_length_mm, body_mass_g)) + \n  geom_point() +\n  geom_smooth() +\n  facet_wrap(species)\n\nError: object 'species' not found"
   },
   {
     "objectID": "slides/w3_ggplot2.html#faceting-2",
     "href": "slides/w3_ggplot2.html#faceting-2",
     "title": "Week 3: Data Visualization",
     "section": "Faceting",
-    "text": "Faceting\ntwo variables (like a matrix)\n\npenguins %&gt;% \n  ggplot(aes(bill_length_mm, body_mass_g)) + \n  geom_point() +\n  geom_smooth() +\n  facet_wrap(species ~ year)"
+    "text": "Faceting\ntwo variables (like a matrix)\n\npenguins |&gt; \n  ggplot(aes(bill_length_mm, body_mass_g)) + \n  geom_point() +\n  geom_smooth() +\n  facet_wrap(species ~ year)"
   },
   {
     "objectID": "slides/w3_ggplot2.html#alternative-specification---vars",
     "href": "slides/w3_ggplot2.html#alternative-specification---vars",
     "title": "Week 3: Data Visualization",
     "section": "Alternative specification - vars()",
-    "text": "Alternative specification - vars()\n\npenguins %&gt;% \n  ggplot(aes(bill_length_mm, body_mass_g)) + \n  geom_point() +\n  geom_smooth() +\n  facet_wrap(vars(species))\n\n\n\npenguins %&gt;% \n  ggplot(aes(bill_length_mm, body_mass_g)) + \n  geom_point() +\n  geom_smooth() +\n  facet_wrap(vars(species, year))"
+    "text": "Alternative specification - vars()\n\npenguins |&gt; \n  ggplot(aes(bill_length_mm, body_mass_g)) + \n  geom_point() +\n  geom_smooth() +\n  facet_wrap(vars(species))\n\n\n\npenguins |&gt; \n  ggplot(aes(bill_length_mm, body_mass_g)) + \n  geom_point() +\n  geom_smooth() +\n  facet_wrap(vars(species, year))"
   },
   {
     "objectID": "slides/w3_ggplot2.html#example-with-correlations",
     "href": "slides/w3_ggplot2.html#example-with-correlations",
     "title": "Week 3: Data Visualization",
     "section": "Example with correlations",
-    "text": "Example with correlations\n\ncorr &lt;- cor(mtcars)\n\npc &lt;- corr %&gt;% \n  as.data.frame() %&gt;% \n  mutate(row = rownames(.)) %&gt;% \n  pivot_longer(\n    cols = -row,\n    names_to = \"col\",\n    values_to = \"cor\"\n  )\n\nhead(pc)\n\n# A tibble: 6 × 3\n  row   col      cor\n  &lt;chr&gt; &lt;chr&gt;  &lt;dbl&gt;\n1 mpg   mpg    1    \n2 mpg   cyl   -0.852\n3 mpg   disp  -0.848\n4 mpg   hp    -0.776\n5 mpg   drat   0.681\n6 mpg   wt    -0.868"
+    "text": "Example with correlations\n\ncorr &lt;- cor(mtcars)\n\npc &lt;- corr |&gt; \n  as.data.frame() |&gt; \n  tibble::rownames_to_column(\"row\") |&gt; \n  pivot_longer(\n    cols = -row,\n    names_to = \"col\",\n    values_to = \"cor\"\n  )\n\nhead(pc)\n\n# A tibble: 6 × 3\n  row   col      cor\n  &lt;chr&gt; &lt;chr&gt;  &lt;dbl&gt;\n1 mpg   mpg    1    \n2 mpg   cyl   -0.852\n3 mpg   disp  -0.848\n4 mpg   hp    -0.776\n5 mpg   drat   0.681\n6 mpg   wt    -0.868"
   },
   {
     "objectID": "slides/w3_ggplot2.html#heatmap",
     "href": "slides/w3_ggplot2.html#heatmap",
     "title": "Week 3: Data Visualization",
     "section": "Heatmap",
-    "text": "Heatmap\n\npc %&gt;% \n  ggplot(aes(row, col, fill = cor)) +\n  geom_tile()"
+    "text": "Heatmap\n\npc |&gt; \n  ggplot(aes(row, col, fill = cor)) +\n  geom_tile()"
   },
   {
     "objectID": "slides/w3_ggplot2.html#viridis",
     "href": "slides/w3_ggplot2.html#viridis",
     "title": "Week 3: Data Visualization",
     "section": "Viridis",
-    "text": "Viridis\n\npc %&gt;% \n  ggplot(aes(row, col, fill = cor)) +\n  geom_tile() +\n  scale_fill_viridis_c()"
+    "text": "Viridis\n\npc |&gt; \n  ggplot(aes(row, col, fill = cor)) +\n  geom_tile() +\n  scale_fill_viridis_c()"
   },
   {
     "objectID": "slides/w3_ggplot2.html#data",
@@ -1600,14 +1600,14 @@
     "href": "slides/w3_ggplot2.html#histogram",
     "title": "Week 3: Data Visualization",
     "section": "Histogram",
-    "text": "Histogram\nHistogram of “grad_total”\n\ngrad %&gt;% \n  ggplot(aes(x = grad_total)) +\n  geom_histogram()"
+    "text": "Histogram\nHistogram of “grad_total”\n\ngrad |&gt; \n  ggplot(aes(x = grad_total)) +\n  geom_histogram()"
   },
   {
     "objectID": "slides/w3_ggplot2.html#transparency---alpha",
     "href": "slides/w3_ggplot2.html#transparency---alpha",
     "title": "Week 3: Data Visualization",
     "section": "Transparency - alpha",
-    "text": "Transparency - alpha\nAdd some transparency – perhaps this looks nicer\n\ngrad %&gt;% \n  ggplot(aes(x = grad_total)) +\n  geom_histogram(alpha = 0.7)"
+    "text": "Transparency - alpha\nAdd some transparency – perhaps this looks nicer\n\ngrad |&gt; \n  ggplot(aes(x = grad_total)) +\n  geom_histogram(alpha = 0.7)"
   },
   {
     "objectID": "slides/w3_ggplot2.html#color-vs.-fill",
@@ -1628,28 +1628,28 @@
     "href": "slides/w3_ggplot2.html#how-would-we-change-the-color-of-this-plot",
     "title": "Week 3: Data Visualization",
     "section": "How would we change the color of this plot?",
-    "text": "How would we change the color of this plot?\n\ngrad %&gt;% \n  ggplot(aes(x = grad_total)) +\n  geom_histogram(alpha = 0.7)"
+    "text": "How would we change the color of this plot?\n\ngrad |&gt; \n  ggplot(aes(x = grad_total)) +\n  geom_histogram(alpha = 0.7)"
   },
   {
     "objectID": "slides/w3_ggplot2.html#how-would-we-change-the-color-of-this-plot-1",
     "href": "slides/w3_ggplot2.html#how-would-we-change-the-color-of-this-plot-1",
     "title": "Week 3: Data Visualization",
     "section": "How would we change the color of this plot?",
-    "text": "How would we change the color of this plot?\n\ngrad %&gt;% \n  ggplot(aes(x = grad_total)) +\n  geom_histogram(alpha = 0.7, color = \"magenta\")"
+    "text": "How would we change the color of this plot?\n\ngrad |&gt; \n  ggplot(aes(x = grad_total)) +\n  geom_histogram(alpha = 0.7, color = \"magenta\")"
   },
   {
     "objectID": "slides/w3_ggplot2.html#how-would-we-change-the-color-fill-of-this-plot",
     "href": "slides/w3_ggplot2.html#how-would-we-change-the-color-fill-of-this-plot",
     "title": "Week 3: Data Visualization",
     "section": "How would we change the color fill of this plot?",
-    "text": "How would we change the color fill of this plot?\n\ngrad %&gt;% \n  ggplot(aes(x = grad_total)) +\n  geom_histogram(alpha = 0.7, fill = \"magenta\")"
+    "text": "How would we change the color fill of this plot?\n\ngrad |&gt; \n  ggplot(aes(x = grad_total)) +\n  geom_histogram(alpha = 0.7, fill = \"magenta\")"
   },
   {
     "objectID": "slides/w3_ggplot2.html#color-by-variable",
     "href": "slides/w3_ggplot2.html#color-by-variable",
     "title": "Week 3: Data Visualization",
     "section": "Color by variable",
-    "text": "Color by variable\nWhat if we wanted different colors by a variable – species\n\npenguins %&gt;% \n  ggplot(aes(x = body_mass_g)) +\n  geom_histogram(aes(fill = species), alpha = 0.7)"
+    "text": "Color by variable\nWhat if we wanted different colors by a variable – species\n\npenguins |&gt; \n  ggplot(aes(x = body_mass_g)) +\n  geom_histogram(aes(fill = species), alpha = 0.7)"
   },
   {
     "objectID": "slides/w3_ggplot2.html#density-plot",
@@ -1663,77 +1663,77 @@
     "href": "slides/w3_ggplot2.html#density-plot-1",
     "title": "Week 3: Data Visualization",
     "section": "Density plot",
-    "text": "Density plot\ngeom_density()\n\npenguins %&gt;% \n  ggplot(aes(x = body_mass_g)) +\n  geom_density()"
+    "text": "Density plot\ngeom_density()\n\npenguins |&gt; \n  ggplot(aes(x = body_mass_g)) +\n  geom_density()"
   },
   {
     "objectID": "slides/w3_ggplot2.html#density-plot-2",
     "href": "slides/w3_ggplot2.html#density-plot-2",
     "title": "Week 3: Data Visualization",
     "section": "Density plot",
-    "text": "Density plot\nNow let’s fill by species\n\npenguins %&gt;% \n  ggplot(aes(x = body_mass_g)) + \n  geom_density(aes(fill = species), alpha = 0.2)"
+    "text": "Density plot\nNow let’s fill by species\n\npenguins |&gt; \n  ggplot(aes(x = body_mass_g)) + \n  geom_density(aes(fill = species), alpha = 0.2)"
   },
   {
     "objectID": "slides/w3_ggplot2.html#possible-alternative-facet_wrap",
     "href": "slides/w3_ggplot2.html#possible-alternative-facet_wrap",
     "title": "Week 3: Data Visualization",
     "section": "Possible alternative? facet_wrap",
-    "text": "Possible alternative? facet_wrap\n\npenguins %&gt;% \n  ggplot(aes(x = body_mass_g)) + \n  geom_density(alpha = 0.2) +\n  facet_wrap(~species)"
+    "text": "Possible alternative? facet_wrap\n\npenguins |&gt; \n  ggplot(aes(x = body_mass_g)) + \n  geom_density(alpha = 0.2) +\n  facet_wrap(~species)"
   },
   {
     "objectID": "slides/w3_ggplot2.html#even-better",
     "href": "slides/w3_ggplot2.html#even-better",
     "title": "Week 3: Data Visualization",
     "section": "Even better",
-    "text": "Even better\ndensity ridges {ggridges}\n\nlibrary(ggridges)\n\npenguins %&gt;% \n  ggplot(aes(x = bill_length_mm, y = species)) + \n  geom_density_ridges()"
+    "text": "Even better\ndensity ridges {ggridges}\n\nlibrary(ggridges)\n\npenguins |&gt; \n  ggplot(aes(x = bill_length_mm, y = species)) + \n  geom_density_ridges()"
   },
   {
     "objectID": "slides/w3_ggplot2.html#fill",
     "href": "slides/w3_ggplot2.html#fill",
     "title": "Week 3: Data Visualization",
     "section": "fill",
-    "text": "fill\n\npenguins %&gt;% \n  ggplot(aes(bill_length_mm , species)) +\n  geom_density_ridges(aes(fill = factor(year)))"
+    "text": "fill\n\npenguins |&gt; \n  ggplot(aes(bill_length_mm , species)) +\n  geom_density_ridges(aes(fill = factor(year)))"
   },
   {
     "objectID": "slides/w3_ggplot2.html#add-transparency-for-clarity",
     "href": "slides/w3_ggplot2.html#add-transparency-for-clarity",
     "title": "Week 3: Data Visualization",
     "section": "Add transparency for clarity",
-    "text": "Add transparency for clarity\n\npenguins %&gt;% \n  ggplot(aes(bill_length_mm , species)) +\n  geom_density_ridges(aes(fill = factor(year)), alpha = 0.5)"
+    "text": "Add transparency for clarity\n\npenguins |&gt; \n  ggplot(aes(bill_length_mm , species)) +\n  geom_density_ridges(aes(fill = factor(year)), alpha = 0.5)"
   },
   {
     "objectID": "slides/w3_ggplot2.html#viridis-1",
     "href": "slides/w3_ggplot2.html#viridis-1",
     "title": "Week 3: Data Visualization",
     "section": "Viridis",
-    "text": "Viridis\n\neasier to read by those with colorblindness\nprints well in gray scale\n\n\npenguins %&gt;% \n  ggplot(aes(bill_length_mm , species)) +\n  geom_density_ridges(aes(fill = factor(year)), alpha = 0.5) +\n  scale_fill_viridis_d()"
+    "text": "Viridis\n\neasier to read by those with colorblindness\nprints well in gray scale\n\n\npenguins |&gt; \n  ggplot(aes(bill_length_mm , species)) +\n  geom_density_ridges(aes(fill = factor(year)), alpha = 0.5) +\n  scale_fill_viridis_d()"
   },
   {
     "objectID": "slides/w3_ggplot2.html#same-fill-function-different-option",
     "href": "slides/w3_ggplot2.html#same-fill-function-different-option",
     "title": "Week 3: Data Visualization",
     "section": "Same fill function, different “option”",
-    "text": "Same fill function, different “option”\n\npenguins %&gt;% \n  ggplot(aes(bill_length_mm , species)) +\n  geom_density_ridges(aes(fill = factor(year)), alpha = 0.7) +\n  scale_fill_viridis_d(option = \"plasma\")"
+    "text": "Same fill function, different “option”\n\npenguins |&gt; \n  ggplot(aes(bill_length_mm , species)) +\n  geom_density_ridges(aes(fill = factor(year)), alpha = 0.7) +\n  scale_fill_viridis_d(option = \"plasma\")"
   },
   {
     "objectID": "slides/w3_ggplot2.html#candy-rankings-fivethirtyeight",
     "href": "slides/w3_ggplot2.html#candy-rankings-fivethirtyeight",
     "title": "Week 3: Data Visualization",
     "section": "Candy rankings {fivethirtyeight}",
-    "text": "Candy rankings {fivethirtyeight}\n\ncandy &lt;- candy_rankings %&gt;% \n  pivot_longer(\n    cols = chocolate:pluribus,\n    names_to = \"type\",\n    values_to = \"foo\") %&gt;% \n  filter(foo) %&gt;% \n  select(-foo)\n\ncandy\n\n\n\n# A tibble: 197 × 5\n   competitorname sugarpercent pricepercent winpercent type            \n   &lt;chr&gt;                 &lt;dbl&gt;        &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;           \n 1 100 Grand             0.732        0.860       67.0 chocolate       \n 2 100 Grand             0.732        0.860       67.0 caramel         \n 3 100 Grand             0.732        0.860       67.0 crispedricewafer\n 4 100 Grand             0.732        0.860       67.0 bar             \n 5 3 Musketeers          0.604        0.511       67.6 chocolate       \n 6 3 Musketeers          0.604        0.511       67.6 nougat          \n 7 3 Musketeers          0.604        0.511       67.6 bar             \n 8 Air Heads             0.906        0.511       52.3 fruity          \n 9 Almond Joy            0.465        0.767       50.3 chocolate       \n10 Almond Joy            0.465        0.767       50.3 peanutyalmondy  \n# ℹ 187 more rows"
+    "text": "Candy rankings {fivethirtyeight}\n\ncandy &lt;- candy_rankings |&gt; \n  pivot_longer(\n    cols = chocolate:pluribus,\n    names_to = \"type\",\n    values_to = \"foo\") |&gt; \n  filter(foo) |&gt; \n  select(-foo)\n\ncandy\n\n\n\n# A tibble: 197 × 5\n   competitorname sugarpercent pricepercent winpercent type            \n   &lt;chr&gt;                 &lt;dbl&gt;        &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;           \n 1 100 Grand             0.732        0.860       67.0 chocolate       \n 2 100 Grand             0.732        0.860       67.0 caramel         \n 3 100 Grand             0.732        0.860       67.0 crispedricewafer\n 4 100 Grand             0.732        0.860       67.0 bar             \n 5 3 Musketeers          0.604        0.511       67.6 chocolate       \n 6 3 Musketeers          0.604        0.511       67.6 nougat          \n 7 3 Musketeers          0.604        0.511       67.6 bar             \n 8 Air Heads             0.906        0.511       52.3 fruity          \n 9 Almond Joy            0.465        0.767       50.3 chocolate       \n10 Almond Joy            0.465        0.767       50.3 peanutyalmondy  \n# ℹ 187 more rows"
   },
   {
     "objectID": "slides/w3_ggplot2.html#boxplot",
     "href": "slides/w3_ggplot2.html#boxplot",
     "title": "Week 3: Data Visualization",
     "section": "Boxplot",
-    "text": "Boxplot\n\ncandy %&gt;% \n  ggplot(aes(type, sugarpercent)) +\n  geom_boxplot()"
+    "text": "Boxplot\n\ncandy |&gt; \n  ggplot(aes(type, sugarpercent)) +\n  geom_boxplot()"
   },
   {
     "objectID": "slides/w3_ggplot2.html#violin-plots",
     "href": "slides/w3_ggplot2.html#violin-plots",
     "title": "Week 3: Data Visualization",
     "section": "Violin plots",
-    "text": "Violin plots\n\ncandy %&gt;% \n  ggplot(aes(type, sugarpercent)) +\n  geom_violin()"
+    "text": "Violin plots\n\ncandy |&gt; \n  ggplot(aes(type, sugarpercent)) +\n  geom_violin()"
   },
   {
     "objectID": "slides/w3_ggplot2.html#bar-charts",
@@ -1754,98 +1754,98 @@
     "href": "slides/w3_ggplot2.html#geom_bar",
     "title": "Week 3: Data Visualization",
     "section": "geom_bar()",
-    "text": "geom_bar()\nmpg data\n\nmpg %&gt;% \n  ggplot(aes(class)) + # one variable in the `aes()`\n  geom_bar() # counts the rows per class"
+    "text": "geom_bar()\nmpg data\n\nmpg |&gt; \n  ggplot(aes(class)) + # one variable in the `aes()`\n  geom_bar() # counts the rows per class"
   },
   {
     "objectID": "slides/w3_ggplot2.html#summarized_mpg-data",
     "href": "slides/w3_ggplot2.html#summarized_mpg-data",
     "title": "Week 3: Data Visualization",
     "section": "summarized_mpg data",
-    "text": "summarized_mpg data\n\nsummarized_mpg &lt;- mpg %&gt;% \n  group_by(class) %&gt;% \n  count()\n\nhead(summarized_mpg)\n\n# A tibble: 6 × 2\n# Groups:   class [6]\n  class          n\n  &lt;chr&gt;      &lt;int&gt;\n1 2seater        5\n2 compact       47\n3 midsize       41\n4 minivan       11\n5 pickup        33\n6 subcompact    35"
+    "text": "summarized_mpg data\n\nsummarized_mpg &lt;- mpg |&gt; \n  group_by(class) |&gt; \n  count()\n\nhead(summarized_mpg)\n\n# A tibble: 6 × 2\n# Groups:   class [6]\n  class          n\n  &lt;chr&gt;      &lt;int&gt;\n1 2seater        5\n2 compact       47\n3 midsize       41\n4 minivan       11\n5 pickup        33\n6 subcompact    35"
   },
   {
     "objectID": "slides/w3_ggplot2.html#geom_col",
     "href": "slides/w3_ggplot2.html#geom_col",
     "title": "Week 3: Data Visualization",
     "section": "geom_col()",
-    "text": "geom_col()\nsummarized_mpg data\n\nsummarized_mpg %&gt;% \n  ggplot(aes(class, n)) + # two variables in the `aes()`\n  geom_col() # data has the rows per class in \"n\""
+    "text": "geom_col()\nsummarized_mpg data\n\nsummarized_mpg |&gt; \n  ggplot(aes(class, n)) + # two variables in the `aes()`\n  geom_col() # data has the rows per class in \"n\""
   },
   {
     "objectID": "slides/w3_ggplot2.html#section-6",
     "href": "slides/w3_ggplot2.html#section-6",
     "title": "Week 3: Data Visualization",
     "section": "",
-    "text": "geom_bar() default\n\nmpg %&gt;% \n  ggplot(aes(class)) + \n  geom_bar()\n\n\n\n\n\n\n\n\n\ngeom_bar(stat = \"identity\")\n\nsummarized_mpg %&gt;% \n  ggplot(aes(class, n)) + \n  geom_bar(stat = \"identity\")"
+    "text": "geom_bar() default\n\nmpg |&gt; \n  ggplot(aes(class)) + \n  geom_bar()\n\n\n\n\n\n\n\n\n\ngeom_bar(stat = \"identity\")\n\nsummarized_mpg |&gt; \n  ggplot(aes(class, n)) + \n  geom_bar(stat = \"identity\")"
   },
   {
     "objectID": "slides/w3_ggplot2.html#section-7",
     "href": "slides/w3_ggplot2.html#section-7",
     "title": "Week 3: Data Visualization",
     "section": "",
-    "text": "geom_bar() default\n\nmpg %&gt;% \n  ggplot(aes(class)) + \n  geom_bar()\n\n\n\n\n\n\n\n\n\ngeom_col() default\n\nsummarized_mpg %&gt;% \n  ggplot(aes(class, n)) + \n  geom_col()"
+    "text": "geom_bar() default\n\nmpg |&gt; \n  ggplot(aes(class)) + \n  geom_bar()\n\n\n\n\n\n\n\n\n\ngeom_col() default\n\nsummarized_mpg |&gt; \n  ggplot(aes(class, n)) + \n  geom_col()"
   },
   {
     "objectID": "slides/w3_ggplot2.html#section-8",
     "href": "slides/w3_ggplot2.html#section-8",
     "title": "Week 3: Data Visualization",
     "section": "",
-    "text": "geom_bar() default\n\nmpg %&gt;% \n  ggplot(aes(class)) + \n  geom_bar()\n\n\n\n\n\n\n\n\n\ngeom_bar() uh-oh\n\nsummarized_mpg %&gt;% \n  ggplot(aes(class)) + \n  geom_bar()"
+    "text": "geom_bar() default\n\nmpg |&gt; \n  ggplot(aes(class)) + \n  geom_bar()\n\n\n\n\n\n\n\n\n\ngeom_bar() uh-oh\n\nsummarized_mpg |&gt; \n  ggplot(aes(class)) + \n  geom_bar()"
   },
   {
     "objectID": "slides/w3_ggplot2.html#what-happened",
     "href": "slides/w3_ggplot2.html#what-happened",
     "title": "Week 3: Data Visualization",
     "section": "What happened?",
-    "text": "What happened?\nLet’s look at our data again\n\n\n\nsummarized_mpg\n\n# A tibble: 7 × 2\n# Groups:   class [7]\n  class          n\n  &lt;chr&gt;      &lt;int&gt;\n1 2seater        5\n2 compact       47\n3 midsize       41\n4 minivan       11\n5 pickup        33\n6 subcompact    35\n7 suv           62\n\n\n\n\nsummarized_mpg %&gt;% \n  ggplot(aes(class)) + \n  geom_bar()"
+    "text": "What happened?\nLet’s look at our data again\n\n\n\nsummarized_mpg\n\n# A tibble: 7 × 2\n# Groups:   class [7]\n  class          n\n  &lt;chr&gt;      &lt;int&gt;\n1 2seater        5\n2 compact       47\n3 midsize       41\n4 minivan       11\n5 pickup        33\n6 subcompact    35\n7 suv           62\n\n\n\n\nsummarized_mpg |&gt; \n  ggplot(aes(class)) + \n  geom_bar()"
   },
   {
     "objectID": "slides/w3_ggplot2.html#more-bar-plot-options",
     "href": "slides/w3_ggplot2.html#more-bar-plot-options",
     "title": "Week 3: Data Visualization",
     "section": "More bar plot options",
-    "text": "More bar plot options\n\neclsk &lt;- haven::read_sav(here::here(\"data\", \"ecls-k_samp.sav\")) %&gt;% \n  rio::characterize() %&gt;% \n  janitor::clean_names()\n\necls_smry &lt;- eclsk %&gt;%\n    group_by(k_type, ethnic) %&gt;%\n    summarize(t1r_mean = mean(t1rscale))\n\necls_smry\n\n\n\n# A tibble: 16 × 3\n# Groups:   k_type [2]\n   k_type   ethnic                                  t1r_mean\n   &lt;chr&gt;    &lt;chr&gt;                                      &lt;dbl&gt;\n 1 full-day AMERICAN INDIAN OR ALASKA NATIVE            17.5\n 2 full-day ASIAN                                       31.8\n 3 full-day BLACK OR AFRICAN AMERICAN, NON-HISPANIC     21.1\n 4 full-day HISPANIC, RACE NOT SPECIFIED                20.3\n 5 full-day HISPANIC, RACE SPECIFIED                    22.3\n 6 full-day MORE THAN ONE RACE, NON HISPANIC            20.8\n 7 full-day NATIVE HAWAIIAN, OTHER PACIFIC ISLANDER     23.2\n 8 full-day WHITE, NON-HISPANIC                         25.5\n 9 half-day AMERICAN INDIAN OR ALASKA NATIVE            30.0\n10 half-day ASIAN                                       25.1\n11 half-day BLACK OR AFRICAN AMERICAN, NON-HISPANIC     18.6\n12 half-day HISPANIC, RACE NOT SPECIFIED                18.7\n13 half-day HISPANIC, RACE SPECIFIED                    20.0\n14 half-day MORE THAN ONE RACE, NON HISPANIC            20.3\n15 half-day NATIVE HAWAIIAN, OTHER PACIFIC ISLANDER     19.7\n16 half-day WHITE, NON-HISPANIC                         23.7"
+    "text": "More bar plot options\n\neclsk &lt;- haven::read_sav(here::here(\"data\", \"ecls-k_samp.sav\")) |&gt; \n  rio::characterize() |&gt; \n  janitor::clean_names()\n\necls_smry &lt;- eclsk |&gt;\n    group_by(k_type, ethnic) |&gt;\n    summarize(t1r_mean = mean(t1rscale))\n\necls_smry\n\n\n\n# A tibble: 16 × 3\n# Groups:   k_type [2]\n   k_type   ethnic                                  t1r_mean\n   &lt;chr&gt;    &lt;chr&gt;                                      &lt;dbl&gt;\n 1 full-day AMERICAN INDIAN OR ALASKA NATIVE            17.5\n 2 full-day ASIAN                                       31.8\n 3 full-day BLACK OR AFRICAN AMERICAN, NON-HISPANIC     21.1\n 4 full-day HISPANIC, RACE NOT SPECIFIED                20.3\n 5 full-day HISPANIC, RACE SPECIFIED                    22.3\n 6 full-day MORE THAN ONE RACE, NON HISPANIC            20.8\n 7 full-day NATIVE HAWAIIAN, OTHER PACIFIC ISLANDER     23.2\n 8 full-day WHITE, NON-HISPANIC                         25.5\n 9 half-day AMERICAN INDIAN OR ALASKA NATIVE            30.0\n10 half-day ASIAN                                       25.1\n11 half-day BLACK OR AFRICAN AMERICAN, NON-HISPANIC     18.6\n12 half-day HISPANIC, RACE NOT SPECIFIED                18.7\n13 half-day HISPANIC, RACE SPECIFIED                    20.0\n14 half-day MORE THAN ONE RACE, NON HISPANIC            20.3\n15 half-day NATIVE HAWAIIAN, OTHER PACIFIC ISLANDER     19.7\n16 half-day WHITE, NON-HISPANIC                         23.7"
   },
   {
     "objectID": "slides/w3_ggplot2.html#stacked-bar-plot",
     "href": "slides/w3_ggplot2.html#stacked-bar-plot",
     "title": "Week 3: Data Visualization",
     "section": "Stacked bar plot",
-    "text": "Stacked bar plot\nLook for effects in “ethnicity” by “k_type” (full/half day K)\n\necls_smry %&gt;% \n  ggplot(aes(ethnic, t1r_mean)) +\n  geom_col(aes(fill = k_type))"
+    "text": "Stacked bar plot\nLook for effects in “ethnicity” by “k_type” (full/half day K)\n\necls_smry |&gt; \n  ggplot(aes(ethnic, t1r_mean)) +\n  geom_col(aes(fill = k_type))"
   },
   {
     "objectID": "slides/w3_ggplot2.html#grouped-bar-plot",
     "href": "slides/w3_ggplot2.html#grouped-bar-plot",
     "title": "Week 3: Data Visualization",
     "section": "Grouped bar plot",
-    "text": "Grouped bar plot\n\necls_smry %&gt;% \n  ggplot(aes(ethnic, t1r_mean)) +\n  geom_col(aes(fill = k_type),\n               position = \"dodge\")"
+    "text": "Grouped bar plot\n\necls_smry |&gt; \n  ggplot(aes(ethnic, t1r_mean)) +\n  geom_col(aes(fill = k_type),\n               position = \"dodge\")"
   },
   {
     "objectID": "slides/w3_ggplot2.html#rotating-labels",
     "href": "slides/w3_ggplot2.html#rotating-labels",
     "title": "Week 3: Data Visualization",
     "section": "Rotating Labels",
-    "text": "Rotating Labels\nI have to look this up every time\n\necls_smry %&gt;% \n  ggplot(aes(ethnic, t1r_mean)) +\n  geom_col(aes(fill = k_type),\n           position = \"dodge\") +\n  theme(axis.text.x = element_text(angle = 90, hjust = 1))"
+    "text": "Rotating Labels\nI have to look this up every time\n\necls_smry |&gt; \n  ggplot(aes(ethnic, t1r_mean)) +\n  geom_col(aes(fill = k_type),\n           position = \"dodge\") +\n  theme(axis.text.x = element_text(angle = 90, hjust = 1))"
   },
   {
     "objectID": "slides/w3_ggplot2.html#flip-the-coordinates",
     "href": "slides/w3_ggplot2.html#flip-the-coordinates",
     "title": "Week 3: Data Visualization",
     "section": "Flip the coordinates",
-    "text": "Flip the coordinates\ncoord_flip()\n\necls_smry %&gt;% \n  ggplot(aes(ethnic, t1r_mean)) +\n  geom_col(aes(fill = k_type),\n           position = \"dodge\") +\n  coord_flip()"
+    "text": "Flip the coordinates\ncoord_flip()\n\necls_smry |&gt; \n  ggplot(aes(ethnic, t1r_mean)) +\n  geom_col(aes(fill = k_type),\n           position = \"dodge\") +\n  coord_flip()"
   },
   {
     "objectID": "slides/w3_ggplot2.html#alternatively",
     "href": "slides/w3_ggplot2.html#alternatively",
     "title": "Week 3: Data Visualization",
     "section": "Alternatively",
-    "text": "Alternatively\nfacet_wrap()\n\necls_smry %&gt;% \n  ggplot(aes(k_type, t1r_mean)) +\n  geom_col(alpha = 0.8) +\n  facet_wrap(~ethnic)"
+    "text": "Alternatively\nfacet_wrap()\n\necls_smry |&gt; \n  ggplot(aes(k_type, t1r_mean)) +\n  geom_col(alpha = 0.8) +\n  facet_wrap(~ethnic)"
   },
   {
     "objectID": "slides/w3_ggplot2.html#sometimes-some-redundancy-works-well",
     "href": "slides/w3_ggplot2.html#sometimes-some-redundancy-works-well",
     "title": "Week 3: Data Visualization",
     "section": "Sometimes some redundancy works well",
-    "text": "Sometimes some redundancy works well\n\necls_smry %&gt;% \n  ggplot(aes(k_type, t1r_mean, fill = k_type)) +\n  geom_col(alpha = 0.8) +\n  facet_wrap(~ethnic)"
+    "text": "Sometimes some redundancy works well\n\necls_smry |&gt; \n  ggplot(aes(k_type, t1r_mean, fill = k_type)) +\n  geom_col(alpha = 0.8) +\n  facet_wrap(~ethnic)"
   },
   {
     "objectID": "slides/w3_ggplot2.html#geom_-review",
