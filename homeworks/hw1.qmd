@@ -1,7 +1,9 @@
 ---
 title: "Homework 1"
 author: "Your Name Here"
-format: html
+format:
+  html:
+    embed-resources: true
 execute: 
   error: true
   message: false
