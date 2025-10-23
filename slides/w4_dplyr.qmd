@@ -32,7 +32,7 @@ library(countdown)
 
 # Share! 
 
-## [`{datapasta}`](https://github.com/MilesMcBain/datapasta)
+## [`{datapasta}`](https://github.com/MilesMcBain/datapasta) & [`{clipr`}](https://github.com/mdlincoln/clipr)
 
 * Copy and paste data to and from `R`
 * VERY handy!
@@ -232,7 +232,7 @@ library(palmerpenguins)
 penguins
 ```
 
-## `select` president *species* and *island* and *body_mass_g*
+## `select` penguins *species* and *island* and *body_mass_g*
 
 ```{r, eval=FALSE}
 select(penguins, species, island, body_mass_g)
@@ -244,7 +244,7 @@ select(penguins, species, island, body_mass_g)
 
 ```{r}
 penguins |>
-	select(name, party, body_mass_g)
+	select(species, island, body_mass_g)
 ```
 
 ## Negation `-`
@@ -595,7 +595,7 @@ penguins |>
 penguins |> 
   filter(
     species == "Gentoo" &
-    start > "2007"
+    year > 2008
   )
 ```
 :::
@@ -605,7 +605,7 @@ penguins |>
 penguins |> 
   filter(
     species == "Gentoo",
-    start > "2007"
+    year > 2007
   )
 ```
 :::
@@ -847,6 +847,8 @@ Order the data
 prepost |> 
   arrange(desc(pre_test_score), desc(gain))
 ```
+
+# `summarize()`
 
 ## `summarize()` {.smaller}
 
@@ -1118,14 +1120,129 @@ penguins |>
   select(species, home = island, bill_length = bill_length_mm, year) 
 ```
 
+
+
 ## Final notes on `{dplyr}`
 
 * We could spend weeks on this
 * We'll be using it all term long
 * Verbs can help you gain fluency
 * There are also conditional and all-inclusive versions of `mutate`, `select`, and `summarize`
-    + [`across()`](https://dplyr.tidyverse.org/reference/across.html)
 
+# [`across()`](https://dplyr.tidyverse.org/reference/across.html)
+
+Use `across()` to apply the same transformation to multiple columns
+
+. . .
+
+[across(]{style="color:#D55E00"}[.cols]{style="color:#56B4E9"}, [.funs]{style="color:#009E73"}, ...[)]{style="color:#D55E00"}
+
+. . .
+
+[.cols]{style="color:#56B4E9"} = columns to transform
+
+[.fns]{style="color:#009E73"} = function to apply to each of the selected columns
+
+# `across()`
+
+Let's transform  the `penguins` columns in *mm* to *in* by dividing by 25.4
+
+. . .
+
+```{r}
+#| output-location: fragment
+
+penguins |> 
+  select(ends_with("mm")) |> 
+  mutate(
+    bill_length_in = bill_length_mm/25.4,
+    bill_depth_in = bill_depth_mm/25.4,
+    flitter_length_in = flipper_length_mm/25.4
+  )
+```
+
+## `across()`
+
+Lets' do the same with `across()`
+
+```{r}
+#| output-location: fragment
+
+penguins |> 
+  select(ends_with("mm")) |> 
+  mutate(
+    across(ends_with("mm"), ~.x/25.4)
+  )
+```
+
+::: {.aside}
+Keeps the same names
+:::
+
+## `across()`
+
+Same thing but let's change the names
+
+```{r}
+#| output-location: fragment
+
+penguins |> 
+  select(ends_with("mm")) |> 
+  mutate(
+    across(ends_with("mm"), ~.x/25.4, .names = "{sub('_mm', '_in', .col)}")
+  )
+```
+
+# `across()`
+
+Let's round some columns to the whole number
+
+```{r}
+#| output-location: fragment
+
+penguins |> 
+  mutate(
+    across(ends_with("mm"), round)
+  )
+```
+
+# `across()`
+
+Let's round some columns to the second decimal
+
+```{r}
+#| output-location: fragment
+
+penguins |> 
+  mutate(
+    across(ends_with("mm"), ~round(., 2))
+  )
+```
+
+# `across()`
+
+How about with `summarize()`?
+
+```{r}
+#| output-location: fragment
+
+penguins %>%
+  group_by(species) %>%
+  summarise(across(c(bill_length_mm:body_mass_g), ~mean(.x, na.rm = TRUE)))
+```
+
+# `across()`
+
+Let's add better names
+
+```{r}
+#| output-location: fragment
+
+penguins %>%
+  group_by(species) %>%
+  summarise(across(c(bill_length_mm:body_mass_g), ~mean(.x, na.rm = TRUE),
+                   .names = "mean_{col}"))
+```
 
 # Next time
 
