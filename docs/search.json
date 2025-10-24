@@ -2546,5 +2546,523 @@
     "title": "Homework 2",
     "section": "",
     "text": "Install the {nlme} package\nLoad {nlme}, {janitor}, and the {tidyverse} packages in the “setup” chunk\nRun the chunk below to prep some data from the {nmle} package for plotting\n\n\npd &lt;- Oxboys |&gt; \n  clean_names() |&gt; \n  mutate(subject = factor(subject),\n         occasion = factor(occasion)) |&gt; \n  filter(subject == \"10\" | subject == \"4\" | subject == \"7\") |&gt; \n  as_tibble()\n\n\n\nReproduce the following two plots, using the pd data. You can use whatever theme you want (I used theme_minimal()), but all else should be the same.\n\n\ntheme_set(theme_minimal())\n\n# Put code below for Plot 1. Note that Plot 1 is a line plot, not a \"smooth.\"\npd |&gt; \n  ggplot(aes(age, height)) +\n  geom_line() +\n  facet_wrap(~subject) +\n  labs(title = \"Plot 1\")\n\n\n\n\n\n\n\n# Put code below for Plot 2. Note that Plot 2 is a line plot also.\n\npd |&gt; \n  ggplot(aes(age, height, color = subject)) +\n  geom_line() +\n  labs(title = \"Plot 2\")\n\n\n\n\n\n\n\n\n\n\nUse the mtcars dataset from base R to replicate the following plots. (Just type mtcars into the console to see the dataset).\n\n\n# Put code below for Plot 3\nmtcars|&gt; \n  ggplot(aes(drat, mpg)) +\n  geom_point() +\n  labs(title = \"Plot 3\")\n\n\n\n\n\n\n\n# Put code below for Plot 4\nmtcars|&gt; \n  ggplot(aes(drat, mpg)) +\n  geom_point() +\n  geom_smooth() +\n  labs(title = \"Plot 4\")\n\n\n\n\n\n\n\n# Put code below for Plot 5\nmtcars|&gt; \n  ggplot(aes(drat, mpg)) +\n  geom_point() +\n  geom_smooth(method = \"lm\") +\n  facet_wrap(~vs) +\n  labs(title = \"Plot 5\")\n\n\n\n\n\n\n\n# Put code below for Plot 6. I have given you the first line of code to start.\nmtcars|&gt; \n  ggplot(aes(drat, mpg, color = factor(cyl))) +\n  geom_point() +\n  geom_smooth(method = \"lm\", se = FALSE) +\n  labs(title = \"Plot 6\")\n\n\n\n\n\n\n\n\n\n\nUse the Orange dataset, also part of base R, to replicate the following plots.\n\n\n# Put code below for Plot 7\nOrange |&gt; \n  ggplot(aes(age, circumference, color = Tree)) +\n  geom_line() +\n  geom_point() +\n  labs(title = \"Plot 7\")\n\n\n\n\n\n\n\n# Put code below for the last plot. See slide xx from the w3 class for labels.\nOrange |&gt; \n  ggplot(aes(age, circumference)) +\n  geom_smooth(method = \"lm\", se = FALSE, color = \"gray40\") +\n  geom_point(aes(color = Tree), size = 3) +\n  labs(x = \"Age of the Tree (in days)\",\n       y = \"Circumference of the Trunk (in mm)\",\n       title = \"Orange Tree Growth\",\n       subtitle = \"Gray line displays a linear model fit to the data.\")"
+  },
+  {
+    "objectID": "slides/w5_git.html#agenda",
+    "href": "slides/w5_git.html#agenda",
+    "title": "Week 6: git & GitHub",
+    "section": "Agenda",
+    "text": "Agenda\n\nIntroduce reasons for version control\nIntroduce\n\ngit\nGitHub\nGitKraken\n\n\nLearning Objectives\n\nUnderstand Introduce the basics of git and git terminology\nBe able to create repos, commit changes, push, pull, and clone\nBe prepared to collaborate on a project"
+  },
+  {
+    "objectID": "slides/w5_git.html#git-github-1",
+    "href": "slides/w5_git.html#git-github-1",
+    "title": "Week 6: git & GitHub",
+    "section": "git & GitHub",
+    "text": "git & GitHub\nWhat are they?\n\n\ngit\n\n\n\n\n\n\n\n\n\n\na version control system\nlives on your computer and keeps track of files and all changes made to them that you register with commits\n\n\nGitHub  * an online host for commits of code and data * lives on the internet"
+  },
+  {
+    "objectID": "slides/w5_git.html#git-github-2",
+    "href": "slides/w5_git.html#git-github-2",
+    "title": "Week 6: git & GitHub",
+    "section": "git & GitHub",
+    "text": "git & GitHub\nWhy are they important?\nBackup: Easy way to upload files and add notes about changes. Excellent way to keep all your R work backed-up on the cloud\n\nVersion Control: Complete history of all changes and why they were made, and multiple branches of history\n\n\nOpen Access: Open, transparent, and public science. Some journals allow GitHub sites to be used to host data and code to meet their open-access requirements\n\n\nVisibility: GitHub makes it easy to make your open-access work visible to people who might be interested (collaborators, employers)\n\n\nCollaborative tool: Git and GitHub are designed for collaboration (even if you’re the only one coding). Easy to share files between collaborators, allows for merging work and reconciling conflicts.\n\n\nJob Skill: This is an important data science skill"
+  },
+  {
+    "objectID": "slides/w5_git.html#git-github-3",
+    "href": "slides/w5_git.html#git-github-3",
+    "title": "Week 6: git & GitHub",
+    "section": "git & GitHub",
+    "text": "git & GitHub\nHow?\n\nInstall git\nCreate a GitHub account (hopefully you all have done this)\nGet a GUI and/or learn the command-line tools\n\nI’m okay with either or both, as long as you (sort of) know what you’re doing\nWe’re going to use GitKraken in this course\n\nDevelop a solid understanding of the underlying structure, so you know what you want to do even if you don’t know how\n\ncommits, push, pull, fork"
+  },
+  {
+    "objectID": "slides/w5_git.html#git-can-be-frustrating-but",
+    "href": "slides/w5_git.html#git-can-be-frustrating-but",
+    "title": "Week 6: git & GitHub",
+    "section": "git can be frustrating, but…",
+    "text": "git can be frustrating, but…\nIt is transparent – mistakes and all\nCan be a powerful tool for collaboration\n\nCommunication between team members is important\nTry to avoid merge conflicts\n\nOne person working on one thing at a time\nPull first each and every time!\nPush often/at logical points\n\n\nExcellent for reproducibility (a tenet of the data science pipeline)\n\nOpen data and code\nTransparent\nForking paths"
+  },
+  {
+    "objectID": "slides/w5_git.html#notes-on-open-reproducible-research",
+    "href": "slides/w5_git.html#notes-on-open-reproducible-research",
+    "title": "Week 6: git & GitHub",
+    "section": "Notes on Open & Reproducible Research",
+    "text": "Notes on Open & Reproducible Research\n\nUse scripting\nUse dynamic documents\n\nQuarto is fantastic\n\nUse Git/GitHub\nUse open data whenever possible\n\nConsider ways you can make portions of the data open, if not all of it\n\nAdvanced – use tools that store software versions\n\n{renv} (Rstudio)"
+  },
+  {
+    "objectID": "slides/w5_git.html#all-the-things",
+    "href": "slides/w5_git.html#all-the-things",
+    "title": "Week 6: git & GitHub",
+    "section": "All the things",
+    "text": "All the things\n\ngit – a version control system that lives on your machine\nGitHub – repo host that lives online, works with git\nGitKraken – a GUI that lives on your machine and communicates with GitHub and git"
+  },
+  {
+    "objectID": "slides/w5_git.html#version-control",
+    "href": "slides/w5_git.html#version-control",
+    "title": "Week 6: git & GitHub",
+    "section": "Version Control",
+    "text": "Version Control\nWe can think of the changes as separate from the document\nYou can then think about “playing back” different sets of changes on the base document, ultimately resulting in different versions of that document\n\n\n\n\n\n\n\n\n\n\n\nswcarpentry"
+  },
+  {
+    "objectID": "slides/w5_git.html#version-control-1",
+    "href": "slides/w5_git.html#version-control-1",
+    "title": "Week 6: git & GitHub",
+    "section": "Version Control",
+    "text": "Version Control\nThis means there are many possible versions of the same document\n\n\n\n\n\n\n\n\n\n\n\nswcarpentry"
+  },
+  {
+    "objectID": "slides/w5_git.html#version-control-2",
+    "href": "slides/w5_git.html#version-control-2",
+    "title": "Week 6: git & GitHub",
+    "section": "Version Control",
+    "text": "Version Control\nUnless there are merge conflicts , two changes from the same document can be merged together\n\n\n\n\n\n\n\n\n\n\n\nswcarpentry"
+  },
+  {
+    "objectID": "slides/w5_git.html#lets-talk-about-how",
+    "href": "slides/w5_git.html#lets-talk-about-how",
+    "title": "Week 6: git & GitHub",
+    "section": "Let’s talk about “how”",
+    "text": "Let’s talk about “how”\n\nUnderstand the structure of git\nActual method of completing the tasks is up to you\n\nGUI? Command line? RStudio?\n\nI’ve asked you to install GitKraken\n\nWorth it to manage merge conflicts alone\n\nIf you’re already using something else, that’s ok!\n\nLet me know"
+  },
+  {
+    "objectID": "slides/w5_git.html#terminology",
+    "href": "slides/w5_git.html#terminology",
+    "title": "Week 6: git & GitHub",
+    "section": "Terminology",
+    "text": "Terminology\n\n\nversion control system\n\nA tool to help us track changes. git is one such system (but there are others)\n\n\n\n\n\nrepository (repo)\n\nThe files, full commit history, and associated metadata for a project\n\n\n\n\n\nremote\n\nThe cloud-based server hosting the repo (that’s GitHub)"
+  },
+  {
+    "objectID": "slides/w5_git.html#connect-github-gitkraken",
+    "href": "slides/w5_git.html#connect-github-gitkraken",
+    "title": "Week 6: git & GitHub",
+    "section": "Connect GitHub & GitKraken",
+    "text": "Connect GitHub & GitKraken\nGo to GitKraken\n\n“Sign in with GitHub”\n“Continue with Authorization”\nYou should see “Success: GitHub and GitKraken are good to go!” or something like that\nCheck your email for an email from GitHub to verify (?)"
+  },
+  {
+    "objectID": "slides/w5_git.html#open-gitkraken",
+    "href": "slides/w5_git.html#open-gitkraken",
+    "title": "Week 6: git & GitHub",
+    "section": "Open GitKraken",
+    "text": "Open GitKraken"
+  },
+  {
+    "objectID": "slides/w5_git.html#connect-github-and-gitkraken",
+    "href": "slides/w5_git.html#connect-github-and-gitkraken",
+    "title": "Week 6: git & GitHub",
+    "section": "Connect GitHub and GitKraken",
+    "text": "Connect GitHub and GitKraken"
+  },
+  {
+    "objectID": "slides/w5_git.html#connect-github-and-gitkraken-1",
+    "href": "slides/w5_git.html#connect-github-and-gitkraken-1",
+    "title": "Week 6: git & GitHub",
+    "section": "Connect GitHub and GitKraken",
+    "text": "Connect GitHub and GitKraken\nCheck your email (associated with your GitHub account)"
+  },
+  {
+    "objectID": "slides/w5_git.html#proposed-workflow",
+    "href": "slides/w5_git.html#proposed-workflow",
+    "title": "Week 6: git & GitHub",
+    "section": "Proposed Workflow",
+    "text": "Proposed Workflow\n\nGo to GitHub\nCreate new repo\nCopy path\nCreate a new RStudio Project\nGo to GitKraken to manage"
+  },
+  {
+    "objectID": "slides/w5_git.html#go-to-github",
+    "href": "slides/w5_git.html#go-to-github",
+    "title": "Week 6: git & GitHub",
+    "section": "1. Go to GitHub",
+    "text": "1. Go to GitHub\nSelect drop down by your profile, then “New Repository”"
+  },
+  {
+    "objectID": "slides/w5_git.html#create-new-repo",
+    "href": "slides/w5_git.html#create-new-repo",
+    "title": "Week 6: git & GitHub",
+    "section": "2. Create new repo",
+    "text": "2. Create new repo"
+  },
+  {
+    "objectID": "slides/w5_git.html#create-new-repo-1",
+    "href": "slides/w5_git.html#create-new-repo-1",
+    "title": "Week 6: git & GitHub",
+    "section": "2. Create new repo",
+    "text": "2. Create new repo\n\n\n\nGive it a Repository name\nMake it Public (this time)\n Add a README file\nAdd .gitignore\n\n.gitignore template: R\n\nCreate repository\n\n\n\n\n\n\nLicense - optional; I usually go with MIT"
+  },
+  {
+    "objectID": "slides/w5_git.html#repo-created",
+    "href": "slides/w5_git.html#repo-created",
+    "title": "Week 6: git & GitHub",
+    "section": "Repo created!",
+    "text": "Repo created!"
+  },
+  {
+    "objectID": "slides/w5_git.html#copy-path",
+    "href": "slides/w5_git.html#copy-path",
+    "title": "Week 6: git & GitHub",
+    "section": "3. Copy path",
+    "text": "3. Copy path"
+  },
+  {
+    "objectID": "slides/w5_git.html#create-new-rstudio-project",
+    "href": "slides/w5_git.html#create-new-rstudio-project",
+    "title": "Week 6: git & GitHub",
+    "section": "4. Create New RStudio Project",
+    "text": "4. Create New RStudio Project\nSelect Version Control"
+  },
+  {
+    "objectID": "slides/w5_git.html#create-new-rstudio-project-1",
+    "href": "slides/w5_git.html#create-new-rstudio-project-1",
+    "title": "Week 6: git & GitHub",
+    "section": "4. Create New RStudio Project",
+    "text": "4. Create New RStudio Project\nSelect Git"
+  },
+  {
+    "objectID": "slides/w5_git.html#create-new-rstudio-project-2",
+    "href": "slides/w5_git.html#create-new-rstudio-project-2",
+    "title": "Week 6: git & GitHub",
+    "section": "4. Create New RStudio Project",
+    "text": "4. Create New RStudio Project\nClone Git Repository"
+  },
+  {
+    "objectID": "slides/w5_git.html#clone-git-repository",
+    "href": "slides/w5_git.html#clone-git-repository",
+    "title": "Week 6: git & GitHub",
+    "section": "Clone Git Repository",
+    "text": "Clone Git Repository\n\nPaste GitHub URL into Repository URL\nDecide where your RProject will live on your machine\nCreate Project"
+  },
+  {
+    "objectID": "slides/w5_git.html#this-will-open-your-new-rproj",
+    "href": "slides/w5_git.html#this-will-open-your-new-rproj",
+    "title": "Week 6: git & GitHub",
+    "section": "This will open your new Rproj",
+    "text": "This will open your new Rproj\n\nSee files we created are there\nWhere does it live?"
+  },
+  {
+    "objectID": "slides/w5_git.html#lets-go-to-github",
+    "href": "slides/w5_git.html#lets-go-to-github",
+    "title": "Week 6: git & GitHub",
+    "section": "Let’s go to GitHub",
+    "text": "Let’s go to GitHub\nWhere is our Rproj\n . . .\nWe haven’t pushed it yet"
+  },
+  {
+    "objectID": "slides/w5_git.html#go-to-gitkraken-to-manage",
+    "href": "slides/w5_git.html#go-to-gitkraken-to-manage",
+    "title": "Week 6: git & GitHub",
+    "section": "5. Go to GitKraken to manage",
+    "text": "5. Go to GitKraken to manage\nFile  New Tab"
+  },
+  {
+    "objectID": "slides/w5_git.html#go-to-gitkraken-to-manage-1",
+    "href": "slides/w5_git.html#go-to-gitkraken-to-manage-1",
+    "title": "Week 6: git & GitHub",
+    "section": "5. Go to GitKraken to manage",
+    "text": "5. Go to GitKraken to manage\n\nIn New Tab\nSelect Browse for a Repo\nOpen folder on your machine where your RProj lives"
+  },
+  {
+    "objectID": "slides/w5_git.html#welcome-to-gitkraken",
+    "href": "slides/w5_git.html#welcome-to-gitkraken",
+    "title": "Week 6: git & GitHub",
+    "section": "Welcome to GitKraken",
+    "text": "Welcome to GitKraken\n # Push Changes"
+  },
+  {
+    "objectID": "slides/w5_git.html#welcome-to-gitkraken-1",
+    "href": "slides/w5_git.html#welcome-to-gitkraken-1",
+    "title": "Week 6: git & GitHub",
+    "section": "Welcome to GitKraken",
+    "text": "Welcome to GitKraken\nWe can see in two places that we have changes to our repo\n\n“//WIP” - Work In Progress\nOn the right under “Unstaged Files”"
+  },
+  {
+    "objectID": "slides/w5_git.html#terminology-1",
+    "href": "slides/w5_git.html#terminology-1",
+    "title": "Week 6: git & GitHub",
+    "section": "Terminology",
+    "text": "Terminology\n\n\nstage\n\nA file that is being prepared for a commit\n\n\n\n\n\ncommit\n\nChanges that have been made to the file(s)\n\n\n\n\n\npush\n\nAfter you commit the changes you want, push them from the local to the remote\n\n\n\n\nHalf the battle is learning these terms"
+  },
+  {
+    "objectID": "slides/w5_git.html#stage",
+    "href": "slides/w5_git.html#stage",
+    "title": "Week 6: git & GitHub",
+    "section": "Stage",
+    "text": "Stage\n“Stage All Changes” or\n“Stage File” individually"
+  },
+  {
+    "objectID": "slides/w5_git.html#stage-1",
+    "href": "slides/w5_git.html#stage-1",
+    "title": "Week 6: git & GitHub",
+    "section": "Stage",
+    "text": "Stage\nAdd a commit comment as a note you and your collaborators what the change was"
+  },
+  {
+    "objectID": "slides/w5_git.html#commit",
+    "href": "slides/w5_git.html#commit",
+    "title": "Week 6: git & GitHub",
+    "section": "Commit",
+    "text": "Commit\nCommit changes"
+  },
+  {
+    "objectID": "slides/w5_git.html#commit-1",
+    "href": "slides/w5_git.html#commit-1",
+    "title": "Week 6: git & GitHub",
+    "section": "Commit",
+    "text": "Commit\n\nNo //WIP\nLet’s check GitHub\n\n\nNo change"
+  },
+  {
+    "objectID": "slides/w5_git.html#push",
+    "href": "slides/w5_git.html#push",
+    "title": "Week 6: git & GitHub",
+    "section": "Push",
+    "text": "Push\nWe need to push the change to GitHub"
+  },
+  {
+    "objectID": "slides/w5_git.html#github",
+    "href": "slides/w5_git.html#github",
+    "title": "Week 6: git & GitHub",
+    "section": "GitHub",
+    "text": "GitHub\nNow we see our changes"
+  },
+  {
+    "objectID": "slides/w5_git.html#lets-make-another-change",
+    "href": "slides/w5_git.html#lets-make-another-change",
+    "title": "Week 6: git & GitHub",
+    "section": "Let’s make another change",
+    "text": "Let’s make another change\n\nMake demo.qmd\nRender\nstage / commit / push\nCheck GitHub\nMake edit\nCheck GitKraken for change\n\ndemo"
+  },
+  {
+    "objectID": "slides/w5_git.html#homework-5",
+    "href": "slides/w5_git.html#homework-5",
+    "title": "Week 6: git & GitHub",
+    "section": "Homework 5",
+    "text": "Homework 5\n\nSubmit a link to the repo you created today!\nUpload the link to Canvas\nSee me if you were unable to complete in class (for technical reasons etc.)\n\nIt is ok if you leave today a little lot confused!"
+  },
+  {
+    "objectID": "slides/w5_git.html#tracking",
+    "href": "slides/w5_git.html#tracking",
+    "title": "Week 6: git & GitHub",
+    "section": "Tracking",
+    "text": "Tracking\n\nAs long as the .git folder exists, the entire folder will be tracked\nDo not create repos inside of repos\nIf you want a folder to show up, there needs to be something in it (e.g., a README.md)"
+  },
+  {
+    "objectID": "slides/w5_git.html#tracking-1",
+    "href": "slides/w5_git.html#tracking-1",
+    "title": "Week 6: git & GitHub",
+    "section": "Tracking",
+    "text": "Tracking\n\nAs long as the .git folder exists, the entire folder will be tracked\nDo not create repos inside of repos\nIf you want a folder to show up, there needs to be something in it (e.g., a README.md)"
+  },
+  {
+    "objectID": "slides/w5_git.html#ignoring-files",
+    "href": "slides/w5_git.html#ignoring-files",
+    "title": "Week 6: git & GitHub",
+    "section": "Ignoring files",
+    "text": "Ignoring files\n\nWhen we created the .Rproj the repo, we started it with a .gitignore file\nThe .gitignore file tells the repo not to track certain files\n\ne.g., proprietary data\n\nNot that important for now, but if you need to ignore a file in your repo for whatever reason, just put the name of the file(s) at the top of the .gitignore file\nOr, create a folder in your .Rproj (e..g, nopublish) and put all your documents to be ignored in that file\n\nthen on the first line of your .gitignore file, type: nopublish/"
+  },
+  {
+    "objectID": "slides/w5_git.html#section-2",
+    "href": "slides/w5_git.html#section-2",
+    "title": "Week 6: git & GitHub",
+    "section": "",
+    "text": "Image from Bryan (2017)"
+  },
+  {
+    "objectID": "slides/w5_git.html#pull",
+    "href": "slides/w5_git.html#pull",
+    "title": "Week 6: git & GitHub",
+    "section": "Pull",
+    "text": "Pull\n\npull before you start any collaborative work!!\npull any accepted changes from the remote to your local\n\n\n\npull before you start any collaborative work!!\n\n # Collaborating"
+  },
+  {
+    "objectID": "slides/w5_git.html#collaborating",
+    "href": "slides/w5_git.html#collaborating",
+    "title": "Week 6: git & GitHub",
+    "section": "Collaborating",
+    "text": "Collaborating\nTwo methods\n\nAdd users to a repo\nCreate an organization"
+  },
+  {
+    "objectID": "slides/w5_git.html#collaborating-1",
+    "href": "slides/w5_git.html#collaborating-1",
+    "title": "Week 6: git & GitHub",
+    "section": "Collaborating",
+    "text": "Collaborating\n\nAdd users to a repo\n\nIn your GitHub repo\nSettings  Collaborators  Manage Access  Add people\nadd user with their GitHub username"
+  },
+  {
+    "objectID": "slides/w5_git.html#collaborating-2",
+    "href": "slides/w5_git.html#collaborating-2",
+    "title": "Week 6: git & GitHub",
+    "section": "Collaborating",
+    "text": "Collaborating\n\nCreate an organization\n\nNew organization"
+  },
+  {
+    "objectID": "slides/w5_git.html#collaborating-3",
+    "href": "slides/w5_git.html#collaborating-3",
+    "title": "Week 6: git & GitHub",
+    "section": "Collaborating",
+    "text": "Collaborating\n(2) Create an organization * New organization"
+  },
+  {
+    "objectID": "slides/w5_git.html#collaborating-4",
+    "href": "slides/w5_git.html#collaborating-4",
+    "title": "Week 6: git & GitHub",
+    "section": "Collaborating",
+    "text": "Collaborating\n\nThe collaborators will receive an email from GitHub\nAccept the invitation\nclone the repo"
+  },
+  {
+    "objectID": "slides/w5_git.html#cloning",
+    "href": "slides/w5_git.html#cloning",
+    "title": "Week 6: git & GitHub",
+    "section": "Cloning",
+    "text": "Cloning\n\ncloning means that you are downloading the repo\nYou can clone any repo you like (even the {tidyverse})\nFor the Final Project, you will clone the repo you were invited to collaborate on"
+  },
+  {
+    "objectID": "slides/w5_git.html#clone-a-repo",
+    "href": "slides/w5_git.html#clone-a-repo",
+    "title": "Week 6: git & GitHub",
+    "section": "Clone a repo",
+    "text": "Clone a repo\n\nGo to the repo on GitHub\nClick the green “Code” button near the top\nCopy the URL"
+  },
+  {
+    "objectID": "slides/w5_git.html#clone-a-repo-1",
+    "href": "slides/w5_git.html#clone-a-repo-1",
+    "title": "Week 6: git & GitHub",
+    "section": "Clone a repo",
+    "text": "Clone a repo\n\n\n\nGo to GitKraken\nClick the  folder icon in the upper left\nClick the  Clone button\n Clone with URL\nWhere to clone to: Specify where it will live on your machine\n\nhere it is on my desktop\n\nURL: Paste in the URL copied from GitHub\n“Clone the repo!”"
+  },
+  {
+    "objectID": "slides/w5_git.html#merge-conflict",
+    "href": "slides/w5_git.html#merge-conflict",
+    "title": "Week 6: git & GitHub",
+    "section": "Merge Conflict",
+    "text": "Merge Conflict"
+  },
+  {
+    "objectID": "slides/w5_git.html#merge-conflicts-1",
+    "href": "slides/w5_git.html#merge-conflicts-1",
+    "title": "Week 6: git & GitHub",
+    "section": "Merge Conflicts",
+    "text": "Merge Conflicts\n\nRemember to always pull first!!\nGitKraken has a really nice GUI to resolve merge conflicts\n\n\n\n\nlink"
+  },
+  {
+    "objectID": "slides/w5_git.html#merge-conflict-activity-15-mins",
+    "href": "slides/w5_git.html#merge-conflict-activity-15-mins",
+    "title": "Week 6: git & GitHub",
+    "section": "Merge Conflict Activity (15 mins)",
+    "text": "Merge Conflict Activity (15 mins)\n\nGet a partner\nPartner1 add Partner2 as a collaborator\nPartner2 clone the repo you made in class\nPartner1 make changes to the .qmd file in the repo, stage, commit, and push\nPartner2 make different changes to the same parts of the .qmd file. Commit the changes. Try to push What happens? Why?\nOpen up the files - do you see some weird stuff that’s been added?\nUse GitKraken to deal with the merge conflicts\n\n\n\n\n−+\n15:00"
+  },
+  {
+    "objectID": "slides/w5_git.html#quick-recap",
+    "href": "slides/w5_git.html#quick-recap",
+    "title": "Week 6: git & GitHub",
+    "section": "Quick Recap",
+    "text": "Quick Recap\nBasic workflow\n\nGitHub - Create new repo\nCopy path\nCreate a new RStudio Project  Version Control  Git\nUse GitKraken to manage\n\n\n\nadd collaborators\npull\nstage and commit changes\npush changes to repo"
+  },
+  {
+    "objectID": "slides/w5_git.html#revisiting-git-terminology",
+    "href": "slides/w5_git.html#revisiting-git-terminology",
+    "title": "Week 6: git & GitHub",
+    "section": "Revisiting git terminology",
+    "text": "Revisiting git terminology\nTalk with a neighbor about what each of these terms mean\n\nclone\npull\nstage\ncommit\npush\nrepo\nremote"
+  },
+  {
+    "objectID": "slides/w5_git.html#before-next-class",
+    "href": "slides/w5_git.html#before-next-class",
+    "title": "Week 6: git & GitHub",
+    "section": "Before next class",
+    "text": "Before next class\n\nReading\n\nR4DS(2e) Chapter 29 Quarto Formats\nMarkdown Tutorial\n\nHomework\n\nHomework 5 (hopefully completed in class today)\nHomework 6 (hopefully completed in class today)"
+  },
+  {
+    "objectID": "slides/w5_git.html#if-you-already-have-an-existing-project",
+    "href": "slides/w5_git.html#if-you-already-have-an-existing-project",
+    "title": "Week 6: git & GitHub",
+    "section": "If you already have an existing project",
+    "text": "If you already have an existing project\n\nRStudio: Create your RStudio Project (as usual)\nGitKraken: Open a repo on GitKraken\nGitHub: Create new repo on GitHub\nGitKraken: Add remote on GitKraken"
+  },
+  {
+    "objectID": "slides/w5_git.html#create-your-rstudio-project-as-usual",
+    "href": "slides/w5_git.html#create-your-rstudio-project-as-usual",
+    "title": "Week 6: git & GitHub",
+    "section": "1. Create your RStudio Project (as usual)",
+    "text": "1. Create your RStudio Project (as usual)\n\nMake a new RStudio Project (cal it “demo”)\n\nOpen a new R Markdown document and name it “foo”\n\nNote the name you gave the project (folder)\n “Create a git repository”\n\nDon’t add .gitignore in GiKraken or GitHub\n\n\nIf you did not  “Create a git repository”: Add .gitignore file in GitKraken or GitHub"
+  },
+  {
+    "objectID": "slides/w5_git.html#open-a-repo-on-gitkraken",
+    "href": "slides/w5_git.html#open-a-repo-on-gitkraken",
+    "title": "Week 6: git & GitHub",
+    "section": "2. Open a repo on GitKraken",
+    "text": "2. Open a repo on GitKraken\n\nIn New Tab\nSelect Browse for a Repo\nSelect project folder"
+  },
+  {
+    "objectID": "slides/w5_git.html#open-a-repo-on-gitkraken-1",
+    "href": "slides/w5_git.html#open-a-repo-on-gitkraken-1",
+    "title": "Week 6: git & GitHub",
+    "section": "2. Open a repo on GitKraken",
+    "text": "2. Open a repo on GitKraken\nClick Initialize"
+  },
+  {
+    "objectID": "slides/w5_git.html#create-new-repo-on-github",
+    "href": "slides/w5_git.html#create-new-repo-on-github",
+    "title": "Week 6: git & GitHub",
+    "section": "3. Create new repo on GitHub",
+    "text": "3. Create new repo on GitHub\n\n\n\nRepository name – same as your Project name\n\nDescription – keep it brief, informative\nPublic\nDo not initialize\n“None”\ndo NOT add .gitignore\ndo NOT add a license"
+  },
+  {
+    "objectID": "slides/w5_git.html#create-new-repo-on-github-1",
+    "href": "slides/w5_git.html#create-new-repo-on-github-1",
+    "title": "Week 6: git & GitHub",
+    "section": "3. Create new repo on GitHub",
+    "text": "3. Create new repo on GitHub\nCopy path"
+  },
+  {
+    "objectID": "slides/w5_git.html#back-to-gitkraken-to-add-remote",
+    "href": "slides/w5_git.html#back-to-gitkraken-to-add-remote",
+    "title": "Week 6: git & GitHub",
+    "section": "4. Back to GitKraken to Add Remote",
+    "text": "4. Back to GitKraken to Add Remote\nAdd remote\n\nClick  URL\nName: Name of RProject\nPull URL: Paste URL copied from GitHub\nPush URL: Populates automatically"
+  },
+  {
+    "objectID": "slides/w5_git.html#quick-recap-1",
+    "href": "slides/w5_git.html#quick-recap-1",
+    "title": "Week 6: git & GitHub",
+    "section": "Quick Recap",
+    "text": "Quick Recap\nBasic workflow if you already have an existing project\n\ncreate an RStudio project\ncreate a repo\nadd collaborators\npull\nstage and commit changes\npush changes to remote"
+  },
+  {
+    "objectID": "slides/w5_git.html#open-reproducible-research",
+    "href": "slides/w5_git.html#open-reproducible-research",
+    "title": "Week 6: git & GitHub",
+    "section": "Open & Reproducible Research",
+    "text": "Open & Reproducible Research\n\nUse scripting\nUse dynamic documents\n\nQuarto is fantastic\n\nUse Git/GitHub\nUse open data whenever possible\n\nConsider ways you can make portions of the data open, if not all of it\n\nAdvanced – use tools that store software versions\n\n{renv} (Rstudio)"
+  },
+  {
+    "objectID": "slides/w5_git.html#tracking-2",
+    "href": "slides/w5_git.html#tracking-2",
+    "title": "Week 6: git & GitHub",
+    "section": "Tracking",
+    "text": "Tracking\nShow hidden files\n\nPC\n\nOpen File Explorer\nSelect View at the top\nShow  Hidden Items\n\nMac\n\ncmd + shift + ."
+  },
+  {
+    "objectID": "slides/w5_git.html#final-project-collaboration-1",
+    "href": "slides/w5_git.html#final-project-collaboration-1",
+    "title": "Week 6: git & GitHub",
+    "section": "Final Project Collaboration",
+    "text": "Final Project Collaboration\nAdd users to a repo\n\nOne group member will Open a repo (like we just went over)\n\nPotentially the person who has the project data, but not necessarily\n\nWithin the repo on GitHub\n\nSettings  Collaborators  Manage Access  Add people"
+  },
+  {
+    "objectID": "slides/w5_git.html#merge-conflict-1",
+    "href": "slides/w5_git.html#merge-conflict-1",
+    "title": "Week 6: git & GitHub",
+    "section": "Merge Conflict",
+    "text": "Merge Conflict"
+  },
+  {
+    "objectID": "slides/w5_git.html#merge-conflict-2",
+    "href": "slides/w5_git.html#merge-conflict-2",
+    "title": "Week 6: git & GitHub",
+    "section": "Merge Conflict",
+    "text": "Merge Conflict\n\nAlways pull before you start working!!\nTry to stay in communication with your collaborators and don’t work on the exact same thing at the same time\nUse GitKraken to help manage merge conflicts that do come up"
+  },
+  {
+    "objectID": "slides/w5_git.html#merge-conflict-3",
+    "href": "slides/w5_git.html#merge-conflict-3",
+    "title": "Week 6: git & GitHub",
+    "section": "Merge Conflict",
+    "text": "Merge Conflict\n\nRemember to always pull first!!\nGitKraken has a really nice GUI to resolve merge conflicts\n\n\n\n\nlink"
   }
 ]
