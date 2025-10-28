@@ -2559,7 +2559,7 @@
     "href": "slides/w5_git.html#git-github-1",
     "title": "Week 6: git & GitHub",
     "section": "git & GitHub",
-    "text": "git & GitHub\nWhat are they?\n\n\ngit\n\n\n\n\n\n\n\n\n\n\na version control system\nlives on your computer and keeps track of files and all changes made to them that you register with commits\n\n\nGitHub  * an online host for commits of code and data * lives on the internet"
+    "text": "git & GitHub\nWhat are they?\n\n\ngit\n\n\na version control system\nlives on your computer and keeps track of files and all changes made to them that you register with commits\n\n\nGitHub\n\n\nan online host for commits of code and data\nlives on the internet"
   },
   {
     "objectID": "slides/w5_git.html#git-github-2",
@@ -2895,7 +2895,7 @@
     "href": "slides/w5_git.html#collaborating-3",
     "title": "Week 6: git & GitHub",
     "section": "Collaborating",
-    "text": "Collaborating\n(2) Create an organization * New organization"
+    "text": "Collaborating\n\nCreate an organization\n\nNew organization"
   },
   {
     "objectID": "slides/w5_git.html#collaborating-4",
@@ -2965,7 +2965,7 @@
     "href": "slides/w5_git.html#before-next-class",
     "title": "Week 6: git & GitHub",
     "section": "Before next class",
-    "text": "Before next class\n\nReading\n\nR4DS(2e) Chapter 29 Quarto Formats\nMarkdown Tutorial\n\nHomework\n\nHomework 5 (hopefully completed in class today)\nHomework 6 (hopefully completed in class today)"
+    "text": "Before next class\n\nReading\n\nR4DS(2e) Chapter 29 Quarto Formats\nMarkdown Tutorial\n\nHomework\n\nHomework 5 (hopefully completed in class today)\nHomework 6"
   },
   {
     "objectID": "slides/w5_git.html#if-you-already-have-an-existing-project",
@@ -3035,7 +3035,7 @@
     "href": "slides/w5_git.html#tracking-2",
     "title": "Week 6: git & GitHub",
     "section": "Tracking",
-    "text": "Tracking\nShow hidden files\n\nPC\n\nOpen File Explorer\nSelect View at the top\nShow  Hidden Items\n\nMac\n\ncmd + shift + ."
+    "text": "Tracking\nShow hidden files\nPC\n\nOpen File Explorer\nSelect View at the top\nShow  Hidden Items\n\nMac\n\ncmd + shift + ."
   },
   {
     "objectID": "slides/w5_git.html#final-project-collaboration-1",

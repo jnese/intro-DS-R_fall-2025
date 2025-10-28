@@ -10,7 +10,7 @@ format:
     incremental: false
     fig-width: 9
     fig-height: 3.5
-    scrollable: true
+    scrollable: false
     slide-number: true
     embed-resources: true
 execute: 
@@ -35,7 +35,7 @@ Homework 4
 
 # git & GitHub
 
-Week 6
+Week 5
 
 ## Agenda {.smaller}
 
@@ -53,22 +53,25 @@ Week 6
 
 ## git & GitHub
 
-#### What are they?
+**What are they?**
 
 :::: {.columns}
 
 ::: {.column width="50%"}
 **git**
-```{r, echo=FALSE, out.width='10%'}
-knitr::include_graphics("https://git-scm.com/images/logos/logomark-orange@2x.png")
-```
+
+![](https://git-scm.com/images/logos/logomark-orange@2x.png){width='20%'}
+
 * a version control system
 * lives on your computer and keeps track of files and all changes made to them that you register with [commits]{style="color:#009E73"}
+
 :::
 
 ::: {.column width="50%"}
 **GitHub**
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/220px-GitHub_Invertocat_Logo.svg.png){width='10%'}
+
+![](https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png){width='20%'}
+
 * an online host for [commits]{style="color:#009E73"} of code and data
 * lives on the internet
 
@@ -376,7 +379,7 @@ We haven't [pushed]{style="color:#009E73"} it yet
 
 We can see in two places that we have changes to our [repo]{style="color:#009E73"}
 
-1. "*//WIP*" - <u>W<u/>ork <u>I<u/>n <u>P<u/>rogress
+1. "//WIP" - **W**ork **I**n **P**rogress
 2. On the right under "*Unstaged Files*"
 
 ![](./images/gk_4.png)
@@ -468,30 +471,32 @@ It is ok if you leave today a ~~little~~ lot confused!
 
 ## Tracking
 
-* As long as the `.git` folder exists, the entire folder will be tracked
-* **Do not** create [repos]{style="color:#009E73"} inside of [repos]{style="color:#009E73"}
-* If you want a folder to show up, there needs to be something in it (e.g., a README.md)
+- As long as the `.git` folder exists, the entire folder will be tracked
+- **Do not** create [repos]{style="color:#009E73"} inside of [repos]{style="color:#009E73"}
+- If you want a folder to show up, there needs to be something in it (e.g., a README.md)
 
 ## Tracking
 
 Show hidden files
 
-* PC
-  + Open *File Explorer*
-   + Select *View* at the top
-   + *Show* {{< fa arrow-right >}} *Hidden Items*
+PC
 
-* Mac
-  + `cmd + shift + .`
+- Open *File Explorer*
+- Select *View* at the top
+- *Show* {{< fa arrow-right >}} *Hidden Items*
+
+Mac
+
+- `cmd + shift + .`
 
 ## Ignoring files {.smaller}
 
 * When we created the .Rproj the [repo]{style="color:#009E73"}, we started it with a `.gitignore` file
 * The `.gitignore` file tells the [repo]{style="color:#009E73"} not to track certain files
-  + e.g., proprietary data
+    + e.g., proprietary data
 * Not that important for now, but if you need to ignore a file in your [repo]{style="color:#009E73"} for whatever reason, just put the name of the file(s) at the top of the `.gitignore` file
 * Or, create a folder in your .Rproj (e..g, `nopublish`) and put all your documents to be ignored in that file
-  + then on the first line of your `.gitignore` file, type: **nopublish/**
+    + then on the first line of your `.gitignore` file, type: **nopublish/**
 
 # [Pull]{style="color:#009E73"} Changes
 
@@ -504,13 +509,13 @@ Image from Bryan (2017)
 
 ## [Pull]{style="color:#009E73"}
 
-* [pull]{style="color:#009E73"} before you start any collaborative work!!
+- [pull]{style="color:#009E73"} before you start any collaborative work!!
 
-* [pull]{style="color:#009E73"} any accepted changes from the [remote]{style="color:#009E73"} to your [local]{style="color:#009E73"}
+- [pull]{style="color:#009E73"} any accepted changes from the [remote]{style="color:#009E73"} to your [local]{style="color:#009E73"}
 
 . . .
 
-* **[pull]{style="color:#009E73"} before you start any collaborative work!!**
+- **[pull]{style="color:#009E73"} before you start any collaborative work!!**
 
 
 ![](./images/pull.png)
@@ -534,23 +539,20 @@ Two methods
 ## Collaborating
 
 (2) Create an organization
-    * *New organization*
+    + *New organization*
 
 ::: aside
-![](./images/gh_neworg.png){width="20%"}
-
+![](./images/gh_neworg.png){width="100%"}
 :::
 
 ## ~~Collaborating~~
 
-~~(2) Create an organization~~
-    ~~* *New organization*~~
+(2) ~~Create an organization~~
+    + ~~*New organization*~~
 
 ::: aside
-![](./images/gh_neworg.png){width="20%"}
-
+![](./images/gh_neworg.png){width="100%"}
 :::
-
 # [Final Project]{style="color:#ff0000"} Collaboration 
 
 ## [Final Project]{style="color:#ff0000"} Collaboration {.smaller}
@@ -569,17 +571,17 @@ Add users to a [repo]{style="color:#009E73"}
 
 ## Collaborating
 
-* The collaborators will receive an email from GitHub
-* Accept the invitation
-* [clone]{style="color:#009E73"} the [repo]{style="color:#009E73"}
+- The collaborators will receive an email from GitHub
+- Accept the invitation
+- [clone]{style="color:#009E73"} the [repo]{style="color:#009E73"}
 
 # [Clone]{style="color:#009E73"}
 
 ## [Cloning]{style="color:#009E73"}
 
-* [cloning]{style="color:#009E73"} means that you are downloading the [repo]{style="color:#009E73"}
-* You can [clone]{style="color:#009E73"} any [repo]{style="color:#009E73"} you like (even the `{tidyverse}`)
-* For the [Final Project]{style="color:#ff0000"}, you will [clone]{style="color:#009E73"} the repo you were invited to collaborate on
+- [cloning]{style="color:#009E73"} means that you are downloading the [repo]{style="color:#009E73"}
+- You can [clone]{style="color:#009E73"} any [repo]{style="color:#009E73"} you like (even the `{tidyverse}`)
+- For the [Final Project]{style="color:#ff0000"}, you will [clone]{style="color:#009E73"} the repo you were invited to collaborate on
 
 ## [Clone]{style="color:#009E73"} a repo
 
@@ -588,8 +590,6 @@ Add users to a [repo]{style="color:#009E73"}
 (2) Click the green *"Code"* button near the top
 
 (3) Copy the URL 
-
-<!-- end of list -->
 
 
 ![](./images/gh_clone.png)
@@ -697,7 +697,7 @@ Talk with a neighbor about what each of these terms mean
   + [Markdown Tutorial](https://www.markdowntutorial.com/)
 * Homework
   + **Homework 5** (hopefully completed in class today)
-  + **Homework 6** (hopefully completed in class today)
+  + **Homework 6** 
 
 # Project first
 
