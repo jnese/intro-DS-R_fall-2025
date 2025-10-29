@@ -1,5 +1,5 @@
 ---
-title: "Week 6: git & GitHub"
+title: "Week 5: git & GitHub"
 subtitle: "Version Control"
 author: "Joe Nese"
 institute: "University of Oregon<br>Fall 2025"
@@ -697,7 +697,6 @@ Talk with a neighbor about what each of these terms mean
   + [Markdown Tutorial](https://www.markdowntutorial.com/)
 * Homework
   + **Homework 5** (hopefully completed in class today)
-  + **Homework 6** 
 
 # Project first
 
