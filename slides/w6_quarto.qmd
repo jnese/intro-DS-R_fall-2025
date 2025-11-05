@@ -210,154 +210,6 @@ execute:
 ---
 ```
 
-## `execute`
-
-```{r, echo=FALSE}
-yamlopts <- tibble::tribble(
-                   ~Options,                        ~Arguments, ~Default,                                 ~Effect,
-                   "`eval`",          "`true`, `false`, `[…]`", "`true`",                    "Evaluate the code?",
-                   "`echo`", "`true`, `false`, `fence`, `[…]`", "`true`",                        "Show the code?",
-                "`warning`",                         "logical", "`true`",                       "Print warnings?",
-                "`message`",                         "logical", "`true`",                       "Print messages?",
-                  "`error`",                         "logical", "`true`",         "Include errors in the output?",
-                "`include`",                         "logical", "`true`", "Prevent any output (code or results)?",
-                 "`output`",         "`true`, `false`, `asis`", "`true`",                 "Include code results?"
-                ) 
-
-fx_tbl_opts <- function(x){
-  x |> 
-    gt() |>
-    fmt_markdown(columns = everything()) |> 
-    tab_style(
-      style = list(
-        cell_fill(color = "white")
-        ),
-      locations = cells_body(
-        rows = everything())
-    )
-}
-
-yamlopts |> 
-  fx_tbl_opts()
-
-```
-
-## `eval` {.smaller}
-
-```{r, echo=FALSE}
-yamlopts |>
-  fx_tbl_opts() |> 
-  tab_style(
-    style = list(
-      cell_fill(color = "#F0E442")
-      ),
-    locations = cells_body(
-      rows = 1)
-  )
-```
-
-* `eval`uates code
-* if `false` it just echos the code into output
-
-## `echo` {.smaller}
-
-```{r, echo=FALSE}
-yamlopts |>
-  fx_tbl_opts() |> 
-  tab_style(
-    style = list(
-      cell_fill(color = "#F0E442")
-      ),
-    locations = cells_body(
-      rows = 2)
-  )
-```
-
-* show (`echo`) source code in rendered output
-* `echo: false` is most useful when producing a report for somebody who doesn't use `R` and has no use for, or knowledge of, the code
-
-## `warning` {.smaller}
-
-```{r, echo=FALSE}
-yamlopts |>
-  fx_tbl_opts() |> 
-  tab_style(
-    style = list(
-      cell_fill(color = "#F0E442")
-      ),
-    locations = cells_body(
-      rows = 3)
-  )
-```
-
-## `message` {.smaller}
-
-```{r, echo=FALSE}
-yamlopts |>
-  fx_tbl_opts() |> 
-  tab_style(
-    style = list(
-      cell_fill(color = "#F0E442")
-      ),
-    locations = cells_body(
-      rows = 4)
-  )
-```
-
-* include `message`s in rendered output
-
-## `error` {.smaller}
-
-```{r, echo=FALSE}
-yamlopts |>
-  fx_tbl_opts() |> 
-  tab_style(
-    style = list(
-      cell_fill(color = "#F0E442")
-      ),
-    locations = cells_body(
-      rows = 5)
-  )
-```
-
-* Include errors in the output 
-* If `false`, then errors executing code will  halt processing of the document
-
-## `include` {.smaller}
-
-```{r, echo=FALSE}
-yamlopts |>
-  fx_tbl_opts() |> 
-  tab_style(
-    style = list(
-      cell_fill(color = "#F0E442")
-      ),
-    locations = cells_body(
-      rows = 6)
-  )
-```
-
-* Code will execute, but neither code or results will show in the output
-
-## `output` {.smaller}
-
-```{r, echo=FALSE}
-yamlopts |>
-  fx_tbl_opts() |> 
-  tab_style(
-    style = list(
-      cell_fill(color = "#F0E442")
-      ),
-    locations = cells_body(
-      rows = 7)
-  )
-```
-
-* Include the results of executing the code in the output. Possible values:
-    + `true`: show results
-    + `false`: do not show results
-    + `asis`: output as raw markdown; use for rendering tables!
-    
 ## figures
 
 So many options for figures. 
@@ -542,27 +394,6 @@ b <- 7
 a / b
 ```
 
-## Chunk Names {.smaller}
-
-* Use single word: `chunk1`
-* Or use hyphen (`-`) to separate words: `chunk-1` 
-* Do **not** use spaces: ~~`chunk 1`~~
-* Do **not** use underscore ~~`chunk_1`~~
-* Chunk names can only be used **once**
-
-. . .
-
-Think kebabs, not snakes
-
-* `bar-plot-1`
-* `bar-plot-2`
-* `hist-plot-1`
-* `model-1`
-
-::: aside
-[Allison Hill](https://apreshill.github.io/rmd4cdc/#100)
-:::
-
 ## [Lists](https://quarto.org/docs/authoring/markdown-basics.html#lists)<sup>^</sup> {.smaller}
 
 Note that lists require an entire blank line above the list, otherwise it will appear as normal text along a single line and **not** rendered in list form 
@@ -573,6 +404,154 @@ Note that lists require an entire blank line above the list, otherwise it will a
 <iframe data-external="1" width="780" height="500" src="https://quarto.org/docs/authoring/markdown-basics.html#lists" ></iframe>
 ```
 
+## `execute`
+
+```{r, echo=FALSE}
+yamlopts <- tibble::tribble(
+                   ~Options,                        ~Arguments, ~Default,                                 ~Effect,
+                   "`eval`",          "`true`, `false`, `[…]`", "`true`",                    "Evaluate the code?",
+                   "`echo`", "`true`, `false`, `fence`, `[…]`", "`true`",                        "Show the code?",
+                "`warning`",                         "logical", "`true`",                       "Print warnings?",
+                "`message`",                         "logical", "`true`",                       "Print messages?",
+                  "`error`",                         "logical", "`true`",         "Include errors in the output?",
+                "`include`",                         "logical", "`true`", "Prevent any output (code or results)?",
+                 "`output`",         "`true`, `false`, `asis`", "`true`",                 "Include code results?"
+                ) 
+
+fx_tbl_opts <- function(x){
+  x |> 
+    gt() |>
+    fmt_markdown(columns = everything()) |> 
+    tab_style(
+      style = list(
+        cell_fill(color = "white")
+        ),
+      locations = cells_body(
+        rows = everything())
+    )
+}
+
+yamlopts |> 
+  fx_tbl_opts()
+
+```
+
+## `eval` {.smaller}
+
+```{r, echo=FALSE}
+yamlopts |>
+  fx_tbl_opts() |> 
+  tab_style(
+    style = list(
+      cell_fill(color = "#F0E442")
+      ),
+    locations = cells_body(
+      rows = 1)
+  )
+```
+
+* `eval`uates code
+* if `false` it just echos the code into output
+
+## `echo` {.smaller}
+
+```{r, echo=FALSE}
+yamlopts |>
+  fx_tbl_opts() |> 
+  tab_style(
+    style = list(
+      cell_fill(color = "#F0E442")
+      ),
+    locations = cells_body(
+      rows = 2)
+  )
+```
+
+* show (`echo`) source code in rendered output
+* `echo: false` is most useful when producing a report for somebody who doesn't use `R` and has no use for, or knowledge of, the code
+
+## `warning` {.smaller}
+
+```{r, echo=FALSE}
+yamlopts |>
+  fx_tbl_opts() |> 
+  tab_style(
+    style = list(
+      cell_fill(color = "#F0E442")
+      ),
+    locations = cells_body(
+      rows = 3)
+  )
+```
+
+## `message` {.smaller}
+
+```{r, echo=FALSE}
+yamlopts |>
+  fx_tbl_opts() |> 
+  tab_style(
+    style = list(
+      cell_fill(color = "#F0E442")
+      ),
+    locations = cells_body(
+      rows = 4)
+  )
+```
+
+* include `message`s in rendered output
+
+## `error` {.smaller}
+
+```{r, echo=FALSE}
+yamlopts |>
+  fx_tbl_opts() |> 
+  tab_style(
+    style = list(
+      cell_fill(color = "#F0E442")
+      ),
+    locations = cells_body(
+      rows = 5)
+  )
+```
+
+* Include errors in the output 
+* If `false`, then errors executing code will  halt processing of the document
+
+## `include` {.smaller}
+
+```{r, echo=FALSE}
+yamlopts |>
+  fx_tbl_opts() |> 
+  tab_style(
+    style = list(
+      cell_fill(color = "#F0E442")
+      ),
+    locations = cells_body(
+      rows = 6)
+  )
+```
+
+* Code will execute, but neither code or results will show in the output
+
+## `output` {.smaller}
+
+```{r, echo=FALSE}
+yamlopts |>
+  fx_tbl_opts() |> 
+  tab_style(
+    style = list(
+      cell_fill(color = "#F0E442")
+      ),
+    locations = cells_body(
+      rows = 7)
+  )
+```
+
+* Include the results of executing the code in the output. Possible values:
+    + `true`: show results
+    + `false`: do not show results
+    + `asis`: output as raw markdown; use for rendering tables!
+    
 ## More Advanced Options
 
 * chunk options
@@ -609,6 +588,27 @@ yamlopts |>
 
 `label`
 : chunk name (or label)
+
+## Chunk Names {.smaller}
+
+* Use single word: `chunk1`
+* Or use hyphen (`-`) to separate words: `chunk-1` 
+* Do **not** use spaces: ~~`chunk 1`~~
+* Do **not** use underscore ~~`chunk_1`~~
+* Chunk names can only be used **once**
+
+. . .
+
+Think kebabs, not snakes
+
+* `bar-plot-1`
+* `bar-plot-2`
+* `hist-plot-1`
+* `model-1`
+
+::: aside
+[Allison Hill](https://apreshill.github.io/rmd4cdc/#100)
+:::
 
 ## `echo` and `eval`
 
