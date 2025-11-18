@@ -1,0 +1,737 @@
+---
+title: "Lunch & Learn:<br>Data Management"
+author: "Joe Nese"
+institute: "University of Oregon<br>Fall 2025"
+format:
+  revealjs: 
+    theme: default
+    highlight-style: github
+    incremental: false
+    fig-width: 9
+    fig-height: 3.5
+    scrollable: true
+    slide-number: true
+    embed-resources: true
+execute: 
+  echo: true
+  warning: false
+embed-resources: true
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(rio)
+library(knitr)
+library(here)
+library(janitor)
+library(kableExtra)
+library(palmerpenguins)
+library(countdown)
+library(gt)
+
+```
+
+## Agenda
+
+- Tidy data
+- Naming stuff
+- Miscellany
+
+## About me {.scrollable .smaller}
+
+-   husband, dad
+-   BA, Psychology: UC Santa Barbara
+-   PhD, School Psychology: University of Maryland
+-   UO since 2009 at Behavioral Research & Teaching ([BRT](http://brtprojects.org))
+-   Research Professor
+
+**Research**
+
+-   Applied statistical methods used by researchers
+-   Developing and improving systems that support data-based decision making using advanced technologies to influence teachers' instructional practices and increase student achievement
+    -   [CORE](https://jnese.github.io/core-blog/) and [CORE II](https://jnese.github.io/coreprosody)
+    -   Inclusive Skill-building Learning Approach ([ISLA](https://www.neselab.org/isla/))
+
+**Teaching**
+
+- Introduction to Data Science with `R`
+- Functional Programming for Educational Data Science
+- Applied Machine Learning for Educational Data Scientists
+- Data Science Capstone
+
+## Data cleaning
+
+> “It is often said that 80% of data analysis is spent on the process of cleaning and preparing the data (Dasu & Johnson, 2003).”
+> - Hadley Wickham (Tidy Data)
+
+. . .
+
+* Persistent and varied challenge
+* Little research on how to do it well
+
+# Tidy Data
+
+## Tidy Data {.smaller}
+
+1. Each variable must have its own column
+2. Each observation must have its own row
+3. Each value must have its own cell
+
+. . .
+
+These three rules are interrelated because it’s impossible to only satisfy two of the three
+
+
+![](https://d33wubrfki0l68.cloudfront.net/6f1ddb544fc5c69a2478e444ab8112fb0eea23f8/91adc/images/tidy-1.png)
+  
+::: aside
+[R4DS](https://r4ds.had.co.nz/tidy-data.html)
+:::
+
+## 
+
+![](https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/85520b8f-4629-4763-8a2a-9ceff27458bf_rw_1920.jpg?h=21007b20ac00cf37318dca645c215453)
+
+::: aside
+[Allison Horst](https://allisonhorst.com/other-r-fun)
+:::
+
+## 
+![](https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/6e297111-efb7-4555-93d2-085071d1853c_rw_1920.jpg?h=f1951b118eaddaaab8a572422bc16566)
+
+::: aside
+[Allison Horst](https://allisonhorst.com/other-r-fun)
+:::
+
+## Common ways data are "messy"
+
+* Column headers are values, not variable names
+* Multiple variables stored in one column
+* Variables are stored in both rows and columns
+* See the pivoting [vignette](https://tidyr.tidyverse.org/articles/pivot.html) for examples and solutions
+
+## Why tidy? {.smaller}
+
+A ~~biased~~ principled approach
+
+::: {.incremental}
+- There are many reasons why you might want to have "messy" data
+- **But**...
+- If you have a consistent data structure, it’s easier to learn tools that work with it because the data has an underlying uniformity
+- There’s a specific advantage to placing variables in columns because it allows R’s vectorised nature to be optimized
+- Tidy data is an **extremely** useful format generally, and particularly useful when applying tools within the `{tidyverse}`
+- All packages within the `{tidyverse}` are designed to either help you get your data in a tidy format, or assume your data are already in a tidy format
+- Assuming a common data format leads to **huge** jumps in efficiency, as the output from certain functions can be directly input into others
+
+:::
+
+##
+
+![](https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/fc9b748b-db96-4ed4-aa23-f6e0ffc866ee_rw_1920.jpg?h=8fa394b572089354aa87b1d602b0f887)
+
+::: aside
+[Allison Horst](https://allisonhorst.com/other-r-fun)
+:::
+
+## Messy data \#1
+
+What makes this data messy? 
+
+Or, why is this data not tidy?
+
+. . .
+
+```{r}
+#| echo: false
+
+tidyr::relig_income
+```
+
+## Messy data \#1
+
+Column names are data (!), not variable names
+
+There are data in the column names
+
+```{r}
+#| echo: false
+
+tidyr::relig_income
+```
+
+## Tidy it up
+
+We want a column for `income` level
+
+And a column for the `count` of people at that level
+
+. . .
+
+```{r}
+#| echo: false
+
+relig_income %>% 
+  pivot_longer(
+    cols = -religion,
+    names_to = "income",
+    values_to = "count"
+  )
+```
+
+## Messy data \#2
+
+What makes this data messy? 
+
+```{r, echo=FALSE}
+(who_r <- who %>% 
+  rename_with(~str_replace(., "newrel", "new_rel"), .cols = contains("rel")) %>% 
+  rename_with(~str_replace(., "m", "m_"), .cols = contains("new_")) %>% 
+  rename_with(~str_replace(., "f", "f_"), .cols = contains("new_")))
+```
+
+## Messy data \#2
+
+There are many variables in column names
+
+```{r, echo=FALSE}
+who_r
+```
+
+
+## Messy data \#2 
+
+There are many variables in column names
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+::: {.fragment}
+Example column names
+:::
+
+::: {.fragment}
+[new_]{style='color:#D55E00'}[sp_]{style='color:#009E73'}[m_]{style='color:#0072B2'}[014]{style='color:#CC79A7'}
+
+[new_]{style='color:#D55E00'}[rel_]{style='color:#009E73'}[f_]{style='color:#0072B2'}[65]{style='color:#CC79A7'}
+:::
+
+:::
+
+::: {.column width="60%" .fragment}
+
+::: {.fragment}
+all `col` names start with [new_]{style='color:#D55E00'}, which we don't really need
+:::
+
+::: {.fragment}
+followed by a diagnosis category: ["sp" "sn" "ep" "rel"]{style='color:#009E73'}
+:::
+
+::: {.fragment}
+then [gender]{style='color:#0072B2'}, which in these data are limited to ["m"]{style='color:#0072B2'} or ["f"]{style='color:#0072B2'}
+:::
+
+::: {.fragment}
+and last an [age range]{style='color:#CC79A7'}
+:::
+
+::: {.fragment}
+<u>and</u> these are separated by underscores `_` which is actually quite convenient
+:::
+
+:::
+
+::::
+
+. . .
+
+That's a lot of information in the column names!
+
+## Let's tidy it
+
+. . .
+
+```{r}
+#| echo: false
+
+who_r %>%
+ pivot_longer(
+  cols = new_sp_m_014:new_rel_f_65,
+  names_to = c("diagnosis", "sex", "age_range"), 
+  names_sep = "_",
+  names_prefix = "new_",
+  values_to = "count",
+  values_drop_na = TRUE
+)
+```
+
+## Messy data \#3
+
+What makes this data messy? 
+
+```{r}
+#| echo: false
+
+(hh <- household |> 
+  bind_cols(
+    tibble(
+    dob_child3 = as_date(c("2001-02-19", NA, NA, NA, "2002-05-05")),
+    name_child3 = c("Alice", NA, NA, NA, "Peter")
+    )
+    ) |> 
+  select(family, name_child1, dob_child1, name_child2, dob_child2, name_child3, dob_child3))
+  
+
+```
+
+## Messy data \#3
+
+There are multiple observations per <u>row</u>
+
+```{r}
+#| echo: false
+
+hh
+```
+
+. . .
+
+We have two pieces of information (or values) for each child
+
+- `name` and `dob` 
+
+These need to go into separate columns 
+
+## Tidy it up!
+
+```{r}
+#| echo: false
+
+hh %>% 
+  pivot_longer(
+    cols = !family, 
+    names_to = c(".value", "child"), 
+    names_sep = "_", 
+    values_drop_na = TRUE
+  )
+```
+
+## Let’s look at some education data
+
+```{r, echo=FALSE}
+(exam <- read_csv(here("data", "exam1.csv")))
+
+```
+
+## Let's Discuss
+
+* Are these data tidy?
+* If not, what needs to happen to make them tidy?
+* What are the variables? What are the values?
+
+```{r, echo=FALSE}
+(exam <- read_csv(here("data", "exam1.csv")))
+
+```
+
+## exam1 data
+
+What do we want?
+
+. . .
+
+Let’s change all `item` variables into two variables: `item` and `score`
+
+. . .
+
+```{r}
+#| echo: false
+exam
+```
+
+## exam1 data
+
+What do we want?
+
+Let’s change all `item` variables into two variables: `item` and `score`
+
+```{r}
+#| echo: false
+(exam_tidy <- exam %>% 
+  pivot_longer(
+    cols = starts_with("item"),
+    names_to = "item",
+    names_prefix = "item_",
+    names_transform = list(item = as.integer),
+    values_to = "score"
+  ))
+```
+
+## Why are tidy data useful?
+
+Easy to calculate the `prop`ortion of students responding correctly to each item
+
+. . .
+
+```{r, echo=FALSE}
+#| echo: false
+
+exam_tidy %>% 
+  group_by(item) %>% 
+  summarize(prop = mean(score))
+```
+
+## Why are tidy data useful?
+
+Easy to calculate the `prop`ortion correct for each item by gender
+
+. . .
+
+```{r}
+#| echo: false
+
+exam_tidy %>% 
+  group_by(item, gender) %>% 
+  summarize(prop = mean(score))
+```
+
+## Why are tidy data useful?
+
+Easy to calculate the `total` and `percent` correct for each student
+
+. . .
+
+```{r}
+#| echo: false
+
+exam_tidy %>% 
+  group_by(stu_name) %>% 
+  summarize(
+    score_total = sum(score),
+    score_pct = round(score_total/n()*100)
+  )
+
+```
+
+## Let's try another
+
+Are these data tidy?
+
+. . .
+
+```{r}
+#| echo: false
+
+(sim <- read_csv(here("data", "longitudinal_sim.csv")))
+```
+
+## Tidy it!
+
+We want separate columns for `wave` and `content` and `score`
+
+. . .
+
+```{r}
+#| echo: false
+
+(sim_tidy <- sim %>% 
+  pivot_longer(
+    cols = -1,
+    names_to = c("wave", "content"),
+    names_sep = "_",
+    values_to = "score",
+    names_prefix = "wave_"
+  )
+)
+```
+
+
+## Caveats {.smaller}
+
+- Tidy data are excellent when conducting preliminary descriptive analyses, plotting data, linear models
+
+- Occasionally, you need the data in a different format
+    + if you're using other packages or software for analysis
+    + specific modeling purposes (SEM)
+    + or you have two outcomes variables that might need to be separate column
+        - `math` & `rdg`
+
+. . .
+
+```{r}
+#| echo: false
+
+sim_tidy
+```
+
+## Tidy Data Made "Simple"
+
+1. Keep each dataset in its own tabular format
+2. Put each variable in a column
+
+## Don’t get discouraged!
+
+It’s hard to understand tidy principles unless you spend <u>a lot</u> of time working with data
+
+Data is often organised to make **data entry** as easy as possible
+
+::: {.incremental}
+
+* Tidying is tricky!
+* Takes practice!
+* Takes trial and error!
+* Takes learning and re-learning - <u>a lot</u>!
+* Takes trial and error!
+* But you are ~~rarely~~ never gifted with tidy data!
+
+:::
+
+## Some tidy reading suggestions
+
+- [*Tidy Data*. Wickham (2014)](http://www.jstatsoft.org/v59/i10/paper)
+- [R4DS(2e) Chapter 12](https://r4ds.had.co.nz/tidy-data.html)
+- [R Ladies Sydney: Clean It Up](https://rladiessydney.org/courses/02-cleanitup-0)
+- [Vignettes](https://tidyr.tidyverse.org/articles/pivot.html)
+
+## 
+![](https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/40488240-4609-4dc3-8920-693e078b55ce_rw_1920.jpg?h=2e96a7e21e19c43867546498da026649)
+
+::: aside
+Credit [Allison Horst](https://allisonhorst.com/data-science-art)
+:::
+
+# Naming Stuff
+
+## Column Naming Rules
+
+**Do use**
+
+- lowercase
+- prefixes and suffixes!
+    + `basc_score`, `basc_date`...
+    + `school_name`, `school_id`, `school_location`...
+- underscores "`_`"
+
+## Column Naming
+
+- A shortened representation of the variable
+- All variable names must be unique
+
+. . .
+
+Column name
+
+[prefix]{style='color:#D55E00'}_[name]{style='color:#0072B2'}
+
+. . .
+
+[id]{style='color:#D55E00'}_[student]{style='color:#0072B2'}
+[id]{style='color:#D55E00'}_[school]{style='color:#0072B2'}
+[id]{style='color:#D55E00'}_[district]{style='color:#0072B2'}
+
+## Column Naming Rules
+
+**Do NOT use**
+
+- CAPS
+- spaces 
+- numbers to start
+- special characters
+    + **except** underscores "`_`"
+
+
+## Data Values
+
+- **Don't** use numbers for labels!
+    + 0 == "yes"
+    + 1 == "no"
+    
+- Just use the values!
+    + "never"
+    + "rarely"
+    + "sometimes"
+    + "often"
+
+## Folder & File Naming Rules
+
+**Do use**
+
+- lowercase
+- underscores "`_`" or hyphens "`-`"
+
+## Folder & File Naming Rules
+
+**Do NOT use**
+
+- CAPS
+- spaces!
+- special characters
+    + no periods, no slashes!
+    + **except** underscores "`_`" or hyphens "`-`"
+
+
+# Some things I liked from [these slides](https://figshare.com/articles/presentation/Data_Management_and_Data_Management_Plans/7890827?file=14698892) from Jessica Logan
+
+## Document Everything!
+
+- It’s so hard to remember what you measured, when you measured it, or why you measured it
+- Your best strategy is organization and detail
+    + well-documented protocol
+    + a good codebook
+    + data dictionary (documentation of what your variable names mean) 
+- Future you won’t remember what current you decides to do today, or why you decided to do it
+- Think about someone else using your data later, and what they will need to know
+
+## Misc
+
+- Back up your data
+- Avoid manually-entered questions 
+
+# Submitted Questions
+
+## Questions
+
+1. *What data management tools do we have access to through UO which typically have a paywall?*
+  + What are you looking for?
+  + [Explore what is available](https://software.uoregon.edu/): https://software.uoregon.edu/
+2. *How can we request data management tools such as Box from UO?*
+  + You can submit a [request](https://service.uoregon.edu/TDClient/2030/Portal/KB/ArticleDet?ID=68409)
+3. *Using cloud-based programs such as Dedoose for storing data (example): Advised to also save back-up in OneDrive/elsewhere?*
+  + GitHub is a nice place to story data
+4. *What are the most novel AND useful data management tools overall?*
+  + R?
+
+
+# Other Questions?
+
+## Let's `pivot_longer()` {visibility="hidden"}
+
+Necessary arguments
+
+* `data` - of course
+* `cols` – which columns you will pivot longer
+* `names_to` – new variable name (in quotes) for those `cols`
+* `values_to` – new variable name (in quotes) for the cell values
+
+## Let's `pivot_longer()` {visibility="hidden"}
+
+```{r, eval=FALSE}
+relig_income %>% 
+ pivot_longer(
+  cols = _____,
+  names_to = "_____",
+  values_to = "_____"
+ )
+
+```
+
+. . .
+
+```{r, echo=FALSE}
+relig_income
+```
+
+## Let's `pivot_longer()` {visibility="hidden"}
+
+Which `cols` do we want to pivot?
+
+. . .
+
+```{r, eval=FALSE}
+relig_income %>% 
+ pivot_longer(
+  cols = c(`<$10k`:`>150k`),
+  names_to = "_____",
+  values_to = "_____"
+ )
+
+```
+
+```{r, echo=FALSE}
+relig_income
+```
+
+## Let's `pivot_longer()` {visibility="hidden"}
+
+Which `cols` do we want to pivot?
+
+. . .
+
+```{r, eval=FALSE}
+relig_income %>% 
+ pivot_longer(
+  cols = -1,
+  names_to = "_____",
+  values_to = "_____"
+ )
+
+```
+
+```{r, echo=FALSE}
+relig_income
+```
+
+## Let's `pivot_longer()` {visibility="hidden"}
+
+Which `cols` to we want to pivot?
+
+. . .
+
+```{r, eval=FALSE}
+relig_income %>% 
+ pivot_longer(
+  cols = -religion,
+  names_to = "_____",
+  values_to = "_____"
+ )
+
+```
+
+```{r, echo=FALSE}
+relig_income
+```
+
+## Let's `pivot_longer()` {visibility="hidden"}
+
+Those `cols` names will become a new column.
+
+What should we that new column of `col names`?
+
+. . .
+
+```{r, eval=FALSE}
+relig_income %>% 
+ pivot_longer(
+  cols = -religion,
+  names_to = "income",
+  values_to = "_____"
+ )
+
+```
+
+```{r, echo=FALSE}
+relig_income
+```
+
+## Let's `pivot_longer()` {visibility="hidden"}
+
+The values of those "income" `cols` will become a new column.
+
+What should we that new column of `col values`?
+
+. . .
+
+```{r, eval=FALSE}
+relig_income %>% 
+ pivot_longer(
+  cols = -religion,
+  names_to = "income",
+  values_to = "frequency"
+ )
+
+```
+
+```{r, echo=FALSE}
+relig_income
+```

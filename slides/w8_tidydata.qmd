@@ -29,6 +29,7 @@ library(palmerpenguins)
 library(countdown)
 library(gt)
 
+theme_set(theme_minimal())
 ```
 
 
@@ -208,15 +209,19 @@ star %>%
 
 ![](https://media1.giphy.com/media/nTfdeBvfgzV26zjoFP/giphy.gif?cid=ecf05e47ss10hzpu9f3yca3n0kgavkxygbxncmuh2hww3vpz&ep=v1_gifs_search&rid=giphy.gif&ct=g)
 
+# Tidy Data
 
 
 ## Tidy Data {.smaller}
 
-* Each variable is a column
-* Each observation is a row
-* Each cell is a single measurement
-* Each type of observational unit forms a table
-    + We won’t talk much about this point
+1. Each variable must have its own column
+2. Each observation must have its own row
+3. Each value must have its own cell
+
+. . .
+
+These three rules are interrelated because it’s impossible to only satisfy two of the three
+
 
 ![](https://d33wubrfki0l68.cloudfront.net/6f1ddb544fc5c69a2478e444ab8112fb0eea23f8/91adc/images/tidy-1.png)
   
@@ -232,6 +237,26 @@ star %>%
 [Allison Horst](https://allisonhorst.com/other-r-fun)
 :::
 
+## Tidy Data Made Simple
+
+1. Put each dataset in a tibble
+2. Put each variable in a column
+
+## Why tidy? {.smaller}
+
+A ~~biased~~ principled approach
+
+::: {.incremental}
+- There are many reasons why you might want to have "messy" data
+- **But**...
+- If you have a consistent data structure, it’s easier to learn tools that work with it because the data has an underlying uniformity
+- There’s a specific advantage to placing variables in columns because it allows R’s vectorised nature to be optimized
+- Tidy data is an **extremely** useful format generally, and particularly useful when applying tools within the `{tidyverse}`
+- All packages within the `{tidyverse}` are designed to either help you get your data in a tidy format, or assume your data are already in a tidy format
+- Assuming a common data format leads to **huge** jumps in efficiency, as the output from certain functions can be directly input into others
+
+:::
+
 ## Common ways data are "messy"
 
 * Column headers are values, not variable names
@@ -245,32 +270,6 @@ star %>%
 ::: aside
 [Allison Horst](https://allisonhorst.com/other-r-fun)
 :::
-
-## Defining tidy data
-
-**Essentially, two rules define tidy data** ^[[Modern Data Science with R](https://mdsr-book.github.io/)]
-
-1. Each row is a case representing the same underlying attribute
-2. Each column is a variable containing the same type of value for each case
-
-The combination of rows and columns make each observational unit (row) unique, even though cells may be repeated many times (e.g., student identifier)
-
-## Why tidy? {.smaller}
-
-* There are many reasons why you might want to have "messy" data
-    + e.g., for other software or specific modeling purposes
-
-. . .
-
-* However, tidy data is an **extremely** useful format generally, and particularly useful when applying tools within the `{tidyverse}`
-
-. . .
-
-* All packages within the `{tidyverse}` are designed to either help you get your data in a tidy format, or assume your data are already in a tidy format
-
-. . .
-
-* Assuming a common data format leads to large jumps in efficiency, as the output from certain functions can be directly input into others
 
 ##
 
@@ -413,7 +412,7 @@ pivot_longer(
 :::
 
 ::: {.column width="50%"}
-a data frame to pivot
+`data`: a data frame to pivot
 ```{r, eval=FALSE}
 df %>% 
   pivot_wider()
@@ -446,7 +445,7 @@ pivot_longer(
 :::
 
 ::: {.column width="50%"}
-The names of the `col`umns you want to pivot into longer format
+`cols`: The names of the `col`umns you want to pivot into longer format
 :::
 
 :::: 
@@ -469,7 +468,7 @@ pivot_longer(
 :::
 
 ::: {.column width="50%"}
-A string specifying the name of the **new** column to create from the data stored in the `col`umn names of data
+`names_to`: A string specifying the name of the **new** column to create from the data stored in the `col`umn names of data
 
 Can be a character vector, creating multiple columns, if `names_sep` or `names_pattern` is provided
 :::
@@ -494,7 +493,7 @@ pivot_longer(
 :::
 
 ::: {.column width="50%"}
-A string specifying the name of the **new** column to create from the data stored in cell values of the `col`umns
+`values_to`: A string specifying the name of the **new** column to create from the data stored in cell values of the `col`umns
 :::
 
 :::: 
@@ -584,7 +583,7 @@ relig_income
 
 ## Let's `pivot_longer()` {.smaller}
 
-Which `cols` to we want to pivot?
+Which `cols` do we want to pivot?
 
 . . .
 
@@ -714,27 +713,46 @@ relig_long %>%
 relig_long %>% 
   group_by(religion) %>% 
   mutate(pct = frequency/sum(frequency) * 100) %>% 
-  ggplot(aes(income, pct)) +
+  ggplot(aes(income, pct, color = religion)) +
+  geom_point() +
+  geom_line(aes(group = religion))
+```
+
+## Why are tidy data useful? {.smaller}
+
+**Or** we can facet by religion and maybe see the data better
+
+```{r}
+relig_long %>% 
+  group_by(religion) %>% 
+  mutate(pct = frequency/sum(frequency) * 100) %>% 
+  ggplot(aes(income, pct, color = religion)) +
   geom_point() +
   geom_line(group = 1) +
   facet_wrap(~religion)
 ```
 
-## Messy data {.smaller}
+## Messy data \#2
 
-Many variables in column names
+What makes this data messy? 
 
-`tidyr::who` (modified slightly)
-
-```{r, echo=FALSE, highlight.output = c(2)}
+```{r, echo=FALSE}
 (who_r <- who %>% 
   rename_with(~str_replace(., "newrel", "new_rel"), .cols = contains("rel")) %>% 
   rename_with(~str_replace(., "m", "m_"), .cols = contains("new_")) %>% 
   rename_with(~str_replace(., "f", "f_"), .cols = contains("new_")))
 ```
 
+## Messy data
 
-## Messy data {.smaller}
+Many variables in column names
+
+```{r, echo=FALSE}
+who_r
+```
+
+
+## Messy data 
 
 Many variables in column names
 
@@ -784,7 +802,9 @@ Necessary arguments
 ## Let's apply it
 
 ```{r}
-#| code-line-numbers: "|1|3|4|5|6"
+#| code-line-numbers: "|3|4|5|6"
+#| output-location: fragment
+
 who_r %>%
  pivot_longer(
   cols = new_sp_m_014:new_rel_f_65,
@@ -794,14 +814,39 @@ who_r %>%
 )
 ```
 
-## Don’t get discouraged
+## Let's apply it
 
-* This is tricky!
-* Takes practice
-* Takes trial and error
-* Takes looking at the [help documentation](https://tidyr.tidyverse.org/reference/pivot_longer.html) and the [vignette](https://tidyr.tidyverse.org/articles/pivot.html) - <u>a lot</u>
+Even better, use `names_prefix` and remove the `new` column
+
+```{r}
+#| code-line-numbers: "|5"
+who_r %>%
+ pivot_longer(
+  cols = new_sp_m_014:new_rel_f_65,
+  names_to = c("diagnosis", "sex", "age"),
+  names_prefix = "new_",
+  names_sep = "_",
+  values_to = "count"
+)
+```
+
+## Don’t get discouraged! {.smaller}
+
+It’s hard to understand tidy principles unless you spend <u>a lot</u> of time working with data
+
+Data is often organised to make **data entry** as easy as possible
+
+::: {.incremental}
+
+* Tidying is tricky!
+* Takes practice!
 * Takes trial and error!
-* But you are ~~rarely~~ never gifted with tidy data
+* Takes looking at the [help documentation](https://tidyr.tidyverse.org/reference/pivot_longer.html) and the [vignette](https://tidyr.tidyverse.org/articles/pivot.html) - <u>a lot</u>
+* Takes learning and re-learning - <u>a lot</u>!
+* Takes trial and error!
+* But you are ~~rarely~~ never gifted with tidy data!
+
+:::
 
 ## Declaring `cols` to `pivot_longer` {.smaller}
 
@@ -952,7 +997,7 @@ exam %>%
 
 ```
 
-## exam1 tidy {.smaller}
+## exam1 tidy
 
 And another step
 
@@ -1004,19 +1049,14 @@ who_r %>%
 
 **Question**: How would we calculate the `prop`ortion of students responding correctly to each item?
 
-```{r, echo=FALSE}
-#| output-location: fragment
-
-exam_tidy %>% 
-  group_by(item) %>% 
-  summarize(prop = mean(score))
-```
-
 ## Why are tidy data useful?
+
+**Question**: How would we calculate the `prop`ortion of students responding correctly to each item?
 
 **Answer**: We `group_by(item)` and `summarize()`
 
 ```{r}
+#| output-location: fragment
 exam_tidy %>% 
   group_by(item) %>% 
   summarize(prop = mean(score))
@@ -1026,12 +1066,40 @@ exam_tidy %>%
 
 **Question**: What if we wanted to know the `prop`ortion correct for each item by gender?
 
+## Why are tidy data useful?
+
+**Question**: What if we wanted to know the `prop`ortion correct for each item by gender?
+
+**Answer**: We `group_by(item, gender)` and `summarize()`
+
 ```{r}
 #| output-location: fragment
 
 exam_tidy %>% 
   group_by(item, gender) %>% 
   summarize(prop = mean(score))
+```
+
+## Why are tidy data useful?
+
+**Question**: What if we want to calculate the `total` and `percent` correct for each student?
+
+## Why are tidy data useful?
+
+**Question**: What if we want to calculate the `total` and `percent` correct for each student?
+
+**Answer**: We `group_by(stu_name)` and `summarize()`
+
+```{r}
+#| output-location: fragment
+
+exam_tidy %>% 
+  group_by(stu_name) %>% 
+  summarize(
+    score_total = sum(score),
+    score_pct = round(score_total/n()*100)
+  )
+
 ```
 
 ## More data
@@ -1045,16 +1113,21 @@ Name the data `scores`
 (scores <- read_csv(here("data", "year-end_scores.csv")))
 ```
 
-## Talk as a class
+## Talk as a class {.smaller}
 
 * Are these data tidy?
-    + If you wanted to summarize scores, or plot and use facet, what would you use to `group_by()` or `facet_wrap()`?
+    + If you wanted to summarize both scores, or plot and use facet by `content`, what would you use to `group_by()` or `facet_wrap()`?
 * What do we need to do to make these tidy?
     + What `pivot_longer()` arguments do we need?
 
-. . .
+```{r}
+#| echo: false
+scores
+```
 
-Work as a class to tidy, name new data `scores_tidy`
+## Work as a class 
+
+Tidy `scores`, name new data `scores_tidy`
 
 ```{r, echo=FALSE}
 countdown(minutes = 3, seconds = 0, bottom = 0, warn_when = 30)
@@ -1094,7 +1167,9 @@ Work with your neighbor to tidy, name new data `tidy_sim`
 countdown(minutes = 5, seconds = 0, bottom = 0, warn_when = 30)
 ```
 
-Tell me your solutions [demo a couple]{style='color:#D55E00'}
+Tell me your solutions 
+
+[demo a couple]{style='color:#D55E00'}
 
 ```{r, include=FALSE}
 sim_tidy <- sim %>% 
@@ -1119,7 +1194,7 @@ hiv <- read_csv(here("data", "hiv.csv"))
 
 Let's make some manipulations to get a sample of the data
 
-* (just `{dplyr}` variety `filter()` and `select()`) 
+* just `{dplyr}` variety `filter()` and `select()`
 
 ```{r}
 (hiv_r <- hiv %>% 
@@ -1132,12 +1207,14 @@ Let's make some manipulations to get a sample of the data
 . . .
 
 * Are these data tidy?
-* How would you add a new variable - say, *percent HIV*?
 * Discuss how you would transform these data, if at all
 
 ## Tidy the data
 
 ```{r}
+#| code-line-numbers: "|2|3|4|5"
+#| output-location: fragment
+
 (hiv_tidy <- hiv_r %>% 
   pivot_longer(
     cols = -1,
@@ -1186,7 +1263,7 @@ hiv_tidy %>%
 
 **OR**
 
-(not generally ideal unless you are **certain** you can remove these missing data)
+(if you're **certain** you can remove these missing data)
 
 ```{r}
 #| code-line-numbers: "|7"
@@ -1213,10 +1290,21 @@ hiv_tidy %>%
 
 ## [`pivot_wider()`](https://tidyr.tidyverse.org/reference/pivot_wider.html)
 
-Tidy data are excellent when conducting preliminary descriptive analyses, plotting data, linear models
+- Tidy data are excellent when conducting preliminary descriptive analyses, plotting data, linear models
 
-* Occasionally, you need the data in a different format
-    + For example, if you're using other packages for analysis
+- Occasionally, you need the data in a different format
++ if you're using other packages or software for analysis
+    + specific modeling purposes (SEM)
+    + or you have two outcomes variables that might need to be separate column
+        - `math` & `rdg`
+
+. . .
+
+```{r}
+#| echo: false
+
+sim_tidy
+```
 
 ## `pivot_wider()`
 
@@ -1320,7 +1408,7 @@ pivot_wider(
 :::
 
 ::: {.column width="60%"}
-The names of the (tidy) column (or columns) from which to get the name of the new data columns
+`names_from`: The names of the (tidy) column (or columns) from which to get the name of the new data columns
 :::
 
 ::::
@@ -1341,7 +1429,7 @@ pivot_wider(
 :::
 
 ::: {.column width="60%"}
-The names of the (tidy) column (or columns) from which to get the the cell values
+`values_from`: The names of the (tidy) column (or columns) from which to get the the cell values
 :::
 
 ::::
@@ -1359,6 +1447,8 @@ tidyr::fish_encounters
 So tidy, so nice...let's muck it up
 
 ```{r}
+#| output-location: fragment
+
 fish_encounters %>% 
   pivot_wider(
     names_from = station, 
@@ -1380,7 +1470,7 @@ fish_encounters %>%
 
 ## An example
 
-Those `NA`s should be zeroes.
+Maybe those `NA`s should be zeroes
 
 ```{r}
 #| code-line-numbers: "|5"
@@ -1405,6 +1495,7 @@ scores_tidy
 
 ::: {.column width="50%"}
 ```{r}
+#| code-line-numbers: "|3|4"
 scores_tidy %>% 
   pivot_wider(
     names_from = content,
@@ -1535,7 +1626,7 @@ Credit [Allison Horst](https://allisonhorst.com/data-science-art)
     + **Homework 9**
 * Reading
     + [R4DS(2e) 17](https://r4ds.hadley.nz/factors)
-* AMA
+* AMA (Week 10)
 
 # Homework 9
 

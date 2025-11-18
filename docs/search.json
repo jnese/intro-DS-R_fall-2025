@@ -4260,7 +4260,7 @@
     "href": "slides/w8_tidydata.html#tidy-data-1",
     "title": "Week 8: Tidy Data",
     "section": "Tidy Data",
-    "text": "Tidy Data\n\nEach variable is a column\nEach observation is a row\nEach cell is a single measurement\nEach type of observational unit forms a table\n\nWe won’t talk much about this point\n\n\n\n\n\nR4DS"
+    "text": "Tidy Data\n\nEach variable must have its own column\nEach observation must have its own row\nEach value must have its own cell\n\n\nThese three rules are interrelated because it’s impossible to only satisfy two of the three\n\n\n\n\nR4DS"
   },
   {
     "objectID": "slides/w8_tidydata.html#section-2",
@@ -4295,7 +4295,7 @@
     "href": "slides/w8_tidydata.html#why-tidy",
     "title": "Week 8: Tidy Data",
     "section": "Why tidy?",
-    "text": "Why tidy?\n\nThere are many reasons why you might want to have “messy” data\n\ne.g., for other software or specific modeling purposes\n\n\n\n\nHowever, tidy data is an extremely useful format generally, and particularly useful when applying tools within the {tidyverse}\n\n\n\n\nAll packages within the {tidyverse} are designed to either help you get your data in a tidy format, or assume your data are already in a tidy format\n\n\n\n\nAssuming a common data format leads to large jumps in efficiency, as the output from certain functions can be directly input into others"
+    "text": "Why tidy?\nA biased principled approach\n\nThere are many reasons why you might want to have “messy” data\nBut…\nIf you have a consistent data structure, it’s easier to learn tools that work with it because the data has an underlying uniformity\nThere’s a specific advantage to placing variables in columns because it allows R’s vectorised nature to be optimized\nTidy data is an extremely useful format generally, and particularly useful when applying tools within the {tidyverse}\nAll packages within the {tidyverse} are designed to either help you get your data in a tidy format, or assume your data are already in a tidy format\nAssuming a common data format leads to huge jumps in efficiency, as the output from certain functions can be directly input into others"
   },
   {
     "objectID": "slides/w8_tidydata.html#section-4",
@@ -4351,28 +4351,28 @@
     "href": "slides/w8_tidydata.html#pivot_longer-4",
     "title": "Week 8: Tidy Data",
     "section": "pivot_longer()",
-    "text": "pivot_longer()\n\n\n\npivot_longer(\n  data, \n  cols, \n  names_to = \"name\", \n  values_to = \"value\",\n)\n\n\na data frame to pivot\n\ndf %&gt;% \n  pivot_wider()\n\nor\n\npivot_wider(df)"
+    "text": "pivot_longer()\n\n\n\npivot_longer(\n  data, \n  cols, \n  names_to = \"name\", \n  values_to = \"value\",\n)\n\n\ndata: a data frame to pivot\n\ndf %&gt;% \n  pivot_wider()\n\nor\n\npivot_wider(df)"
   },
   {
     "objectID": "slides/w8_tidydata.html#pivot_longer-5",
     "href": "slides/w8_tidydata.html#pivot_longer-5",
     "title": "Week 8: Tidy Data",
     "section": "pivot_longer()",
-    "text": "pivot_longer()\n\n\n\npivot_longer(\n  data, \n  cols, \n  names_to = \"name\", \n  values_to = \"value\",\n)\n\n\nThe names of the columns you want to pivot into longer format"
+    "text": "pivot_longer()\n\n\n\npivot_longer(\n  data, \n  cols, \n  names_to = \"name\", \n  values_to = \"value\",\n)\n\n\ncols: The names of the columns you want to pivot into longer format"
   },
   {
     "objectID": "slides/w8_tidydata.html#pivot_longer-6",
     "href": "slides/w8_tidydata.html#pivot_longer-6",
     "title": "Week 8: Tidy Data",
     "section": "pivot_longer()",
-    "text": "pivot_longer()\n\n\n\npivot_longer(\n  data, \n  cols, \n  names_to = \"name\", \n  values_to = \"value\",\n)\n\n\nA string specifying the name of the new column to create from the data stored in the column names of data\nCan be a character vector, creating multiple columns, if names_sep or names_pattern is provided"
+    "text": "pivot_longer()\n\n\n\npivot_longer(\n  data, \n  cols, \n  names_to = \"name\", \n  values_to = \"value\",\n)\n\n\nnames_to: A string specifying the name of the new column to create from the data stored in the column names of data\nCan be a character vector, creating multiple columns, if names_sep or names_pattern is provided"
   },
   {
     "objectID": "slides/w8_tidydata.html#pivot_longer-7",
     "href": "slides/w8_tidydata.html#pivot_longer-7",
     "title": "Week 8: Tidy Data",
     "section": "pivot_longer()",
-    "text": "pivot_longer()\n\n\n\npivot_longer(\n  data, \n  cols, \n  names_to = \"name\", \n  values_to = \"value\",\n)\n\n\nA string specifying the name of the new column to create from the data stored in cell values of the columns"
+    "text": "pivot_longer()\n\n\n\npivot_longer(\n  data, \n  cols, \n  names_to = \"name\", \n  values_to = \"value\",\n)\n\n\nvalues_to: A string specifying the name of the new column to create from the data stored in cell values of the columns"
   },
   {
     "objectID": "slides/w8_tidydata.html#messy-data",
@@ -4421,7 +4421,7 @@
     "href": "slides/w8_tidydata.html#lets-pivot_longer-4",
     "title": "Week 8: Tidy Data",
     "section": "Let’s pivot_longer()",
-    "text": "Let’s pivot_longer()\nWhich cols to we want to pivot?\n\n\nrelig_income %&gt;% \n pivot_longer(\n  cols = -religion,\n  names_to = \"_____\",\n  values_to = \"_____\"\n )\n\n\n\n# A tibble: 18 × 11\n   religion `&lt;$10k` `$10-20k` `$20-30k` `$30-40k` `$40-50k` `$50-75k` `$75-100k`\n   &lt;chr&gt;      &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;      &lt;dbl&gt;\n 1 Agnostic      27        34        60        81        76       137        122\n 2 Atheist       12        27        37        52        35        70         73\n 3 Buddhist      27        21        30        34        33        58         62\n 4 Catholic     418       617       732       670       638      1116        949\n 5 Don’t k…      15        14        15        11        10        35         21\n 6 Evangel…     575       869      1064       982       881      1486        949\n 7 Hindu          1         9         7         9        11        34         47\n 8 Histori…     228       244       236       238       197       223        131\n 9 Jehovah…      20        27        24        24        21        30         15\n10 Jewish        19        19        25        25        30        95         69\n11 Mainlin…     289       495       619       655       651      1107        939\n12 Mormon        29        40        48        51        56       112         85\n13 Muslim         6         7         9        10         9        23         16\n14 Orthodox      13        17        23        32        32        47         38\n15 Other C…       9         7        11        13        13        14         18\n16 Other F…      20        33        40        46        49        63         46\n17 Other W…       5         2         3         4         2         7          3\n18 Unaffil…     217       299       374       365       341       528        407\n# ℹ 3 more variables: `$100-150k` &lt;dbl&gt;, `&gt;150k` &lt;dbl&gt;,\n#   `Don't know/refused` &lt;dbl&gt;"
+    "text": "Let’s pivot_longer()\nWhich cols do we want to pivot?\n\n\nrelig_income %&gt;% \n pivot_longer(\n  cols = -religion,\n  names_to = \"_____\",\n  values_to = \"_____\"\n )\n\n\n\n# A tibble: 18 × 11\n   religion `&lt;$10k` `$10-20k` `$20-30k` `$30-40k` `$40-50k` `$50-75k` `$75-100k`\n   &lt;chr&gt;      &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;      &lt;dbl&gt;\n 1 Agnostic      27        34        60        81        76       137        122\n 2 Atheist       12        27        37        52        35        70         73\n 3 Buddhist      27        21        30        34        33        58         62\n 4 Catholic     418       617       732       670       638      1116        949\n 5 Don’t k…      15        14        15        11        10        35         21\n 6 Evangel…     575       869      1064       982       881      1486        949\n 7 Hindu          1         9         7         9        11        34         47\n 8 Histori…     228       244       236       238       197       223        131\n 9 Jehovah…      20        27        24        24        21        30         15\n10 Jewish        19        19        25        25        30        95         69\n11 Mainlin…     289       495       619       655       651      1107        939\n12 Mormon        29        40        48        51        56       112         85\n13 Muslim         6         7         9        10         9        23         16\n14 Orthodox      13        17        23        32        32        47         38\n15 Other C…       9         7        11        13        13        14         18\n16 Other F…      20        33        40        46        49        63         46\n17 Other W…       5         2         3         4         2         7          3\n18 Unaffil…     217       299       374       365       341       528        407\n# ℹ 3 more variables: `$100-150k` &lt;dbl&gt;, `&gt;150k` &lt;dbl&gt;,\n#   `Don't know/refused` &lt;dbl&gt;"
   },
   {
     "objectID": "slides/w8_tidydata.html#lets-pivot_longer-5",
@@ -4470,42 +4470,42 @@
     "href": "slides/w8_tidydata.html#why-are-tidy-data-useful-3",
     "title": "Week 8: Tidy Data",
     "section": "Why are tidy data useful?",
-    "text": "Why are tidy data useful?\nNow we can facet by religion and see all data at once!\n\nrelig_long %&gt;% \n  group_by(religion) %&gt;% \n  mutate(pct = frequency/sum(frequency) * 100) %&gt;% \n  ggplot(aes(income, pct)) +\n  geom_point() +\n  geom_line(group = 1) +\n  facet_wrap(~religion)"
+    "text": "Why are tidy data useful?\nNow we can facet by religion and see all data at once!\n\nrelig_long %&gt;% \n  group_by(religion) %&gt;% \n  mutate(pct = frequency/sum(frequency) * 100) %&gt;% \n  ggplot(aes(income, pct, color = religion)) +\n  geom_point() +\n  geom_line(aes(group = religion))"
   },
   {
     "objectID": "slides/w8_tidydata.html#messy-data-2",
     "href": "slides/w8_tidydata.html#messy-data-2",
     "title": "Week 8: Tidy Data",
-    "section": "Messy data",
-    "text": "Messy data\nMany variables in column names\ntidyr::who (modified slightly)\n\n\n# A tibble: 7,240 × 60\n   country     iso2  iso3   year new_sp_m_014 new_sp_m_1524 new_sp_m_2534\n   &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt; &lt;dbl&gt;        &lt;dbl&gt;         &lt;dbl&gt;         &lt;dbl&gt;\n 1 Afghanistan AF    AFG    1980           NA            NA            NA\n 2 Afghanistan AF    AFG    1981           NA            NA            NA\n 3 Afghanistan AF    AFG    1982           NA            NA            NA\n 4 Afghanistan AF    AFG    1983           NA            NA            NA\n 5 Afghanistan AF    AFG    1984           NA            NA            NA\n 6 Afghanistan AF    AFG    1985           NA            NA            NA\n 7 Afghanistan AF    AFG    1986           NA            NA            NA\n 8 Afghanistan AF    AFG    1987           NA            NA            NA\n 9 Afghanistan AF    AFG    1988           NA            NA            NA\n10 Afghanistan AF    AFG    1989           NA            NA            NA\n# ℹ 7,230 more rows\n# ℹ 53 more variables: new_sp_m_3544 &lt;dbl&gt;, new_sp_m_4554 &lt;dbl&gt;,\n#   new_sp_m_5564 &lt;dbl&gt;, new_sp_m_65 &lt;dbl&gt;, new_sp_f_014 &lt;dbl&gt;,\n#   new_sp_f_1524 &lt;dbl&gt;, new_sp_f_2534 &lt;dbl&gt;, new_sp_f_3544 &lt;dbl&gt;,\n#   new_sp_f_4554 &lt;dbl&gt;, new_sp_f_5564 &lt;dbl&gt;, new_sp_f_65 &lt;dbl&gt;,\n#   new_sn_m_014 &lt;dbl&gt;, new_sn_m_1524 &lt;dbl&gt;, new_sn_m_2534 &lt;dbl&gt;,\n#   new_sn_m_3544 &lt;dbl&gt;, new_sn_m_4554 &lt;dbl&gt;, new_sn_m_5564 &lt;dbl&gt;, …"
+    "section": "Messy data #2",
+    "text": "Messy data #2\nWhat makes this data messy?\n\n\n# A tibble: 7,240 × 60\n   country     iso2  iso3   year new_sp_m_014 new_sp_m_1524 new_sp_m_2534\n   &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt; &lt;dbl&gt;        &lt;dbl&gt;         &lt;dbl&gt;         &lt;dbl&gt;\n 1 Afghanistan AF    AFG    1980           NA            NA            NA\n 2 Afghanistan AF    AFG    1981           NA            NA            NA\n 3 Afghanistan AF    AFG    1982           NA            NA            NA\n 4 Afghanistan AF    AFG    1983           NA            NA            NA\n 5 Afghanistan AF    AFG    1984           NA            NA            NA\n 6 Afghanistan AF    AFG    1985           NA            NA            NA\n 7 Afghanistan AF    AFG    1986           NA            NA            NA\n 8 Afghanistan AF    AFG    1987           NA            NA            NA\n 9 Afghanistan AF    AFG    1988           NA            NA            NA\n10 Afghanistan AF    AFG    1989           NA            NA            NA\n# ℹ 7,230 more rows\n# ℹ 53 more variables: new_sp_m_3544 &lt;dbl&gt;, new_sp_m_4554 &lt;dbl&gt;,\n#   new_sp_m_5564 &lt;dbl&gt;, new_sp_m_65 &lt;dbl&gt;, new_sp_f_014 &lt;dbl&gt;,\n#   new_sp_f_1524 &lt;dbl&gt;, new_sp_f_2534 &lt;dbl&gt;, new_sp_f_3544 &lt;dbl&gt;,\n#   new_sp_f_4554 &lt;dbl&gt;, new_sp_f_5564 &lt;dbl&gt;, new_sp_f_65 &lt;dbl&gt;,\n#   new_sn_m_014 &lt;dbl&gt;, new_sn_m_1524 &lt;dbl&gt;, new_sn_m_2534 &lt;dbl&gt;,\n#   new_sn_m_3544 &lt;dbl&gt;, new_sn_m_4554 &lt;dbl&gt;, new_sn_m_5564 &lt;dbl&gt;, …"
   },
   {
     "objectID": "slides/w8_tidydata.html#messy-data-3",
     "href": "slides/w8_tidydata.html#messy-data-3",
     "title": "Week 8: Tidy Data",
     "section": "Messy data",
-    "text": "Messy data\nMany variables in column names\n\n\nExample column names\nnew_sp_m_014\nnew_rel_f_65\n\nall col names start with new_, which we don’t need\nfollowed by a diagnosis category: “sp_” “sn_” “ep_” “rel_”\nthen gender, which in these data are limited to “m_” or “f_”\nand last an age range\nand these are separated by underscores _ which is quite convenient, as we’ll see\n\n\nThat’s a lot of information in the column names!"
+    "text": "Messy data\nMany variables in column names\n\n\n# A tibble: 7,240 × 60\n   country     iso2  iso3   year new_sp_m_014 new_sp_m_1524 new_sp_m_2534\n   &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt; &lt;dbl&gt;        &lt;dbl&gt;         &lt;dbl&gt;         &lt;dbl&gt;\n 1 Afghanistan AF    AFG    1980           NA            NA            NA\n 2 Afghanistan AF    AFG    1981           NA            NA            NA\n 3 Afghanistan AF    AFG    1982           NA            NA            NA\n 4 Afghanistan AF    AFG    1983           NA            NA            NA\n 5 Afghanistan AF    AFG    1984           NA            NA            NA\n 6 Afghanistan AF    AFG    1985           NA            NA            NA\n 7 Afghanistan AF    AFG    1986           NA            NA            NA\n 8 Afghanistan AF    AFG    1987           NA            NA            NA\n 9 Afghanistan AF    AFG    1988           NA            NA            NA\n10 Afghanistan AF    AFG    1989           NA            NA            NA\n# ℹ 7,230 more rows\n# ℹ 53 more variables: new_sp_m_3544 &lt;dbl&gt;, new_sp_m_4554 &lt;dbl&gt;,\n#   new_sp_m_5564 &lt;dbl&gt;, new_sp_m_65 &lt;dbl&gt;, new_sp_f_014 &lt;dbl&gt;,\n#   new_sp_f_1524 &lt;dbl&gt;, new_sp_f_2534 &lt;dbl&gt;, new_sp_f_3544 &lt;dbl&gt;,\n#   new_sp_f_4554 &lt;dbl&gt;, new_sp_f_5564 &lt;dbl&gt;, new_sp_f_65 &lt;dbl&gt;,\n#   new_sn_m_014 &lt;dbl&gt;, new_sn_m_1524 &lt;dbl&gt;, new_sn_m_2534 &lt;dbl&gt;,\n#   new_sn_m_3544 &lt;dbl&gt;, new_sn_m_4554 &lt;dbl&gt;, new_sn_m_5564 &lt;dbl&gt;, …"
   },
   {
     "objectID": "slides/w8_tidydata.html#messy-data-4",
     "href": "slides/w8_tidydata.html#messy-data-4",
     "title": "Week 8: Tidy Data",
     "section": "Messy data",
-    "text": "Messy data\nMany variables in column names\nNecessary arguments\n\ndata - of course\ncols – which columns you will pivot longer\nnames_to – new variable names (in quotes) for those cols\nvalues_to – new variable name (in quotes) for the cell values\n\n\n\nnames_separate – how to separate those cols names"
+    "text": "Messy data\nMany variables in column names\n\n\nExample column names\nnew_sp_m_014\nnew_rel_f_65\n\nall col names start with new_, which we don’t need\nfollowed by a diagnosis category: “sp_” “sn_” “ep_” “rel_”\nthen gender, which in these data are limited to “m_” or “f_”\nand last an age range\nand these are separated by underscores _ which is quite convenient, as we’ll see\n\n\nThat’s a lot of information in the column names!"
   },
   {
     "objectID": "slides/w8_tidydata.html#lets-apply-it",
     "href": "slides/w8_tidydata.html#lets-apply-it",
     "title": "Week 8: Tidy Data",
     "section": "Let’s apply it",
-    "text": "Let’s apply it\n\nwho_r %&gt;%\n pivot_longer(\n  cols = new_sp_m_014:new_rel_f_65,\n  names_to = c(\"new\", \"diagnosis\", \"sex\", \"age\"), \n  names_sep = \"_\",\n  values_to = \"count\"\n)\n\n# A tibble: 405,440 × 9\n   country     iso2  iso3   year new   diagnosis sex   age   count\n   &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt; &lt;dbl&gt;\n 1 Afghanistan AF    AFG    1980 new   sp        m     014      NA\n 2 Afghanistan AF    AFG    1980 new   sp        m     1524     NA\n 3 Afghanistan AF    AFG    1980 new   sp        m     2534     NA\n 4 Afghanistan AF    AFG    1980 new   sp        m     3544     NA\n 5 Afghanistan AF    AFG    1980 new   sp        m     4554     NA\n 6 Afghanistan AF    AFG    1980 new   sp        m     5564     NA\n 7 Afghanistan AF    AFG    1980 new   sp        m     65       NA\n 8 Afghanistan AF    AFG    1980 new   sp        f     014      NA\n 9 Afghanistan AF    AFG    1980 new   sp        f     1524     NA\n10 Afghanistan AF    AFG    1980 new   sp        f     2534     NA\n# ℹ 405,430 more rows"
+    "text": "Let’s apply it\n\nwho_r %&gt;%\n pivot_longer(\n  cols = new_sp_m_014:new_rel_f_65,\n  names_to = c(\"new\", \"diagnosis\", \"sex\", \"age\"), \n  names_sep = \"_\",\n  values_to = \"count\"\n)\n\n\n\n# A tibble: 405,440 × 9\n   country     iso2  iso3   year new   diagnosis sex   age   count\n   &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt; &lt;dbl&gt;\n 1 Afghanistan AF    AFG    1980 new   sp        m     014      NA\n 2 Afghanistan AF    AFG    1980 new   sp        m     1524     NA\n 3 Afghanistan AF    AFG    1980 new   sp        m     2534     NA\n 4 Afghanistan AF    AFG    1980 new   sp        m     3544     NA\n 5 Afghanistan AF    AFG    1980 new   sp        m     4554     NA\n 6 Afghanistan AF    AFG    1980 new   sp        m     5564     NA\n 7 Afghanistan AF    AFG    1980 new   sp        m     65       NA\n 8 Afghanistan AF    AFG    1980 new   sp        f     014      NA\n 9 Afghanistan AF    AFG    1980 new   sp        f     1524     NA\n10 Afghanistan AF    AFG    1980 new   sp        f     2534     NA\n# ℹ 405,430 more rows"
   },
   {
     "objectID": "slides/w8_tidydata.html#dont-get-discouraged",
     "href": "slides/w8_tidydata.html#dont-get-discouraged",
     "title": "Week 8: Tidy Data",
-    "section": "Don’t get discouraged",
-    "text": "Don’t get discouraged\n\nThis is tricky!\nTakes practice\nTakes trial and error\nTakes looking at the help documentation and the vignette - a lot\nTakes trial and error!\nBut you are rarely never gifted with tidy data"
+    "section": "Don’t get discouraged!",
+    "text": "Don’t get discouraged!\nIt’s hard to understand tidy principles unless you spend a lot of time working with data\nData is often organised to make data entry as easy as possible\n\nTidying is tricky!\nTakes practice!\nTakes trial and error!\nTakes looking at the help documentation and the vignette - a lot\nTakes learning and re-learning - a lot!\nTakes trial and error!\nBut you are rarely never gifted with tidy data!"
   },
   {
     "objectID": "slides/w8_tidydata.html#declaring-cols-to-pivot_longer",
@@ -4589,21 +4589,21 @@
     "href": "slides/w8_tidydata.html#why-are-tidy-data-useful-4",
     "title": "Week 8: Tidy Data",
     "section": "Why are tidy data useful?",
-    "text": "Why are tidy data useful?\nQuestion: How would we calculate the proportion of students responding correctly to each item?\n\n\n# A tibble: 18 × 2\n    item   prop\n   &lt;int&gt;  &lt;dbl&gt;\n 1     1 1     \n 2     2 1     \n 3     3 1     \n 4     4 0.914 \n 5     5 0.886 \n 6     6 0.857 \n 7     7 0.886 \n 8     8 0.771 \n 9     9 0.857 \n10    10 0.686 \n11    11 0.343 \n12    12 0.171 \n13    13 0.2   \n14    14 0.0857\n15    15 0.0286\n16    16 0.0286\n17    17 0.0286\n18    18 0"
+    "text": "Why are tidy data useful?\nOr we can facet by religion and maybe see the data better\n\nrelig_long %&gt;% \n  group_by(religion) %&gt;% \n  mutate(pct = frequency/sum(frequency) * 100) %&gt;% \n  ggplot(aes(income, pct, color = religion)) +\n  geom_point() +\n  geom_line(group = 1) +\n  facet_wrap(~religion)"
   },
   {
     "objectID": "slides/w8_tidydata.html#why-are-tidy-data-useful-5",
     "href": "slides/w8_tidydata.html#why-are-tidy-data-useful-5",
     "title": "Week 8: Tidy Data",
     "section": "Why are tidy data useful?",
-    "text": "Why are tidy data useful?\nAnswer: We group_by(item) and summarize()\n\nexam_tidy %&gt;% \n  group_by(item) %&gt;% \n  summarize(prop = mean(score))\n\n# A tibble: 18 × 2\n    item   prop\n   &lt;int&gt;  &lt;dbl&gt;\n 1     1 1     \n 2     2 1     \n 3     3 1     \n 4     4 0.914 \n 5     5 0.886 \n 6     6 0.857 \n 7     7 0.886 \n 8     8 0.771 \n 9     9 0.857 \n10    10 0.686 \n11    11 0.343 \n12    12 0.171 \n13    13 0.2   \n14    14 0.0857\n15    15 0.0286\n16    16 0.0286\n17    17 0.0286\n18    18 0"
+    "text": "Why are tidy data useful?\nQuestion: How would we calculate the proportion of students responding correctly to each item?"
   },
   {
     "objectID": "slides/w8_tidydata.html#why-are-tidy-data-useful-6",
     "href": "slides/w8_tidydata.html#why-are-tidy-data-useful-6",
     "title": "Week 8: Tidy Data",
     "section": "Why are tidy data useful?",
-    "text": "Why are tidy data useful?\nQuestion: What if we wanted to know the proportion correct for each item by gender?\n\nexam_tidy %&gt;% \n  group_by(item, gender) %&gt;% \n  summarize(prop = mean(score))\n\n\n\n# A tibble: 36 × 3\n# Groups:   item [18]\n    item gender  prop\n   &lt;int&gt; &lt;chr&gt;  &lt;dbl&gt;\n 1     1 F      1    \n 2     1 M      1    \n 3     2 F      1    \n 4     2 M      1    \n 5     3 F      1    \n 6     3 M      1    \n 7     4 F      0.889\n 8     4 M      0.941\n 9     5 F      0.833\n10     5 M      0.941\n# ℹ 26 more rows"
+    "text": "Why are tidy data useful?\nQuestion: How would we calculate the proportion of students responding correctly to each item?\nAnswer: We group_by(item) and summarize()\n\nexam_tidy %&gt;% \n  group_by(item) %&gt;% \n  summarize(prop = mean(score))\n\n\n\n# A tibble: 18 × 2\n    item   prop\n   &lt;int&gt;  &lt;dbl&gt;\n 1     1 1     \n 2     2 1     \n 3     3 1     \n 4     4 0.914 \n 5     5 0.886 \n 6     6 0.857 \n 7     7 0.886 \n 8     8 0.771 \n 9     9 0.857 \n10    10 0.686 \n11    11 0.343 \n12    12 0.171 \n13    13 0.2   \n14    14 0.0857\n15    15 0.0286\n16    16 0.0286\n17    17 0.0286\n18    18 0"
   },
   {
     "objectID": "slides/w8_tidydata.html#more-data",
@@ -4617,7 +4617,7 @@
     "href": "slides/w8_tidydata.html#talk-as-a-class",
     "title": "Week 8: Tidy Data",
     "section": "Talk as a class",
-    "text": "Talk as a class\n\nAre these data tidy?\n\nIf you wanted to summarize scores, or plot and use facet, what would you use to group_by() or facet_wrap()?\n\nWhat do we need to do to make these tidy?\n\nWhat pivot_longer() arguments do we need?\n\n\n\nWork as a class to tidy, name new data scores_tidy\n\n\n\n−+\n03:00"
+    "text": "Talk as a class\n\nAre these data tidy?\n\nIf you wanted to summarize both scores, or plot and use facet by content, what would you use to group_by() or facet_wrap()?\n\nWhat do we need to do to make these tidy?\n\nWhat pivot_longer() arguments do we need?\n\n\n\n\n# A tibble: 10 × 7\n      id   sex ethnicity  sped frl    math  read\n   &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;lgl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1     1     0         5     0 NA      101    99\n 2     2     1         2     0 NA       96    NA\n 3     3     1         5     0 NA      131   119\n 4     4     1         4     0 NA       84    93\n 5     5     0         1     0 NA      110   118\n 6     6     0         5     1 NA       NA   105\n 7     7     1         5     1 NA       93    99\n 8     8     0         3     0 NA       81    77\n 9     9     1         2     0 NA      129   135\n10    10     0         1     0 NA      117   122"
   },
   {
     "objectID": "slides/w8_tidydata.html#lets-try-another",
@@ -4631,7 +4631,7 @@
     "href": "slides/w8_tidydata.html#talk-with-a-neighbor-1",
     "title": "Week 8: Tidy Data",
     "section": "Talk with a neighbor",
-    "text": "Talk with a neighbor\n\nAre these data tidy?\n\nIf you wanted to summarize scores, or plot and use facet, what would you use to group_by() or facet_wrap()?\n\nWhat do we need to do to make these tidy?\n\nWhat pivot_longer() arguments do we need?\n\n\n\nWork with your neighbor to tidy, name new data tidy_sim\n\n\n\n−+\n05:00\n\n\n\nTell me your solutions demo a couple"
+    "text": "Talk with a neighbor\n\nAre these data tidy?\n\nIf you wanted to summarize scores, or plot and use facet, what would you use to group_by() or facet_wrap()?\n\nWhat do we need to do to make these tidy?\n\nWhat pivot_longer() arguments do we need?\n\n\n\nWork with your neighbor to tidy, name new data tidy_sim\n\n\n\n−+\n05:00\n\n\n\nTell me your solutions\ndemo a couple"
   },
   {
     "objectID": "slides/w8_tidydata.html#other-possible-issues",
@@ -4645,14 +4645,14 @@
     "href": "slides/w8_tidydata.html#other-possible-issues-1",
     "title": "Week 8: Tidy Data",
     "section": "Other possible issues",
-    "text": "Other possible issues\nLet’s make some manipulations to get a sample of the data\n\n(just {dplyr} variety filter() and select())\n\n\n(hiv_r &lt;- hiv %&gt;% \n  filter(country == \"France\" |\n          country == \"South Africa\" |\n            country == \"United States\") %&gt;% \n  select(country, `1979`, `1989`, `1999`, `2009`))\n\n# A tibble: 3 × 5\n  country        `1979` `1989` `1999` `2009`\n  &lt;chr&gt;           &lt;dbl&gt; &lt;lgl&gt;   &lt;dbl&gt;  &lt;dbl&gt;\n1 France        NA      NA        0.3    0.4\n2 South Africa  NA      NA       14.8   17.2\n3 United States  0.0318 NA        0.5    0.6\n\n\n\n\nAre these data tidy?\nHow would you add a new variable - say, percent HIV?\nDiscuss how you would transform these data, if at all"
+    "text": "Other possible issues\nLet’s make some manipulations to get a sample of the data\n\njust {dplyr} variety filter() and select()\n\n\n(hiv_r &lt;- hiv %&gt;% \n  filter(country == \"France\" |\n          country == \"South Africa\" |\n            country == \"United States\") %&gt;% \n  select(country, `1979`, `1989`, `1999`, `2009`))\n\n# A tibble: 3 × 5\n  country        `1979` `1989` `1999` `2009`\n  &lt;chr&gt;           &lt;dbl&gt; &lt;lgl&gt;   &lt;dbl&gt;  &lt;dbl&gt;\n1 France        NA      NA        0.3    0.4\n2 South Africa  NA      NA       14.8   17.2\n3 United States  0.0318 NA        0.5    0.6\n\n\n\n\nAre these data tidy?\nDiscuss how you would transform these data, if at all"
   },
   {
     "objectID": "slides/w8_tidydata.html#tidy-the-data",
     "href": "slides/w8_tidydata.html#tidy-the-data",
     "title": "Week 8: Tidy Data",
     "section": "Tidy the data",
-    "text": "Tidy the data\n\n(hiv_tidy &lt;- hiv_r %&gt;% \n  pivot_longer(\n    cols = -1,\n    names_to = \"year\",\n    values_to = \"percentage\"\n  )\n)\n\n# A tibble: 12 × 3\n   country       year  percentage\n   &lt;chr&gt;         &lt;chr&gt;      &lt;dbl&gt;\n 1 France        1979     NA     \n 2 France        1989     NA     \n 3 France        1999      0.3   \n 4 France        2009      0.4   \n 5 South Africa  1979     NA     \n 6 South Africa  1989     NA     \n 7 South Africa  1999     14.8   \n 8 South Africa  2009     17.2   \n 9 United States 1979      0.0318\n10 United States 1989     NA     \n11 United States 1999      0.5   \n12 United States 2009      0.6"
+    "text": "Tidy the data\n\n(hiv_tidy &lt;- hiv_r %&gt;% \n  pivot_longer(\n    cols = -1,\n    names_to = \"year\",\n    values_to = \"percentage\"\n  )\n)\n\n\n\n# A tibble: 12 × 3\n   country       year  percentage\n   &lt;chr&gt;         &lt;chr&gt;      &lt;dbl&gt;\n 1 France        1979     NA     \n 2 France        1989     NA     \n 3 France        1999      0.3   \n 4 France        2009      0.4   \n 5 South Africa  1979     NA     \n 6 South Africa  1989     NA     \n 7 South Africa  1999     14.8   \n 8 South Africa  2009     17.2   \n 9 United States 1979      0.0318\n10 United States 1989     NA     \n11 United States 1999      0.5   \n12 United States 2009      0.6"
   },
   {
     "objectID": "slides/w8_tidydata.html#lets-plot-it",
@@ -4680,7 +4680,7 @@
     "href": "slides/w8_tidydata.html#drop-nas",
     "title": "Week 8: Tidy Data",
     "section": "Drop NAs",
-    "text": "Drop NAs\n\nhiv_tidy %&gt;% \n  drop_na(percentage)\n\nOR\n(not generally ideal unless you are certain you can remove these missing data)\n\nhiv_tidy &lt;- hiv_r %&gt;% \n  pivot_longer(\n    cols = -1,\n    names_to = \"year\",\n    values_to = \"percentage\",\n    names_transform = list(year = as.integer),\n    values_drop_na = TRUE\n  )"
+    "text": "Drop NAs\n\nhiv_tidy %&gt;% \n  drop_na(percentage)\n\nOR\n(if you’re certain you can remove these missing data)\n\nhiv_tidy &lt;- hiv_r %&gt;% \n  pivot_longer(\n    cols = -1,\n    names_to = \"year\",\n    values_to = \"percentage\",\n    names_transform = list(year = as.integer),\n    values_drop_na = TRUE\n  )"
   },
   {
     "objectID": "slides/w8_tidydata.html#plot-again",
@@ -4694,7 +4694,7 @@
     "href": "slides/w8_tidydata.html#pivot_wider-1",
     "title": "Week 8: Tidy Data",
     "section": "pivot_wider()",
-    "text": "pivot_wider()\nTidy data are excellent when conducting preliminary descriptive analyses, plotting data, linear models\n\nOccasionally, you need the data in a different format\n\nFor example, if you’re using other packages for analysis"
+    "text": "pivot_wider()\n\nTidy data are excellent when conducting preliminary descriptive analyses, plotting data, linear models\nOccasionally, you need the data in a different format\nif you’re using other packages or software for analysis\n\nspecific modeling purposes (SEM)\nor you have two outcomes variables that might need to be separate column\n\nmath & rdg\n\n\n\n\n\n\n# A tibble: 40 × 4\n     sid wave  content score\n   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;   &lt;dbl&gt;\n 1     1 1     math       95\n 2     1 2     math       98\n 3     1 3     math      102\n 4     1 4     math      105\n 5     1 1     rdg        96\n 6     1 2     rdg        98\n 7     1 3     rdg       101\n 8     1 4     rdg       103\n 9     2 1     math      101\n10     2 2     math      103\n# ℹ 30 more rows"
   },
   {
     "objectID": "slides/w8_tidydata.html#pivot_wider-2",
@@ -4722,14 +4722,14 @@
     "href": "slides/w8_tidydata.html#pivot_wider-5",
     "title": "Week 8: Tidy Data",
     "section": "pivot_wider()",
-    "text": "pivot_wider()\n\n\n\npivot_wider(\n  data, \n  names_from = name, \n  values_from = value \n)\n\n\nThe names of the (tidy) column (or columns) from which to get the name of the new data columns"
+    "text": "pivot_wider()\n\n\n\npivot_wider(\n  data, \n  names_from = name, \n  values_from = value \n)\n\n\nnames_from: The names of the (tidy) column (or columns) from which to get the name of the new data columns"
   },
   {
     "objectID": "slides/w8_tidydata.html#pivot_wider-6",
     "href": "slides/w8_tidydata.html#pivot_wider-6",
     "title": "Week 8: Tidy Data",
     "section": "pivot_wider()",
-    "text": "pivot_wider()\n\n\n\npivot_wider(\n  data, \n  names_from = name, \n  values_from = value \n)\n\n\nThe names of the (tidy) column (or columns) from which to get the the cell values"
+    "text": "pivot_wider()\n\n\n\npivot_wider(\n  data, \n  names_from = name, \n  values_from = value \n)\n\n\nvalues_from: The names of the (tidy) column (or columns) from which to get the the cell values"
   },
   {
     "objectID": "slides/w8_tidydata.html#an-example",
@@ -4743,7 +4743,7 @@
     "href": "slides/w8_tidydata.html#an-example-1",
     "title": "Week 8: Tidy Data",
     "section": "An example",
-    "text": "An example\nSo tidy, so nice…let’s muck it up\n\nfish_encounters %&gt;% \n  pivot_wider(\n    names_from = station, \n    values_from = seen,\n)\n\n# A tibble: 19 × 12\n   fish  Release I80_1 Lisbon  Rstr Base_TD   BCE   BCW  BCE2  BCW2   MAE   MAW\n   &lt;fct&gt;   &lt;int&gt; &lt;int&gt;  &lt;int&gt; &lt;int&gt;   &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt;\n 1 4842        1     1      1     1       1     1     1     1     1     1     1\n 2 4843        1     1      1     1       1     1     1     1     1     1     1\n 3 4844        1     1      1     1       1     1     1     1     1     1     1\n 4 4845        1     1      1     1       1    NA    NA    NA    NA    NA    NA\n 5 4847        1     1      1    NA      NA    NA    NA    NA    NA    NA    NA\n 6 4848        1     1      1     1      NA    NA    NA    NA    NA    NA    NA\n 7 4849        1     1     NA    NA      NA    NA    NA    NA    NA    NA    NA\n 8 4850        1     1     NA     1       1     1     1    NA    NA    NA    NA\n 9 4851        1     1     NA    NA      NA    NA    NA    NA    NA    NA    NA\n10 4854        1     1     NA    NA      NA    NA    NA    NA    NA    NA    NA\n11 4855        1     1      1     1       1    NA    NA    NA    NA    NA    NA\n12 4857        1     1      1     1       1     1     1     1     1    NA    NA\n13 4858        1     1      1     1       1     1     1     1     1     1     1\n14 4859        1     1      1     1       1    NA    NA    NA    NA    NA    NA\n15 4861        1     1      1     1       1     1     1     1     1     1     1\n16 4862        1     1      1     1       1     1     1     1     1    NA    NA\n17 4863        1     1     NA    NA      NA    NA    NA    NA    NA    NA    NA\n18 4864        1     1     NA    NA      NA    NA    NA    NA    NA    NA    NA\n19 4865        1     1      1    NA      NA    NA    NA    NA    NA    NA    NA"
+    "text": "An example\nSo tidy, so nice…let’s muck it up\n\nfish_encounters %&gt;% \n  pivot_wider(\n    names_from = station, \n    values_from = seen,\n)\n\n\n\n# A tibble: 19 × 12\n   fish  Release I80_1 Lisbon  Rstr Base_TD   BCE   BCW  BCE2  BCW2   MAE   MAW\n   &lt;fct&gt;   &lt;int&gt; &lt;int&gt;  &lt;int&gt; &lt;int&gt;   &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt;\n 1 4842        1     1      1     1       1     1     1     1     1     1     1\n 2 4843        1     1      1     1       1     1     1     1     1     1     1\n 3 4844        1     1      1     1       1     1     1     1     1     1     1\n 4 4845        1     1      1     1       1    NA    NA    NA    NA    NA    NA\n 5 4847        1     1      1    NA      NA    NA    NA    NA    NA    NA    NA\n 6 4848        1     1      1     1      NA    NA    NA    NA    NA    NA    NA\n 7 4849        1     1     NA    NA      NA    NA    NA    NA    NA    NA    NA\n 8 4850        1     1     NA     1       1     1     1    NA    NA    NA    NA\n 9 4851        1     1     NA    NA      NA    NA    NA    NA    NA    NA    NA\n10 4854        1     1     NA    NA      NA    NA    NA    NA    NA    NA    NA\n11 4855        1     1      1     1       1    NA    NA    NA    NA    NA    NA\n12 4857        1     1      1     1       1     1     1     1     1    NA    NA\n13 4858        1     1      1     1       1     1     1     1     1     1     1\n14 4859        1     1      1     1       1    NA    NA    NA    NA    NA    NA\n15 4861        1     1      1     1       1     1     1     1     1     1     1\n16 4862        1     1      1     1       1     1     1     1     1    NA    NA\n17 4863        1     1     NA    NA      NA    NA    NA    NA    NA    NA    NA\n18 4864        1     1     NA    NA      NA    NA    NA    NA    NA    NA    NA\n19 4865        1     1      1    NA      NA    NA    NA    NA    NA    NA    NA"
   },
   {
     "objectID": "slides/w8_tidydata.html#an-example-2",
@@ -4757,7 +4757,7 @@
     "href": "slides/w8_tidydata.html#an-example-3",
     "title": "Week 8: Tidy Data",
     "section": "An example",
-    "text": "An example\nThose NAs should be zeroes.\n\nfish_encounters %&gt;% \n  pivot_wider(\n    names_from = station, \n    values_from = seen,\n    values_fill = list(seen = 0)\n)\n\n\n\n# A tibble: 19 × 12\n   fish  Release I80_1 Lisbon  Rstr Base_TD   BCE   BCW  BCE2  BCW2   MAE   MAW\n   &lt;fct&gt;   &lt;int&gt; &lt;int&gt;  &lt;int&gt; &lt;int&gt;   &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt;\n 1 4842        1     1      1     1       1     1     1     1     1     1     1\n 2 4843        1     1      1     1       1     1     1     1     1     1     1\n 3 4844        1     1      1     1       1     1     1     1     1     1     1\n 4 4845        1     1      1     1       1     0     0     0     0     0     0\n 5 4847        1     1      1     0       0     0     0     0     0     0     0\n 6 4848        1     1      1     1       0     0     0     0     0     0     0\n 7 4849        1     1      0     0       0     0     0     0     0     0     0\n 8 4850        1     1      0     1       1     1     1     0     0     0     0\n 9 4851        1     1      0     0       0     0     0     0     0     0     0\n10 4854        1     1      0     0       0     0     0     0     0     0     0\n11 4855        1     1      1     1       1     0     0     0     0     0     0\n12 4857        1     1      1     1       1     1     1     1     1     0     0\n13 4858        1     1      1     1       1     1     1     1     1     1     1\n14 4859        1     1      1     1       1     0     0     0     0     0     0\n15 4861        1     1      1     1       1     1     1     1     1     1     1\n16 4862        1     1      1     1       1     1     1     1     1     0     0\n17 4863        1     1      0     0       0     0     0     0     0     0     0\n18 4864        1     1      0     0       0     0     0     0     0     0     0\n19 4865        1     1      1     0       0     0     0     0     0     0     0"
+    "text": "An example\nMaybe those NAs should be zeroes\n\nfish_encounters %&gt;% \n  pivot_wider(\n    names_from = station, \n    values_from = seen,\n    values_fill = list(seen = 0)\n)\n\n\n\n# A tibble: 19 × 12\n   fish  Release I80_1 Lisbon  Rstr Base_TD   BCE   BCW  BCE2  BCW2   MAE   MAW\n   &lt;fct&gt;   &lt;int&gt; &lt;int&gt;  &lt;int&gt; &lt;int&gt;   &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt; &lt;int&gt;\n 1 4842        1     1      1     1       1     1     1     1     1     1     1\n 2 4843        1     1      1     1       1     1     1     1     1     1     1\n 3 4844        1     1      1     1       1     1     1     1     1     1     1\n 4 4845        1     1      1     1       1     0     0     0     0     0     0\n 5 4847        1     1      1     0       0     0     0     0     0     0     0\n 6 4848        1     1      1     1       0     0     0     0     0     0     0\n 7 4849        1     1      0     0       0     0     0     0     0     0     0\n 8 4850        1     1      0     1       1     1     1     0     0     0     0\n 9 4851        1     1      0     0       0     0     0     0     0     0     0\n10 4854        1     1      0     0       0     0     0     0     0     0     0\n11 4855        1     1      1     1       1     0     0     0     0     0     0\n12 4857        1     1      1     1       1     1     1     1     1     0     0\n13 4858        1     1      1     1       1     1     1     1     1     1     1\n14 4859        1     1      1     1       1     0     0     0     0     0     0\n15 4861        1     1      1     1       1     1     1     1     1     1     1\n16 4862        1     1      1     1       1     1     1     1     1     0     0\n17 4863        1     1      0     0       0     0     0     0     0     0     0\n18 4864        1     1      0     0       0     0     0     0     0     0     0\n19 4865        1     1      1     0       0     0     0     0     0     0     0"
   },
   {
     "objectID": "slides/w8_tidydata.html#remember-scores_tidy",
@@ -4827,7 +4827,7 @@
     "href": "slides/w8_tidydata.html#before-next-class",
     "title": "Week 8: Tidy Data",
     "section": "Before next class",
-    "text": "Before next class\n\nFinal Project\n\nFinal Project: Draft Data Script\n\nHomework\n\nHomework 9\n\nReading\n\nR4DS(2e) 17\n\nAMA"
+    "text": "Before next class\n\nFinal Project\n\nFinal Project: Draft Data Script\n\nHomework\n\nHomework 9\n\nReading\n\nR4DS(2e) 17\n\nAMA (Week 10)"
   },
   {
     "objectID": "homeworks/hw7-key.html",
@@ -4842,5 +4842,383 @@
     "title": "Homework 6",
     "section": "",
     "text": "Note, this is a group project. You will need to work with your final project group on this lab. Each member of your group should make at least one commit. Once you have completed the assignment, provide a link to the repository in the text box for the lab on Canvas.\n\nCreate a shared GitHub repo for this lab. Call it hw_6\n\n \n\n\nCommit 1\n\nAdd a data folder to the repo. Place star.csv into the folder.\nAdd a folder for your scripts documents.\nWrite code in a .qmd document to load all the libraries that will be used in the document\nSet global YAML options to make the code not show anywhere in the document, set figure width to 6.5 and figure height to 8, and specify a .pdf file as output.\nWrite the code to load the data.\n\n  \n\n\nCommit 2\n\nAdd the bibliography (.bib) file and include at least four additional references.\nInclude in-text examples of citations formatted as Author (Year) and (Author, Year).\nRender the document and make sure the reference section has a Level 1 header of “References”, and the references are displayed on their own page.   \n\n\n\nCommit 3\n\nWrite the code to create the summary statistics shown in the table below. Output the table below and briefly describe it in text.\n\n\n\n\nsex\nfrl\nmath_mean\nmath_sd\nrdg_mean\nrdg_sd\n\n\n\n\nboy\nno\n492.85\n46.34\n441.46\n32.32\n\n\nboy\nyes\n469.87\n46.09\n425.38\n26.63\n\n\ngirl\nno\n501.21\n45.96\n448.54\n34.52\n\n\ngirl\nyes\n477.51\n46.30\n430.80\n27.42\n\n\n\n  \n\n\nCommit 4\n\nCreate the following plot, using whatever theme you’d like, and briefly discuss it in text. (Note that might need to problem-solve how to put the legend at the bottom.)"
+  },
+  {
+    "objectID": "slides/lunch_and_learn.html#agenda",
+    "href": "slides/lunch_and_learn.html#agenda",
+    "title": "Lunch & Learn:Data Management",
+    "section": "Agenda",
+    "text": "Agenda\n\nTidy data\nNaming stuff\nMiscellany"
+  },
+  {
+    "objectID": "slides/lunch_and_learn.html#some-reading-suggestions",
+    "href": "slides/lunch_and_learn.html#some-reading-suggestions",
+    "title": "Lunch & Learn:Data Management",
+    "section": "Some reading suggestions",
+    "text": "Some reading suggestions\n\nTidy Data. Wickham (2014)\nR4DS(2e) Chapter 12\nR Ladies Sydney: Clean It Up\nVignettes"
+  },
+  {
+    "objectID": "slides/lunch_and_learn.html#data-cleaning",
+    "href": "slides/lunch_and_learn.html#data-cleaning",
+    "title": "Lunch & Learn:Data Management",
+    "section": "Data cleaning",
+    "text": "Data cleaning\n\n“It is often said that 80% of data analysis is spent on the process of cleaning and preparing the data (Dasu & Johnson, 2003).” - Hadley Wickham (Tidy Data)\n\n\n\nPersistent and varied challenge\nLittle research on how to do it well"
+  },
+  {
+    "objectID": "slides/lunch_and_learn.html#tidy-data-1",
+    "href": "slides/lunch_and_learn.html#tidy-data-1",
+    "title": "Lunch & Learn:Data Management",
+    "section": "Tidy Data",
+    "text": "Tidy Data\n\nEach variable must have its own column\nEach observation must have its own row\nEach value must have its own cell\n\n\nThese three rules are interrelated because it’s impossible to only satisfy two of the three\n\n\n\n\nR4DS"
+  },
+  {
+    "objectID": "slides/lunch_and_learn.html#section",
+    "href": "slides/lunch_and_learn.html#section",
+    "title": "Lunch & Learn:Data Management",
+    "section": "",
+    "text": "Allison Horst"
+  },
+  {
+    "objectID": "slides/lunch_and_learn.html#section-1",
+    "href": "slides/lunch_and_learn.html#section-1",
+    "title": "Lunch & Learn:Data Management",
+    "section": "",
+    "text": "Allison Horst"
+  },
+  {
+    "objectID": "slides/lunch_and_learn.html#defining-tidy-data",
+    "href": "slides/lunch_and_learn.html#defining-tidy-data",
+    "title": "Lunch & Learn:Data Management",
+    "section": "Defining tidy data",
+    "text": "Defining tidy data\nEssentially, two rules define tidy data 1\n\nEach row is a case representing the same underlying attribute\nEach column is a variable containing the same type of value for each case\n\nThe combination of rows and columns make each observational unit (row) unique, even though cells may be repeated many times (e.g., student identifier)\nModern Data Science with R"
+  },
+  {
+    "objectID": "slides/lunch_and_learn.html#common-ways-data-are-messy",
+    "href": "slides/lunch_and_learn.html#common-ways-data-are-messy",
+    "title": "Lunch & Learn:Data Management",
+    "section": "Common ways data are “messy”",
+    "text": "Common ways data are “messy”\n\nColumn headers are values, not variable names\nMultiple variables stored in one column\nVariables are stored in both rows and columns\nSee the pivoting vignette for examples and solutions"
+  },
+  {
+    "objectID": "slides/lunch_and_learn.html#why-tidy",
+    "href": "slides/lunch_and_learn.html#why-tidy",
+    "title": "Lunch & Learn:Data Management",
+    "section": "Why tidy?",
+    "text": "Why tidy?\nA biased principled approach\n\nThere are many reasons why you might want to have “messy” data\nBut…\nIf you have a consistent data structure, it’s easier to learn tools that work with it because the data has an underlying uniformity\nThere’s a specific advantage to placing variables in columns because it allows R’s vectorised nature to be optimized\nTidy data is an extremely useful format generally, and particularly useful when applying tools within the {tidyverse}\nAll packages within the {tidyverse} are designed to either help you get your data in a tidy format, or assume your data are already in a tidy format\nAssuming a common data format leads to huge jumps in efficiency, as the output from certain functions can be directly input into others"
+  },
+  {
+    "objectID": "slides/lunch_and_learn.html#section-2",
+    "href": "slides/lunch_and_learn.html#section-2",
+    "title": "Lunch & Learn:Data Management",
+    "section": "",
+    "text": "Allison Horst"
+  },
+  {
+    "objectID": "slides/lunch_and_learn.html#messy-data-1",
+    "href": "slides/lunch_and_learn.html#messy-data-1",
+    "title": "Lunch & Learn:Data Management",
+    "section": "Messy data #1",
+    "text": "Messy data #1\nWhat makes this data messy?\nOr, why is this data not tidy?\n\n\n\n# A tibble: 18 × 11\n   religion `&lt;$10k` `$10-20k` `$20-30k` `$30-40k` `$40-50k` `$50-75k` `$75-100k`\n   &lt;chr&gt;      &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;      &lt;dbl&gt;\n 1 Agnostic      27        34        60        81        76       137        122\n 2 Atheist       12        27        37        52        35        70         73\n 3 Buddhist      27        21        30        34        33        58         62\n 4 Catholic     418       617       732       670       638      1116        949\n 5 Don’t k…      15        14        15        11        10        35         21\n 6 Evangel…     575       869      1064       982       881      1486        949\n 7 Hindu          1         9         7         9        11        34         47\n 8 Histori…     228       244       236       238       197       223        131\n 9 Jehovah…      20        27        24        24        21        30         15\n10 Jewish        19        19        25        25        30        95         69\n11 Mainlin…     289       495       619       655       651      1107        939\n12 Mormon        29        40        48        51        56       112         85\n13 Muslim         6         7         9        10         9        23         16\n14 Orthodox      13        17        23        32        32        47         38\n15 Other C…       9         7        11        13        13        14         18\n16 Other F…      20        33        40        46        49        63         46\n17 Other W…       5         2         3         4         2         7          3\n18 Unaffil…     217       299       374       365       341       528        407\n# ℹ 3 more variables: `$100-150k` &lt;dbl&gt;, `&gt;150k` &lt;dbl&gt;,\n#   `Don't know/refused` &lt;dbl&gt;"
+  },
+  {
+    "objectID": "slides/lunch_and_learn.html#messy-data-1-1",
+    "href": "slides/lunch_and_learn.html#messy-data-1-1",
+    "title": "Lunch & Learn:Data Management",
+    "section": "Messy data #1",
+    "text": "Messy data #1\nColumn names are data (!), not variable names\nThere are data in the column names\n\n\n# A tibble: 18 × 11\n   religion `&lt;$10k` `$10-20k` `$20-30k` `$30-40k` `$40-50k` `$50-75k` `$75-100k`\n   &lt;chr&gt;      &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;      &lt;dbl&gt;\n 1 Agnostic      27        34        60        81        76       137        122\n 2 Atheist       12        27        37        52        35        70         73\n 3 Buddhist      27        21        30        34        33        58         62\n 4 Catholic     418       617       732       670       638      1116        949\n 5 Don’t k…      15        14        15        11        10        35         21\n 6 Evangel…     575       869      1064       982       881      1486        949\n 7 Hindu          1         9         7         9        11        34         47\n 8 Histori…     228       244       236       238       197       223        131\n 9 Jehovah…      20        27        24        24        21        30         15\n10 Jewish        19        19        25        25        30        95         69\n11 Mainlin…     289       495       619       655       651      1107        939\n12 Mormon        29        40        48        51        56       112         85\n13 Muslim         6         7         9        10         9        23         16\n14 Orthodox      13        17        23        32        32        47         38\n15 Other C…       9         7        11        13        13        14         18\n16 Other F…      20        33        40        46        49        63         46\n17 Other W…       5         2         3         4         2         7          3\n18 Unaffil…     217       299       374       365       341       528        407\n# ℹ 3 more variables: `$100-150k` &lt;dbl&gt;, `&gt;150k` &lt;dbl&gt;,\n#   `Don't know/refused` &lt;dbl&gt;"
+  },
+  {
+    "objectID": "slides/lunch_and_learn.html#tidy-it-up",
+    "href": "slides/lunch_and_learn.html#tidy-it-up",
+    "title": "Lunch & Learn:Data Management",
+    "section": "Tidy it up",
+    "text": "Tidy it up\nWe want a column for income level\nAnd a column for the count of people at that level\n\n\n\n# A tibble: 180 × 3\n   religion income             count\n   &lt;chr&gt;    &lt;chr&gt;              &lt;dbl&gt;\n 1 Agnostic &lt;$10k                 27\n 2 Agnostic $10-20k               34\n 3 Agnostic $20-30k               60\n 4 Agnostic $30-40k               81\n 5 Agnostic $40-50k               76\n 6 Agnostic $50-75k              137\n 7 Agnostic $75-100k             122\n 8 Agnostic $100-150k            109\n 9 Agnostic &gt;150k                 84\n10 Agnostic Don't know/refused    96\n# ℹ 170 more rows"
+  },
+  {
+    "objectID": "slides/lunch_and_learn.html#messy-data-2",
+    "href": "slides/lunch_and_learn.html#messy-data-2",
+    "title": "Lunch & Learn:Data Management",
+    "section": "Messy data #2",
+    "text": "Messy data #2\nWhat makes this data messy?\n\n\n# A tibble: 7,240 × 60\n   country     iso2  iso3   year new_sp_m_014 new_sp_m_1524 new_sp_m_2534\n   &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt; &lt;dbl&gt;        &lt;dbl&gt;         &lt;dbl&gt;         &lt;dbl&gt;\n 1 Afghanistan AF    AFG    1980           NA            NA            NA\n 2 Afghanistan AF    AFG    1981           NA            NA            NA\n 3 Afghanistan AF    AFG    1982           NA            NA            NA\n 4 Afghanistan AF    AFG    1983           NA            NA            NA\n 5 Afghanistan AF    AFG    1984           NA            NA            NA\n 6 Afghanistan AF    AFG    1985           NA            NA            NA\n 7 Afghanistan AF    AFG    1986           NA            NA            NA\n 8 Afghanistan AF    AFG    1987           NA            NA            NA\n 9 Afghanistan AF    AFG    1988           NA            NA            NA\n10 Afghanistan AF    AFG    1989           NA            NA            NA\n# ℹ 7,230 more rows\n# ℹ 53 more variables: new_sp_m_3544 &lt;dbl&gt;, new_sp_m_4554 &lt;dbl&gt;,\n#   new_sp_m_5564 &lt;dbl&gt;, new_sp_m_65 &lt;dbl&gt;, new_sp_f_014 &lt;dbl&gt;,\n#   new_sp_f_1524 &lt;dbl&gt;, new_sp_f_2534 &lt;dbl&gt;, new_sp_f_3544 &lt;dbl&gt;,\n#   new_sp_f_4554 &lt;dbl&gt;, new_sp_f_5564 &lt;dbl&gt;, new_sp_f_65 &lt;dbl&gt;,\n#   new_sn_m_014 &lt;dbl&gt;, new_sn_m_1524 &lt;dbl&gt;, new_sn_m_2534 &lt;dbl&gt;,\n#   new_sn_m_3544 &lt;dbl&gt;, new_sn_m_4554 &lt;dbl&gt;, new_sn_m_5564 &lt;dbl&gt;, …"
+  },
+  {
+    "objectID": "slides/lunch_and_learn.html#messy-data-2-1",
+    "href": "slides/lunch_and_learn.html#messy-data-2-1",
+    "title": "Lunch & Learn:Data Management",
+    "section": "Messy data #2",
+    "text": "Messy data #2\nThere are many variables in column names\n\n\n# A tibble: 7,240 × 60\n   country     iso2  iso3   year new_sp_m_014 new_sp_m_1524 new_sp_m_2534\n   &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt; &lt;dbl&gt;        &lt;dbl&gt;         &lt;dbl&gt;         &lt;dbl&gt;\n 1 Afghanistan AF    AFG    1980           NA            NA            NA\n 2 Afghanistan AF    AFG    1981           NA            NA            NA\n 3 Afghanistan AF    AFG    1982           NA            NA            NA\n 4 Afghanistan AF    AFG    1983           NA            NA            NA\n 5 Afghanistan AF    AFG    1984           NA            NA            NA\n 6 Afghanistan AF    AFG    1985           NA            NA            NA\n 7 Afghanistan AF    AFG    1986           NA            NA            NA\n 8 Afghanistan AF    AFG    1987           NA            NA            NA\n 9 Afghanistan AF    AFG    1988           NA            NA            NA\n10 Afghanistan AF    AFG    1989           NA            NA            NA\n# ℹ 7,230 more rows\n# ℹ 53 more variables: new_sp_m_3544 &lt;dbl&gt;, new_sp_m_4554 &lt;dbl&gt;,\n#   new_sp_m_5564 &lt;dbl&gt;, new_sp_m_65 &lt;dbl&gt;, new_sp_f_014 &lt;dbl&gt;,\n#   new_sp_f_1524 &lt;dbl&gt;, new_sp_f_2534 &lt;dbl&gt;, new_sp_f_3544 &lt;dbl&gt;,\n#   new_sp_f_4554 &lt;dbl&gt;, new_sp_f_5564 &lt;dbl&gt;, new_sp_f_65 &lt;dbl&gt;,\n#   new_sn_m_014 &lt;dbl&gt;, new_sn_m_1524 &lt;dbl&gt;, new_sn_m_2534 &lt;dbl&gt;,\n#   new_sn_m_3544 &lt;dbl&gt;, new_sn_m_4554 &lt;dbl&gt;, new_sn_m_5564 &lt;dbl&gt;, …"
+  },
+  {
+    "objectID": "slides/lunch_and_learn.html#messy-data-2-2",
+    "href": "slides/lunch_and_learn.html#messy-data-2-2",
+    "title": "Lunch & Learn:Data Management",
+    "section": "Messy data #2",
+    "text": "Messy data #2\nThere are many variables in column names\n\n\n\nExample column names\n\n\nnew_sp_m_014\nnew_rel_f_65\n\n\n\nall col names start with new_, which we don’t really need\n\n\nfollowed by a diagnosis category: “sp” “sn” “ep” “rel”\n\n\nthen gender, which in these data are limited to “m” or “f”\n\n\nand last an age range\n\n\nand these are separated by underscores _ which is actually quite convenient\n\n\n\nThat’s a lot of information in the column names!"
+  },
+  {
+    "objectID": "slides/lunch_and_learn.html#lets-tidy-it",
+    "href": "slides/lunch_and_learn.html#lets-tidy-it",
+    "title": "Lunch & Learn:Data Management",
+    "section": "Let’s tidy it",
+    "text": "Let’s tidy it\n\n\n\n# A tibble: 76,046 × 8\n   country     iso2  iso3   year diagnosis sex   age_range count\n   &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt;     &lt;dbl&gt;\n 1 Afghanistan AF    AFG    1997 sp        m     014           0\n 2 Afghanistan AF    AFG    1997 sp        m     1524         10\n 3 Afghanistan AF    AFG    1997 sp        m     2534          6\n 4 Afghanistan AF    AFG    1997 sp        m     3544          3\n 5 Afghanistan AF    AFG    1997 sp        m     4554          5\n 6 Afghanistan AF    AFG    1997 sp        m     5564          2\n 7 Afghanistan AF    AFG    1997 sp        m     65            0\n 8 Afghanistan AF    AFG    1997 sp        f     014           5\n 9 Afghanistan AF    AFG    1997 sp        f     1524         38\n10 Afghanistan AF    AFG    1997 sp        f     2534         36\n# ℹ 76,036 more rows"
+  },
+  {
+    "objectID": "slides/lunch_and_learn.html#messy-data-3",
+    "href": "slides/lunch_and_learn.html#messy-data-3",
+    "title": "Lunch & Learn:Data Management",
+    "section": "Messy data #3",
+    "text": "Messy data #3\nWhat makes this data messy?\n\n\n# A tibble: 5 × 7\n  family name_child1 dob_child1 name_child2 dob_child2 name_child3 dob_child3\n   &lt;int&gt; &lt;chr&gt;       &lt;date&gt;     &lt;chr&gt;       &lt;date&gt;     &lt;chr&gt;       &lt;date&gt;    \n1      1 Susan       1998-11-26 Jose        2000-01-29 Alice       2001-02-19\n2      2 Mark        1996-06-22 &lt;NA&gt;        NA         &lt;NA&gt;        NA        \n3      3 Sam         2002-07-11 Seth        2004-04-05 &lt;NA&gt;        NA        \n4      4 Craig       2004-10-10 Khai        2009-08-27 &lt;NA&gt;        NA        \n5      5 Parker      2000-12-05 Gracie      2005-02-28 Peter       2002-05-05"
+  },
+  {
+    "objectID": "slides/lunch_and_learn.html#messy-data-3-1",
+    "href": "slides/lunch_and_learn.html#messy-data-3-1",
+    "title": "Lunch & Learn:Data Management",
+    "section": "Messy data #3",
+    "text": "Messy data #3\nThere are multiple observations per row\n\n\n# A tibble: 5 × 7\n  family name_child1 dob_child1 name_child2 dob_child2 name_child3 dob_child3\n   &lt;int&gt; &lt;chr&gt;       &lt;date&gt;     &lt;chr&gt;       &lt;date&gt;     &lt;chr&gt;       &lt;date&gt;    \n1      1 Susan       1998-11-26 Jose        2000-01-29 Alice       2001-02-19\n2      2 Mark        1996-06-22 &lt;NA&gt;        NA         &lt;NA&gt;        NA        \n3      3 Sam         2002-07-11 Seth        2004-04-05 &lt;NA&gt;        NA        \n4      4 Craig       2004-10-10 Khai        2009-08-27 &lt;NA&gt;        NA        \n5      5 Parker      2000-12-05 Gracie      2005-02-28 Peter       2002-05-05\n\n\n\nWe have two pieces of information (or values) for each child\n\nname and dob\n\nThese need to go into separate columns"
+  },
+  {
+    "objectID": "slides/lunch_and_learn.html#tidy-it-up-1",
+    "href": "slides/lunch_and_learn.html#tidy-it-up-1",
+    "title": "Lunch & Learn:Data Management",
+    "section": "Tidy it up!",
+    "text": "Tidy it up!\n\n\n# A tibble: 11 × 4\n   family child  name   dob       \n    &lt;int&gt; &lt;chr&gt;  &lt;chr&gt;  &lt;date&gt;    \n 1      1 child1 Susan  1998-11-26\n 2      1 child2 Jose   2000-01-29\n 3      1 child3 Alice  2001-02-19\n 4      2 child1 Mark   1996-06-22\n 5      3 child1 Sam    2002-07-11\n 6      3 child2 Seth   2004-04-05\n 7      4 child1 Craig  2004-10-10\n 8      4 child2 Khai   2009-08-27\n 9      5 child1 Parker 2000-12-05\n10      5 child2 Gracie 2005-02-28\n11      5 child3 Peter  2002-05-05"
+  },
+  {
+    "objectID": "slides/lunch_and_learn.html#dont-get-discouraged",
+    "href": "slides/lunch_and_learn.html#dont-get-discouraged",
+    "title": "Lunch & Learn:Data Management",
+    "section": "Don’t get discouraged!",
+    "text": "Don’t get discouraged!\nIt’s hard to understand tidy principles unless you spend a lot of time working with data\nData is often organised to make data entry as easy as possible\n\nTidying is tricky!\nTakes practice!\nTakes trial and error!\nTakes learning and re-learning - a lot!\nTakes trial and error!\nBut you are rarely never gifted with tidy data!"
+  },
+  {
+    "objectID": "slides/lunch_and_learn.html#lets-look-at-some-education-data",
+    "href": "slides/lunch_and_learn.html#lets-look-at-some-education-data",
+    "title": "Lunch & Learn:Data Management",
+    "section": "Let’s look at some education data",
+    "text": "Let’s look at some education data\n\n\n# A tibble: 35 × 20\n   stu_name gender item_1 item_2 item_3 item_4 item_5 item_6 item_7 item_8\n   &lt;chr&gt;    &lt;chr&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n 1 Adam     M           1      1      1      1      1      1      1      0\n 2 Anne     F           1      1      1      1      1      1      1      1\n 3 Audrey   F           1      1      1      1      1      1      1      1\n 4 Barbara  F           1      1      1      1      0      0      1      0\n 5 Bert     M           1      1      1      1      1      0      1      0\n 6 Betty    F           1      1      1      1      1      1      1      1\n 7 Blaise   M           1      1      1      1      1      1      1      1\n 8 Brenda   F           1      1      1      1      1      1      1      1\n 9 Britton  F           1      1      1      0      1      1      1      1\n10 Carol    F           1      1      1      1      0      0      1      0\n# ℹ 25 more rows\n# ℹ 10 more variables: item_9 &lt;dbl&gt;, item_10 &lt;dbl&gt;, item_11 &lt;dbl&gt;,\n#   item_12 &lt;dbl&gt;, item_13 &lt;dbl&gt;, item_14 &lt;dbl&gt;, item_15 &lt;dbl&gt;, item_16 &lt;dbl&gt;,\n#   item_17 &lt;dbl&gt;, item_18 &lt;dbl&gt;"
+  },
+  {
+    "objectID": "slides/lunch_and_learn.html#talk-with-a-neighbor",
+    "href": "slides/lunch_and_learn.html#talk-with-a-neighbor",
+    "title": "Lunch & Learn:Data Management",
+    "section": "Talk with a neighbor",
+    "text": "Talk with a neighbor\n\nAre these data tidy?\nIf not, what needs to happen to make them tidy?\nWhat are the variables? What are the values?\n\n\n\n\n−+\n03:00"
+  },
+  {
+    "objectID": "slides/lunch_and_learn.html#exam1-data",
+    "href": "slides/lunch_and_learn.html#exam1-data",
+    "title": "Lunch & Learn:Data Management",
+    "section": "exam1 data",
+    "text": "exam1 data\nWhat do we want?\n\nLet’s change all item variables into two variables: item and score\n\n\n\n\n# A tibble: 35 × 20\n   stu_name gender item_1 item_2 item_3 item_4 item_5 item_6 item_7 item_8\n   &lt;chr&gt;    &lt;chr&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n 1 Adam     M           1      1      1      1      1      1      1      0\n 2 Anne     F           1      1      1      1      1      1      1      1\n 3 Audrey   F           1      1      1      1      1      1      1      1\n 4 Barbara  F           1      1      1      1      0      0      1      0\n 5 Bert     M           1      1      1      1      1      0      1      0\n 6 Betty    F           1      1      1      1      1      1      1      1\n 7 Blaise   M           1      1      1      1      1      1      1      1\n 8 Brenda   F           1      1      1      1      1      1      1      1\n 9 Britton  F           1      1      1      0      1      1      1      1\n10 Carol    F           1      1      1      1      0      0      1      0\n# ℹ 25 more rows\n# ℹ 10 more variables: item_9 &lt;dbl&gt;, item_10 &lt;dbl&gt;, item_11 &lt;dbl&gt;,\n#   item_12 &lt;dbl&gt;, item_13 &lt;dbl&gt;, item_14 &lt;dbl&gt;, item_15 &lt;dbl&gt;, item_16 &lt;dbl&gt;,\n#   item_17 &lt;dbl&gt;, item_18 &lt;dbl&gt;"
+  },
+  {
+    "objectID": "slides/lunch_and_learn.html#why-are-tidy-data-useful",
+    "href": "slides/lunch_and_learn.html#why-are-tidy-data-useful",
+    "title": "Lunch & Learn:Data Management",
+    "section": "Why are tidy data useful?",
+    "text": "Why are tidy data useful?\nEasy to calculate the proportion of students responding correctly to each item\n\n\n\n# A tibble: 18 × 2\n    item   prop\n   &lt;int&gt;  &lt;dbl&gt;\n 1     1 1     \n 2     2 1     \n 3     3 1     \n 4     4 0.914 \n 5     5 0.886 \n 6     6 0.857 \n 7     7 0.886 \n 8     8 0.771 \n 9     9 0.857 \n10    10 0.686 \n11    11 0.343 \n12    12 0.171 \n13    13 0.2   \n14    14 0.0857\n15    15 0.0286\n16    16 0.0286\n17    17 0.0286\n18    18 0"
+  },
+  {
+    "objectID": "slides/lunch_and_learn.html#why-are-tidy-data-useful-1",
+    "href": "slides/lunch_and_learn.html#why-are-tidy-data-useful-1",
+    "title": "Lunch & Learn:Data Management",
+    "section": "Why are tidy data useful?",
+    "text": "Why are tidy data useful?\nEasy to calculate the proportion correct for each item by gender\n\n\n\n# A tibble: 36 × 3\n# Groups:   item [18]\n    item gender  prop\n   &lt;int&gt; &lt;chr&gt;  &lt;dbl&gt;\n 1     1 F      1    \n 2     1 M      1    \n 3     2 F      1    \n 4     2 M      1    \n 5     3 F      1    \n 6     3 M      1    \n 7     4 F      0.889\n 8     4 M      0.941\n 9     5 F      0.833\n10     5 M      0.941\n# ℹ 26 more rows"
+  },
+  {
+    "objectID": "slides/lunch_and_learn.html#lets-try-another",
+    "href": "slides/lunch_and_learn.html#lets-try-another",
+    "title": "Lunch & Learn:Data Management",
+    "section": "Let’s try another",
+    "text": "Let’s try another\nAre these data tidy?\n\n\n\n# A tibble: 5 × 9\n    sid wave_1_math wave_2_math wave_3_math wave_4_math wave_1_rdg wave_2_rdg\n  &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;\n1     1          95          98         102         105         96         98\n2     2         101         103         107         109        108        110\n3     3          99         103         106         110        103        106\n4     4         109         111         115         116        108        109\n5     5         101         104         107         113         92         95\n# ℹ 2 more variables: wave_3_rdg &lt;dbl&gt;, wave_4_rdg &lt;dbl&gt;"
+  },
+  {
+    "objectID": "slides/lunch_and_learn.html#tidy-it",
+    "href": "slides/lunch_and_learn.html#tidy-it",
+    "title": "Lunch & Learn:Data Management",
+    "section": "Tidy it!",
+    "text": "Tidy it!\nWe want separate columns for wave and content and score\n\n\n\n# A tibble: 40 × 4\n     sid wave  content score\n   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;   &lt;dbl&gt;\n 1     1 1     math       95\n 2     1 2     math       98\n 3     1 3     math      102\n 4     1 4     math      105\n 5     1 1     rdg        96\n 6     1 2     rdg        98\n 7     1 3     rdg       101\n 8     1 4     rdg       103\n 9     2 1     math      101\n10     2 2     math      103\n# ℹ 30 more rows"
+  },
+  {
+    "objectID": "slides/lunch_and_learn.html#caveats",
+    "href": "slides/lunch_and_learn.html#caveats",
+    "title": "Lunch & Learn:Data Management",
+    "section": "Caveats",
+    "text": "Caveats\n\nTidy data are excellent when conducting preliminary descriptive analyses, plotting data, linear models\nOccasionally, you need the data in a different format\n\nif you’re using other packages or software for analysis\nspecific modeling purposes (SEM)\nor you have two outcomes variables that might need to be separate column\n\nmath & rdg\n\n\n\n\n\n\n# A tibble: 40 × 4\n     sid wave  content score\n   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;   &lt;dbl&gt;\n 1     1 1     math       95\n 2     1 2     math       98\n 3     1 3     math      102\n 4     1 4     math      105\n 5     1 1     rdg        96\n 6     1 2     rdg        98\n 7     1 3     rdg       101\n 8     1 4     rdg       103\n 9     2 1     math      101\n10     2 2     math      103\n# ℹ 30 more rows"
+  },
+  {
+    "objectID": "slides/lunch_and_learn.html#section-3",
+    "href": "slides/lunch_and_learn.html#section-3",
+    "title": "Lunch & Learn:Data Management",
+    "section": "",
+    "text": "Credit Allison Horst"
+  },
+  {
+    "objectID": "slides/lunch_and_learn.html#column-naming-rules",
+    "href": "slides/lunch_and_learn.html#column-naming-rules",
+    "title": "Lunch & Learn:Data Management",
+    "section": "Column Naming Rules",
+    "text": "Column Naming Rules\nDo use\n\nlowercase\nprefixes and suffixes!\n\nbasc_score, basc_date…\nschool_name, school_id, school_location…\n\nunderscores “_”"
+  },
+  {
+    "objectID": "slides/lunch_and_learn.html#about-me",
+    "href": "slides/lunch_and_learn.html#about-me",
+    "title": "Lunch & Learn:Data Management",
+    "section": "About me",
+    "text": "About me\n\nhusband, dad\nBA, Psychology: UC Santa Barbara\nPhD, School Psychology: University of Maryland\nUO since 2009 at Behavioral Research & Teaching (BRT)\nResearch Professor\n\nResearch\n\nApplied statistical methods used by researchers\nDeveloping and improving systems that support data-based decision making using advanced technologies to influence teachers’ instructional practices and increase student achievement\n\nCORE and CORE II\nInclusive Skill-building Learning Approach (ISLA)\n\n\nTeaching\n\nIntroduction to Data Science with R\nFunctional Programming for Educational Data Science\nApplied Machine Learning for Educational Data Scientists\nData Science Capstone"
+  },
+  {
+    "objectID": "slides/lunch_and_learn.html#questions",
+    "href": "slides/lunch_and_learn.html#questions",
+    "title": "Lunch & Learn:Data Management",
+    "section": "Questions",
+    "text": "Questions\n\nWhat data management tools do we have access to through UO which typically have a paywall?\n\n\nWhat are you looking for?\nExplore what is available: https://software.uoregon.edu/\n\n\nHow can we request data management tools such as Box from UO?\n\n\nYou can submit a request\n\n\nUsing cloud-based programs such as Dedoose for storing data (example): Advised to also save back-up in OneDrive/elsewhere?\n\n\nGitHub is a nice place to story data\n\n\nWhat are the most novel AND useful data management tools overall?\n\n\nR?"
+  },
+  {
+    "objectID": "slides/lunch_and_learn.html#tidy-data-made-simple",
+    "href": "slides/lunch_and_learn.html#tidy-data-made-simple",
+    "title": "Lunch & Learn:Data Management",
+    "section": "Tidy Data Made “Simple”",
+    "text": "Tidy Data Made “Simple”\n\nKeep each dataset in its own tabular format\nPut each variable in a column"
+  },
+  {
+    "objectID": "slides/lunch_and_learn.html#lets-discuss",
+    "href": "slides/lunch_and_learn.html#lets-discuss",
+    "title": "Lunch & Learn:Data Management",
+    "section": "Let’s Discuss",
+    "text": "Let’s Discuss\n\nAre these data tidy?\nIf not, what needs to happen to make them tidy?\nWhat are the variables? What are the values?\n\n\n\n# A tibble: 35 × 20\n   stu_name gender item_1 item_2 item_3 item_4 item_5 item_6 item_7 item_8\n   &lt;chr&gt;    &lt;chr&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n 1 Adam     M           1      1      1      1      1      1      1      0\n 2 Anne     F           1      1      1      1      1      1      1      1\n 3 Audrey   F           1      1      1      1      1      1      1      1\n 4 Barbara  F           1      1      1      1      0      0      1      0\n 5 Bert     M           1      1      1      1      1      0      1      0\n 6 Betty    F           1      1      1      1      1      1      1      1\n 7 Blaise   M           1      1      1      1      1      1      1      1\n 8 Brenda   F           1      1      1      1      1      1      1      1\n 9 Britton  F           1      1      1      0      1      1      1      1\n10 Carol    F           1      1      1      1      0      0      1      0\n# ℹ 25 more rows\n# ℹ 10 more variables: item_9 &lt;dbl&gt;, item_10 &lt;dbl&gt;, item_11 &lt;dbl&gt;,\n#   item_12 &lt;dbl&gt;, item_13 &lt;dbl&gt;, item_14 &lt;dbl&gt;, item_15 &lt;dbl&gt;, item_16 &lt;dbl&gt;,\n#   item_17 &lt;dbl&gt;, item_18 &lt;dbl&gt;"
+  },
+  {
+    "objectID": "slides/lunch_and_learn.html#column-naming",
+    "href": "slides/lunch_and_learn.html#column-naming",
+    "title": "Lunch & Learn:Data Management",
+    "section": "Column Naming",
+    "text": "Column Naming\n\nA shortened representation of the variable\nAll variable names must be unique\n\n\nColumn name\nprefix_name\n\n\nidstudent idschool id_district"
+  },
+  {
+    "objectID": "slides/lunch_and_learn.html#data-values",
+    "href": "slides/lunch_and_learn.html#data-values",
+    "title": "Lunch & Learn:Data Management",
+    "section": "Data Values",
+    "text": "Data Values\n\nDon’t use numbers for labels!\n\n0 == “yes”\n1 == “no”\n\nJust use the values!\n\n“never”\n“rarely”\n“sometimes”\n“often”"
+  },
+  {
+    "objectID": "slides/lunch_and_learn.html#folder-file-naming-rules",
+    "href": "slides/lunch_and_learn.html#folder-file-naming-rules",
+    "title": "Lunch & Learn:Data Management",
+    "section": "Folder & File Naming Rules",
+    "text": "Folder & File Naming Rules\nDo use\n\nlowercase\nunderscores “_” or hyphens “-”"
+  },
+  {
+    "objectID": "slides/lunch_and_learn.html#document-everything",
+    "href": "slides/lunch_and_learn.html#document-everything",
+    "title": "Lunch & Learn:Data Management",
+    "section": "Document Everything!",
+    "text": "Document Everything!\n\nIt’s so hard to remember what you measured, when you measured it, or why you measured it\nYour best strategy is organization and detail\n\nwell-documented protocol\na good codebook\ndata dictionary (documentation of what your variable names mean)\n\nFuture you won’t remember what current you decides to do today, or why you decided to do it\nThink about someone else using your data later, and what they will need to know"
+  },
+  {
+    "objectID": "slides/lunch_and_learn.html#misc",
+    "href": "slides/lunch_and_learn.html#misc",
+    "title": "Lunch & Learn:Data Management",
+    "section": "Misc",
+    "text": "Misc\n\nBack up your data\nAvoid manually-entered questions"
+  },
+  {
+    "objectID": "slides/lunch_and_learn.html#why-are-tidy-data-useful-2",
+    "href": "slides/lunch_and_learn.html#why-are-tidy-data-useful-2",
+    "title": "Lunch & Learn:Data Management",
+    "section": "Why are tidy data useful?",
+    "text": "Why are tidy data useful?\nEasy to calculate the total and percent correct for each student\n\n\n\n# A tibble: 35 × 3\n   stu_name score_total score_pct\n   &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;\n 1 Adam               7        39\n 2 Anne              10        56\n 3 Audrey            11        61\n 4 Barbara            6        33\n 5 Bert               8        44\n 6 Betty              9        50\n 7 Blaise            13        72\n 8 Brenda            10        56\n 9 Britton            8        44\n10 Carol              6        33\n# ℹ 25 more rows"
+  },
+  {
+    "objectID": "slides/lunch_and_learn.html#some-tidy-reading-suggestions",
+    "href": "slides/lunch_and_learn.html#some-tidy-reading-suggestions",
+    "title": "Lunch & Learn:Data Management",
+    "section": "Some tidy reading suggestions",
+    "text": "Some tidy reading suggestions\n\nTidy Data. Wickham (2014)\nR4DS(2e) Chapter 12\nR Ladies Sydney: Clean It Up\nVignettes"
+  },
+  {
+    "objectID": "slides/lunch_and_learn.html#exam1-data-1",
+    "href": "slides/lunch_and_learn.html#exam1-data-1",
+    "title": "Lunch & Learn:Data Management",
+    "section": "exam1 data",
+    "text": "exam1 data\nWhat do we want?\nLet’s change all item variables into two variables: item and score\n\n\n# A tibble: 630 × 4\n   stu_name gender  item score\n   &lt;chr&gt;    &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt;\n 1 Adam     M          1     1\n 2 Adam     M          2     1\n 3 Adam     M          3     1\n 4 Adam     M          4     1\n 5 Adam     M          5     1\n 6 Adam     M          6     1\n 7 Adam     M          7     1\n 8 Adam     M          8     0\n 9 Adam     M          9     0\n10 Adam     M         10     0\n# ℹ 620 more rows"
+  },
+  {
+    "objectID": "slides/lunch_and_learn.html#column-naming-rules-1",
+    "href": "slides/lunch_and_learn.html#column-naming-rules-1",
+    "title": "Lunch & Learn:Data Management",
+    "section": "Column Naming Rules",
+    "text": "Column Naming Rules\nDo NOT use\n\nCAPS\nspaces\nnumbers to start\nspecial characters\n\nexcept underscores “_”"
+  },
+  {
+    "objectID": "slides/lunch_and_learn.html#folder-file-naming-rules-1",
+    "href": "slides/lunch_and_learn.html#folder-file-naming-rules-1",
+    "title": "Lunch & Learn:Data Management",
+    "section": "Folder & File Naming Rules",
+    "text": "Folder & File Naming Rules\nDo NOT use\n\nCAPS\nspaces!\nspecial characters\n\nno periods, no slashes!\nexcept underscores “_” or hyphens “-”"
+  },
+  {
+    "objectID": "slides/w8_tidydata.html#tidy-data-made-simple",
+    "href": "slides/w8_tidydata.html#tidy-data-made-simple",
+    "title": "Week 8: Tidy Data",
+    "section": "Tidy Data Made Simple",
+    "text": "Tidy Data Made Simple\n\nPut each dataset in a tibble\nPut each variable in a column"
+  },
+  {
+    "objectID": "slides/w8_tidydata.html#messy-data-5",
+    "href": "slides/w8_tidydata.html#messy-data-5",
+    "title": "Week 8: Tidy Data",
+    "section": "Messy data",
+    "text": "Messy data\nMany variables in column names\nNecessary arguments\n\ndata - of course\ncols – which columns you will pivot longer\nnames_to – new variable names (in quotes) for those cols\nvalues_to – new variable name (in quotes) for the cell values\n\n\n\nnames_separate – how to separate those cols names"
+  },
+  {
+    "objectID": "slides/w8_tidydata.html#lets-apply-it-1",
+    "href": "slides/w8_tidydata.html#lets-apply-it-1",
+    "title": "Week 8: Tidy Data",
+    "section": "Let’s apply it",
+    "text": "Let’s apply it\nEven better, use names_prefix and remove the new column\n\nwho_r %&gt;%\n pivot_longer(\n  cols = new_sp_m_014:new_rel_f_65,\n  names_to = c(\"diagnosis\", \"sex\", \"age\"),\n  names_prefix = \"new_\",\n  names_sep = \"_\",\n  values_to = \"count\"\n)\n\n# A tibble: 405,440 × 8\n   country     iso2  iso3   year diagnosis sex   age   count\n   &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt; &lt;dbl&gt;\n 1 Afghanistan AF    AFG    1980 sp        m     014      NA\n 2 Afghanistan AF    AFG    1980 sp        m     1524     NA\n 3 Afghanistan AF    AFG    1980 sp        m     2534     NA\n 4 Afghanistan AF    AFG    1980 sp        m     3544     NA\n 5 Afghanistan AF    AFG    1980 sp        m     4554     NA\n 6 Afghanistan AF    AFG    1980 sp        m     5564     NA\n 7 Afghanistan AF    AFG    1980 sp        m     65       NA\n 8 Afghanistan AF    AFG    1980 sp        f     014      NA\n 9 Afghanistan AF    AFG    1980 sp        f     1524     NA\n10 Afghanistan AF    AFG    1980 sp        f     2534     NA\n# ℹ 405,430 more rows"
+  },
+  {
+    "objectID": "slides/w8_tidydata.html#why-are-tidy-data-useful-7",
+    "href": "slides/w8_tidydata.html#why-are-tidy-data-useful-7",
+    "title": "Week 8: Tidy Data",
+    "section": "Why are tidy data useful?",
+    "text": "Why are tidy data useful?\nQuestion: What if we wanted to know the proportion correct for each item by gender?"
+  },
+  {
+    "objectID": "slides/w8_tidydata.html#why-are-tidy-data-useful-8",
+    "href": "slides/w8_tidydata.html#why-are-tidy-data-useful-8",
+    "title": "Week 8: Tidy Data",
+    "section": "Why are tidy data useful?",
+    "text": "Why are tidy data useful?\nQuestion: What if we wanted to know the proportion correct for each item by gender?\nAnswer: We group_by(item, gender) and summarize()\n\nexam_tidy %&gt;% \n  group_by(item, gender) %&gt;% \n  summarize(prop = mean(score))\n\n\n\n# A tibble: 36 × 3\n# Groups:   item [18]\n    item gender  prop\n   &lt;int&gt; &lt;chr&gt;  &lt;dbl&gt;\n 1     1 F      1    \n 2     1 M      1    \n 3     2 F      1    \n 4     2 M      1    \n 5     3 F      1    \n 6     3 M      1    \n 7     4 F      0.889\n 8     4 M      0.941\n 9     5 F      0.833\n10     5 M      0.941\n# ℹ 26 more rows"
+  },
+  {
+    "objectID": "slides/w8_tidydata.html#why-are-tidy-data-useful-9",
+    "href": "slides/w8_tidydata.html#why-are-tidy-data-useful-9",
+    "title": "Week 8: Tidy Data",
+    "section": "Why are tidy data useful?",
+    "text": "Why are tidy data useful?\nQuestion: What if we want to calculate the total and percent correct for each student?"
+  },
+  {
+    "objectID": "slides/w8_tidydata.html#why-are-tidy-data-useful-10",
+    "href": "slides/w8_tidydata.html#why-are-tidy-data-useful-10",
+    "title": "Week 8: Tidy Data",
+    "section": "Why are tidy data useful?",
+    "text": "Why are tidy data useful?\nQuestion: What if we want to calculate the total and percent correct for each student?\nAnswer: We group_by(stu_name) and summarize()\n\nexam_tidy %&gt;% \n  group_by(stu_name) %&gt;% \n  summarize(\n    score_total = sum(score),\n    score_pct = round(score_total/n()*100)\n  )\n\n\n\n# A tibble: 35 × 3\n   stu_name score_total score_pct\n   &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;\n 1 Adam               7        39\n 2 Anne              10        56\n 3 Audrey            11        61\n 4 Barbara            6        33\n 5 Bert               8        44\n 6 Betty              9        50\n 7 Blaise            13        72\n 8 Brenda            10        56\n 9 Britton            8        44\n10 Carol              6        33\n# ℹ 25 more rows"
+  },
+  {
+    "objectID": "slides/w8_tidydata.html#work-as-a-class",
+    "href": "slides/w8_tidydata.html#work-as-a-class",
+    "title": "Week 8: Tidy Data",
+    "section": "Work as a class",
+    "text": "Work as a class\nTidy scores, name new data scores_tidy\n\n\n\n−+\n03:00"
+  },
+  {
+    "objectID": "slides/w8_tidydata.html#tidy-data-2",
+    "href": "slides/w8_tidydata.html#tidy-data-2",
+    "title": "Week 8: Tidy Data",
+    "section": "Tidy Data",
+    "text": "Tidy Data\n\nEach variable must have its own column\nEach observation must have its own row\nEach value must have its own cell\n\n\nThese three rules are interrelated because it’s impossible to only satisfy two of the three\n\n\n\n\nR4DS"
   }
 ]
