@@ -32,6 +32,9 @@ library(gt)
 theme_set(theme_minimal())
 ```
 
+# Homework Review
+
+Homework 8
 
 # Tidy Data 
 
@@ -1187,7 +1190,7 @@ sim_tidy <- sim %>%
 The `hiv` data
 
 ```{r}
-hiv <- read_csv(here("data", "hiv.csv"))
+(hiv <- read_csv(here("data", "hiv.csv")))
 ```
 
 ## Other possible issues {.smaller}

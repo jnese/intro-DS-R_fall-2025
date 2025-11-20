@@ -592,6 +592,8 @@ Column name
 
 ## Questions
 
+::: {.incremental}
+
 1. *What data management tools do we have access to through UO which typically have a paywall?*
   + What are you looking for?
   + [Explore what is available](https://software.uoregon.edu/): https://software.uoregon.edu/
@@ -602,6 +604,7 @@ Column name
 4. *What are the most novel AND useful data management tools overall?*
   + R?
 
+:::
 
 # Other Questions?
 
