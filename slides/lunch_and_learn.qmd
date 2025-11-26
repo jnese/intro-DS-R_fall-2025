@@ -1,7 +1,7 @@
 ---
 title: "Lunch & Learn:<br>Data Management"
 author: "Joe Nese"
-institute: "University of Oregon<br>Fall 2025"
+institute: "jnese@uoregon.edu"
 format:
   revealjs: 
     theme: default
@@ -341,7 +341,9 @@ What do we want?
 
 . . .
 
-Let’s change all `item` variables into two variables: `item` and `score`
+Let’s change all `item_#` variables into two variables
+
+- `item` and `score`
 
 . . .
 
@@ -354,7 +356,9 @@ exam
 
 What do we want?
 
-Let’s change all `item` variables into two variables: `item` and `score`
+Let’s change all `item_#` variables into two variables
+
+- `item` and `score`
 
 ```{r}
 #| echo: false
@@ -455,14 +459,14 @@ We want separate columns for `wave` and `content` and `score`
     + if you're using other packages or software for analysis
     + specific modeling purposes (SEM)
     + or you have two outcomes variables that might need to be separate column
-        - `math` & `rdg`
+        - `math` & `read`
 
 . . .
 
 ```{r}
 #| echo: false
 
-sim_tidy
+(scores <- read_csv(here("data", "year-end_scores.csv")))
 ```
 
 ## Tidy Data Made "Simple"
@@ -518,17 +522,27 @@ Credit [Allison Horst](https://allisonhorst.com/data-science-art)
 - A shortened representation of the variable
 - All variable names must be unique
 
-. . .
+::: {.incremental}
 
-Column name
+## Column name examples
 
 [prefix]{style='color:#D55E00'}_[name]{style='color:#0072B2'}
 
-. . .
-
 [id]{style='color:#D55E00'}_[student]{style='color:#0072B2'}
+
 [id]{style='color:#D55E00'}_[school]{style='color:#0072B2'}
+
 [id]{style='color:#D55E00'}_[district]{style='color:#0072B2'}
+
+[surveyID_]{style='color:#D55E00'}[itemID]{style='color:#0072B2'}
+
+[sdq_]{style='color:#D55E00'}[25]{style='color:#0072B2'}
+
+[survey_]{style='color:#D55E00'}[time_]{style='color:#009E73'}[itemid]{style='color:#0072B2'}
+
+[sdq_]{style='color:#D55E00'}[y1_]{style='color:#009E73'}[25]{style='color:#0072B2'}
+
+:::
 
 ## Column Naming Rules
 
@@ -590,19 +604,28 @@ Column name
 
 # Submitted Questions
 
-## Questions
+## Questions {.smaller}
 
 ::: {.incremental}
 
 1. *What data management tools do we have access to through UO which typically have a paywall?*
-  + What are you looking for?
-  + [Explore what is available](https://software.uoregon.edu/): https://software.uoregon.edu/
+
+- What are you looking for?
+- [Explore what is available](https://software.uoregon.edu/): https://software.uoregon.edu/
+
 2. *How can we request data management tools such as Box from UO?*
-  + You can submit a [request](https://service.uoregon.edu/TDClient/2030/Portal/KB/ArticleDet?ID=68409)
+
+- You can submit a [request](https://service.uoregon.edu/TDClient/2030/Portal/KB/ArticleDet?ID=68409)
+
 3. *Using cloud-based programs such as Dedoose for storing data (example): Advised to also save back-up in OneDrive/elsewhere?*
-  + GitHub is a nice place to story data
+
+- GitHub is a nice place to store data
+- UO also has servers
+- Dropbox? Google Drive?
+
 4. *What are the most novel AND useful data management tools overall?*
-  + R?
+
+- R?
 
 :::
 

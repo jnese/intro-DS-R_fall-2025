@@ -1625,6 +1625,7 @@ Credit [Allison Horst](https://allisonhorst.com/data-science-art)
 
 * Final Project
     + [Final Project: Draft Data Script]{style='color:#FF0000'}
+    + Send me your repo link & document name
 * Homework
     + **Homework 9**
 * Reading

@@ -1082,7 +1082,7 @@
     "href": "assignments.html#final-project",
     "title": "Assignments",
     "section": "Final Project",
-    "text": "Final Project\n\n\n\n\n\n\n\n\nDate Assigned\nDate Due\nAssigned\nPoints\n\n\n\n\nOct-01\nOct-29\nOutline\n15\n\n\nOct-01\nNov-26\nDraft Data Prep Script\n25\n\n\nOct-01\nDec-03\nPeer Review of Script\n25\n\n\nOct-01\nDec-03\nPresentation\n25\n\n\nOct-01\nDec-10\nPaper\n110\n\n\n\n\n\n\n\n\nFinal Project\nThe final project in this class is a group project, requiring students use a “real world” dataset to write, essentially, a miniature manuscript, including an introduction (paragraph or two), methods, results, and discussion (again, maybe 2-3 paragraphs). Ideally, students would work with a dataset that includes variables they are interested in using beyond just this class; however, if students do not have access to a dataset, the instructor will provide one. Students who do not have access to data should plan to meet with the instructor as soon as possible so a dataset can be provided. Additionally, the dataset must be able to be shared publicly, as the full project will be required to be housed on GitHub and be fully reproducible. If making your data publicly available is a problem for you, please contact the instructor as soon as possible. We can work together to either find a dataset that will work for you, or simulate a dataset that is similar to the data you’d like to work with in reality (and then all your code should work for the real dataset, but you can share the simulated data with your classmates). Students are required to work in groups of 2-4 people. The final assignment is assigned during the first class, and groups must be finalized by the end of Week 2 (at which point students who have not self-selected into groups will be randomly assigned).\nI will investigate the commits made by different authors when evaluating the final project. If it is obvious that one person did not utilize GitHub, and instead added all of their contributions through a single or only a few commits, I will dock points from that individual. There should be numerous commits by each author, and they should be roughly even in terms of contribution activity (which GitHub has metrics to track, both in terms of the number of commits as well as the number of lines modified).  \n\n\nOutline (15 points)\nA basic outline of the final project is due at the end of Week 5. The outline should include a description of the data to be used, a discussion of what preparatory work will need to be done, and how the requirements of the final project will be met. The outline is intended to be low-stakes and is primarily designed to be a means for you to obtain feedback on the feasibility of the project and areas to consider.  \n\n\nDraft Data Preparation Script (25 points)\nAt the end of Week 8, you must have a draft of the data preparation complete, including moving the data from its raw to tidy form and a variety of exploratory data visualizations. Final project must use the following functions: pivot_longer(), select(), filter(), mutate(), pivot_wider(), group_by(), and summarize().  \n\n\nPeer Review of Data Preparation Script (25 points)\nFollowing the submission of the data preparation scripts, you will be assigned to review your peers’ code. The purpose of this exercise is to learn from each other. Programming is an immensely open-ended enterprise and there are lots of winding paths that all ultimately end up at the same destination. During your peer review, you must note (a) at least three areas of strength, (b) at least one thing you learned from reviewing their script, and (c) at least one and no more than three areas for improvement. Making your code publicly available can feel daunting. The purpose of this portion of the final project is to help us all learn from each other, not to denigrate. Under no circumstances will negative comments be tolerated. Any comments that could be perceived as negative, and outside the scope of the code, will result in an immediate score of zero. Be constructive in your feedback. Be kind. We are all learning.  \n\n\nFinal Project Presentation (25 points)\nEach group will present on their final project during Week 10, which is expected to still be in progress. These presentations are expected to be informal, and emphasize what learning occurred during the project. Specifically, the presentations are to commiserate with each other about the failures and challenges experienced along the way, while also celebrating the successes. Learning R is a difficult task, and we should all take solace knowing that others are struggling along with us. The final presentation should be equal parts “journey” and substantive findings/conclusions/results. Students are expected to present for approximately 10 minutes each (20-40 minutes per group), although the time may change depending on the enrollment of the class.  \n\n\n\n\n\n\n\n\nPresentation Rubric\n\n\nCriteria\nPoints possible\n\n\n\n\nChallenges faced along the way\n5\n\n\nVictories and things to celebrate\n5\n\n\nChallenges you are still facing\n5\n\n\nSubstantive findings/interpretations\n5\n\n\nNext R hurdle to tackle\n5\n\n\nTotal\n25\n\n\n\n\n\n\n\n\n\nFinal Paper (110)\nThe purpose of the final project is to allow students an opportunity to demonstrate all the skills they have learned throughout the course. The final project must (a) be a reproducible and dynamic R Markdown document with references to the extant literature; (b) be housed on GitHub, with contributions from all authors obvious; (c) demonstrate moving data from its raw “messy” format to a tidy data format through the R Markdown file, but not in the final document; (d) include at least two exploratory data visualizations, and (e) include at least summary statistics of the data in tables, although fitted models of any sort are an added bonus (not literally, there are not extra points for fitting a model). The points for the final project are broken down as follows.  \n\n\n\n\n\n\n\n\nFinal Paper Rubric\n\n\nCriteria\nPoints Possible\n\n\n\n\nWriting\n\n\n\nAbstract\n5\n\n\nIntroduction\n5\n\n\nMethods\n5\n\n\nResults\n5\n\n\nDiscussion\n5\n\n\nReferences\n5\n\n\nCode\n\n\n\nDocument is fully reproducible\n25\n\n\nDemonstrate use of inline code\n5\n\n\nAt least two data visualizations\n10 (5 pts each)\n\n\nDemonstrate tidying messy data using:\n\n\n\npivot_longer()\n5\n\n\nmutate()\n5\n\n\nselect() and filter()\n5\n\n\npivot_wider()\n5\n\n\nAt least one table of descriptive statistics\n10\n\n\ngroup_by()\n5\n\n\nsummarize()\n5\n\n\nTotal\n110"
+    "text": "Final Project\n\n\n\n\n\n\n\n\nDate Assigned\nDate Due\nAssigned\nPoints\n\n\n\n\nOct-01\nOct-29\nOutline\n15\n\n\nOct-01\nNov-26\nDraft Data Prep Script\n25\n\n\nOct-01\nDec-03\nPeer Review of Script\n25\n\n\nOct-01\nDec-03\nPresentation\n25\n\n\nOct-01\nDec-10\nPaper\n110\n\n\n\n\n\n\n\n\nFinal Project\nThe final project in this class is a group project, requiring students use a “real world” dataset to write, essentially, a miniature manuscript, including an introduction (paragraph or two), methods, results, and discussion (again, maybe 2-3 paragraphs). Ideally, students would work with a dataset that includes variables they are interested in using beyond just this class; however, if students do not have access to a dataset, the instructor will provide one. Students who do not have access to data should plan to meet with the instructor as soon as possible so a dataset can be provided. Additionally, the dataset must be able to be shared publicly, as the full project will be required to be housed on GitHub and be fully reproducible. If making your data publicly available is a problem for you, please contact the instructor as soon as possible. We can work together to either find a dataset that will work for you, or simulate a dataset that is similar to the data you’d like to work with in reality (and then all your code should work for the real dataset, but you can share the simulated data with your classmates). Students are required to work in groups of 2-4 people. The final assignment is assigned during the first class, and groups must be finalized by the end of Week 2 (at which point students who have not self-selected into groups will be randomly assigned).\nI will investigate the commits made by different authors when evaluating the final project. If it is obvious that one person did not utilize GitHub, and instead added all of their contributions through a single or only a few commits, I will dock points from that individual. There should be numerous commits by each author, and they should be roughly even in terms of contribution activity (which GitHub has metrics to track, both in terms of the number of commits as well as the number of lines modified).  \n\n\nOutline (15 points)\nA basic outline of the final project is due at the end of Week 5. The outline should include a description of the data to be used, a discussion of what preparatory work will need to be done, and how the requirements of the final project will be met. The outline is intended to be low-stakes and is primarily designed to be a means for you to obtain feedback on the feasibility of the project and areas to consider.  \n\n\nDraft Data Preparation Script (25 points)\nAt the end of Week 8, you must have a draft of the data preparation complete, including moving the data from its raw to tidy form and a variety of exploratory data visualizations. Final project must use the following functions: pivot_longer(), select(), filter(), mutate(), pivot_wider(), group_by(), and summarize().  \n\n\nPeer Review of Data Preparation Script (25 points)\nFollowing the submission of the data preparation scripts, you will be assigned to review your peers’ code. The purpose of this exercise is to learn from each other. Programming is an immensely open-ended enterprise and there are lots of winding paths that all ultimately end up at the same destination. During your peer review, you must note (a) at least three areas of strength, (b) at least one thing you learned from reviewing their script, and (c) at least one and no more than three areas for improvement. Making your code publicly available can feel daunting. The purpose of this portion of the final project is to help us all learn from each other, not to denigrate. Under no circumstances will negative comments be tolerated. Any comments that could be perceived as negative, and outside the scope of the code, will result in an immediate score of zero. Be constructive in your feedback. Be kind. We are all learning.  \n\n\nFinal Project Presentation (25 points)\nEach group will present on their final project during Week 10, which is expected to still be in progress. These presentations are expected to be informal, and emphasize what learning occurred during the project. Specifically, the presentations are to commiserate with each other about the failures and challenges experienced along the way, while also celebrating the successes. Learning R is a difficult task, and we should all take solace knowing that others are struggling along with us. The final presentation should be equal parts “journey” and substantive findings/conclusions/results. Students are expected to present for approximately 10 minutes each (20-40 minutes per group), although the time may change depending on the enrollment of the class.  \n\n\n\n\n\n\n\n\nPresentation Rubric\n\n\nCriteria\nPoints possible\n\n\n\n\nChallenges faced along the way\n5\n\n\nVictories and things to celebrate\n5\n\n\nChallenges you are still facing\n5\n\n\nSubstantive findings/interpretations\n5\n\n\nNext R hurdle to tackle\n5\n\n\nTotal\n25\n\n\n\n\n\n\n\n\n\nFinal Paper (110)\nThe purpose of the final project is to allow students an opportunity to demonstrate all the skills they have learned throughout the course. The final project must (a) be a reproducible and dynamic Quarto document with references to the extant literature; (b) be housed on GitHub, with contributions from all authors obvious; (c) demonstrate moving data from its raw “messy” format to a tidy data format through the Quarto file, but not in the final document; (d) include at least two exploratory data visualizations, and (e) include at least summary statistics of the data in tables, although fitted models of any sort are an added bonus (not literally, there are not extra points for fitting a model). The points for the final project are broken down as follows.  \n\n\n\n\n\n\n\n\nFinal Paper Rubric\n\n\nCriteria\nPoints Possible\n\n\n\n\nWriting\n\n\n\nAbstract\n5\n\n\nIntroduction\n5\n\n\nMethods\n5\n\n\nResults\n5\n\n\nDiscussion\n5\n\n\nReferences\n5\n\n\nCode\n\n\n\nDocument is fully reproducible\n25\n\n\nDemonstrate use of inline code\n5\n\n\nAt least two data visualizations\n10 (5 pts each)\n\n\nDemonstrate tidying messy data using:\n\n\n\npivot_longer()\n5\n\n\nmutate()\n5\n\n\nselect() and filter()\n5\n\n\npivot_wider()\n5\n\n\nAt least one table of descriptive statistics\n10\n\n\ngroup_by()\n5\n\n\nsummarize()\n5\n\n\nTotal\n110"
   },
   {
     "objectID": "homeworks/hw1.html",
@@ -1096,7 +1096,7 @@
     "href": "schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "Before Week 1\nPlease complete the following five installs before our first class.\nInstructions for each are on the Installs page.\n\nInstall R\nInstall RStudio\nRegister a GitHub account\nInstall Git\nInstall GitKraken\n\n\n\nWeek 1: Introduction\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReading\nSlides\nLecture1\nAssigned2\nDue\n\n\n\n\nOct-01\nR4DS(2e) 5\n\n\nA Quick Tour of the RStudio IDE\nInstalls\n\n\n\n\nR4DS(2e) 3\n\n\n\n\nCodecademy: Introduction to R Syntax\n\n\n\n\n\n\nR4DS(2e) 7\n\n\n\n\n\nFinal Project\n\nFinal Project\n\n\n\n\n\n\nOptional: MD 1.1\n\n\n\n\n\n\n\n\n\n\n\n1 Passcode: TjPe*3C0\n\n\n2 I do not rearrange my RStudio panes as he does.\n\n\n\n\n\n\n\n\n\n\nWeek 2: Workflow\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReading\nSlides\nLecture1\nAssigned\nDue\n\n\n\n\nOct-08\nProject-oriented Workflow\n\n\nCodecademy: Introduction to Data Frames in R\nA Quick Tour of the RStudio IDE\n\n\n\n\nR4DS(2e) 29\n\n\n\n\nCodecademy: Introduction to Visualization with R\nCodecademy: Introduction to R Syntax\n\n\n\n\nhere::here() Jenny Bryan\n\n\n\n\nHomework 1\n\n\n\n\n\n\n{rio} vignette\n\n\n\n\n\n\n\n\n\n\n\n1 Passcode: 9.0Xhxz!\n\n\n\n\n\n\n\n\n\n\nWeek 3: {ggplot2}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReading\nSlides\nLecture1\nAssigned\nDue\n\n\n\n\nOct-15\nR4DS(2e) 2\n\n\nCodecademy: Modifying Data Frames\nCodecademy: Introduction to Data Frames in R\n\n\n\n\nOptional: MD 2.0 to 2.9\n\n\n\nCodecademy: Aggregates in R\nCodecademy: Introduction to Visualization with R\n\n\n\n\nOptional: Healy Ch 3\n\n\n\n\nHomework 2\nHomework 1\n\n\n\n\n\n\n\n\n\n\nHomework 3\n\nFinal Project: Finalize Groups\n\nFinal Project: Finalize Groups\n\n\n\n1 Passcode: 0m9#%C5B\n\n\n\n\n\n\n\n\n\n\nWeek 4: {dplyr}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReading\nSlides\nLecture1\nAssigned\nDue\n\n\n\n\nOct-22\nR4DS(2e) 4\n\n\nDownload GitKraken\nCodecademy: Modifying Data Frames\n\n\n\n\nOptional: MD 3.1 to 3.6, 3.8\n\n\n\n\nWatch What is a Git repository?\nCodecademy: Aggregates in R\n\n\n\n\n\n\n\n\n\n\nWatch What is a remote repository?\nHomework 2\n\n\n\n\n\n\n\n\n\n\nHomework 4\nHomework 3\n\n\n\n1 Passcode: %TX9BMPR\n\n\n\n\n\n\n\n\n\n\nWeek 5: GitHub\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReading\nSlides\nLecture1\nAssigned\nDue\n\n\n\n\nOct-29\nBryan 2017\n\n\nMarkdown Tutorial\nDownload GitKraken\n\n\n\n\n\n\n\n\n\n\nHomework 5\nWatch What is a Git repository?\n\n\n\n\n\n\n\n\n\n\n\n\nWatch What is a remote repository?\n\n\n\n\n\n\n\n\n\n\n\n\nHomework 4\n\n\n\n\n\n\n\n\n\n\n\n\n\nFinal Project: Outline\n\nFinal Project: Outline\n\n\n\n1 Passcode: #&0yeLk1\n\n\n\n\n\n\n\n\n\n\nWeek 6: Quarto\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReading\nSlides\nLecture1\nAssigned\nDue\n\n\n\n\nNov-05\nR4DS(2e) 29\n\n\nCodecademy: Joining Tables in R\nMarkdown Tutorial\n\n\n\n\n\n\n\n\n\n\nHomework 6\nHomework 5\n\n\n\n\n\n\n\n\n\n\nHomework 7\n\n\n\n\n\n1 Passcode: aLJg8F%@\n\n\n\n\n\n\n\n\n\n\nWeek 7: Mutating Joins\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReading\nSlides\nLecture1\nAssigned\nDue\n\n\n\n\nNov-12\nR4DS(2e) 13\n\n\nCodecademy: Data Cleaning in R\nCodecademy: Joining Tables in R\n\n\n\n\n\n\n\n\n\n\nHomework 8\nHomework 6\n\n\n\n\n\n\n\n\n\n\n\n\nHomework 7\n\n\n\n1 Passcode: 5Kn5d6v&\n\n\n\n\n\n\n\n\n\n\nWeek 8: Tidy Data\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReading\nSlides\nLecture1\nAssigned\nDue\n\n\n\n\nNov-19\nR4DS(2e) 12\n\n\nHomework 9\nCodecademy: Data Cleaning in R\n\n\n\n\nWickham 2014\n\n\n\n\n\n\nHomework 8\n\n\n\n\nR-Ladies Sydney CleanItUp 2\n\n\n\n\n\nFinal Project: Draft Data Script\n\nFinal Project: Draft Data Script\n\n\n\n\n\n\nOptional: MD 4.2 - 4.4\n\n\n\n\n\n\n\n\n\n\n\n1 Passcode: xQe^5^6b\n\n\n\n\n\n\n\n\n\n\nWeek 9: Factors & Pull Request\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReading\nSlides\nLecture1\nAssigned\nDue\n\n\n\n\nNov-26\nR4DS(2e) 17\n\n\n\n\nHomework 10\nHomework 9\n\n\n\n\n\n\n\n\n\n\n\nFinal Project: Peer Review of Script\n\nFinal Project: Peer Review of Script\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFinal Project: Draft Data Script\n\nFinal Project: Draft Data Script\n\n\n\n1 Passcode: NA\n\n\n\n\n\n\n\n\n\n\nWeek 10: Presentations\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReading\nSlides\nLecture1\nAssigned\nDue\n\n\n\n\nDec-03\n\n\n\n\n\n\n\n\nHomework 10\n\n\n\n\n\n\n\n\n\n\n\n\n\nFinal Project: Presentation\n\nFinal Project: Presentation\n\n\n\n1 Passcode: NA\n\n\n\n\n\n\n\n\n\n\nWeek 11: No class: Final papers due"
+    "text": "Before Week 1\nPlease complete the following five installs before our first class.\nInstructions for each are on the Installs page.\n\nInstall R\nInstall RStudio\nRegister a GitHub account\nInstall Git\nInstall GitKraken\n\n\n\nWeek 1: Introduction\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReading\nSlides\nLecture1\nAssigned2\nDue\n\n\n\n\nOct-01\nR4DS(2e) 5\n\n\nA Quick Tour of the RStudio IDE\nInstalls\n\n\n\n\nR4DS(2e) 3\n\n\n\n\nCodecademy: Introduction to R Syntax\n\n\n\n\n\n\nR4DS(2e) 7\n\n\n\n\n\nFinal Project\n\nFinal Project\n\n\n\n\n\n\nOptional: MD 1.1\n\n\n\n\n\n\n\n\n\n\n\n1 Passcode: TjPe*3C0\n\n\n2 I do not rearrange my RStudio panes as he does.\n\n\n\n\n\n\n\n\n\n\nWeek 2: Workflow\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReading\nSlides\nLecture1\nAssigned\nDue\n\n\n\n\nOct-08\nProject-oriented Workflow\n\n\nCodecademy: Introduction to Data Frames in R\nA Quick Tour of the RStudio IDE\n\n\n\n\nR4DS(2e) 29\n\n\n\n\nCodecademy: Introduction to Visualization with R\nCodecademy: Introduction to R Syntax\n\n\n\n\nhere::here() Jenny Bryan\n\n\n\n\nHomework 1\n\n\n\n\n\n\n{rio} vignette\n\n\n\n\n\n\n\n\n\n\n\n1 Passcode: 9.0Xhxz!\n\n\n\n\n\n\n\n\n\n\nWeek 3: {ggplot2}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReading\nSlides\nLecture1\nAssigned\nDue\n\n\n\n\nOct-15\nR4DS(2e) 2\n\n\nCodecademy: Modifying Data Frames\nCodecademy: Introduction to Data Frames in R\n\n\n\n\nOptional: MD 2.0 to 2.9\n\n\n\nCodecademy: Aggregates in R\nCodecademy: Introduction to Visualization with R\n\n\n\n\nOptional: Healy Ch 3\n\n\n\n\nHomework 2\nHomework 1\n\n\n\n\n\n\n\n\n\n\nHomework 3\n\nFinal Project: Finalize Groups\n\nFinal Project: Finalize Groups\n\n\n\n1 Passcode: 0m9#%C5B\n\n\n\n\n\n\n\n\n\n\nWeek 4: {dplyr}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReading\nSlides\nLecture1\nAssigned\nDue\n\n\n\n\nOct-22\nR4DS(2e) 4\n\n\nDownload GitKraken\nCodecademy: Modifying Data Frames\n\n\n\n\nOptional: MD 3.1 to 3.6, 3.8\n\n\n\n\nWatch What is a Git repository?\nCodecademy: Aggregates in R\n\n\n\n\n\n\n\n\n\n\nWatch What is a remote repository?\nHomework 2\n\n\n\n\n\n\n\n\n\n\nHomework 4\nHomework 3\n\n\n\n1 Passcode: %TX9BMPR\n\n\n\n\n\n\n\n\n\n\nWeek 5: GitHub\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReading\nSlides\nLecture1\nAssigned\nDue\n\n\n\n\nOct-29\nBryan 2017\n\n\nMarkdown Tutorial\nDownload GitKraken\n\n\n\n\n\n\n\n\n\n\nHomework 5\nWatch What is a Git repository?\n\n\n\n\n\n\n\n\n\n\n\n\nWatch What is a remote repository?\n\n\n\n\n\n\n\n\n\n\n\n\nHomework 4\n\n\n\n\n\n\n\n\n\n\n\n\n\nFinal Project: Outline\n\nFinal Project: Outline\n\n\n\n1 Passcode: #&0yeLk1\n\n\n\n\n\n\n\n\n\n\nWeek 6: Quarto\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReading\nSlides\nLecture1\nAssigned\nDue\n\n\n\n\nNov-05\nR4DS(2e) 29\n\n\nCodecademy: Joining Tables in R\nMarkdown Tutorial\n\n\n\n\n\n\n\n\n\n\nHomework 6\nHomework 5\n\n\n\n\n\n\n\n\n\n\nHomework 7\n\n\n\n\n\n1 Passcode: aLJg8F%@\n\n\n\n\n\n\n\n\n\n\nWeek 7: Mutating Joins\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReading\nSlides\nLecture1\nAssigned\nDue\n\n\n\n\nNov-12\nR4DS(2e) 13\n\n\nCodecademy: Data Cleaning in R\nCodecademy: Joining Tables in R\n\n\n\n\n\n\n\n\n\n\nHomework 8\nHomework 6\n\n\n\n\n\n\n\n\n\n\n\n\nHomework 7\n\n\n\n1 Passcode: 5Kn5d6v&\n\n\n\n\n\n\n\n\n\n\nWeek 8: Tidy Data\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReading\nSlides\nLecture1\nAssigned\nDue\n\n\n\n\nNov-19\nR4DS(2e) 12\n\n\nHomework 9\nCodecademy: Data Cleaning in R\n\n\n\n\nWickham 2014\n\n\n\n\n\n\nHomework 8\n\n\n\n\nR-Ladies Sydney CleanItUp 2\n\n\n\n\n\nFinal Project: Draft Data Script\n\nFinal Project: Draft Data Script\n\n\n\n\n\n\nOptional: MD 4.2 - 4.4\n\n\n\n\n\n\n\n\n\n\n\n1 Passcode: xQe^5^6b\n\n\n\n\n\n\n\n\n\n\nWeek 9: Factors & Pull Request\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReading\nSlides\nLecture1\nAssigned\nDue\n\n\n\n\nNov-26\nR4DS(2e) 17\n\n\n\nHomework 10\nHomework 9\n\n\n\n\n\n\n\n\n\n\n\nFinal Project: Peer Review of Script\n\nFinal Project: Peer Review of Script\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFinal Project: Draft Data Script\n\nFinal Project: Draft Data Script\n\n\n\n1 Passcode: NA\n\n\n\n\n\n\n\n\n\n\nWeek 10: Presentations\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReading\nSlides\nLecture1\nAssigned\nDue\n\n\n\n\nDec-03\n\n\n\n\n\n\n\n\nHomework 10\n\n\n\n\n\n\n\n\n\n\n\n\n\nFinal Project: Presentation\n\nFinal Project: Presentation\n\n\n\n1 Passcode: NA\n\n\n\n\n\n\n\n\n\n\nWeek 11: No class: Final papers due"
   },
   {
     "objectID": "syllabus.html",
@@ -4827,7 +4827,7 @@
     "href": "slides/w8_tidydata.html#before-next-class",
     "title": "Week 8: Tidy Data",
     "section": "Before next class",
-    "text": "Before next class\n\nFinal Project\n\nFinal Project: Draft Data Script\n\nHomework\n\nHomework 9\n\nReading\n\nR4DS(2e) 17\n\nAMA (Week 10)"
+    "text": "Before next class\n\nFinal Project\n\nFinal Project: Draft Data Script\nSend me your repo link & document name\n\nHomework\n\nHomework 9\n\nReading\n\nR4DS(2e) 17\n\nAMA (Week 10)"
   },
   {
     "objectID": "homeworks/hw7-key.html",
@@ -4847,8 +4847,8 @@
     "objectID": "slides/lunch_and_learn.html#agenda",
     "href": "slides/lunch_and_learn.html#agenda",
     "title": "Lunch & Learn:Data Management",
-    "section": "",
-    "text": "Tidy data\nNaming stuff\nMiscellany"
+    "section": "Agenda",
+    "text": "Agenda\n\nTidy data\nNaming stuff\nMiscellany"
   },
   {
     "objectID": "slides/lunch_and_learn.html#some-reading-suggestions",
@@ -4862,14 +4862,14 @@
     "href": "slides/lunch_and_learn.html#data-cleaning",
     "title": "Lunch & Learn:Data Management",
     "section": "Data cleaning",
-    "text": "Data cleaning\n\n“It is often said that 80% of data analysis is spent on the process of cleaning and preparing the data (Dasu & Johnson, 2003).” - Hadley Wickham (Tidy Data)\n\n. . .\n\nPersistent and varied challenge\nLittle research on how to do it well"
+    "text": "Data cleaning\n\n“It is often said that 80% of data analysis is spent on the process of cleaning and preparing the data (Dasu & Johnson, 2003).” - Hadley Wickham (Tidy Data)\n\n\n\nPersistent and varied challenge\nLittle research on how to do it well"
   },
   {
     "objectID": "slides/lunch_and_learn.html#tidy-data-1",
     "href": "slides/lunch_and_learn.html#tidy-data-1",
     "title": "Lunch & Learn:Data Management",
     "section": "Tidy Data",
-    "text": "Tidy Data\n\nEach variable must have its own column\nEach observation must have its own row\nEach value must have its own cell\n\n. . .\nThese three rules are interrelated because it’s impossible to only satisfy two of the three\n\n\n\nR4DS"
+    "text": "Tidy Data\n\nEach variable must have its own column\nEach observation must have its own row\nEach value must have its own cell\n\n\nThese three rules are interrelated because it’s impossible to only satisfy two of the three\n\n\n\n\nR4DS"
   },
   {
     "objectID": "slides/lunch_and_learn.html#section",
@@ -4904,7 +4904,7 @@
     "href": "slides/lunch_and_learn.html#why-tidy",
     "title": "Lunch & Learn:Data Management",
     "section": "Why tidy?",
-    "text": "Why tidy?\nA biased principled approach\n\n\nThere are many reasons why you might want to have “messy” data\nBut…\nIf you have a consistent data structure, it’s easier to learn tools that work with it because the data has an underlying uniformity\nThere’s a specific advantage to placing variables in columns because it allows R’s vectorised nature to be optimized\nTidy data is an extremely useful format generally, and particularly useful when applying tools within the {tidyverse}\nAll packages within the {tidyverse} are designed to either help you get your data in a tidy format, or assume your data are already in a tidy format\nAssuming a common data format leads to huge jumps in efficiency, as the output from certain functions can be directly input into others"
+    "text": "Why tidy?\nA biased principled approach\n\nThere are many reasons why you might want to have “messy” data\nBut…\nIf you have a consistent data structure, it’s easier to learn tools that work with it because the data has an underlying uniformity\nThere’s a specific advantage to placing variables in columns because it allows R’s vectorised nature to be optimized\nTidy data is an extremely useful format generally, and particularly useful when applying tools within the {tidyverse}\nAll packages within the {tidyverse} are designed to either help you get your data in a tidy format, or assume your data are already in a tidy format\nAssuming a common data format leads to huge jumps in efficiency, as the output from certain functions can be directly input into others"
   },
   {
     "objectID": "slides/lunch_and_learn.html#section-2",
@@ -4918,7 +4918,7 @@
     "href": "slides/lunch_and_learn.html#messy-data-1",
     "title": "Lunch & Learn:Data Management",
     "section": "Messy data #1",
-    "text": "Messy data #1\nWhat makes this data messy?\nOr, why is this data not tidy?\n. . .\n\n\n# A tibble: 18 × 11\n   religion `&lt;$10k` `$10-20k` `$20-30k` `$30-40k` `$40-50k` `$50-75k` `$75-100k`\n   &lt;chr&gt;      &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;      &lt;dbl&gt;\n 1 Agnostic      27        34        60        81        76       137        122\n 2 Atheist       12        27        37        52        35        70         73\n 3 Buddhist      27        21        30        34        33        58         62\n 4 Catholic     418       617       732       670       638      1116        949\n 5 Don’t k…      15        14        15        11        10        35         21\n 6 Evangel…     575       869      1064       982       881      1486        949\n 7 Hindu          1         9         7         9        11        34         47\n 8 Histori…     228       244       236       238       197       223        131\n 9 Jehovah…      20        27        24        24        21        30         15\n10 Jewish        19        19        25        25        30        95         69\n11 Mainlin…     289       495       619       655       651      1107        939\n12 Mormon        29        40        48        51        56       112         85\n13 Muslim         6         7         9        10         9        23         16\n14 Orthodox      13        17        23        32        32        47         38\n15 Other C…       9         7        11        13        13        14         18\n16 Other F…      20        33        40        46        49        63         46\n17 Other W…       5         2         3         4         2         7          3\n18 Unaffil…     217       299       374       365       341       528        407\n# ℹ 3 more variables: `$100-150k` &lt;dbl&gt;, `&gt;150k` &lt;dbl&gt;,\n#   `Don't know/refused` &lt;dbl&gt;"
+    "text": "Messy data #1\nWhat makes this data messy?\nOr, why is this data not tidy?\n\n\n\n# A tibble: 18 × 11\n   religion `&lt;$10k` `$10-20k` `$20-30k` `$30-40k` `$40-50k` `$50-75k` `$75-100k`\n   &lt;chr&gt;      &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;      &lt;dbl&gt;\n 1 Agnostic      27        34        60        81        76       137        122\n 2 Atheist       12        27        37        52        35        70         73\n 3 Buddhist      27        21        30        34        33        58         62\n 4 Catholic     418       617       732       670       638      1116        949\n 5 Don’t k…      15        14        15        11        10        35         21\n 6 Evangel…     575       869      1064       982       881      1486        949\n 7 Hindu          1         9         7         9        11        34         47\n 8 Histori…     228       244       236       238       197       223        131\n 9 Jehovah…      20        27        24        24        21        30         15\n10 Jewish        19        19        25        25        30        95         69\n11 Mainlin…     289       495       619       655       651      1107        939\n12 Mormon        29        40        48        51        56       112         85\n13 Muslim         6         7         9        10         9        23         16\n14 Orthodox      13        17        23        32        32        47         38\n15 Other C…       9         7        11        13        13        14         18\n16 Other F…      20        33        40        46        49        63         46\n17 Other W…       5         2         3         4         2         7          3\n18 Unaffil…     217       299       374       365       341       528        407\n# ℹ 3 more variables: `$100-150k` &lt;dbl&gt;, `&gt;150k` &lt;dbl&gt;,\n#   `Don't know/refused` &lt;dbl&gt;"
   },
   {
     "objectID": "slides/lunch_and_learn.html#messy-data-1-1",
@@ -4932,7 +4932,7 @@
     "href": "slides/lunch_and_learn.html#tidy-it-up",
     "title": "Lunch & Learn:Data Management",
     "section": "Tidy it up",
-    "text": "Tidy it up\nWe want a column for income level\nAnd a column for the count of people at that level\n. . .\n\n\n# A tibble: 180 × 3\n   religion income             count\n   &lt;chr&gt;    &lt;chr&gt;              &lt;dbl&gt;\n 1 Agnostic &lt;$10k                 27\n 2 Agnostic $10-20k               34\n 3 Agnostic $20-30k               60\n 4 Agnostic $30-40k               81\n 5 Agnostic $40-50k               76\n 6 Agnostic $50-75k              137\n 7 Agnostic $75-100k             122\n 8 Agnostic $100-150k            109\n 9 Agnostic &gt;150k                 84\n10 Agnostic Don't know/refused    96\n# ℹ 170 more rows"
+    "text": "Tidy it up\nWe want a column for income level\nAnd a column for the count of people at that level\n\n\n\n# A tibble: 180 × 3\n   religion income             count\n   &lt;chr&gt;    &lt;chr&gt;              &lt;dbl&gt;\n 1 Agnostic &lt;$10k                 27\n 2 Agnostic $10-20k               34\n 3 Agnostic $20-30k               60\n 4 Agnostic $30-40k               81\n 5 Agnostic $40-50k               76\n 6 Agnostic $50-75k              137\n 7 Agnostic $75-100k             122\n 8 Agnostic $100-150k            109\n 9 Agnostic &gt;150k                 84\n10 Agnostic Don't know/refused    96\n# ℹ 170 more rows"
   },
   {
     "objectID": "slides/lunch_and_learn.html#messy-data-2",
@@ -4953,14 +4953,14 @@
     "href": "slides/lunch_and_learn.html#messy-data-2-2",
     "title": "Lunch & Learn:Data Management",
     "section": "Messy data #2",
-    "text": "Messy data #2\nThere are many variables in column names\n\n\n\nExample column names\n\n\nnew_sp_m_014\nnew_rel_f_65\n\n\n\nall col names start with new_, which we don’t really need\n\n\nfollowed by a diagnosis category: “sp” “sn” “ep” “rel”\n\n\nthen gender, which in these data are limited to “m” or “f”\n\n\nand last an age range\n\n\nand these are separated by underscores _ which is actually quite convenient\n\n\n\n. . .\nThat’s a lot of information in the column names!"
+    "text": "Messy data #2\nThere are many variables in column names\n\n\n\nExample column names\n\n\nnew_sp_m_014\nnew_rel_f_65\n\n\n\nall col names start with new_, which we don’t really need\n\n\nfollowed by a diagnosis category: “sp” “sn” “ep” “rel”\n\n\nthen gender, which in these data are limited to “m” or “f”\n\n\nand last an age range\n\n\nand these are separated by underscores _ which is actually quite convenient\n\n\n\nThat’s a lot of information in the column names!"
   },
   {
     "objectID": "slides/lunch_and_learn.html#lets-tidy-it",
     "href": "slides/lunch_and_learn.html#lets-tidy-it",
     "title": "Lunch & Learn:Data Management",
     "section": "Let’s tidy it",
-    "text": "Let’s tidy it\n. . .\n\n\n# A tibble: 76,046 × 8\n   country     iso2  iso3   year diagnosis sex   age_range count\n   &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt;     &lt;dbl&gt;\n 1 Afghanistan AF    AFG    1997 sp        m     014           0\n 2 Afghanistan AF    AFG    1997 sp        m     1524         10\n 3 Afghanistan AF    AFG    1997 sp        m     2534          6\n 4 Afghanistan AF    AFG    1997 sp        m     3544          3\n 5 Afghanistan AF    AFG    1997 sp        m     4554          5\n 6 Afghanistan AF    AFG    1997 sp        m     5564          2\n 7 Afghanistan AF    AFG    1997 sp        m     65            0\n 8 Afghanistan AF    AFG    1997 sp        f     014           5\n 9 Afghanistan AF    AFG    1997 sp        f     1524         38\n10 Afghanistan AF    AFG    1997 sp        f     2534         36\n# ℹ 76,036 more rows"
+    "text": "Let’s tidy it\n\n\n\n# A tibble: 76,046 × 8\n   country     iso2  iso3   year diagnosis sex   age_range count\n   &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt; &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt; &lt;chr&gt;     &lt;dbl&gt;\n 1 Afghanistan AF    AFG    1997 sp        m     014           0\n 2 Afghanistan AF    AFG    1997 sp        m     1524         10\n 3 Afghanistan AF    AFG    1997 sp        m     2534          6\n 4 Afghanistan AF    AFG    1997 sp        m     3544          3\n 5 Afghanistan AF    AFG    1997 sp        m     4554          5\n 6 Afghanistan AF    AFG    1997 sp        m     5564          2\n 7 Afghanistan AF    AFG    1997 sp        m     65            0\n 8 Afghanistan AF    AFG    1997 sp        f     014           5\n 9 Afghanistan AF    AFG    1997 sp        f     1524         38\n10 Afghanistan AF    AFG    1997 sp        f     2534         36\n# ℹ 76,036 more rows"
   },
   {
     "objectID": "slides/lunch_and_learn.html#messy-data-3",
@@ -4974,7 +4974,7 @@
     "href": "slides/lunch_and_learn.html#messy-data-3-1",
     "title": "Lunch & Learn:Data Management",
     "section": "Messy data #3",
-    "text": "Messy data #3\nThere are multiple observations per row\n\n\n# A tibble: 5 × 7\n  family name_child1 dob_child1 name_child2 dob_child2 name_child3 dob_child3\n   &lt;int&gt; &lt;chr&gt;       &lt;date&gt;     &lt;chr&gt;       &lt;date&gt;     &lt;chr&gt;       &lt;date&gt;    \n1      1 Susan       1998-11-26 Jose        2000-01-29 Alice       2001-02-19\n2      2 Mark        1996-06-22 &lt;NA&gt;        NA         &lt;NA&gt;        NA        \n3      3 Sam         2002-07-11 Seth        2004-04-05 &lt;NA&gt;        NA        \n4      4 Craig       2004-10-10 Khai        2009-08-27 &lt;NA&gt;        NA        \n5      5 Parker      2000-12-05 Gracie      2005-02-28 Peter       2002-05-05\n\n\n. . .\nWe have two pieces of information (or values) for each child\n\nname and dob\n\nThese need to go into separate columns"
+    "text": "Messy data #3\nThere are multiple observations per row\n\n\n# A tibble: 5 × 7\n  family name_child1 dob_child1 name_child2 dob_child2 name_child3 dob_child3\n   &lt;int&gt; &lt;chr&gt;       &lt;date&gt;     &lt;chr&gt;       &lt;date&gt;     &lt;chr&gt;       &lt;date&gt;    \n1      1 Susan       1998-11-26 Jose        2000-01-29 Alice       2001-02-19\n2      2 Mark        1996-06-22 &lt;NA&gt;        NA         &lt;NA&gt;        NA        \n3      3 Sam         2002-07-11 Seth        2004-04-05 &lt;NA&gt;        NA        \n4      4 Craig       2004-10-10 Khai        2009-08-27 &lt;NA&gt;        NA        \n5      5 Parker      2000-12-05 Gracie      2005-02-28 Peter       2002-05-05\n\n\n\nWe have two pieces of information (or values) for each child\n\nname and dob\n\nThese need to go into separate columns"
   },
   {
     "objectID": "slides/lunch_and_learn.html#tidy-it-up-1",
@@ -4988,7 +4988,7 @@
     "href": "slides/lunch_and_learn.html#dont-get-discouraged",
     "title": "Lunch & Learn:Data Management",
     "section": "Don’t get discouraged!",
-    "text": "Don’t get discouraged!\nIt’s hard to understand tidy principles unless you spend a lot of time working with data\nData is often organised to make data entry as easy as possible\n\n\nTidying is tricky!\nTakes practice!\nTakes trial and error!\nTakes learning and re-learning - a lot!\nTakes trial and error!\nBut you are rarely never gifted with tidy data!"
+    "text": "Don’t get discouraged!\nIt’s hard to understand tidy principles unless you spend a lot of time working with data\nData is often organised to make data entry as easy as possible\n\nTidying is tricky!\nTakes practice!\nTakes trial and error!\nTakes learning and re-learning - a lot!\nTakes trial and error!\nBut you are rarely never gifted with tidy data!"
   },
   {
     "objectID": "slides/lunch_and_learn.html#lets-look-at-some-education-data",
@@ -5009,42 +5009,42 @@
     "href": "slides/lunch_and_learn.html#exam1-data",
     "title": "Lunch & Learn:Data Management",
     "section": "exam1 data",
-    "text": "exam1 data\nWhat do we want?\n. . .\nLet’s change all item variables into two variables: item and score\n. . .\n\n\n# A tibble: 35 × 20\n   stu_name gender item_1 item_2 item_3 item_4 item_5 item_6 item_7 item_8\n   &lt;chr&gt;    &lt;chr&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n 1 Adam     M           1      1      1      1      1      1      1      0\n 2 Anne     F           1      1      1      1      1      1      1      1\n 3 Audrey   F           1      1      1      1      1      1      1      1\n 4 Barbara  F           1      1      1      1      0      0      1      0\n 5 Bert     M           1      1      1      1      1      0      1      0\n 6 Betty    F           1      1      1      1      1      1      1      1\n 7 Blaise   M           1      1      1      1      1      1      1      1\n 8 Brenda   F           1      1      1      1      1      1      1      1\n 9 Britton  F           1      1      1      0      1      1      1      1\n10 Carol    F           1      1      1      1      0      0      1      0\n# ℹ 25 more rows\n# ℹ 10 more variables: item_9 &lt;dbl&gt;, item_10 &lt;dbl&gt;, item_11 &lt;dbl&gt;,\n#   item_12 &lt;dbl&gt;, item_13 &lt;dbl&gt;, item_14 &lt;dbl&gt;, item_15 &lt;dbl&gt;, item_16 &lt;dbl&gt;,\n#   item_17 &lt;dbl&gt;, item_18 &lt;dbl&gt;"
+    "text": "exam1 data\nWhat do we want?\n\nLet’s change all item_# variables into two variables\n\nitem and score\n\n\n\n\n\n# A tibble: 35 × 20\n   stu_name gender item_1 item_2 item_3 item_4 item_5 item_6 item_7 item_8\n   &lt;chr&gt;    &lt;chr&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n 1 Adam     M           1      1      1      1      1      1      1      0\n 2 Anne     F           1      1      1      1      1      1      1      1\n 3 Audrey   F           1      1      1      1      1      1      1      1\n 4 Barbara  F           1      1      1      1      0      0      1      0\n 5 Bert     M           1      1      1      1      1      0      1      0\n 6 Betty    F           1      1      1      1      1      1      1      1\n 7 Blaise   M           1      1      1      1      1      1      1      1\n 8 Brenda   F           1      1      1      1      1      1      1      1\n 9 Britton  F           1      1      1      0      1      1      1      1\n10 Carol    F           1      1      1      1      0      0      1      0\n# ℹ 25 more rows\n# ℹ 10 more variables: item_9 &lt;dbl&gt;, item_10 &lt;dbl&gt;, item_11 &lt;dbl&gt;,\n#   item_12 &lt;dbl&gt;, item_13 &lt;dbl&gt;, item_14 &lt;dbl&gt;, item_15 &lt;dbl&gt;, item_16 &lt;dbl&gt;,\n#   item_17 &lt;dbl&gt;, item_18 &lt;dbl&gt;"
   },
   {
     "objectID": "slides/lunch_and_learn.html#why-are-tidy-data-useful",
     "href": "slides/lunch_and_learn.html#why-are-tidy-data-useful",
     "title": "Lunch & Learn:Data Management",
     "section": "Why are tidy data useful?",
-    "text": "Why are tidy data useful?\nEasy to calculate the proportion of students responding correctly to each item\n. . .\n\n\n# A tibble: 18 × 2\n    item   prop\n   &lt;int&gt;  &lt;dbl&gt;\n 1     1 1     \n 2     2 1     \n 3     3 1     \n 4     4 0.914 \n 5     5 0.886 \n 6     6 0.857 \n 7     7 0.886 \n 8     8 0.771 \n 9     9 0.857 \n10    10 0.686 \n11    11 0.343 \n12    12 0.171 \n13    13 0.2   \n14    14 0.0857\n15    15 0.0286\n16    16 0.0286\n17    17 0.0286\n18    18 0"
+    "text": "Why are tidy data useful?\nEasy to calculate the proportion of students responding correctly to each item\n\n\n\n# A tibble: 18 × 2\n    item   prop\n   &lt;int&gt;  &lt;dbl&gt;\n 1     1 1     \n 2     2 1     \n 3     3 1     \n 4     4 0.914 \n 5     5 0.886 \n 6     6 0.857 \n 7     7 0.886 \n 8     8 0.771 \n 9     9 0.857 \n10    10 0.686 \n11    11 0.343 \n12    12 0.171 \n13    13 0.2   \n14    14 0.0857\n15    15 0.0286\n16    16 0.0286\n17    17 0.0286\n18    18 0"
   },
   {
     "objectID": "slides/lunch_and_learn.html#why-are-tidy-data-useful-1",
     "href": "slides/lunch_and_learn.html#why-are-tidy-data-useful-1",
     "title": "Lunch & Learn:Data Management",
     "section": "Why are tidy data useful?",
-    "text": "Why are tidy data useful?\nEasy to calculate the proportion correct for each item by gender\n. . .\n\n\n# A tibble: 36 × 3\n# Groups:   item [18]\n    item gender  prop\n   &lt;int&gt; &lt;chr&gt;  &lt;dbl&gt;\n 1     1 F      1    \n 2     1 M      1    \n 3     2 F      1    \n 4     2 M      1    \n 5     3 F      1    \n 6     3 M      1    \n 7     4 F      0.889\n 8     4 M      0.941\n 9     5 F      0.833\n10     5 M      0.941\n# ℹ 26 more rows"
+    "text": "Why are tidy data useful?\nEasy to calculate the proportion correct for each item by gender\n\n\n\n# A tibble: 36 × 3\n# Groups:   item [18]\n    item gender  prop\n   &lt;int&gt; &lt;chr&gt;  &lt;dbl&gt;\n 1     1 F      1    \n 2     1 M      1    \n 3     2 F      1    \n 4     2 M      1    \n 5     3 F      1    \n 6     3 M      1    \n 7     4 F      0.889\n 8     4 M      0.941\n 9     5 F      0.833\n10     5 M      0.941\n# ℹ 26 more rows"
   },
   {
     "objectID": "slides/lunch_and_learn.html#lets-try-another",
     "href": "slides/lunch_and_learn.html#lets-try-another",
     "title": "Lunch & Learn:Data Management",
     "section": "Let’s try another",
-    "text": "Let’s try another\nAre these data tidy?\n. . .\n\n\n# A tibble: 5 × 9\n    sid wave_1_math wave_2_math wave_3_math wave_4_math wave_1_rdg wave_2_rdg\n  &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;\n1     1          95          98         102         105         96         98\n2     2         101         103         107         109        108        110\n3     3          99         103         106         110        103        106\n4     4         109         111         115         116        108        109\n5     5         101         104         107         113         92         95\n# ℹ 2 more variables: wave_3_rdg &lt;dbl&gt;, wave_4_rdg &lt;dbl&gt;"
+    "text": "Let’s try another\nAre these data tidy?\n\n\n\n# A tibble: 5 × 9\n    sid wave_1_math wave_2_math wave_3_math wave_4_math wave_1_rdg wave_2_rdg\n  &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;\n1     1          95          98         102         105         96         98\n2     2         101         103         107         109        108        110\n3     3          99         103         106         110        103        106\n4     4         109         111         115         116        108        109\n5     5         101         104         107         113         92         95\n# ℹ 2 more variables: wave_3_rdg &lt;dbl&gt;, wave_4_rdg &lt;dbl&gt;"
   },
   {
     "objectID": "slides/lunch_and_learn.html#tidy-it",
     "href": "slides/lunch_and_learn.html#tidy-it",
     "title": "Lunch & Learn:Data Management",
     "section": "Tidy it!",
-    "text": "Tidy it!\nWe want separate columns for wave and content and score\n. . .\n\n\n# A tibble: 40 × 4\n     sid wave  content score\n   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;   &lt;dbl&gt;\n 1     1 1     math       95\n 2     1 2     math       98\n 3     1 3     math      102\n 4     1 4     math      105\n 5     1 1     rdg        96\n 6     1 2     rdg        98\n 7     1 3     rdg       101\n 8     1 4     rdg       103\n 9     2 1     math      101\n10     2 2     math      103\n# ℹ 30 more rows"
+    "text": "Tidy it!\nWe want separate columns for wave and content and score\n\n\n\n# A tibble: 40 × 4\n     sid wave  content score\n   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;   &lt;dbl&gt;\n 1     1 1     math       95\n 2     1 2     math       98\n 3     1 3     math      102\n 4     1 4     math      105\n 5     1 1     rdg        96\n 6     1 2     rdg        98\n 7     1 3     rdg       101\n 8     1 4     rdg       103\n 9     2 1     math      101\n10     2 2     math      103\n# ℹ 30 more rows"
   },
   {
     "objectID": "slides/lunch_and_learn.html#caveats",
     "href": "slides/lunch_and_learn.html#caveats",
     "title": "Lunch & Learn:Data Management",
     "section": "Caveats",
-    "text": "Caveats\n\nTidy data are excellent when conducting preliminary descriptive analyses, plotting data, linear models\nOccasionally, you need the data in a different format\n\nif you’re using other packages or software for analysis\nspecific modeling purposes (SEM)\nor you have two outcomes variables that might need to be separate column\n\nmath & rdg\n\n\n\n. . .\n\n\n# A tibble: 40 × 4\n     sid wave  content score\n   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;   &lt;dbl&gt;\n 1     1 1     math       95\n 2     1 2     math       98\n 3     1 3     math      102\n 4     1 4     math      105\n 5     1 1     rdg        96\n 6     1 2     rdg        98\n 7     1 3     rdg       101\n 8     1 4     rdg       103\n 9     2 1     math      101\n10     2 2     math      103\n# ℹ 30 more rows"
+    "text": "Caveats\n\nTidy data are excellent when conducting preliminary descriptive analyses, plotting data, linear models\nOccasionally, you need the data in a different format\n\nif you’re using other packages or software for analysis\nspecific modeling purposes (SEM)\nor you have two outcomes variables that might need to be separate column\n\nmath & read\n\n\n\n\n\n\n# A tibble: 10 × 7\n      id   sex ethnicity  sped frl    math  read\n   &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;lgl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1     1     0         5     0 NA      101    99\n 2     2     1         2     0 NA       96    NA\n 3     3     1         5     0 NA      131   119\n 4     4     1         4     0 NA       84    93\n 5     5     0         1     0 NA      110   118\n 6     6     0         5     1 NA       NA   105\n 7     7     1         5     1 NA       93    99\n 8     8     0         3     0 NA       81    77\n 9     9     1         2     0 NA      129   135\n10    10     0         1     0 NA      117   122"
   },
   {
     "objectID": "slides/lunch_and_learn.html#section-3",
@@ -5072,7 +5072,7 @@
     "href": "slides/lunch_and_learn.html#questions",
     "title": "Lunch & Learn:Data Management",
     "section": "Questions",
-    "text": "Questions\n\n\nWhat data management tools do we have access to through UO which typically have a paywall?\n\n\nWhat are you looking for?\nExplore what is available: https://software.uoregon.edu/\n\n\nHow can we request data management tools such as Box from UO?\n\n\nYou can submit a request\n\n\nUsing cloud-based programs such as Dedoose for storing data (example): Advised to also save back-up in OneDrive/elsewhere?\n\n\nGitHub is a nice place to story data\n\n\nWhat are the most novel AND useful data management tools overall?\n\n\nR?"
+    "text": "Questions\n\nWhat data management tools do we have access to through UO which typically have a paywall?\n\n\nWhat are you looking for?\nExplore what is available: https://software.uoregon.edu/\n\n\nHow can we request data management tools such as Box from UO?\n\n\nYou can submit a request\n\n\nUsing cloud-based programs such as Dedoose for storing data (example): Advised to also save back-up in OneDrive/elsewhere?\n\n\nGitHub is a nice place to store data\nUO also has servers\nDropbox? Google Drive?\n\n\nWhat are the most novel AND useful data management tools overall?\n\n\nR?"
   },
   {
     "objectID": "slides/lunch_and_learn.html#tidy-data-made-simple",
@@ -5093,7 +5093,7 @@
     "href": "slides/lunch_and_learn.html#column-naming",
     "title": "Lunch & Learn:Data Management",
     "section": "Column Naming",
-    "text": "Column Naming\n\nA shortened representation of the variable\nAll variable names must be unique\n\n. . .\nColumn name\nprefix_name\n. . .\nidstudent idschool id_district"
+    "text": "Column Naming\n\nA shortened representation of the variable\nAll variable names must be unique"
   },
   {
     "objectID": "slides/lunch_and_learn.html#data-values",
@@ -5128,7 +5128,7 @@
     "href": "slides/lunch_and_learn.html#why-are-tidy-data-useful-2",
     "title": "Lunch & Learn:Data Management",
     "section": "Why are tidy data useful?",
-    "text": "Why are tidy data useful?\nEasy to calculate the total and percent correct for each student\n. . .\n\n\n# A tibble: 35 × 3\n   stu_name score_total score_pct\n   &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;\n 1 Adam               7        39\n 2 Anne              10        56\n 3 Audrey            11        61\n 4 Barbara            6        33\n 5 Bert               8        44\n 6 Betty              9        50\n 7 Blaise            13        72\n 8 Brenda            10        56\n 9 Britton            8        44\n10 Carol              6        33\n# ℹ 25 more rows"
+    "text": "Why are tidy data useful?\nEasy to calculate the total and percent correct for each student\n\n\n\n# A tibble: 35 × 3\n   stu_name score_total score_pct\n   &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;\n 1 Adam               7        39\n 2 Anne              10        56\n 3 Audrey            11        61\n 4 Barbara            6        33\n 5 Bert               8        44\n 6 Betty              9        50\n 7 Blaise            13        72\n 8 Brenda            10        56\n 9 Britton            8        44\n10 Carol              6        33\n# ℹ 25 more rows"
   },
   {
     "objectID": "slides/lunch_and_learn.html#some-tidy-reading-suggestions",
@@ -5142,7 +5142,7 @@
     "href": "slides/lunch_and_learn.html#exam1-data-1",
     "title": "Lunch & Learn:Data Management",
     "section": "exam1 data",
-    "text": "exam1 data\nWhat do we want?\nLet’s change all item variables into two variables: item and score\n\n\n# A tibble: 630 × 4\n   stu_name gender  item score\n   &lt;chr&gt;    &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt;\n 1 Adam     M          1     1\n 2 Adam     M          2     1\n 3 Adam     M          3     1\n 4 Adam     M          4     1\n 5 Adam     M          5     1\n 6 Adam     M          6     1\n 7 Adam     M          7     1\n 8 Adam     M          8     0\n 9 Adam     M          9     0\n10 Adam     M         10     0\n# ℹ 620 more rows"
+    "text": "exam1 data\nWhat do we want?\nLet’s change all item_# variables into two variables\n\nitem and score\n\n\n\n# A tibble: 630 × 4\n   stu_name gender  item score\n   &lt;chr&gt;    &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt;\n 1 Adam     M          1     1\n 2 Adam     M          2     1\n 3 Adam     M          3     1\n 4 Adam     M          4     1\n 5 Adam     M          5     1\n 6 Adam     M          6     1\n 7 Adam     M          7     1\n 8 Adam     M          8     0\n 9 Adam     M          9     0\n10 Adam     M         10     0\n# ℹ 620 more rows"
   },
   {
     "objectID": "slides/lunch_and_learn.html#column-naming-rules-1",
@@ -5290,5 +5290,481 @@
     "title": "Lunch & Learn:Data Management",
     "section": "Let’s pivot_longer()",
     "text": "Let’s pivot_longer()\nThe values of those “income” cols will become a new column.\nWhat should we that new column of col values?\n. . .\n\nrelig_income %&gt;% \n pivot_longer(\n  cols = -religion,\n  names_to = \"income\",\n  values_to = \"frequency\"\n )\n\n\n\n# A tibble: 18 × 11\n   religion `&lt;$10k` `$10-20k` `$20-30k` `$30-40k` `$40-50k` `$50-75k` `$75-100k`\n   &lt;chr&gt;      &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;      &lt;dbl&gt;\n 1 Agnostic      27        34        60        81        76       137        122\n 2 Atheist       12        27        37        52        35        70         73\n 3 Buddhist      27        21        30        34        33        58         62\n 4 Catholic     418       617       732       670       638      1116        949\n 5 Don’t k…      15        14        15        11        10        35         21\n 6 Evangel…     575       869      1064       982       881      1486        949\n 7 Hindu          1         9         7         9        11        34         47\n 8 Histori…     228       244       236       238       197       223        131\n 9 Jehovah…      20        27        24        24        21        30         15\n10 Jewish        19        19        25        25        30        95         69\n11 Mainlin…     289       495       619       655       651      1107        939\n12 Mormon        29        40        48        51        56       112         85\n13 Muslim         6         7         9        10         9        23         16\n14 Orthodox      13        17        23        32        32        47         38\n15 Other C…       9         7        11        13        13        14         18\n16 Other F…      20        33        40        46        49        63         46\n17 Other W…       5         2         3         4         2         7          3\n18 Unaffil…     217       299       374       365       341       528        407\n# ℹ 3 more variables: `$100-150k` &lt;dbl&gt;, `&gt;150k` &lt;dbl&gt;,\n#   `Don't know/refused` &lt;dbl&gt;"
+  },
+  {
+    "objectID": "slides/lunch_and_learn.html#column-name-examples",
+    "href": "slides/lunch_and_learn.html#column-name-examples",
+    "title": "Lunch & Learn:Data Management",
+    "section": "Column name examples",
+    "text": "Column name examples\nprefix_name\nid_student\nid_school\nid_district\nsurveyID_itemID\nsdq_25\nsurvey_time_itemid\nsdq_y1_25"
+  },
+  {
+    "objectID": "slides/w9_factors.html#homework-review",
+    "href": "slides/w9_factors.html#homework-review",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "Homework Review",
+    "text": "Homework Review\nHomework 9"
+  },
+  {
+    "objectID": "slides/w9_factors.html#agenda",
+    "href": "slides/w9_factors.html#agenda",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "Agenda",
+    "text": "Agenda\n\nFinal Project Review\nDiscuss factors and factor re-leveling\nWalk through a pull request (PR)\n\nOverall Purpose\n\nUnderstand factors and how to manipulate them\nUnderstand how to complete a pull request (PR)"
+  },
+  {
+    "objectID": "slides/w9_factors.html#your-code",
+    "href": "slides/w9_factors.html#your-code",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "Your code!",
+    "text": "Your code!"
+  },
+  {
+    "objectID": "slides/w9_factors.html#final-project---data-prep-script",
+    "href": "slides/w9_factors.html#final-project---data-prep-script",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "Final Project - Data Prep Script",
+    "text": "Final Project - Data Prep Script\n\nExpected to be a work in progress\nProvided to your peers so they can learn from you as much as you can learn from their feedback\n\nPeer Review\n\nUnderstand the purpose of the exercise\nConducted as a professional product\nShould be very encouraging\nZero tolerance policy for inappropriate comments"
+  },
+  {
+    "objectID": "slides/w9_factors.html#final-project-presentation",
+    "href": "slides/w9_factors.html#final-project-presentation",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "Final Project – Presentation",
+    "text": "Final Project – Presentation\n\nGroups are expected to present for about 15-20 minutes (split evenly among members)\nGroup order randomly assigned"
+  },
+  {
+    "objectID": "slides/w9_factors.html#final-project-presentation-1",
+    "href": "slides/w9_factors.html#final-project-presentation-1",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "Final Project – Presentation",
+    "text": "Final Project – Presentation\nPresentation cover the following:\n\nShare your journey (everyone, at least for a minute or two)\nDiscuss challenges you had along the way\nCelebrate your successes\nDiscuss challenges you are still facing\nDiscuss substantive findings\nShow off your cool figures!\nDiscuss next R hurdle you want to address"
+  },
+  {
+    "objectID": "slides/w9_factors.html#final-project-paper",
+    "href": "slides/w9_factors.html#final-project-paper",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "Final Project – Paper",
+    "text": "Final Project – Paper\n\nQuarto document\n\nAbstract, Intro, Methods, Results, Discussion, References\nShould be brief: 3,500 words max\n\nNo code displayed - should look similar to a manuscript being submitted for publication\nInclude at least 1 table\nInclude at least 2 plots\nShould be fully open, reproducible, and housed on GitHub\n\nI should be able to clone your repository, open the R Studio Project, and reproduce the full manuscript (by rendering the quarto doc)"
+  },
+  {
+    "objectID": "slides/w9_factors.html#final-project-1",
+    "href": "slides/w9_factors.html#final-project-1",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "Final Project",
+    "text": "Final Project\nThe following functions:\n\npivot_longer()\nmutate()\nselect()\nfilter()\npivot_wider()\ngroup_by()\nsummarize()"
+  },
+  {
+    "objectID": "slides/w9_factors.html#scoring-rubric",
+    "href": "slides/w9_factors.html#scoring-rubric",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "Scoring Rubric",
+    "text": "Scoring Rubric\nCheck the syllabus for the scoring rubrics for:\n\nPresentation and\nFinal Paper"
+  },
+  {
+    "objectID": "slides/w9_factors.html#when-do-we-really-want-factors",
+    "href": "slides/w9_factors.html#when-do-we-really-want-factors",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "When do we really want factors?",
+    "text": "When do we really want factors?\nGenerally two reasons to declare a factor\n\nOnly finite number of categories\n\ntreatment/control\nincome categories\nperformance levels\nmonths\netc.\n\nUse in modeling"
+  },
+  {
+    "objectID": "slides/w9_factors.html#creating-factors",
+    "href": "slides/w9_factors.html#creating-factors",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "Creating factors",
+    "text": "Creating factors\nImagine you have a vector of months\n\nmonths_4 &lt;- c(\"Dec\", \"Apr\", \"Jan\", \"Mar\")\n\n\nWe could store this as a string, but there are issues with this:\n\nThere are only 12 possible months\n\nfactors will help us weed out values that don’t conform to our predefined levels, which helps safeguard against typos, etc.\n\nYou can’t sort this vector in a meaningful way\n\ndefault is alphabetic sorting\n\n\n\n\n\nsort(months_4)\n\n[1] \"Apr\" \"Dec\" \"Jan\" \"Mar\""
+  },
+  {
+    "objectID": "slides/w9_factors.html#define-it-as-a-factor",
+    "href": "slides/w9_factors.html#define-it-as-a-factor",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "Define it as a factor()",
+    "text": "Define it as a factor()\nAnd hand enter the order of the levels\n\nmonths_4 &lt;- factor(months_4, levels = c(\"Jan\", \"Feb\", \"Mar\", \"Apr\", \"May\", \"Jun\", \"Jul\", \"Aug\", \"Sep\", \"Oct\", \"Nov\", \"Dec\"))\nmonths_4\n\n[1] Dec Apr Jan Mar\nLevels: Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec\n\n\n\nNow we can sort\n\nsort(months_4)\n\n[1] Jan Mar Apr Dec\nLevels: Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec"
+  },
+  {
+    "objectID": "slides/w9_factors.html#accessing-and-modifying-levels",
+    "href": "slides/w9_factors.html#accessing-and-modifying-levels",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "Accessing and modifying levels",
+    "text": "Accessing and modifying levels\nUse the levels() function\n\n\nlevels(months_4)\n\n [1] \"Jan\" \"Feb\" \"Mar\" \"Apr\" \"May\" \"Jun\" \"Jul\" \"Aug\" \"Sep\" \"Oct\" \"Nov\" \"Dec\""
+  },
+  {
+    "objectID": "slides/w9_factors.html#provides-an-error-check-of-sorts",
+    "href": "slides/w9_factors.html#provides-an-error-check-of-sorts",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "Provides an error check of sorts",
+    "text": "Provides an error check of sorts\n\nmonths_4[5] &lt;- \"Jam\"\n\nWarning in `[&lt;-.factor`(`*tmp*`, 5, value = \"Jam\"): invalid factor level, NA\ngenerated\n\n\n\n\nmonths_4\n\n[1] Dec  Apr  Jan  Mar  &lt;NA&gt;\nLevels: Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec"
+  },
+  {
+    "objectID": "slides/w9_factors.html#what-if-we-dont-specify-levels",
+    "href": "slides/w9_factors.html#what-if-we-dont-specify-levels",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "What if we don’t specify levels?",
+    "text": "What if we don’t specify levels?\nIf you define a factor without specifying the levels, it will assign them alphabetically\n\nmnths &lt;- factor(c(\"Dec\", \"Apr\", \"Jan\", \"Mar\"))\n\n\n\n\n[1] Dec Apr Jan Mar\nLevels: Apr Dec Jan Mar"
+  },
+  {
+    "objectID": "slides/w9_factors.html#forcats",
+    "href": "slides/w9_factors.html#forcats",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "{forcats} ",
+    "text": "{forcats} \n\nWhen working with factors, we can use the {forcats} package\n\nfor categorical variables\nanagram of factors\nbest package name ever?\n\nPart of the {tidyverse} so should be good to go\nAll functions start with fct_\n\nuse the autofill in RStudio"
+  },
+  {
+    "objectID": "slides/w9_factors.html#change-level-order-fct_inorder",
+    "href": "slides/w9_factors.html#change-level-order-fct_inorder",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "Change level order – fct_inorder()",
+    "text": "Change level order – fct_inorder()\nBy the order in which they first appear\n\n(simpsons &lt;- factor(c(\"Homer\", \"Marge\", \"Bart\", \"Lisa\", \"Maggie\")))\n\n[1] Homer  Marge  Bart   Lisa   Maggie\nLevels: Bart Homer Lisa Maggie Marge\n\n\n\n\nsimpsons |&gt; \n  sort()\n\n[1] Bart   Homer  Lisa   Maggie Marge \nLevels: Bart Homer Lisa Maggie Marge"
+  },
+  {
+    "objectID": "slides/w9_factors.html#change-level-order-fct_inorder-1",
+    "href": "slides/w9_factors.html#change-level-order-fct_inorder-1",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "Change level order – fct_inorder()",
+    "text": "Change level order – fct_inorder()\nBy the order in which they first appear\n\n(simpsons &lt;- factor(c(\"Homer\", \"Marge\", \"Bart\", \"Lisa\", \"Maggie\")))\n\n[1] Homer  Marge  Bart   Lisa   Maggie\nLevels: Bart Homer Lisa Maggie Marge\n\n\n\n\nsimpsons |&gt; \n  fct_inorder() |&gt;\n  sort()\n\n[1] Homer  Marge  Bart   Lisa   Maggie\nLevels: Homer Marge Bart Lisa Maggie"
+  },
+  {
+    "objectID": "slides/w9_factors.html#change-level-order-fct_infreq",
+    "href": "slides/w9_factors.html#change-level-order-fct_infreq",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "Change level order – fct_infreq()",
+    "text": "Change level order – fct_infreq()\nBy number of observations with each level (largest first)\n\nc(\"b\", \"b\", \"c\", \"a\", \"a\", \"a\") |&gt; \n    fct_infreq() \n\n[1] b b c a a a\nLevels: a b c\n\n\n\nThis can be especially useful for plotting\n\nggplot(aes(x, fct_infreq(y))"
+  },
+  {
+    "objectID": "slides/w9_factors.html#investigate-factors",
+    "href": "slides/w9_factors.html#investigate-factors",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "Investigate factors",
+    "text": "Investigate factors\n\n{tidyverse} gives you convenient way to evaluate factors\n\ncount()\ngeom_bar() or geom_col()) with {ggplot2}\n\nBut don’t forget about the base function unique()\n\ne.g., unique(df$factor_variable)"
+  },
+  {
+    "objectID": "slides/w9_factors.html#general-social-survey-gss",
+    "href": "slides/w9_factors.html#general-social-survey-gss",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "General Social Survey (GSS)",
+    "text": "General Social Survey (GSS)\n\nforcats::gss_cat\n\n# A tibble: 21,483 × 9\n    year marital         age race  rincome        partyid    relig denom tvhours\n   &lt;int&gt; &lt;fct&gt;         &lt;int&gt; &lt;fct&gt; &lt;fct&gt;          &lt;fct&gt;      &lt;fct&gt; &lt;fct&gt;   &lt;int&gt;\n 1  2000 Never married    26 White $8000 to 9999  Ind,near … Prot… Sout…      12\n 2  2000 Divorced         48 White $8000 to 9999  Not str r… Prot… Bapt…      NA\n 3  2000 Widowed          67 White Not applicable Independe… Prot… No d…       2\n 4  2000 Never married    39 White Not applicable Ind,near … Orth… Not …       4\n 5  2000 Divorced         25 White Not applicable Not str d… None  Not …       1\n 6  2000 Married          25 White $20000 - 24999 Strong de… Prot… Sout…      NA\n 7  2000 Never married    36 White $25000 or more Not str r… Chri… Not …       3\n 8  2000 Divorced         44 White $7000 to 7999  Ind,near … Prot… Luth…      NA\n 9  2000 Married          44 White $25000 or more Not str d… Prot… Other       0\n10  2000 Married          47 White $25000 or more Strong re… Prot… Sout…       3\n# ℹ 21,473 more rows"
+  },
+  {
+    "objectID": "slides/w9_factors.html#section",
+    "href": "slides/w9_factors.html#section",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "",
+    "text": "gss_cat |&gt; \n  count(partyid)\n\n# A tibble: 10 × 2\n   partyid                n\n   &lt;fct&gt;              &lt;int&gt;\n 1 No answer            154\n 2 Don't know             1\n 3 Other party          393\n 4 Strong republican   2314\n 5 Not str republican  3032\n 6 Ind,near rep        1791\n 7 Independent         4119\n 8 Ind,near dem        2499\n 9 Not str democrat    3690\n10 Strong democrat     3490"
+  },
+  {
+    "objectID": "slides/w9_factors.html#section-1",
+    "href": "slides/w9_factors.html#section-1",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "",
+    "text": "levels(gss_cat$partyid)\n\n [1] \"No answer\"          \"Don't know\"         \"Other party\"       \n [4] \"Strong republican\"  \"Not str republican\" \"Ind,near rep\"      \n [7] \"Independent\"        \"Ind,near dem\"       \"Not str democrat\"  \n[10] \"Strong democrat\""
+  },
+  {
+    "objectID": "slides/w9_factors.html#section-2",
+    "href": "slides/w9_factors.html#section-2",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "",
+    "text": "unique(gss_cat$partyid)\n\n [1] Ind,near rep       Not str republican Independent        Not str democrat  \n [5] Strong democrat    Ind,near dem       Strong republican  Other party       \n [9] No answer          Don't know        \n10 Levels: No answer Don't know Other party ... Strong democrat\n\n\n\nHow many unique categories are there (if you have a lot)?\n\nlength(unique(gss_cat$partyid))\n\n[1] 10"
+  },
+  {
+    "objectID": "slides/w9_factors.html#section-3",
+    "href": "slides/w9_factors.html#section-3",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "",
+    "text": "ggplot(gss_cat, aes(partyid)) +\n    geom_bar()"
+  },
+  {
+    "objectID": "slides/w9_factors.html#change-level-order-fct_relevel",
+    "href": "slides/w9_factors.html#change-level-order-fct_relevel",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "Change level order – fct_relevel()",
+    "text": "Change level order – fct_relevel()\nChange level order by hand, or move any number of levels to any location\n\nprobably one I use most\n\n\nfct_relevel(variable_name, \n            \"first_level\", \n            \"second_level\", \n            \"third_level\", \n            ...)\n\n\n\nfct_relevel(variable_name, \n            \"fourth_level\", \n            after = 3)"
+  },
+  {
+    "objectID": "slides/w9_factors.html#section-4",
+    "href": "slides/w9_factors.html#section-4",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "",
+    "text": "ggplot(gss_cat, aes(fct_infreq(partyid))) +\n    geom_bar()\n\nggplot(gss_cat, aes(fct_infreq(partyid))) +  geom_bar()"
+  },
+  {
+    "objectID": "slides/w9_factors.html#section-5",
+    "href": "slides/w9_factors.html#section-5",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "",
+    "text": "set.seed(3000)\ntibble(\n month = c(\"Jan\", \"Feb\", \"Mar\", \"Apr\", \"May\", \"Jun\", \"Sep\", \"Oct\", \"Nov\", \"Dec\"),\n suspensions = sample(c(5:75), size = 10)\n)\n\n# A tibble: 10 × 2\n   month suspensions\n   &lt;chr&gt;       &lt;int&gt;\n 1 Jan            19\n 2 Feb            51\n 3 Mar            61\n 4 Apr            14\n 5 May            25\n 6 Jun            27\n 7 Sep            15\n 8 Oct            21\n 9 Nov             7\n10 Dec            59"
+  },
+  {
+    "objectID": "slides/w9_factors.html#section-6",
+    "href": "slides/w9_factors.html#section-6",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "",
+    "text": "set.seed(3000)\ntibble(\n month = c(\"Jan\", \"Feb\", \"Mar\", \"Apr\", \"May\", \"Jun\", \"Sep\", \"Oct\", \"Nov\", \"Dec\"),\n suspensions = sample(c(5:75), size = 10)\n) |&gt; \n  ggplot(aes(month, suspensions)) +\n  geom_col() \n\n\n\n\n\n\n\n\n\n\n\n\ndefault alphabetical order"
+  },
+  {
+    "objectID": "slides/w9_factors.html#section-7",
+    "href": "slides/w9_factors.html#section-7",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "",
+    "text": "set.seed(3000)\ntibble(\n month = c(\"Jan\", \"Feb\", \"Mar\", \"Apr\", \"May\", \"Jun\", \"Sep\", \"Oct\", \"Nov\", \"Dec\"),\n suspensions = sample(c(5:75), size = 10)\n) |&gt; \n  mutate(month = fct_relevel(month, \n                    \"Sep\", \"Oct\", \"Nov\", \"Dec\", \"Jan\", \"Feb\", \"Mar\", \"Apr\", \"May\"))"
+  },
+  {
+    "objectID": "slides/w9_factors.html#change-level-order-fct_reorder",
+    "href": "slides/w9_factors.html#change-level-order-fct_reorder",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "Change level order – fct_reorder()",
+    "text": "Change level order – fct_reorder()\nReorder according to another variable\n\n(relig_summary &lt;- gss_cat |&gt;\n  group_by(relig) |&gt;\n  summarise(tvhours = mean(tvhours, na.rm = TRUE),\n            n = n()))\n\n# A tibble: 15 × 3\n   relig                   tvhours     n\n   &lt;fct&gt;                     &lt;dbl&gt; &lt;int&gt;\n 1 No answer                  2.72    93\n 2 Don't know                 4.62    15\n 3 Inter-nondenominational    2.87   109\n 4 Native american            3.46    23\n 5 Christian                  2.79   689\n 6 Orthodox-christian         2.42    95\n 7 Moslem/islam               2.44   104\n 8 Other eastern              1.67    32\n 9 Hinduism                   1.89    71\n10 Buddhism                   2.38   147\n11 Other                      2.73   224\n12 None                       2.71  3523\n13 Jewish                     2.52   388\n14 Catholic                   2.96  5124\n15 Protestant                 3.15 10846"
+  },
+  {
+    "objectID": "slides/w9_factors.html#section-8",
+    "href": "slides/w9_factors.html#section-8",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "",
+    "text": "set.seed(3000)\ntibble(\n month = c(\"Jan\", \"Feb\", \"Mar\", \"Apr\", \"May\", \"Jun\", \"Sep\", \"Oct\", \"Nov\", \"Dec\"),\n suspensions = sample(c(5:75), size = 10)\n) |&gt; \n  mutate(month = fct_relevel(month,\n                    \"Sep\", \"Oct\", \"Nov\", \"Dec\", \"Jan\", \"Feb\", \"Mar\", \"Apr\", \"May\")) |&gt; \n  ggplot(aes(month, suspensions)) + \n  geom_col() \n\n\n\n\n\n\n\n\n\n\n\n\ncustom order"
+  },
+  {
+    "objectID": "slides/w9_factors.html#section-9",
+    "href": "slides/w9_factors.html#section-9",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "",
+    "text": "ggplot(relig_summary, aes(tvhours, relig)) + \n  geom_point()"
+  },
+  {
+    "objectID": "slides/w9_factors.html#or-mutate-the-factor-reorder",
+    "href": "slides/w9_factors.html#or-mutate-the-factor-reorder",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "Or mutate() the factor reorder",
+    "text": "Or mutate() the factor reorder\n\nrelig_summary %&gt;% \n  mutate(relig = fct_reorder(relig, tvhours)) %&gt;% \n  ggplot(aes(tvhours, relig)) + \n  geom_point()"
+  },
+  {
+    "objectID": "slides/w9_factors.html#quick-aside-for-error-bars",
+    "href": "slides/w9_factors.html#quick-aside-for-error-bars",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "Quick aside for error bars",
+    "text": "Quick aside for error bars\n\n(relig_summary_eb &lt;- gss_cat |&gt;\n  group_by(relig) |&gt;\n  summarise(tvhours_mean = mean(tvhours, na.rm = TRUE),\n            tvhours_se   = sqrt(var(tvhours, na.rm = TRUE) / \n                                  length(na.omit(tvhours))),\n            n = n()))\n\n# A tibble: 15 × 4\n   relig                   tvhours_mean tvhours_se     n\n   &lt;fct&gt;                          &lt;dbl&gt;      &lt;dbl&gt; &lt;int&gt;\n 1 No answer                       2.72     0.326     93\n 2 Don't know                      4.62     3.01      15\n 3 Inter-nondenominational         2.87     0.363    109\n 4 Native american                 3.46     1.13      23\n 5 Christian                       2.79     0.126    689\n 6 Orthodox-christian              2.42     0.355     95\n 7 Moslem/islam                    2.44     0.269    104\n 8 Other eastern                   1.67     0.449     32\n 9 Hinduism                        1.89     0.197     71\n10 Buddhism                        2.38     0.235    147\n11 Other                           2.73     0.203    224\n12 None                            2.71     0.0590  3523\n13 Jewish                          2.52     0.151    388\n14 Catholic                        2.96     0.0453  5124\n15 Protestant                      3.15     0.0360 10846"
+  },
+  {
+    "objectID": "slides/w9_factors.html#quick-aside-for-error-bars-1",
+    "href": "slides/w9_factors.html#quick-aside-for-error-bars-1",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "Quick aside for error bars",
+    "text": "Quick aside for error bars\n\nggplot(relig_summary_eb, \n       aes(tvhours_mean, fct_reorder(relig, tvhours_mean))) + \n  geom_errorbarh(aes(xmin = tvhours_mean - 1.96 * tvhours_se,\n                     xmax = tvhours_mean + 1.96 * tvhours_se),\n                 color = \"cornflowerblue\") +\n  geom_point()"
+  },
+  {
+    "objectID": "slides/w9_factors.html#modifying-factor-levels-fct_recode",
+    "href": "slides/w9_factors.html#modifying-factor-levels-fct_recode",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "Modifying factor levels – fct_recode()",
+    "text": "Modifying factor levels – fct_recode()\nMake modifying factors more explicit\nfct_recode(var_name,\n\n\"new level\" = \"old level\"...\n\n\ngss_cat |&gt;\n  mutate(partyid = fct_recode(partyid,\n    \"Republican, strong\" = \"Strong republican\", \n    \"Republican, weak\" = \"Not str republican\", \n    \"Independent, near rep\" = \"Ind, near rep\", \n    \"Independent, near dem\" = \"Ind, near dem\", \n    \"Democrat, weak\" = \"Not str democrat\", \n    \"Democrat, strong\" = \"Strong democrat\")) |&gt; \n  count(partyid)"
+  },
+  {
+    "objectID": "slides/w9_factors.html#collapsing-levels-fct_recode",
+    "href": "slides/w9_factors.html#collapsing-levels-fct_recode",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "Collapsing levels – fct_recode()",
+    "text": "Collapsing levels – fct_recode()\nfct_recode() can also be used to collapse levels easily\n\ngss_cat |&gt;\n  mutate(partyid = fct_recode(partyid,\n    \"Republican\"  = \"Strong republican\",\n    \"Republican\"  = \"Not str republican\",\n    \"Independent\" = \"Ind,near rep\",\n    \"Independent\" = \"Ind,near dem\",\n    \"Democrat\"    = \"Not str democrat\",\n    \"Democrat\"    = \"Strong democrat\",\n    \"Other\"       = \"No answer\", \n    \"Other\"       = \"Don't know\", \n    \"Other\"       = \"Other party\")) |&gt; \n  count(partyid)\n\n\n\n# A tibble: 4 × 2\n  partyid         n\n  &lt;fct&gt;       &lt;int&gt;\n1 Other         548\n2 Republican   5346\n3 Independent  8409\n4 Democrat     7180"
+  },
+  {
+    "objectID": "slides/w9_factors.html#collapsing-levels-fct_collapse",
+    "href": "slides/w9_factors.html#collapsing-levels-fct_collapse",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "Collapsing levels – fct_collapse()",
+    "text": "Collapsing levels – fct_collapse()\nfct_collapse() is one of the more useful functions in {forcats}\n\nCollapse all categories into Republican, Democrat, Independent, or Other\n\n\ngss_cat |&gt;\n  mutate(partyid = fct_collapse(partyid, \n        Other = c(\"No answer\", \"Don't know\", \"Other party\"),\n        Rep = c(\"Strong republican\", \"Not str republican\"),\n        Ind = c(\"Ind,near rep\", \"Independent\", \"Ind,near dem\"),\n        Dem = c(\"Not str democrat\", \"Strong democrat\")\n  )) |&gt;\n  count(partyid)\n\n# A tibble: 4 × 2\n  partyid     n\n  &lt;fct&gt;   &lt;int&gt;\n1 Other     548\n2 Rep      5346\n3 Ind      8409\n4 Dem      7180"
+  },
+  {
+    "objectID": "slides/w9_factors.html#collapsing-levels-fct_lump_",
+    "href": "slides/w9_factors.html#collapsing-levels-fct_lump_",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "Collapsing levels – fct_lump_?()",
+    "text": "Collapsing levels – fct_lump_?()\nfct_lump_?() – “lump” a bunch of categories together\n\nfct_lump_n(factor_variable, n)\n\nlumps all levels except for the n most frequent (or least frequent if n &lt; 0) into “Other” level\n\n\n\n\nfct_lump_min(factor_variable, min)\n\nlumps levels that appear fewer than min times\n\n\n\n\n\nfct_lump_prop(factor_variable, prop)\n\nlumps levels that appear in fewer prop \\(\\times\\) n times"
+  },
+  {
+    "objectID": "slides/w9_factors.html#collapsing-levels-fct_lump_n",
+    "href": "slides/w9_factors.html#collapsing-levels-fct_lump_n",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "Collapsing levels – fct_lump_n()",
+    "text": "Collapsing levels – fct_lump_n()\nCollapse to n = 9 religious groups: top 8 groups plus “Other”\n\ngss_cat |&gt; \n  mutate(rel = fct_lump_n(relig, 9)) |&gt; \n  count(rel) |&gt; \n  arrange(rel)\n\n# A tibble: 9 × 2\n  rel                         n\n  &lt;fct&gt;                   &lt;int&gt;\n1 Inter-nondenominational   109\n2 Christian                 689\n3 Moslem/islam              104\n4 Buddhism                  147\n5 None                     3523\n6 Jewish                    388\n7 Catholic                 5124\n8 Protestant              10846\n9 Other                     553"
+  },
+  {
+    "objectID": "slides/w9_factors.html#collapsing-levels-fct_lump_min",
+    "href": "slides/w9_factors.html#collapsing-levels-fct_lump_min",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "Collapsing levels – fct_lump_min()",
+    "text": "Collapsing levels – fct_lump_min()\nCollapse to all religious groups that appear less than min = 200 into Other\n\ngss_cat |&gt; \n  mutate(rel = fct_lump_min(relig, min = 200)) |&gt; \n  count(rel) \n\n# A tibble: 6 × 2\n  rel            n\n  &lt;fct&gt;      &lt;int&gt;\n1 Christian    689\n2 None        3523\n3 Jewish       388\n4 Catholic    5124\n5 Protestant 10846\n6 Other        913"
+  },
+  {
+    "objectID": "slides/w9_factors.html#collapsing-levels-fct_lump_prop",
+    "href": "slides/w9_factors.html#collapsing-levels-fct_lump_prop",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "Collapsing levels – fct_lump_prop()",
+    "text": "Collapsing levels – fct_lump_prop()\nCollapse to all religious groups that appear less than prop = 10% into Other\n\ngss_cat |&gt; \n  mutate(rel = fct_lump_prop(relig, prop = .10)) |&gt; \n  count(rel) \n\n# A tibble: 4 × 2\n  rel            n\n  &lt;fct&gt;      &lt;int&gt;\n1 None        3523\n2 Catholic    5124\n3 Protestant 10846\n4 Other       1990"
+  },
+  {
+    "objectID": "slides/w9_factors.html#missing-levels",
+    "href": "slides/w9_factors.html#missing-levels",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "Missing levels",
+    "text": "Missing levels\n\nlevels(gss_cat$race)\n\n[1] \"Other\"          \"Black\"          \"White\"          \"Not applicable\"\n\n\n\n\ngss_cat |&gt; \n  count(race)\n\n# A tibble: 3 × 2\n  race      n\n  &lt;fct&gt; &lt;int&gt;\n1 Other  1959\n2 Black  3129\n3 White 16395\n\n\n\n\n\ntable(gss_cat$race)\n\n\n         Other          Black          White Not applicable \n          1959           3129          16395              0"
+  },
+  {
+    "objectID": "slides/w9_factors.html#missing-levels-1",
+    "href": "slides/w9_factors.html#missing-levels-1",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "Missing levels",
+    "text": "Missing levels\n\nggplot(gss_cat, aes(race)) +\n    geom_bar()"
+  },
+  {
+    "objectID": "slides/w9_factors.html#missing-levels-2",
+    "href": "slides/w9_factors.html#missing-levels-2",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "Missing levels",
+    "text": "Missing levels\n\nggplot(gss_cat, aes(race)) +\n    geom_bar() +\n    scale_x_discrete(drop = FALSE)"
+  },
+  {
+    "objectID": "slides/w9_factors.html#review",
+    "href": "slides/w9_factors.html#review",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "Review",
+    "text": "Review\n\nfct_inorder()\n\nBy the order in which they first appear\n\nfct_infreq()\n\nBy number of observations with each level (largest first)\n\nfct_relevel()\n\nChange level order by hand, or move any number of levels to any location\n\nfct_reorder()\n\nChange level order according to another variable\n\nfct_recode()\n\nRecode levels into new named levels\n\nfct_collapse()\n\nCollapse many levels into fewer levels\n\nfct_lump_?()\n\nRecode all levels into “Other”:\n\n\nfct_lump_n() - except for the n most frequent\n\n\nfct_lump_min() - that appear fewer than min times\n\n\nfct_lump_prop() - that appear less than prop%"
+  },
+  {
+    "objectID": "slides/w9_factors.html#lets-revisit-git",
+    "href": "slides/w9_factors.html#lets-revisit-git",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "Let’s revisit git",
+    "text": "Let’s revisit git\nTalk with neighbor. What do these terms mean?\nTalk about them in the order you would encounter them in your workflow\n\nclone\npull\nstage\ncommit\npush\nrepo\nremote\n\n\n\n\n−+\n03:00"
+  },
+  {
+    "objectID": "slides/w9_factors.html#peer-review-of-data-prep-script",
+    "href": "slides/w9_factors.html#peer-review-of-data-prep-script",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "Peer Review of Data Prep Script",
+    "text": "Peer Review of Data Prep Script\nExpectations\nFeedback:\n\nNote at least 3 areas of strength\nNote at least 1 thing you learned from reviewing their script\nNote at least 1 and no more than 3 areas for improvement\n\n\nMaking your code publicly available can feel daunting\n\nThe purpose of this portion of the final project is to help us all learn from each other\nWe are all learning\n\nBe constructive in your feedback\nBe kind\n\nUnder no circumstances will negative comments be tolerated\n\nAny comments that could be perceived as negative, and outside the scope of the code, will result in an immediate score of zero"
+  },
+  {
+    "objectID": "slides/w9_factors.html#peer-review-github-process",
+    "href": "slides/w9_factors.html#peer-review-github-process",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "Peer Review GitHub Process",
+    "text": "Peer Review GitHub Process\n\nLocate GitHub repo of assigned peer to review\nFork the repo\nClone the repo\nProvide script feedback\n\nedit the .qmd file directly\nedit code\nprovide comments in code and/or text (Ctrl/Command + Shift + C)\n\ncommit & push!\nCreate Pull Request (PR)\n\n\nWrite brief summary uisng markdown of the PR that includes\n\n&gt;= 3 strengths\n&gt;= 1 thing you learned\n1 to 3 three areas of improvement"
+  },
+  {
+    "objectID": "slides/w9_factors.html#locate-github-repo-of-assigned-peer-to-review",
+    "href": "slides/w9_factors.html#locate-github-repo-of-assigned-peer-to-review",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "1. Locate GitHub repo of assigned peer to review",
+    "text": "1. Locate GitHub repo of assigned peer to review\n\n\n\n\n\nStudent\nRepo to Review\nFile to Review\n\n\n\n\nKyla Brannigan\nhttps://github.com/Febelin/Final_project\ndraft_data_preparation_script.qmd\n\n\nErika Davis\nhttps://github.com/jjmarshalluo/final_project\nfinal_project qmd.qmd\n\n\nCheyna Warner\nhttps://github.com/XinyuWangLily/EDLD-651_Final-Project\nEDLD_651_Final_Project.html \n\n\nSteven McIntyre\nhttps://github.com/skiros101/EDLD651_Final-Project\nedld651_sk_okm_cs.qmd\n\n\nMaritza Ruiz\nhttps://github.com/Febelin/Final_project\ndraft_data_preparation_script.qmd\n\n\nSara Kiros\nhttps://github.com/XinyuWangLily/EDLD-651_Final-Project\nEDLD_651_Final_Project.html \n\n\nOhnmar Min\nhttps://github.com/jjmarshalluo/final_project\nfinal_project qmd.qmd\n\n\nChen Su\nhttps://github.com/Febelin/Final_project\ndraft_data_preparation_script.qmd\n\n\nDodjivi Amekoudji\nhttps://github.com/stmii/EDLD_651_Final_Project\nfinal_proj.qmd\n\n\nEmily Lang\nhttps://github.com/skiros101/EDLD651_Final-Project\nedld651_sk_okm_cs.qmd\n\n\nJessica Marshall\nhttps://github.com/kylabrannigan/EDLD651_final_project\nEDLD651_final_project.qmd\n\n\nKat Vrotsos\nhttps://github.com/stmii/EDLD_651_Final_Project\nfinal_proj.qmd\n\n\nFebe Lin\nhttps://github.com/kylabrannigan/EDLD651_final_project\nEDLD651_final_project.qmd\n\n\nJames Phillips\nhttps://github.com/jjmarshalluo/final_project\nfinal_project qmd.qmd\n\n\nRamtin Ranjpour\nhttps://github.com/XinyuWangLily/EDLD-651_Final-Project\nEDLD_651_Final_Project.html \n\n\nSophie Hartford\nhttps://github.com/skiros101/EDLD651_Final-Project\nedld651_sk_okm_cs.qmd\n\n\nEverett Mahaffy\nhttps://github.com/jjmarshalluo/final_project\nfinal_project qmd.qmd\n\n\nXinyu Wang\nhttps://github.com/kylabrannigan/EDLD651_final_project\nEDLD651_final_project.qmd"
+  },
+  {
+    "objectID": "slides/w9_factors.html#fork-the-repo",
+    "href": "slides/w9_factors.html#fork-the-repo",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "2. Fork the repo",
+    "text": "2. Fork the repo\n\nNavigate to the (host) GitHub repo\nClick Fork in the upper right corner\nOwner? – your GitHub account"
+  },
+  {
+    "objectID": "slides/w9_factors.html#clone-the-repo",
+    "href": "slides/w9_factors.html#clone-the-repo",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "3. Clone the repo",
+    "text": "3. Clone the repo\n\nClone the repo\n\ncopy the URL"
+  },
+  {
+    "objectID": "slides/w9_factors.html#clone-the-repo-1",
+    "href": "slides/w9_factors.html#clone-the-repo-1",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "3. Clone the repo",
+    "text": "3. Clone the repo\n\nOpen GitKraken\n\nClone with URL\nWhere will it live on your local machine? It’s own folder, with no other RProjects"
+  },
+  {
+    "objectID": "slides/w9_factors.html#provide-script-feedback",
+    "href": "slides/w9_factors.html#provide-script-feedback",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "4. Provide script feedback",
+    "text": "4. Provide script feedback\n\nOpen RProj in your local (i.e., on your machine)\nFind the .qmd document you will be reviewing\n\nit should be a .qmd document\n\nMake your edits/comments\n\nedit code as you like\ninclude a comment for each edit!\nProvide comments in code and/or text (Ctrl/Command + Shift + C)\n\nCommit as you go (if you are working on this across sessions/days)\nPush only when you are finished"
+  },
+  {
+    "objectID": "slides/w9_factors.html#commit-push",
+    "href": "slides/w9_factors.html#commit-push",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "5. commit & push",
+    "text": "5. commit & push\nOnce you have provided comments and code suggestions to the script\n\nsave the changes\ngo to GitKraken\ncommit\npush"
+  },
+  {
+    "objectID": "slides/w9_factors.html#create-pull-request-pr",
+    "href": "slides/w9_factors.html#create-pull-request-pr",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "5. Create Pull Request (PR)",
+    "text": "5. Create Pull Request (PR)\n\nNavigate back to the (host) GitHub repo\n\n\n\nClick “Pull requests”\n\n\n\n\n\nClick “New pull request”"
+  },
+  {
+    "objectID": "slides/w9_factors.html#create-pull-request-pr-1",
+    "href": "slides/w9_factors.html#create-pull-request-pr-1",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "6. Create Pull Request (PR)",
+    "text": "6. Create Pull Request (PR)\n\nClick “Compare across forks”\n\n\n\nUse drop-downs so that:\n\nleft = host repo\nright = your repo\n\n . . .\nYou will be able view the changes you made to the .qmd document"
+  },
+  {
+    "objectID": "slides/w9_factors.html#create-pull-request-pr-2",
+    "href": "slides/w9_factors.html#create-pull-request-pr-2",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "6. Create Pull Request (PR)",
+    "text": "6. Create Pull Request (PR)\n\nClick “Create pull request”"
+  },
+  {
+    "objectID": "slides/w9_factors.html#create-pull-request-pr-3",
+    "href": "slides/w9_factors.html#create-pull-request-pr-3",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "6. Create Pull Request (PR)",
+    "text": "6. Create Pull Request (PR)\nWrite a brief summary list of the PR that includes\n\n&gt;= 3 strengths\n&gt;= 1 thing you learned\n1 to 3 three areas of improvement\nUse markdown formatting\n\nheaders\nlists\nbold/italics"
+  },
+  {
+    "objectID": "slides/w9_factors.html#create-pull-request-pr-4",
+    "href": "slides/w9_factors.html#create-pull-request-pr-4",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "6. Create Pull Request (PR)",
+    "text": "6. Create Pull Request (PR)\n\nClick “Create pull request” when you’re done"
+  },
+  {
+    "objectID": "slides/w9_factors.html#create-pull-request-pr-5",
+    "href": "slides/w9_factors.html#create-pull-request-pr-5",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "6. Create Pull Request (PR)",
+    "text": "6. Create Pull Request (PR)\nRecap\n\nNavigate back to the (host) GitHub repo\nClick “Pull requests”\nClick “New pull request”\nClick “Compare across forks”\n\nUse drop-downs so that:\n\nHost repo is on the left, your repo is on the right\n\nView changes!\n\nClick “Create pull request”\n\nWrite brief summary list of the PR that includes\n\n&gt;= 3 strengths\n&gt;= 1 thing you learned\n1 to 3 three areas of improvement\nUse markdown formatting, headers, or list!\n\n\nClick “Create pull request”"
+  },
+  {
+    "objectID": "slides/w9_factors.html#reviewing-your-prs",
+    "href": "slides/w9_factors.html#reviewing-your-prs",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "Reviewing your PRs",
+    "text": "Reviewing your PRs\nYou will get an email from GitHub\n\nClick on first link, for PR\nClick “Commits” tab\nClick on “File changes” to see changes\nCopy/paste all desired changes\nDon’t close “Close PR” just yet; I want to review"
+  },
+  {
+    "objectID": "slides/w9_factors.html#before-next-class",
+    "href": "slides/w9_factors.html#before-next-class",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "Before next class",
+    "text": "Before next class\n\nFinal Project\n\nFinal Project: Peer Review of Script\nFinal Project: Presentations - email me your content before class\n\nHomework\n\nHomework 10\n\nAsk Me Anything (AMA)\n\nR stuff\nProfessional/Career stuff"
+  },
+  {
+    "objectID": "slides/w9_factors.html#mutate-the-factor-reorder",
+    "href": "slides/w9_factors.html#mutate-the-factor-reorder",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "mutate() the factor reorder",
+    "text": "mutate() the factor reorder\n\nrelig_summary |&gt; \n  mutate(relig = fct_reorder(relig, tvhours)) |&gt; \n  ggplot(aes(tvhours, relig)) + \n  geom_point()"
+  },
+  {
+    "objectID": "slides/w9_factors.html#or-reorder-within-ggplot",
+    "href": "slides/w9_factors.html#or-reorder-within-ggplot",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "Or reorder within ggplot()",
+    "text": "Or reorder within ggplot()\n\nggplot(relig_summary, aes(tvhours, fct_reorder(relig, tvhours))) + \n  geom_point()\n\nfct_reorder(relig, tvhours))"
+  },
+  {
+    "objectID": "slides/w9_factors.html",
+    "href": "slides/w9_factors.html",
+    "title": "Week 9: Factors &Pull Requests",
+    "section": "",
+    "text": "extra credit\n\n\nHomework 9"
   }
 ]
