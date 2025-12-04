@@ -5780,5 +5780,54 @@
     "title": "Homework 9",
     "section": "Figure",
     "text": "Figure\n\n\nCode\nd_summary %&gt;% \n  ggplot(aes(Race, total_words)) +\n  geom_col(fill = \"cornflowerblue\") +\n  theme_minimal() +\n  labs(y = \"Total Words Spoken\",\n       title = \"Lord of the Rings Trilogy\",\n       subtitle = \"Total number of words spoken by three races across the movie trilogy\")\n\n\n\n\n\n\n\n\nFigure 1: Total number of words spoken by three races across the movie trilogy\n\n\n\n\n\n \n\n8. Let’s make messy data. Your fifth code chunk should include code that uses lotr_tidy and pivot_wider() to:\n\nGet one variable per Race. Save this as an object\nGet one variable per Gender. Save this as an object\n\n\n\nCode\nmessy_by_race &lt;- lotr_tidy %&gt;% \n  pivot_wider(\n    names_from = Race, \n    values_from = Words,\n  )\n\nmessy_by_gender &lt;- lotr_tidy %&gt;% \n  pivot_wider(\n    names_from = Gender, \n    values_from = Words,\n  )\n\n\n   \n\n\n\nPart 2\n\n \n\n1. Tidy the Project Reads data\n\nLoad the Project_Reads_Scores.csv file\nRemove columns 5-9, 24, and 25\nFilter to remove the rows in student_id that represent aggregate summaries\nTidy the remaining dataset such that a case represents a score and percentage within a unit (i.e., score and percentage will be separate columns). Take a VERY close look at the data. You will be able to use the names_sep argument if you first rename() two columns. Identify those two columns first. Also, you will need to first pivot_longer and then pivot_wider in order to tidy properly. In these data, “tidy” is a row for each of the seven units for every student_id.\n\n\n\nCode\nlibrary(janitor)\nlibrary(ggthemes)\n\ntheme_set(theme_minimal())\n\nreads &lt;- read_csv(here(\"data\", \"Project_Reads_Scores.csv\")) %&gt;% \n  clean_names()\n\n\nreads_tidy &lt;- reads %&gt;% \n  select(4, 1:3, 10:23) %&gt;% \n  rename(\"unit_56_score\" = \"unit_5_6_score\", \n         \"unit_56_percent\" = \"unit_5_6_percent\") %&gt;% \n  filter(student_id != \"All Students (Average)\") %&gt;% \n  pivot_longer(\n    cols = contains(\"unit\"),\n    names_prefix = \"unit_\",\n    names_sep = \"_\",\n    names_to = c(\"unit\", \"score_type\"),\n    values_to = \"score\",\n    values_transform = list(score = as.character)\n  ) %&gt;% \n  mutate(score = parse_number(score)) %&gt;% \n  pivot_wider(\n    names_from = score_type,\n    values_from = score\n  )\n\n\n \n\n\n2. Produce a summary table of the mean percentage correct for each unit within test sites. Report the summary in a table.\n\n\nCode\nreads_summary &lt;- reads_tidy %&gt;% \n    group_by(test_site, unit) %&gt;% \n    summarize(percent = mean(percent))\n\nreads_summary %&gt;% \n  kable(digits = 1)\n\n\n\n\n\ntest_site\nunit\npercent\n\n\n\n\nJONES\n1\n8.3\n\n\nJONES\n2\n13.3\n\n\nJONES\n3\n17.1\n\n\nJONES\n4\n22.7\n\n\nJONES\n56\n29.5\n\n\nJONES\n7\n46.5\n\n\nJONES\n8\n52.4\n\n\nVIRDEN\n1\n16.8\n\n\nVIRDEN\n2\n18.4\n\n\nVIRDEN\n3\n24.8\n\n\nVIRDEN\n4\n27.4\n\n\nVIRDEN\n56\n44.4\n\n\nVIRDEN\n7\n55.5\n\n\nVIRDEN\n8\n61.1\n\n\nWESTSIDE\n1\n14.1\n\n\nWESTSIDE\n2\n19.5\n\n\nWESTSIDE\n3\n22.9\n\n\nWESTSIDE\n4\n29.0\n\n\nWESTSIDE\n56\n31.3\n\n\nWESTSIDE\n7\n38.5\n\n\nWESTSIDE\n8\n50.1"
+  },
+  {
+    "objectID": "slides/w10_presentations.html#agenda",
+    "href": "slides/w10_presentations.html#agenda",
+    "title": "Week 10: Presentations",
+    "section": "",
+    "text": "Group Presentations\nAMA"
+  },
+  {
+    "objectID": "slides/w10_presentations.html#student-experience-survey",
+    "href": "slides/w10_presentations.html#student-experience-survey",
+    "title": "Week 10: Presentations",
+    "section": "Student Experience Survey",
+    "text": "Student Experience Survey\nPlease complete!"
+  },
+  {
+    "objectID": "slides/w10_presentations.html#randomize-order",
+    "href": "slides/w10_presentations.html#randomize-order",
+    "title": "Week 10: Presentations",
+    "section": "Randomize Order",
+    "text": "Randomize Order\n\n\n\n\n\nOrder\nGroup\n\n\n\n\n1\nCheyna, Erika, Kyla\n\n\n2\nFebe, James, Ramtin\n\n\n3\nEverett, Sophie, Xinyu\n\n\n4\nMaritza, Steven\n\n\n5\nDodjivi, Emily, Jessica, Kat\n\n\n6\nChen, Ohnmar, Sara"
+  },
+  {
+    "objectID": "slides/w10_presentations.html#week-11",
+    "href": "slides/w10_presentations.html#week-11",
+    "title": "Week 10: Presentations",
+    "section": "Week 11",
+    "text": "Week 11\n\nFinal Project: Final Paper\n\nDue 12/10 by 1pm"
+  },
+  {
+    "objectID": "slides/w10_presentations.html#presentation-order",
+    "href": "slides/w10_presentations.html#presentation-order",
+    "title": "Week 10: Presentations",
+    "section": "Presentation Order",
+    "text": "Presentation Order\n\n\n\n\n\nOrder\nGroup\n\n\n\n\n1\nCheyna, Erika, Kyla\n\n\n2\nFebe, James, Ramtin\n\n\n3\nEverett, Sophie, Xinyu\n\n\n4\nMaritza, Steven\n\n\n5\nDodjivi, Emily, Jessica, Kat\n\n\n6\nChen, Ohnmar, Sara"
+  },
+  {
+    "objectID": "slides/w10_presentations.html",
+    "href": "slides/w10_presentations.html",
+    "title": "Week 10: Presentations",
+    "section": "",
+    "text": "Group Presentations\nAMA"
+  },
+  {
+    "objectID": "homeworks/hw10-key.html",
+    "href": "homeworks/hw10-key.html",
+    "title": "Homework 10",
+    "section": "",
+    "text": "Code\nlibrary(tidyverse)\n\n\nWarning: package 'tidyverse' was built under R version 4.4.1\n\n\nCode\nlibrary(ggthemes)\n\n\nWarning: package 'ggthemes' was built under R version 4.4.1\n\n\nCode\nlibrary(gt)\n\n\nWarning: package 'gt' was built under R version 4.4.1\n\n\nCode\ntheme_set(theme_minimal())\n\n\n\n1. Create a new RStudio Project and modify the YAML to:\n\nRender to html\nChange the syntax highlighting to any scheme but the default\nInclude code folding\n\n\n\n2a. Reorder factors\n\nGet familiar with the gss_cat data within the {forcats} package.\nRemove the rows with missing data in the tvhours column.\nCalculate the mean tvhours by marital status.\nDisplay the results as a point plot of average TV consumption by marital status (tvhours on the x-axis and martial on they y-axis).\n\nIn your plot, reorder the levels of marital according to tvhours.\n\nGive your plot meaningful axis labels and a title.\n\n\n\nCode\ngss_cat %&gt;%\n  drop_na(tvhours) %&gt;%\n  group_by(marital) %&gt;%\n  summarise(tvhours_mean = mean(tvhours)) %&gt;%\n  ggplot(aes(tvhours_mean, fct_reorder(marital, tvhours_mean))) +\n  geom_point() +\n  labs(y = \"Marital Status\",\n       x = \"TV Hours/Day\",\n       title = \"Mean TV Hours/Day by Marital Status\")\n\n\n\n\n\n\n\n\n\n\n\n2b. Working with tables\n\nDisplay the same results (mean tvhours by marital status) as a table using kable().\n\nChange the column names.\nRound the mean tvhours to one decimal.\nBold the row with the highest mean tvhours.\n\n\n\n\n3a. Recode factors\n\nUse any of the functions we talked about in class to display the levels of the marital variable.\nrecode or collapse the marital column into three categories: “Not married”, “Married”, and “No answer”.\nCalculate the mean tvhours by marital status.\nDisplay the results as a column plot of average TV consumption by marital status (martial on the x-axis and tvhours on they y-axis).\n\nFrom left to right, the columns in your plot should read: “Not married”, “Married”, and “No answer”.\n\nMake your plot look a little nicer with some color, different theme, meaningful axis labels, and a title.\n\n\n\nCode\nlevels(gss_cat$marital)\n\n\n[1] \"No answer\"     \"Never married\" \"Separated\"     \"Divorced\"     \n[5] \"Widowed\"       \"Married\"      \n\n\nCode\ntable(gss_cat$marital)\n\n\n\n    No answer Never married     Separated      Divorced       Widowed \n           17          5416           743          3383          1807 \n      Married \n        10117 \n\n\nCode\ngss_cat %&gt;% \n  count(marital)\n\n\n# A tibble: 6 × 2\n  marital           n\n  &lt;fct&gt;         &lt;int&gt;\n1 No answer        17\n2 Never married  5416\n3 Separated       743\n4 Divorced       3383\n5 Widowed        1807\n6 Married       10117\n\n\nCode\ngss_cat %&gt;% \n  mutate(marital = fct_collapse(marital,\n                                \"Not married\" = c(\"Never married\", \"Separated\", \"Divorced\", \"Widowed\"),\n                                \"Married\" = c(\"Married\"),\n                                \"No anser\" = c(\"No answer\"))) %&gt;% \n  group_by(marital) %&gt;% \n  summarise(tvhours_mean = mean(tvhours, na.rm = TRUE)) %&gt;%\n  ggplot(aes(fct_relevel(marital, \"Not married\", \"Married\"), tvhours_mean)) +\n  geom_col(aes(fill = marital)) +\n  scale_fill_colorblind() +\n  labs(y = \"Marital Status\",\n       x = \"TV Hours/Day\",\n       title = \"Mean TV Hours/Day by Marital Status\") +\n  theme(legend.position = \"none\")\n\n\n\n\n\n\n\n\n\n\n\n3b. Working with tables\n\nDisplay the same results (mean tvhours by collapsed marital status) as a table using the {gt}.\n\nChange the column names.\nRound the mean tvhours to one decimal.\nHighlight in yellow the row with the lowest mean tvhours.\n\n\n\n\nCode\ngss_cat %&gt;% \n  mutate(marital = fct_collapse(marital,\n                                \"Not married\" = c(\"Never married\", \"Separated\", \"Divorced\", \"Widowed\"),\n                                \"Married\" = c(\"Married\"),\n                                \"No answer\" = c(\"No answer\"))) %&gt;% \n  group_by(marital) %&gt;% \n  summarise(tvhours_mean = mean(tvhours, na.rm = TRUE)) %&gt;% \n  arrange(tvhours_mean) %&gt;% \n  gt() %&gt;% \n  fmt_number(\n    columns = 2,\n    decimals = 1\n  ) %&gt;% \n  tab_style(\n    style = cell_fill(color = \"yellow\"),\n    locations = cells_body(\n      columns = c(1, 2),\n      rows = 3\n    )\n  ) %&gt;% \n  cols_label(\n    marital = \"Marital Status\",\n    tvhours_mean = \"Mean TV hours/day\"\n  )\n\n\n\n\nTable 1: Mean TV Hours/Day by Marital Status\n\n\n\n\n\n\n\n\n\nMarital Status\nMean TV hours/day\n\n\n\n\nNo answer\n2.6\n\n\nMarried\n2.7\n\n\nNot married\n3.3\n\n\n\n\n\n\n\n\n\n\nThis lab borrows from Garrett Grolemund’s Remaster the Tidyverse materials."
   }
 ]
